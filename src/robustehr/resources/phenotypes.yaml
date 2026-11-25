@@ -1,0 +1,395 @@
+# Phenotype definitions: seed concepts, expanded at build time.
+#
+# A phenotype is declared by naming a handful of seed concepts, not by
+# enumerating every way a note can express it. Expansion through
+# `SNOMEDCT_US isa` union `MTH RN` supplies the rest — see
+# robustehr/concepts/hierarchy.py for why both edge sets are needed.
+#
+# Only IDENTIFIERS appear here. No UMLS strings, ever: this file ships with the
+# package, and the Metathesaurus licence does not permit redistributing
+# vocabulary content. `label` is our own wording, not a UMLS preferred term.
+#
+# `measured_set_recall` is the fraction of expert-annotated evidence for this
+# phenotype that the matcher recovers with a concept inside the set, on the
+# SNOMED CT Entity Linking Challenge test split (68 notes, 23,131 spans). It
+# travels with the definition on purpose: every protect-mode result is
+# conditional on it, because evidence the matcher never found is evidence that
+# was never protected, and the run still reports evidence_touch = 0.
+#
+# `measured_set_precision` is its counterpart, and it is not optional. Recall
+# rises monotonically with closure size, so a set that swallows half the
+# terminology posts excellent recall — pulmonary_embolism at the file-wide depth
+# expands to 9,712 concepts and scores 0.669 recall while meaning nothing.
+# Precision is scored against the seed's SNOMEDCT_US `isa` closure, which is
+# INDEPENDENT of the `MTH RN` edges under test; scoring a set against itself
+# forgave that blow-up at 0.823. Read the two together, never one alone.
+#
+# A null recall means NOT MEASURABLE HERE, not zero: the corpus carries too few
+# annotated spans for that phenotype. A measured 0.0 is a different and much
+# worse fact, and both appear below. Reproduce with validation/phenotype/scripts/phenotype_eval.py
+# --limit 300 --overlap length --trim-affixes --prefer-snomed.
+#
+# `measured_set_recall`/`measured_set_precision` score the DISORDER FACET
+# alone — the seed closure this file declares — and the closure layers did not
+# touch that facet, so they are stable. `measured_union_recall` and
+# `union_gold_spans` score what a `pheno=X` target ACTUALLY selects at
+# runtime: the disorder closure plus the medication facet (vetting-gated,
+# with RxNorm identity variants), the vetted LLM-proposed facet, declared
+# findings, and the vetted evidence closure — see
+# validation/methodology/17-phenotype-association-method.md §3-§4. Those numbers are
+# re-measured whenever the vetting or closure artifacts change (last:
+# 2026-08-18, against the 18,074-CUI union), and the denominator moves with
+# the set: widening a set makes MORE gold spans count as its evidence, so
+# union recall is comparable only within one measurement date. Union
+# PRECISION is null by construction (no independent key exists for the
+# union; validation/methodology/14 §5).
+#
+# `cohorts` names the study a definition serves. See
+# validation/phenotype/PIPELINE.md for how to add one.
+
+schema_version: "1.1"
+source: SNOMEDCT_US
+max_depth: 6
+
+phenotypes:
+  - name: hypertension
+    label: Hypertension
+    seeds: ["38341003"]
+    cohorts: [mipa]
+    measured_set_recall: 0.817
+    measured_set_precision: 0.758
+    gold_evidence_spans: 197
+    measured_union_recall: 0.79
+    union_gold_spans: 615
+
+  - name: chest_pain
+    label: Chest pain
+    seeds: ["29857009"]
+    measured_set_recall: 0.614
+    measured_set_precision: 0.948
+    gold_evidence_spans: 210
+    measured_union_recall: 0.745
+    union_gold_spans: 974
+
+  - name: dyspnea
+    label: Dyspnea
+    seeds: ["267036007"]
+    measured_set_recall: 0.914
+    measured_set_precision: 0.722
+    gold_evidence_spans: 187
+    measured_union_recall: 0.789
+    union_gold_spans: 698
+    note: >-
+      90% of this phenotype's gold evidence is non-affirmed, overwhelmingly
+      "denies shortness of breath" in review of systems. Targeting it without
+      reading the assertion breakdown will mostly corrupt negated statements.
+
+  - name: fever
+    label: Fever
+    seeds: ["386661006"]
+    measured_set_recall: 0.774
+    measured_set_precision: 0.93
+    gold_evidence_spans: 137
+    measured_union_recall: 0.664
+    union_gold_spans: 444
+
+  - name: diabetes_mellitus
+    label: Diabetes mellitus
+    seeds: ["73211009"]
+    measured_set_recall: 0.397
+    measured_set_precision: 0.839
+    gold_evidence_spans: 121
+    measured_union_recall: 0.502
+    union_gold_spans: 227
+    note: >-
+      Low, and the cause is known. Annotators mark bare "diabetes" as Diabetes
+      Mellitus (C0011849) while the matcher often returns C0011847 (Diabetes),
+      a concept with no SNOMED code that no source vocabulary places in a tree.
+      The MTH RN edge reaches it; the residue is ambiguity this seed cannot fix
+      alone. Seeding C0011847's own descendants would help and needs review.
+
+  - name: chronic_kidney_disease
+    label: Chronic kidney disease
+    seeds: ["709044004"]
+    medication_seeds: ["C3490348", "C2353951", "C4045511"]
+    finding_seeds: ["84229001"]
+    measured_set_recall: 0.889
+    measured_set_precision: 1.0
+    gold_evidence_spans: 45
+    measured_union_recall: 0.78
+    union_gold_spans: 451
+
+  - name: heart_failure
+    label: Heart failure
+    seeds: ["84114007"]
+    medication_seeds: ["C3490348", "C2353951", "C4045511"]
+    finding_seeds: ["267036007", "62744007", "55442000", "82014009"]
+    measured_set_recall: 0.449
+    measured_set_precision: 0.917
+    gold_evidence_spans: 49
+    measured_union_recall: 0.732
+    union_gold_spans: 447
+    note: >-
+      The worst of the eight, and almost entirely one cause: HFrEF and CHFrEF
+      produce no match at all. This is the abbreviation-resolver gap, priced.
+      Do not use this phenotype in protect mode until that lands.
+
+  - name: atrial_fibrillation
+    label: Atrial fibrillation
+    seeds: ["49436004"]
+    measured_set_recall: 0.731
+    measured_set_precision: 0.949
+    gold_evidence_spans: 52
+    measured_union_recall: 0.786
+    union_gold_spans: 584
+
+  # -- MIPA panel ------------------------------------------------------------
+  # Declared for the MIPA study. Every number below was measured with the seed
+  # beside it, on the split named at the top of this file, before the
+  # definition was written. Several are poor and say so: a phenotype that
+  # cannot find its own evidence is worse than an absent one, because a run
+  # still reports evidence_touch = 0 and that reads like a clean result.
+
+  - name: depression
+    label: Depression
+    seeds: ["35489007"]
+    finding_seeds: ["366979004", "28669007", "225457007"]
+    cohorts: [mipa]
+    measured_set_recall: 0.111
+    measured_set_precision: 0.188
+    gold_evidence_spans: 27
+    measured_union_recall: 0.653
+    union_gold_spans: 124
+    note: >-
+      The worst measured set in the file, and weak in BOTH directions, which
+      rules out the usual explanations. Span recall is 1.0 — the text is found
+      every time — so this is entirely concept assignment: annotators mark
+      depressive language with concepts outside the Depressive disorder
+      closure. Seeding Major depressive disorder (370143000) instead scores
+      0.0, and adding it changes nothing, so the seed is not the problem. Do
+      not use in protect mode. Treat any depression result as unsupported until
+      the assignment failure is characterised.
+
+  - name: type_2_diabetes
+    label: Type 2 diabetes mellitus
+    seeds: ["44054006"]
+    medication_seeds: ["C3490348", "C2353951", "C3885068", "C5139934"]
+    finding_seeds: ["28442001", "17173007"]
+    cohorts: [mipa]
+    measured_set_recall: 0.222
+    measured_set_precision: 0.667
+    gold_evidence_spans: 54
+    measured_union_recall: 0.516
+    union_gold_spans: 219
+    note: >-
+      Low recall with a known and structural cause: notes write "diabetes",
+      annotators resolve it to Type 2, and the matcher returns a generic
+      diabetes concept that is NOT in the type-2 closure. Precision is fine, so
+      what it does claim is right. Adding the generic seed (73211009) lifts
+      recall to 0.397 but yields exactly the 382-concept `diabetes_mellitus`
+      set — it stops being type 2. Use `diabetes_mellitus` when the study
+      question tolerates either type; use this only when it does not.
+
+  - name: type_1_diabetes
+    label: Type 1 diabetes mellitus
+    seeds: ["46635009"]
+    finding_seeds: ["28442001", "17173007"]
+    cohorts: [mipa]
+    measured_set_recall: 0.625
+    measured_set_precision: 0.625
+    gold_evidence_spans: 8
+    measured_union_recall: 0.678
+    union_gold_spans: 367
+    note: >-
+      Measured on 8 gold spans. That is too few to separate 0.625 from 0.5 or
+      0.75, so treat it as an order of magnitude and not a rate.
+
+  - name: dementia
+    label: Dementia
+    seeds: ["52448006"]
+    finding_seeds: ["386807006"]
+    cohorts: [mipa]
+    measured_set_recall: 0.867
+    measured_set_precision: 0.929
+    gold_evidence_spans: 15
+    measured_union_recall: 0.486
+    union_gold_spans: 70
+
+  - name: hfpef
+    label: Heart failure with preserved ejection fraction
+    seeds: ["446221000"]
+    medication_seeds: ["C3490348", "C2353951", "C4045511"]
+    finding_seeds: ["267036007", "62744007", "55442000", "82014009"]
+    cohorts: [mipa]
+    measured_set_recall: 0.0
+    measured_set_precision: null
+    gold_evidence_spans: 7
+    measured_union_recall: 0.724
+    union_gold_spans: 398
+    note: >-
+      The DISORDER FACET alone is measured zero and remains so: span recall
+      0.714 — the text is found for 5 of 7 gold spans — but none carries a
+      concept inside the 8-concept closure, so disorder set recall is 0.0.
+      This was a DO-NOT-USE phenotype until the evidence closure (2026-08-17):
+      the decisive surfaces ("diastolic heart failure", "Diastolic CHF") are
+      SIBLINGS of this seed, matched by the matcher to CUIs the closure alone
+      could never hold. The vetted closure facet plus medication identity
+      variants now carry the runtime set to ~1,150 concepts with union recall
+      0.724, and the causal probe measured that this recovered evidence is
+      what the phenotyping model's hfpef call actually rides on
+      (validation/methodology/14 §7). USABLE for targeting since the closure; the
+      disorder-facet zero stays recorded because protect-mode claims scoped
+      to the disorder facet are still unsupported.
+
+  - name: hfref
+    label: Heart failure with reduced ejection fraction
+    seeds: ["703272007"]
+    medication_seeds: ["C3490348", "C2353951", "C4033447", "C0037982"]
+    finding_seeds: ["267036007", "62744007", "55442000", "82014009"]
+    cohorts: [mipa]
+    measured_set_recall: 0.0
+    measured_set_precision: null
+    gold_evidence_spans: 4
+    measured_union_recall: 0.813
+    union_gold_spans: 359
+    note: >-
+      The DISORDER FACET alone measures span recall 0.0 — the abbreviation
+      "HFrEF" is never matched at all, the failure `heart_failure`'s own note
+      names — and that remains true. Like hfpef, this was DO-NOT-USE until the
+      evidence closure (2026-08-17): the vetted closure ("Heart Failure,
+      Systolic" and variants) plus medication identity variants carry the
+      runtime set to ~1,350 concepts with union recall 0.813. USABLE for
+      targeting since the closure — with the measured caveat that the causal
+      probe found hfref's PREDICTION rides chiefly on the numeric EF channel
+      no concept set can reach (validation/methodology/17 §6), so corruption
+      targeted at this set is expected to move little.
+
+  - name: metastatic_cancer
+    label: Metastatic malignant neoplasm
+    seeds: ["128462008"]
+    cohorts: [mipa]
+    measured_set_recall: 0.463
+    measured_set_precision: 0.926
+    gold_evidence_spans: 54
+    measured_union_recall: 0.683
+    union_gold_spans: 281
+    note: >-
+      1,080 concepts, the largest set here, because every primary site has its
+      own metastatic concept. Precision stays at 0.926, so the size is real
+      breadth and not a closure blow-up — which is the distinction
+      `measured_set_precision` exists to make. Recall is middling: notes name
+      the site ("liver mets") more often than the concept.
+
+  - name: rheumatoid_arthritis
+    label: Rheumatoid arthritis
+    seeds: ["69896004"]
+    finding_seeds: ["271771009"]
+    cohorts: [mipa]
+    measured_set_recall: null
+    measured_set_precision: null
+    gold_evidence_spans: 2
+    measured_union_recall: 0.653
+    union_gold_spans: 49
+    note: >-
+      NOT MEASURABLE on this corpus — 2 gold spans. Null is not zero: the
+      closure is 257 concepts and may well work, but nothing here establishes
+      that. Do not use in protect mode until measured against a corpus that
+      contains the condition.
+
+  - name: systemic_lupus_erythematosus
+    label: Systemic lupus erythematosus
+    seeds: ["55464009"]
+    cohorts: [mipa]
+    measured_set_recall: null
+    measured_set_precision: null
+    gold_evidence_spans: 1
+    measured_union_recall: 0.786
+    union_gold_spans: 267
+    note: >-
+      NOT MEASURABLE on this corpus — 1 gold span. See rheumatoid_arthritis.
+
+  - name: alcohol_use_disorder
+    label: Alcohol use disorder
+    seeds: ["15167005"]
+    cohorts: [mipa]
+    measured_set_recall: 0.5
+    measured_set_precision: 0.917
+    gold_evidence_spans: 22
+    measured_union_recall: 0.667
+    union_gold_spans: 75
+    note: >-
+      Seeded on Harmful pattern of use of alcohol, SNOMED's successor to
+      "alcohol abuse". Verified to already contain Alcohol dependence
+      (66590003) — adding that seed changes the closure by nothing — so the set
+      covers abuse and dependence as a comorbidity flag is meant to. The
+      broader Alcohol use disorder (1336085007) was measured as the
+      alternative: 80 concepts, recall 0.419, precision 0.733. This seed is
+      both tighter and better.
+
+  - name: obesity
+    label: Obesity
+    seeds: ["414916001"]
+    medication_seeds: ["C3885068", "C5139934"]
+    finding_seeds: ["816159004"]
+    cohorts: [mipa]
+    measured_set_recall: 1.0
+    measured_set_precision: 0.76
+    gold_evidence_spans: 19
+    measured_union_recall: 0.786
+    union_gold_spans: 42
+    note: >-
+      The only set that recovers all its evidence. Precision 0.76 is the
+      trade — the closure reaches overweight and BMI findings an annotator did
+      not call obesity.
+
+  - name: deep_vein_thrombosis
+    label: Deep vein thrombosis
+    seeds: ["128053003"]
+    finding_seeds: ["82014009"]
+    cohorts: [mipa]
+    measured_set_recall: 0.679
+    measured_set_precision: 0.783
+    gold_evidence_spans: 28
+    measured_union_recall: 0.301
+    union_gold_spans: 113
+    note: >-
+      Half of the DVT/PE pair, kept separate because pulmonary_embolism needs a
+      depth bound this one does not. Target both with
+      `any(pheno=deep_vein_thrombosis;pheno=pulmonary_embolism)`.
+
+  - name: pulmonary_embolism
+    label: Pulmonary embolism
+    seeds: ["59282003"]
+    finding_seeds: ["267036007", "2237002", "66857006"]
+    cohorts: [mipa]
+    max_depth: 1
+    measured_set_recall: 0.36
+    measured_set_precision: 0.773
+    gold_evidence_spans: 50
+    measured_union_recall: 0.656
+    union_gold_spans: 812
+    note: >-
+      The one phenotype in this file that needs its own depth bound, and the
+      reason `max_depth` exists. At the file-wide depth of 6 this seed reaches
+      Vascular diseases (C0042373) through a single MTH RN hop and expands to
+      9,712 concepts — recall 0.669, precision 0.049. Depth 2 already collapses
+      to precision 0.073, so the bad edge is one hop out. Bounded to depth 1 it
+      is 30 concepts at precision 0.773, and the recall cost (0.67 -> 0.36) is
+      the price of a set that means what its name says.
+
+  - name: clostridioides_difficile
+    label: Clostridioides difficile infection
+    seeds: ["186431008"]
+    medication_seeds: ["C0042313", "C0065023", "C0025872"]
+    finding_seeds: ["62315008", "21522001"]
+    cohorts: [mipa]
+    measured_set_recall: null
+    measured_set_precision: null
+    gold_evidence_spans: 1
+    measured_union_recall: 0.519
+    union_gold_spans: 651
+    note: >-
+      NOT MEASURABLE on this corpus — 1 gold span. The closure is only 10
+      concepts; adding C. difficile colitis (423590009) and C. difficile
+      diarrhea (5891000119102) as seeds changes it by nothing, so both are
+      already inside. Do not use in protect mode until measured.

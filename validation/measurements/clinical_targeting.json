@@ -1,0 +1,89 @@
+{
+  "benchmark": "SNOMED CT Entity Linking Challenge (MIMIC-IV discharge summaries)",
+  "train_notes": 223,
+  "heldout_notes": 49,
+  "heldout_tokens": 67825,
+  "gold_token_rate": 0.2908,
+  "rules": [
+    {
+      "rule": "concept (exp2 as built)",
+      "precision": 0.4997,
+      "recall": 0.7848,
+      "f1": 0.6106,
+      "coverage": 0.4567,
+      "tp": 15479,
+      "fp": 15496,
+      "fn": 4245
+    },
+    {
+      "rule": "concept AND not general_english",
+      "precision": 0.5511,
+      "recall": 0.6484,
+      "f1": 0.5958,
+      "coverage": 0.3422,
+      "tp": 12790,
+      "fp": 10419,
+      "fn": 6934
+    },
+    {
+      "rule": "salience>=0.40 (no tagger)",
+      "precision": 0.852,
+      "recall": 0.8123,
+      "f1": 0.8317,
+      "coverage": 0.2772,
+      "tp": 16021,
+      "fp": 2782,
+      "fn": 3703
+    },
+    {
+      "rule": "salience>=0.50 (no tagger)",
+      "precision": 0.8904,
+      "recall": 0.7667,
+      "f1": 0.8239,
+      "coverage": 0.2504,
+      "tp": 15122,
+      "fp": 1861,
+      "fn": 4602
+    },
+    {
+      "rule": "concept AND salience>=0.30",
+      "precision": 0.8363,
+      "recall": 0.7127,
+      "f1": 0.7696,
+      "coverage": 0.2478,
+      "tp": 14058,
+      "fp": 2752,
+      "fn": 5666
+    },
+    {
+      "rule": "concept AND salience>=0.40",
+      "precision": 0.8775,
+      "recall": 0.6845,
+      "f1": 0.7691,
+      "coverage": 0.2268,
+      "tp": 13501,
+      "fp": 1884,
+      "fn": 6223
+    },
+    {
+      "rule": "concept AND salience>=0.50",
+      "precision": 0.905,
+      "recall": 0.6566,
+      "f1": 0.761,
+      "coverage": 0.211,
+      "tp": 12950,
+      "fp": 1360,
+      "fn": 6774
+    },
+    {
+      "rule": "concept AND salience>=0.60",
+      "precision": 0.921,
+      "recall": 0.6099,
+      "f1": 0.7338,
+      "coverage": 0.1926,
+      "tp": 12030,
+      "fp": 1032,
+      "fn": 7694
+    }
+  ]
+}

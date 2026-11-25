@@ -1,0 +1,306 @@
+{
+  "L0_to_L1": [
+    {
+      "L0_precision": 0.1898,
+      "L0_recall": 0.688,
+      "L1_precision": 0.2739,
+      "L1_recall": 0.61,
+      "category": "anatomy",
+      "delta": 0.084
+    },
+    {
+      "L0_precision": 0.4733,
+      "L0_recall": 0.7473,
+      "L1_precision": 0.4316,
+      "L1_recall": 0.6501,
+      "category": "clinical_any",
+      "delta": -0.0416
+    },
+    {
+      "L0_precision": 0.5545,
+      "L0_recall": 0.7467,
+      "L1_precision": 0.5928,
+      "L1_recall": 0.737,
+      "category": "disease",
+      "delta": 0.0384
+    },
+    {
+      "L0_precision": 0.6097,
+      "L0_recall": 0.6156,
+      "L1_precision": 0.5055,
+      "L1_recall": 0.7191,
+      "category": "disorder",
+      "delta": -0.1043
+    },
+    {
+      "L0_precision": 0.3633,
+      "L0_recall": 0.2723,
+      "L1_precision": 0.2559,
+      "L1_recall": 0.4342,
+      "category": "finding",
+      "delta": -0.1075
+    },
+    {
+      "L0_precision": 0.3389,
+      "L0_recall": 0.3015,
+      "L1_precision": 0.3671,
+      "L1_recall": 0.2735,
+      "category": "procedure",
+      "delta": 0.0282
+    },
+    {
+      "L0_precision": 0.4832,
+      "L0_recall": 0.7089,
+      "L1_precision": 0.7053,
+      "L1_recall": 0.7216,
+      "category": "symptom",
+      "delta": 0.222
+    }
+  ],
+  "benchmark": "SNOMED CT Entity Linking Challenge",
+  "caveat": "The gold standard is not exhaustive over clinical content \u2014 see gold_token_coverage. A tagger finding real mentions the annotators did not mark scores as imprecise, so absolute targeting precision is a LOWER BOUND and the rung-to-rung delta is what is interpretable.",
+  "gold_spans": 75491,
+  "gold_token_coverage": {
+    "content_tokens": 433926,
+    "fraction": 0.257,
+    "inside_a_gold_span": 111498
+  },
+  "lexicon_source": "umls-2026AA",
+  "matcher": "quickumls:jaccard:0.7:3:5:score",
+  "metric": "targeting precision \u2014 of the units a category target selected, the fraction overlapping a gold span of that category. Precision gates; recall informs.",
+  "notes": 272,
+  "rungs": [
+    {
+      "category": "anatomy",
+      "f1": 0.2976,
+      "gold": 7185,
+      "gold_covered": 4943,
+      "hits": 5933,
+      "recall": 0.688,
+      "rung": "L0",
+      "selected": 31252,
+      "targeting_precision": 0.1898
+    },
+    {
+      "category": "clinical_any",
+      "f1": 0.5795,
+      "gold": 57020,
+      "gold_covered": 42610,
+      "hits": 51606,
+      "recall": 0.7473,
+      "rung": "L0",
+      "selected": 109045,
+      "targeting_precision": 0.4733
+    },
+    {
+      "category": "disease",
+      "f1": 0.6364,
+      "gold": 15332,
+      "gold_covered": 11448,
+      "hits": 11918,
+      "recall": 0.7467,
+      "rung": "L0",
+      "selected": 21495,
+      "targeting_precision": 0.5545
+    },
+    {
+      "category": "disorder",
+      "f1": 0.6127,
+      "gold": 40176,
+      "gold_covered": 24734,
+      "hits": 26224,
+      "recall": 0.6156,
+      "rung": "L0",
+      "selected": 43008,
+      "targeting_precision": 0.6097
+    },
+    {
+      "category": "finding",
+      "f1": 0.3113,
+      "gold": 18040,
+      "gold_covered": 4913,
+      "hits": 4968,
+      "recall": 0.2723,
+      "rung": "L0",
+      "selected": 13673,
+      "targeting_precision": 0.3633
+    },
+    {
+      "category": "procedure",
+      "f1": 0.3191,
+      "gold": 26157,
+      "gold_covered": 7886,
+      "hits": 7996,
+      "recall": 0.3015,
+      "rung": "L0",
+      "selected": 23595,
+      "targeting_precision": 0.3389
+    },
+    {
+      "category": "symptom",
+      "f1": 0.5747,
+      "gold": 8155,
+      "gold_covered": 5781,
+      "hits": 5983,
+      "recall": 0.7089,
+      "rung": "L0",
+      "selected": 12381,
+      "targeting_precision": 0.4832
+    },
+    {
+      "category": "anatomy",
+      "f1": 0.378,
+      "gold": 7185,
+      "gold_covered": 4383,
+      "hits": 6323,
+      "recall": 0.61,
+      "rung": "L1",
+      "selected": 23086,
+      "targeting_precision": 0.2739
+    },
+    {
+      "category": "clinical_any",
+      "f1": 0.5188,
+      "gold": 57020,
+      "gold_covered": 37070,
+      "hits": 50819,
+      "recall": 0.6501,
+      "rung": "L1",
+      "selected": 117744,
+      "targeting_precision": 0.4316
+    },
+    {
+      "category": "disease",
+      "f1": 0.6571,
+      "gold": 15332,
+      "gold_covered": 11299,
+      "hits": 15163,
+      "recall": 0.737,
+      "rung": "L1",
+      "selected": 25578,
+      "targeting_precision": 0.5928
+    },
+    {
+      "category": "disorder",
+      "f1": 0.5936,
+      "gold": 40176,
+      "gold_covered": 28889,
+      "hits": 37477,
+      "recall": 0.7191,
+      "rung": "L1",
+      "selected": 74145,
+      "targeting_precision": 0.5055
+    },
+    {
+      "category": "finding",
+      "f1": 0.322,
+      "gold": 18040,
+      "gold_covered": 7833,
+      "hits": 9649,
+      "recall": 0.4342,
+      "rung": "L1",
+      "selected": 37710,
+      "targeting_precision": 0.2559
+    },
+    {
+      "category": "procedure",
+      "f1": 0.3135,
+      "gold": 26157,
+      "gold_covered": 7155,
+      "hits": 9180,
+      "recall": 0.2735,
+      "rung": "L1",
+      "selected": 25010,
+      "targeting_precision": 0.3671
+    },
+    {
+      "category": "symptom",
+      "f1": 0.7134,
+      "gold": 8155,
+      "gold_covered": 5885,
+      "hits": 7657,
+      "recall": 0.7216,
+      "rung": "L1",
+      "selected": 10857,
+      "targeting_precision": 0.7053
+    },
+    {
+      "category": "anatomy",
+      "f1": 0.378,
+      "gold": 7185,
+      "gold_covered": 4383,
+      "hits": 6323,
+      "recall": 0.61,
+      "rung": "L1F",
+      "selected": 23086,
+      "targeting_precision": 0.2739
+    },
+    {
+      "category": "clinical_any",
+      "f1": 0.4746,
+      "gold": 57020,
+      "gold_covered": 40191,
+      "hits": 55606,
+      "recall": 0.7049,
+      "rung": "L1F",
+      "selected": 155453,
+      "targeting_precision": 0.3577
+    },
+    {
+      "category": "disease",
+      "f1": 0.6571,
+      "gold": 15332,
+      "gold_covered": 11299,
+      "hits": 15163,
+      "recall": 0.737,
+      "rung": "L1F",
+      "selected": 25578,
+      "targeting_precision": 0.5928
+    },
+    {
+      "category": "disorder",
+      "f1": 0.5936,
+      "gold": 40176,
+      "gold_covered": 28889,
+      "hits": 37477,
+      "recall": 0.7191,
+      "rung": "L1F",
+      "selected": 74145,
+      "targeting_precision": 0.5055
+    },
+    {
+      "category": "finding",
+      "f1": 0.322,
+      "gold": 18040,
+      "gold_covered": 7833,
+      "hits": 9649,
+      "recall": 0.4342,
+      "rung": "L1F",
+      "selected": 37710,
+      "targeting_precision": 0.2559
+    },
+    {
+      "category": "procedure",
+      "f1": 0.3135,
+      "gold": 26157,
+      "gold_covered": 7155,
+      "hits": 9180,
+      "recall": 0.2735,
+      "rung": "L1F",
+      "selected": 25010,
+      "targeting_precision": 0.3671
+    },
+    {
+      "category": "symptom",
+      "f1": 0.7134,
+      "gold": 8155,
+      "gold_covered": 5885,
+      "hits": 7657,
+      "recall": 0.7216,
+      "rung": "L1F",
+      "selected": 10857,
+      "targeting_precision": 0.7053
+    }
+  ],
+  "split": "all"
+}

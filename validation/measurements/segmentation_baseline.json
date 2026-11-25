@@ -1,0 +1,31 @@
+{
+  "baseline": "PyRuSH via medspaCy \u2014 the clinical sentence splitter in common use",
+  "boundaries": {
+    "agreed": 33209,
+    "jaccard": 0.3888,
+    "ours": 52809,
+    "pyrush": 65824
+  },
+  "notes": 200,
+  "only_ours": {
+    "after a colon (header or label)": 3958,
+    "after a digit (list number or value)": 50,
+    "after terminal punctuation": 572,
+    "blank line": 102,
+    "de-id placeholder": 5867,
+    "line break, no terminal punctuation": 8578,
+    "mid-line, no cue": 473
+  },
+  "only_pyrush": {
+    "after a colon (header or label)": 334,
+    "after a digit (list number or value)": 396,
+    "after terminal punctuation": 6320,
+    "blank line": 1,
+    "de-id placeholder": 2848,
+    "line break, no terminal punctuation": 605,
+    "mid-line, no cue": 6964
+  },
+  "question": "Does RobustEHR's segmentation agree with the clinical baseline, and where it does not, which one is right?",
+  "tolerance_chars": 1,
+  "why_no_gold": "no clean public sentence-boundary gold exists for MIMIC discharge summaries, and annotating one ourselves would make the reference our own judgement again. Agreement plus a disagreement taxonomy is the honest measurement; the taxonomy is the informative half."
+}

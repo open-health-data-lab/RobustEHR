@@ -1,0 +1,10 @@
+{
+  "dead": 0,
+  "dead_entries": [],
+  "entries": 97,
+  "question": "Does every expansion entry reach a concept in this UMLS release?",
+  "resolving": 97,
+  "resource_sha256": "43ee03c2820709f240f35aac232c50de2af99da0e815b942548157984e66f663",
+  "reviewed": false,
+  "why": "the long form is a lookup key. A row expanding to a string the terminology does not carry resolves to nothing and is dropped exactly as if absent \u2014 coverage in name only, and silent."
+}

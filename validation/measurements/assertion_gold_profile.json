@@ -1,0 +1,199 @@
+{
+  "by_category": {
+    "diagnostic_procedure": {
+      "detector_errors_by_dimension": {
+        "historical": 9,
+        "negated": 3,
+        "uncertain": 5
+      },
+      "detector_exact_agreement": 0.8095,
+      "distinct_cuis": 49,
+      "family": 0,
+      "family_rate": 0.0,
+      "historical": 8,
+      "historical_rate": 0.0952,
+      "label_instances": 13,
+      "modified": 13,
+      "modifier_rate": 0.1548,
+      "multi_label_spans": 0,
+      "n": 84,
+      "negated": 1,
+      "negated_rate": 0.0119,
+      "uncertain": 4,
+      "uncertain_rate": 0.0476,
+      "unmodified": 71
+    },
+    "disease": {
+      "detector_errors_by_dimension": {
+        "historical": 29,
+        "negated": 9,
+        "uncertain": 19
+      },
+      "detector_exact_agreement": 0.7243,
+      "distinct_cuis": 125,
+      "family": 5,
+      "family_rate": 0.027,
+      "historical": 33,
+      "historical_rate": 0.1784,
+      "label_instances": 81,
+      "modified": 76,
+      "modifier_rate": 0.4108,
+      "multi_label_spans": 5,
+      "n": 185,
+      "negated": 16,
+      "negated_rate": 0.0865,
+      "uncertain": 27,
+      "uncertain_rate": 0.1459,
+      "unmodified": 109
+    },
+    "finding": {
+      "detector_errors_by_dimension": {
+        "family": 3,
+        "historical": 27,
+        "negated": 31,
+        "uncertain": 32
+      },
+      "detector_exact_agreement": 0.6788,
+      "distinct_cuis": 151,
+      "family": 3,
+      "family_rate": 0.0109,
+      "historical": 29,
+      "historical_rate": 0.1058,
+      "label_instances": 94,
+      "modified": 90,
+      "modifier_rate": 0.3285,
+      "multi_label_spans": 4,
+      "n": 274,
+      "negated": 28,
+      "negated_rate": 0.1022,
+      "uncertain": 34,
+      "uncertain_rate": 0.1241,
+      "unmodified": 184
+    },
+    "medication": {
+      "detector_errors_by_dimension": {
+        "historical": 12,
+        "negated": 8,
+        "uncertain": 27
+      },
+      "detector_exact_agreement": 0.791,
+      "distinct_cuis": 146,
+      "family": 0,
+      "family_rate": 0.0,
+      "historical": 9,
+      "historical_rate": 0.0448,
+      "label_instances": 35,
+      "modified": 35,
+      "modifier_rate": 0.1741,
+      "multi_label_spans": 0,
+      "n": 201,
+      "negated": 6,
+      "negated_rate": 0.0299,
+      "uncertain": 20,
+      "uncertain_rate": 0.0995,
+      "unmodified": 166
+    },
+    "procedure": {
+      "detector_errors_by_dimension": {
+        "historical": 14,
+        "negated": 5,
+        "uncertain": 11
+      },
+      "detector_exact_agreement": 0.7623,
+      "distinct_cuis": 36,
+      "family": 0,
+      "family_rate": 0.0,
+      "historical": 10,
+      "historical_rate": 0.082,
+      "label_instances": 23,
+      "modified": 23,
+      "modifier_rate": 0.1885,
+      "multi_label_spans": 0,
+      "n": 122,
+      "negated": 0,
+      "negated_rate": 0.0,
+      "uncertain": 13,
+      "uncertain_rate": 0.1066,
+      "unmodified": 99
+    },
+    "symptom": {
+      "detector_errors_by_dimension": {
+        "historical": 6,
+        "negated": 12,
+        "uncertain": 12
+      },
+      "detector_exact_agreement": 0.6447,
+      "distinct_cuis": 29,
+      "family": 0,
+      "family_rate": 0.0,
+      "historical": 3,
+      "historical_rate": 0.0395,
+      "label_instances": 49,
+      "modified": 47,
+      "modifier_rate": 0.6184,
+      "multi_label_spans": 2,
+      "n": 76,
+      "negated": 27,
+      "negated_rate": 0.3553,
+      "uncertain": 19,
+      "uncertain_rate": 0.25,
+      "unmodified": 29
+    },
+    "therapeutic_procedure": {
+      "detector_errors_by_dimension": {
+        "family": 1,
+        "historical": 6,
+        "negated": 5,
+        "uncertain": 4
+      },
+      "detector_exact_agreement": 0.7586,
+      "distinct_cuis": 41,
+      "family": 1,
+      "family_rate": 0.0172,
+      "historical": 7,
+      "historical_rate": 0.1207,
+      "label_instances": 13,
+      "modified": 12,
+      "modifier_rate": 0.2069,
+      "multi_label_spans": 1,
+      "n": 58,
+      "negated": 3,
+      "negated_rate": 0.0517,
+      "uncertain": 2,
+      "uncertain_rate": 0.0345,
+      "unmodified": 46
+    }
+  },
+  "dimensions": [
+    "negated",
+    "historical",
+    "family",
+    "uncertain"
+  ],
+  "how_categories_were_assigned": "by `categories.categories_of` at sampling time, before annotation. Where a span carries a broad and a narrow label the narrow one is reported, so the table partitions the spans rather than double-counting the hierarchy.",
+  "modified_means": "the span carries at least one of the four modifiers \u2014 the UNION of the dimension columns. `label_instances` is their sum and `multi_label_spans` the difference, so the inclusion-exclusion is checkable per row: dimensions co-occur, and `no history of X` is negated AND historical. Its complement, `unmodified`, is what ConText and this codebase call `affirmed`.",
+  "n_spans": 1000,
+  "overall_label_counts": {
+    "family": 9,
+    "historical": 99,
+    "negated": 81,
+    "uncertain": 119
+  },
+  "precedence": [
+    "medication",
+    "diagnostic_procedure",
+    "therapeutic_procedure",
+    "symptom",
+    "disease",
+    "finding",
+    "disorder",
+    "procedure"
+  ],
+  "publishable": "counts only. Surfaces, sentences and note ids stay in data/; the categories are derived from UMLS semantic types, which are identifiers rather than licensed strings.",
+  "question": "What kind of concept carries each assertion in the gold?",
+  "restricted_source": true,
+  "unmatched_spans": 0,
+  "why": "A pooled per-dimension F1 treats every span as interchangeable. A disease and a medication are qualified by different constructions, so the mix of concepts in a gold determines what its numbers mean. This states the mix.",
+  "why_not_non_affirmed": "because it is false for two of the four. `historical` does not withhold the assertion \u2014 `history of hypertension` AFFIRMS the hypertension and locates it in the past; `family` affirms the finding in someone else. Only `negated` truly withholds, and `uncertain` only partly. `non-affirmed` is accurate only with the trailing qualifier `about the patient now`, which drops off every time the term is used alone. Each dimension MODIFIES the asserted presence of the concept, which is what the SEMANTIC operators flip, so `modifier` is both positively defined and true of all four.",
+  "why_not_positive": "it inverts between frames. Clinically, `positive for pneumonia` means the patient has it \u2014 an UNMODIFIED span here. In the scorer, `gold_positives` for `negated` counts spans that ARE negated, which is clinically negative. `modified`/`unmodified` describes what the note does to the concept and does not flip between those readings."
+}

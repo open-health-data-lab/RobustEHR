@@ -1,0 +1,289 @@
+{
+  "adopted": {
+    "modal": "BIDIRECTIONAL",
+    "nil": "BACKWARD",
+    "past reference": "BIDIRECTIONAL",
+    "prior to admission": "BIDIRECTIONAL",
+    "prn": "BIDIRECTIONAL"
+  },
+  "adoption_threshold": {
+    "min_delta_f1": 0.01,
+    "min_delta_tp": 1
+  },
+  "baseline": {
+    "family": {
+      "f1": 0.7692,
+      "fn": 0,
+      "fp": 3,
+      "precision": 0.625,
+      "recall": 1.0,
+      "tp": 5
+    },
+    "historical": {
+      "f1": 0.3878,
+      "fn": 42,
+      "fp": 18,
+      "precision": 0.5135,
+      "recall": 0.3115,
+      "tp": 19
+    },
+    "negated": {
+      "f1": 0.5882,
+      "fn": 17,
+      "fp": 25,
+      "precision": 0.5455,
+      "recall": 0.6383,
+      "tp": 30
+    },
+    "uncertain": {
+      "f1": 0.448,
+      "fn": 54,
+      "fp": 15,
+      "precision": 0.6512,
+      "recall": 0.3415,
+      "tp": 28
+    }
+  },
+  "combined": {
+    "family": {
+      "f1": 0.7692,
+      "fn": 0,
+      "fp": 3,
+      "precision": 0.625,
+      "recall": 1.0,
+      "tp": 5
+    },
+    "historical": {
+      "f1": 0.4444,
+      "fn": 37,
+      "fp": 23,
+      "precision": 0.5106,
+      "recall": 0.3934,
+      "tp": 24
+    },
+    "negated": {
+      "f1": 0.6139,
+      "fn": 16,
+      "fp": 23,
+      "precision": 0.5741,
+      "recall": 0.6596,
+      "tp": 31
+    },
+    "uncertain": {
+      "f1": 0.6133,
+      "fn": 36,
+      "fp": 22,
+      "precision": 0.6765,
+      "recall": 0.561,
+      "tp": 46
+    }
+  },
+  "how_to_read": "delta_f1 is on the development half, which is where the choice is made. It is NOT evidence of generalisation \u2014 the held-out half judges the adopted combination, and only once.",
+  "method": "one rule at a time against the shipped baseline, on the development half only. A full sweep is 3^9 configurations; cross-rule interaction is weak because the rules carry different categories, so winners are combined and re-measured together at the end.",
+  "n_items": 600,
+  "n_notes": 60,
+  "per_rule": [
+    {
+      "category": "HISTORICAL",
+      "delta_f1": 0.0,
+      "delta_fp": 0,
+      "delta_tp": 0,
+      "dimension": "historical",
+      "f1": 0.3878,
+      "from": "FORWARD",
+      "rule": "status post",
+      "to": "BIDIRECTIONAL"
+    },
+    {
+      "category": "HISTORICAL",
+      "delta_f1": 0.0,
+      "delta_fp": 0,
+      "delta_tp": 0,
+      "dimension": "historical",
+      "f1": 0.3878,
+      "from": "FORWARD",
+      "rule": "status post",
+      "to": "BACKWARD"
+    },
+    {
+      "category": "HISTORICAL",
+      "delta_f1": 0.0044,
+      "delta_fp": 3,
+      "delta_tp": 1,
+      "dimension": "historical",
+      "f1": 0.3922,
+      "from": "FORWARD",
+      "rule": "s/p",
+      "to": "BIDIRECTIONAL"
+    },
+    {
+      "category": "HISTORICAL",
+      "delta_f1": -0.0579,
+      "delta_fp": 2,
+      "delta_tp": -3,
+      "dimension": "historical",
+      "f1": 0.3299,
+      "from": "FORWARD",
+      "rule": "s/p",
+      "to": "BACKWARD"
+    },
+    {
+      "category": "HISTORICAL",
+      "delta_f1": 0.0122,
+      "delta_fp": 1,
+      "delta_tp": 1,
+      "dimension": "historical",
+      "f1": 0.4,
+      "from": "FORWARD",
+      "rule": "prior to admission",
+      "to": "BIDIRECTIONAL"
+    },
+    {
+      "category": "HISTORICAL",
+      "delta_f1": -0.0867,
+      "delta_fp": 0,
+      "delta_tp": -5,
+      "dimension": "historical",
+      "f1": 0.3011,
+      "from": "FORWARD",
+      "rule": "prior to admission",
+      "to": "BACKWARD"
+    },
+    {
+      "category": "NEGATED_EXISTENCE",
+      "delta_f1": 0.008,
+      "delta_fp": 1,
+      "delta_tp": 1,
+      "dimension": "negated",
+      "f1": 0.5962,
+      "from": "FORWARD",
+      "rule": "nil",
+      "to": "BIDIRECTIONAL"
+    },
+    {
+      "category": "NEGATED_EXISTENCE",
+      "delta_f1": 0.0257,
+      "delta_fp": -2,
+      "delta_tp": 1,
+      "dimension": "negated",
+      "f1": 0.6139,
+      "from": "FORWARD",
+      "rule": "nil",
+      "to": "BACKWARD"
+    },
+    {
+      "category": "NEGATED_EXISTENCE",
+      "delta_f1": -0.0168,
+      "delta_fp": 3,
+      "delta_tp": 0,
+      "dimension": "negated",
+      "f1": 0.5714,
+      "from": "FORWARD",
+      "rule": "negative",
+      "to": "BIDIRECTIONAL"
+    },
+    {
+      "category": "NEGATED_EXISTENCE",
+      "delta_f1": -0.0057,
+      "delta_fp": 1,
+      "delta_tp": 0,
+      "dimension": "negated",
+      "f1": 0.5825,
+      "from": "FORWARD",
+      "rule": "negative",
+      "to": "BACKWARD"
+    },
+    {
+      "category": "HYPOTHETICAL",
+      "delta_f1": 0.1254,
+      "delta_fp": 5,
+      "delta_tp": 13,
+      "dimension": "uncertain",
+      "f1": 0.5734,
+      "from": "FORWARD",
+      "rule": "prn",
+      "to": "BIDIRECTIONAL"
+    },
+    {
+      "category": "HYPOTHETICAL",
+      "delta_f1": 0.1067,
+      "delta_fp": 2,
+      "delta_tp": 10,
+      "dimension": "uncertain",
+      "f1": 0.5547,
+      "from": "FORWARD",
+      "rule": "prn",
+      "to": "BACKWARD"
+    },
+    {
+      "category": "HYPOTHETICAL",
+      "delta_f1": 0.052,
+      "delta_fp": 2,
+      "delta_tp": 5,
+      "dimension": "uncertain",
+      "f1": 0.5,
+      "from": "FORWARD",
+      "rule": "modal",
+      "to": "BIDIRECTIONAL"
+    },
+    {
+      "category": "HYPOTHETICAL",
+      "delta_f1": 0.0274,
+      "delta_fp": -4,
+      "delta_tp": 1,
+      "dimension": "uncertain",
+      "f1": 0.4754,
+      "from": "FORWARD",
+      "rule": "modal",
+      "to": "BACKWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "delta_f1": -0.0086,
+      "delta_fp": 6,
+      "delta_tp": 1,
+      "dimension": "uncertain",
+      "f1": 0.4394,
+      "from": "FORWARD",
+      "rule": "hedge",
+      "to": "BIDIRECTIONAL"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "delta_f1": -0.0543,
+      "delta_fp": 5,
+      "delta_tp": -3,
+      "dimension": "uncertain",
+      "f1": 0.3937,
+      "from": "FORWARD",
+      "rule": "hedge",
+      "to": "BACKWARD"
+    },
+    {
+      "category": "HISTORICAL",
+      "delta_f1": 0.0462,
+      "delta_fp": 4,
+      "delta_tp": 4,
+      "dimension": "historical",
+      "f1": 0.434,
+      "from": "FORWARD",
+      "rule": "past reference",
+      "to": "BIDIRECTIONAL"
+    },
+    {
+      "category": "HISTORICAL",
+      "delta_f1": 0.0392,
+      "delta_fp": -9,
+      "delta_tp": 0,
+      "dimension": "historical",
+      "f1": 0.427,
+      "from": "FORWARD",
+      "rule": "past reference",
+      "to": "BACKWARD"
+    }
+  ],
+  "question": "Which extension rules should reach backwards, and at what cost?",
+  "split": "development",
+  "why": "every rule in the resource is FORWARD because the loader defaulted to it, not because anyone chose it \u2014 and 33 of 66 held-out false negatives are a cue sitting after its target, which a FORWARD rule cannot reach at any vocabulary size.",
+  "why_a_threshold": "without one the sweep adopts noise: `s/p` gained 0.0044 F1 by trading one recovered span for three new false positives, an improvement only because the base rate makes any true positive outweigh a false one. Changes that small do not survive held-out."
+}

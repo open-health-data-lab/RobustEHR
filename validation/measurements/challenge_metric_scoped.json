@@ -1,0 +1,25 @@
+{
+  "category_classes": 10,
+  "category_level": 0.2476,
+  "caveats": [
+    "Different task: the challenge is concept-level entity linking over 6,595 concepts; RobustEHR needs category-level typing over 11.",
+    "Different system class: the winners are purpose-built and two are trained on the challenge's training split. This is an untrained off-the-shelf matcher scored as a baseline.",
+    "Different evaluation set: the challenge's test set was held out and is not public. This scores the test-marked rows of the release.",
+    "Concept identity is reached through UMLS CUIs and credited when any of a CUI's SNOMED codes matches, which is more forgiving."
+  ],
+  "classes_scored": 5216,
+  "gold_spans": 23131,
+  "leaderboard": {
+    "KIRI (dictionary-based)": 0.4202,
+    "MITEL-UNIUD (decoder-based)": 0.3777,
+    "SNOBERT (encoder-based)": 0.4194,
+    "median of all final submissions": 0.2572
+  },
+  "metric": "character IoU, macro-averaged by concept (the challenge's metric)",
+  "notes": 68,
+  "our_score": 0.1733,
+  "scoped_to_challenge": true,
+  "span_detection_only": 0.4406,
+  "split": "test",
+  "system": "QuickUMLS via medspaCy, default parameters, untrained"
+}

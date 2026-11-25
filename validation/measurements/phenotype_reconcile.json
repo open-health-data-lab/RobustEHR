@@ -1,0 +1,99 @@
+{
+  "asked": 8296,
+  "confirmed": 7982,
+  "facet": "closure",
+  "model": "openai/gpt-5.6-terra",
+  "override_rate": 0.0378,
+  "overturned": 314,
+  "per_phenotype": {
+    "alcohol_use_disorder": {
+      "asked": 72,
+      "overturned": 3
+    },
+    "atrial_fibrillation": {
+      "asked": 261,
+      "overturned": 3
+    },
+    "chest_pain": {
+      "asked": 673,
+      "overturned": 11
+    },
+    "chronic_kidney_disease": {
+      "asked": 419,
+      "overturned": 14
+    },
+    "clostridioides_difficile": {
+      "asked": 213,
+      "overturned": 1
+    },
+    "deep_vein_thrombosis": {
+      "asked": 252,
+      "overturned": 11
+    },
+    "dementia": {
+      "asked": 562,
+      "overturned": 27
+    },
+    "depression": {
+      "asked": 408,
+      "overturned": 19
+    },
+    "diabetes_mellitus": {
+      "asked": 255,
+      "overturned": 33
+    },
+    "dyspnea": {
+      "asked": 353,
+      "overturned": 15
+    },
+    "fever": {
+      "asked": 412,
+      "overturned": 15
+    },
+    "heart_failure": {
+      "asked": 463,
+      "overturned": 19
+    },
+    "hfpef": {
+      "asked": 184,
+      "overturned": 11
+    },
+    "hfref": {
+      "asked": 231,
+      "overturned": 28
+    },
+    "hypertension": {
+      "asked": 487,
+      "overturned": 9
+    },
+    "metastatic_cancer": {
+      "asked": 1157,
+      "overturned": 12
+    },
+    "obesity": {
+      "asked": 91,
+      "overturned": 4
+    },
+    "pulmonary_embolism": {
+      "asked": 400,
+      "overturned": 9
+    },
+    "rheumatoid_arthritis": {
+      "asked": 691,
+      "overturned": 35
+    },
+    "systemic_lupus_erythematosus": {
+      "asked": 321,
+      "overturned": 10
+    },
+    "type_1_diabetes": {
+      "asked": 239,
+      "overturned": 17
+    },
+    "type_2_diabetes": {
+      "asked": 152,
+      "overturned": 8
+    }
+  },
+  "what": "drops revisited under a recall-biased criterion by a stronger model; keeps override, drops confirm"
+}

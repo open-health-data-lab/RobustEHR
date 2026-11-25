@@ -1,0 +1,73 @@
+{
+  "candidate_words": "withheld \u2014 note-derived; full list in data/assertion_gold_mimic/cue_candidates.json",
+  "dimensions": {
+    "family": {
+      "candidates_considered": 0,
+      "ceiling_if_all_strong_adopted": 0.0,
+      "gold_positives": 5,
+      "high_precision_candidates": []
+    },
+    "historical": {
+      "candidates_considered": 20,
+      "ceiling_if_all_strong_adopted": 0.2459,
+      "gold_positives": 61,
+      "high_precision_candidates": [
+        {
+          "precedes_missed": 5,
+          "precedes_negative": 1,
+          "precision_proxy": 0.8333
+        },
+        {
+          "precedes_missed": 3,
+          "precedes_negative": 1,
+          "precision_proxy": 0.75
+        },
+        {
+          "precedes_missed": 3,
+          "precedes_negative": 1,
+          "precision_proxy": 0.75
+        },
+        {
+          "precedes_missed": 4,
+          "precedes_negative": 2,
+          "precision_proxy": 0.6667
+        }
+      ]
+    },
+    "negated": {
+      "candidates_considered": 0,
+      "ceiling_if_all_strong_adopted": 0.0,
+      "gold_positives": 47,
+      "high_precision_candidates": []
+    },
+    "uncertain": {
+      "candidates_considered": 23,
+      "ceiling_if_all_strong_adopted": 0.1585,
+      "gold_positives": 82,
+      "high_precision_candidates": [
+        {
+          "precedes_missed": 3,
+          "precedes_negative": 0,
+          "precision_proxy": 1.0
+        },
+        {
+          "precedes_missed": 6,
+          "precedes_negative": 4,
+          "precision_proxy": 0.6
+        },
+        {
+          "precedes_missed": 4,
+          "precedes_negative": 4,
+          "precision_proxy": 0.5
+        }
+      ]
+    }
+  },
+  "how_to_read": "`ceiling_if_all_strong_adopted` is an OPTIMISTIC bound on what a cue extension could recover, not a promise: it assumes every candidate becomes a working rule with its proxy precision intact, and it double-counts spans preceded by more than one candidate. Treat it as the gate \u2014 if the ceiling is small the honest answer is a documented limitation, not a rule file.",
+  "left_tokens": 6,
+  "method": "for every gold-positive span the detector missed, the 6 preceding word types are counted, against the same counts over spans the gold does NOT mark. The ratio is a precision proxy: a word that precedes everything buys recall and destroys precision.",
+  "min_occurrences": 3,
+  "question": "Which triggers is the rule set missing, and what would adding them buy?",
+  "restricted_source": true,
+  "why": "on real discharge summaries the detector's recall collapses while its precision holds \u2014 historical 0.111. That is the signature of missing triggers rather than mis-scoped ones. `s/p`, `status post` and `nil` were confirmed to produce no cue at all before this ran."
+}

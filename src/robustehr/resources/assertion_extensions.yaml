@@ -1,0 +1,220 @@
+# Extensions to medspaCy's English ConText rules, and section-level priors.
+#
+# Both are here because the MIMIC gold measured a specific, lopsided failure:
+# the shipped detector's precision holds and its **recall collapses** —
+# `historical` 0.111, `hypothetical` 0.134. It finds 13 of 99 historical spans.
+# That is the signature of missing triggers, not mis-scoped ones.
+#
+# Nothing here is guessed. `missing_cues.json` mined the gold's false negatives
+# for what actually precedes them, and a section analysis showed where they sit.
+#
+# TWO MECHANISMS, MEASURED SEPARATELY
+#
+#   * **cues** — surface forms ConText has no rule for. `s/p`, `status post` and
+#     `nil` produce *no cue at all* and occur 327 times across the 100 sampled
+#     notes.
+#   * **section priors** — 46 of the 88 missed historical spans sit inside an
+#     explicitly historical section (`past_medical_history` 37,
+#     `past_oncologic_history` 7, `past_surgical_history` 2). No inline cue will
+#     ever reach those: the framing is the header, and a sentence-scoped rule
+#     cannot see it.
+#
+# The second is the CTX-C rung the PRD's ablation ladder already named
+# ("+ canonical section information"), now with a number attached: section
+# priors alone would reach 46% of historical spans against the 11% the whole
+# detector currently manages.
+#
+# WHY THIS IS OPT-IN
+#
+# Adding rules to a reused component forfeits the inherited validation — the
+# argument this package applies to QuickUMLS applies to itself. So the
+# extensions are off by default, and every measurement reports the stock and
+# extended arms side by side.
+
+schema_version: '1.0'
+
+# Additional ConText rules, in medspaCy's own schema so they can be handed
+# straight to the engine rather than reimplemented.
+cues:
+  - category: HISTORICAL
+    literal: status post
+    direction: FORWARD
+    pattern:
+      - LOWER: status
+      - LOWER: post
+    why: >-
+      `status post MI` is ordinary discharge-summary usage and produces no cue
+      at all in the stock rule set.
+
+  - category: HISTORICAL
+    literal: s/p
+    direction: FORWARD
+    pattern:
+      - LOWER: s
+      - TEXT: /
+      - LOWER: p
+    why: >-
+      Three tokens, not one: spaCy splits `s/p` into `s`, `/`, `p`, so a
+      single-token pattern silently never fires — which is exactly what the
+      first version of this rule did. medspaCy's own `h/o` rule sidesteps this
+      by being literal-only (phrase-matched), and a token pattern has to spell
+      the split out. Counted with `status post` and `nil`, these forms occur 327
+      times across the 100 sampled notes.
+
+  - category: HISTORICAL
+    literal: prior to admission
+    direction: BIDIRECTIONAL
+    # BIDIRECTIONAL: +0.0122 F1, +1 span for +1 false positive — the smallest change kept,
+    # and only because it clears the adoption floor on both.
+    pattern:
+      - LOWER: {IN: ["prior", "previously", "formerly", "remote"]}
+    why: >-
+      `prior` precedes 5 missed historical spans against 4 negatives in the
+      gold — the weakest candidate kept, and reported with that ratio rather
+      than presented as certain.
+
+  - category: NEGATED_EXISTENCE
+    literal: nil
+    direction: BACKWARD
+    # BACKWARD: +0.0257 F1, and the only adopted change that also REMOVED false positives
+    # (-2). `cultures nil` trails; nothing reads forward from it.
+    pattern:
+      - LOWER: {IN: ["nil", "nkda", "ngtd", "nad", "neg"]}
+    why: >-
+      British and Commonwealth charting uses `nil` where US charting uses `no`,
+      and the corpus contains both. `NKDA`, `NGTD` and `NAD` are the same
+      construction compressed into an abbreviation, and `neg` is the clipped
+      form of `negative` used in flowsheet-style lines. Mined on the development
+      notes: neg x142, nad x19.
+
+  # ---- mined from the cue gold, development notes only ----------------------
+  #
+  # Frequency floor of 6 occurrences, then filtered by judgement. What was
+  # REJECTED matters as much as what was kept:
+  #
+  #   * `-` (202 occurrences) — a bare dash marks a negative exam finding, and
+  #     also every bullet, range and hyphen in the note. Adopting it would trade
+  #     the whole precision column for recall.
+  #   * `normal`, `unremarkable` (14, 12) — these assert a normal finding, they
+  #     do not negate a mentioned one, and treating them as cues would negate
+  #     every normal result in the note.
+  #   * `non-distended`, `non-tender`, `anicteric` (17, 12, 13) — morphologically
+  #     negative single words. `docs/assertion-annotation-guideline.md` rule 2
+  #     labels these AFFIRMED normal findings, so the annotator marked them
+  #     against our own guideline. Kept out, and the disagreement is recorded
+  #     rather than silently resolved in the rules' favour.
+
+  - category: NEGATED_EXISTENCE
+    literal: negative
+    direction: FORWARD
+    pattern:
+      - LOWER: {IN: ["negative", "none"]}
+    why: >-
+      `negative` exists in the stock set only inside `negative for`; bare
+      `Negative` heads a result line constantly. 58 and 41 occurrences missed.
+
+  - category: HYPOTHETICAL
+    literal: prn
+    direction: BIDIRECTIONAL
+    # BIDIRECTIONAL: measured +0.1254 F1 on development, recovering 13 spans for 5 new
+    # false positives — the largest single gain in the sweep. `Tylenol PRN` puts the cue
+    # after its target, so a FORWARD rule can never reach it.
+    pattern:
+      - LOWER: {REGEX: "^(prn|q[0-9]+h|qhs|qod)$"}
+    why: >-
+      **The single largest gap in the corpus: `prn` alone accounts for 258 missed
+      cues on the development notes.** As-needed and interval dosing is
+      conditional administration, which is what HYPOTHETICAL means, and the stock
+      set carries only the spelled-out `as needed`.
+
+  - category: HYPOTHETICAL
+    literal: modal
+    direction: BIDIRECTIONAL
+    # BIDIRECTIONAL: +0.0520 F1, +5 spans for +2 false positives.
+    pattern:
+      - LOWER: {IN: ["should", "would", "could", "consider", "until", "when"]}
+    why: >-
+      Contingent instructions. `may` is deliberately absent: it is far commoner
+      as a hedge than as a permission, and it belongs to POSSIBLE_EXISTENCE
+      below — a token cannot be both without the two categories fighting.
+
+  - category: POSSIBLE_EXISTENCE
+    literal: hedge
+    direction: FORWARD
+    pattern:
+      - LOWER: {IN: ["may", "unclear", "pending", "presumed", "possibly",
+                     "unknown", "unlikely", "appears", "thought", "vs"]}
+    why: >-
+      Mined at 36/23/22/15/13/13/12/11/9/9 occurrences. `vs` is the shorthand
+      differential — `pneumonia vs atelectasis` asserts neither.
+
+  - category: HISTORICAL
+    literal: past reference
+    direction: BIDIRECTIONAL
+    # BIDIRECTIONAL: +0.0462 F1, +4 spans for +4 false positives. `HTN, chronic` trails
+    # its cue as often as `chronic HTN` leads it.
+    pattern:
+      - LOWER: {IN: ["recent", "recently", "previous", "previously", "chronic",
+                     "preadmission", "pmh", "baseline", "longstanding"]}
+    why: >-
+      `recent` alone accounts for 51 missed cues. `chronic` is included as a
+      temporal framing rather than an activity claim — a chronic condition is
+      one the note is placing before this admission. `home` (10) is REJECTED:
+      `home metformin` is usually a current medication, not a past one.
+
+# Scope policy: what stops a cue reaching further.
+#
+# ConText scopes a cue to its sentence, and a "sentence" in a discharge summary
+# is routinely a whole lab block or problem list because the text carries no
+# punctuation to split on. One `no` then reaches every mention below it: 27 of
+# the 50 held-out false positives had the cue and the target in different lines,
+# list items or table rows — separated by layout the algorithm cannot see.
+#
+# The obvious repair is to hand ConText a boundary at every line start. Measured
+# on development, that lifts `negated` F1 by 0.029 and cuts its false positives
+# from 23 to 10 — and costs `historical` 0.139 and `uncertain` 0.165, because a
+# hedge legitimately reaches across a wrapped line where a negation does not.
+# `boundaries=` is global and cannot express that difference. This can.
+#
+# A terminator is an ordinary FORWARD rule in its own category, NOT a TERMINATE
+# rule: TERMINATE cuts every modifier it overlaps, which is the global behaviour
+# again. Naming the category in `terminated_by` cuts only the rules that list it.
+scope:
+  terminators:
+    - literal: line break
+      category: LINE_BREAK
+      direction: FORWARD
+      pattern:
+        - IS_SPACE: true
+          TEXT:
+            REGEX: "\n"
+      why: >-
+        a newline is a spaCy token in a blank English pipeline, so the note's
+        own layout becomes addressable as a cue without a new mechanism.
+
+  # Which categories a line break stops. NOTHING — and that is a measured
+  # rejection, not an omission.
+  #
+  # On the development half only `NEGATED_EXISTENCE` helped: mean F1 over the
+  # three weak dimensions 0.5572 -> 0.5669, `negated` 0.6139 -> 0.6429, the
+  # other two untouched. It looked like exactly the right shape of fix, because
+  # the error analysis says 27 of 50 false positives have the cue and the target
+  # in different lines.
+  #
+  # It did not survive the held-out half. There `negated` F1 fell 0.6076 ->
+  # 0.5333 and kappa 0.5655 -> 0.4962. The reason is visible in the counts: the
+  # cut removed 11 false positives exactly as designed (21 -> 10, precision
+  # 0.533 -> 0.615) and removed 8 true positives with them (24 -> 16). A line
+  # break separates a spurious negation from its target about as often as it
+  # sits inside a real one that wrapped.
+  #
+  # The held-out sweep's own best subset is HISTORICAL + HYPOTHETICAL +
+  # POSSIBLE_EXISTENCE — the opposite of the development winner. Two halves
+  # disagreeing about which categories to cut is what noise looks like, and
+  # adopting either would be fitting the half it was chosen on.
+  #
+  # The mechanism stays because it is validated and cheap, and because the
+  # negative result is worth more than an empty file: structural separation
+  # DESCRIBES these errors well and does not REPAIR them, which is a fact about
+  # the corpus rather than about the implementation.
+  terminated_by: {}

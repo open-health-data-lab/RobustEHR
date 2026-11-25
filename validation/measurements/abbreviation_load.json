@@ -1,0 +1,119 @@
+{
+  "abbreviations": 41571,
+  "ambiguity_rate": 0.4086,
+  "ambiguous": 16985,
+  "ambiguous_snomed": 11645,
+  "bands": "ambiguous = 2+ UMLS concepts as written; highly ambiguous = 5+. The SNOMED count is the same question asked of the space a phenotype is declared in.",
+  "corpus": "golden_notes.csv",
+  "high_ambiguity_rate": 0.1559,
+  "highly_ambiguous": 6481,
+  "most_frequent_ambiguous": [
+    {
+      "occurrences": 4684,
+      "senses": 15,
+      "surface": "po"
+    },
+    {
+      "occurrences": 906,
+      "senses": 3,
+      "surface": "pm"
+    },
+    {
+      "occurrences": 425,
+      "senses": 2,
+      "surface": "hct"
+    },
+    {
+      "occurrences": 398,
+      "senses": 2,
+      "surface": "edema"
+    },
+    {
+      "occurrences": 360,
+      "senses": 3,
+      "surface": "mcv"
+    },
+    {
+      "occurrences": 348,
+      "senses": 2,
+      "surface": "mch"
+    },
+    {
+      "occurrences": 346,
+      "senses": 3,
+      "surface": "hd"
+    },
+    {
+      "occurrences": 344,
+      "senses": 2,
+      "surface": "ed"
+    },
+    {
+      "occurrences": 326,
+      "senses": 4,
+      "surface": "ct"
+    },
+    {
+      "occurrences": 304,
+      "senses": 5,
+      "surface": "ra"
+    },
+    {
+      "occurrences": 266,
+      "senses": 2,
+      "surface": "rx"
+    },
+    {
+      "occurrences": 215,
+      "senses": 5,
+      "surface": "bp"
+    },
+    {
+      "occurrences": 179,
+      "senses": 2,
+      "surface": "ast"
+    },
+    {
+      "occurrences": 178,
+      "senses": 5,
+      "surface": "alt"
+    },
+    {
+      "occurrences": 172,
+      "senses": 2,
+      "surface": "hr"
+    },
+    {
+      "occurrences": 161,
+      "senses": 2,
+      "surface": "vs"
+    },
+    {
+      "occurrences": 161,
+      "senses": 3,
+      "surface": "ptt"
+    },
+    {
+      "occurrences": 159,
+      "senses": 4,
+      "surface": "nad"
+    },
+    {
+      "occurrences": 158,
+      "senses": 3,
+      "surface": "esrd"
+    },
+    {
+      "occurrences": 156,
+      "senses": 6,
+      "surface": "hs"
+    }
+  ],
+  "outcomes": {
+    "ambiguous": 16985,
+    "expandable": 3030,
+    "resolved": 9933,
+    "unreachable": 11623
+  },
+  "what": "abbreviation-shaped tokens and how ambiguous each is, before any operator runs"
+}

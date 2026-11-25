@@ -1,0 +1,2698 @@
+licence: author-written English. No Metathesaurus string appears here, which is why this resource
+  ships in the clear while the concept sets ship as identifiers with hashed surfaces.
+passes:
+- by: llm
+  model: openai/gpt-5.6-luna
+  pass: 1
+  role: propose
+- by: llm
+  model: openai/gpt-5.6-terra
+  pass: 2
+  role: review
+- by: deterministic
+  pass: 3
+  role: recover ungrounded proposals
+  source: phenotype_proposals.yaml terms_unmatched
+- by: hand
+  pass: 4
+  role: curated associated terms
+  source: hand-curated beside the study that needed them; the terms and their exclusions are
+    recorded in this file
+phenotypes:
+  alcohol_use_disorder:
+    anchors:
+    - alcohol use disorder
+    - alcohol use d/o
+    - alcohol use disorder (aud)
+    - aud
+    - alcohol dependence
+    - alcohol dependence syndrome
+    - alcohol dep
+    - alcoholism
+    - chronic alcoholism
+    - alcohol addiction
+    - alcohol abuse
+    - alcohol abuse disorder
+    - alcohol misuse
+    - problem drinking
+    - etoh use disorder
+    - etoh use d/o
+    - etoh dependence
+    - etoh dependence syndrome
+    - etoh dep
+    - etoh abuse
+    - etoh abuse disorder
+    - etohism
+    - alcohol use disorder, mild
+    - alcohol use disorder, moderate
+    - alcohol use disorder, severe
+    - alcohol dependence, in remission
+    - alcohol use disorder, in remission
+    associated:
+    - addiction medicine consultation
+    - alcohol odor on breath
+    - alcohol use disorder in early remission
+    - alcohol use disorder in full remission
+    - alcohol use disorder in partial remission
+    - alcohol use disorder in sustained remission
+    - alcohol withdrawal
+    - alcohol withdrawal monitoring
+    - alcohol withdrawal syndrome
+    - alcohol-related blackout
+    - aspartate aminotransferase to alanine aminotransferase ratio
+    - blood ethanol concentration
+    - brain magnetic resonance imaging
+    - carbohydrate-deficient transferrin level
+    - chronic heavy alcohol use
+    - ciwa
+    - ciwa-ar
+    - clinical institute withdrawal assessment for alcohol
+    - clinical institute withdrawal assessment for alcohol revised
+    - coarse postural tremor
+    - complicated alcohol withdrawal
+    - computed tomography of the abdomen
+    - continued alcohol use despite harm
+    - continued drinking despite interpersonal problems
+    - continued drinking despite occupational problems
+    - continued drinking despite physical harm
+    - continued drinking despite psychological harm
+    - cut down, annoyed, guilty, eye-opener questionnaire
+    - delirium tremens
+    - drinking diary
+    - drinking more than intended
+    - elevated blood alcohol level
+    - etoh withdrawal
+    - failure to fulfill major role obligations
+    - fixed-dose benzodiazepine protocol
+    - flushed facial appearance
+    - folate replacement
+    - harmful use of alcohol
+    - head computed tomography
+    - heavy alcohol use
+    - impaired control over alcohol use
+    - inpatient withdrawal management
+    - intravenous thiamine administration
+    - liver elastography
+    - loss of control over drinking
+    - magnetic resonance imaging of the liver
+    - medically supervised withdrawal
+    - mild alcohol use disorder
+    - moderate alcohol use disorder
+    - neglect of family responsibilities
+    - neglect of social activities
+    - neglect of work activities
+    - odor of alcohol
+    - odor of alcohol on the breath
+    - outpatient withdrawal management
+    - phosphatidylethanol level
+    - phosphatidylethanol testing
+    - physiologic alcohol dependence
+    - prediction of alcohol withdrawal severity scale
+    - recurrent drinking in hazardous situations
+    - serum ammonia
+    - serum ethanol concentration
+    - serum ketone testing
+    - serum magnesium level
+    - serum thiamine
+    - serum thiamine level
+    - severe alcohol use disorder
+    - single-question alcohol screening
+    - structured clinical interview for substance use disorders
+    - symptom-triggered benzodiazepine protocol
+    - t-ace screening tool
+    - thiamine replacement
+    - time spent drinking
+    - time spent obtaining alcohol
+    - time spent recovering from drinking
+    - timeline follow-back interview
+    - tweak alcohol screening test
+    - unsuccessful efforts to cut down
+    - unsuccessful efforts to stop drinking
+    - urine ethyl glucuronide test
+    - urine toxicology screen
+    - withdrawal seizure
+    pass: 2
+    reviewed_n: 27
+    source: llm
+    stop_surfaces: []
+  atrial_fibrillation:
+    anchors:
+    - atrial fibrillation
+    - atrial fib
+    - auricular fibrillation
+    - af
+    - a-fib
+    - a fib
+    - afib
+    - paroxysmal atrial fibrillation
+    - paroxysmal af
+    - persistent atrial fibrillation
+    - persistent af
+    - permanent atrial fibrillation
+    - permanent af
+    - chronic atrial fibrillation
+    - chronic af
+    - longstanding persistent atrial fibrillation
+    - longstanding persistent af
+    - lone atrial fibrillation
+    - lone af
+    - valvular atrial fibrillation
+    - valvular af
+    - nonvalvular atrial fibrillation
+    - nonvalvular af
+    - atrial fibrillation with rapid ventricular response
+    - af with rapid ventricular response
+    - af with rvr
+    associated:
+    - absence of p waves
+    - absent a wave in jugular venous pulse
+    - absent discernible p waves
+    - absent organized atrial activity
+    - absent organized atrial electrical activity
+    - acute atrial fibrillation
+    - alcohol-induced atrial fibrillation
+    - anti-factor xa activity
+    - apical-radial pulse deficit
+    - atrial fibrillation with a rapid ventricular rate
+    - atrial fibrillation with a slow ventricular rate
+    - atrial fibrillation with controlled ventricular response
+    - atrial fibrillation with rapid ventricular rate
+    - atrial fibrillation with ventricular pre-excitation
+    - atrial mechanical dysfunction
+    - atrioventricular node ablation
+    - awareness of heartbeat
+    - beat-to-beat variation in pulse amplitude
+    - bibasilar crackles
+    - biventricular pacemaker implantation
+    - blood ethanol concentration
+    - cardiac computed tomography
+    - cardiac magnetic resonance imaging
+    - coarse fibrillatory baseline
+    - continuous cardiac telemetry
+    - controlled ventricular response
+    - cool extremities
+    - cryoballoon ablation
+    - digoxin concentration
+    - electrocardiographic rhythm strip
+    - electrophysiology study
+    - event monitor
+    - fibrillatory atrial waves
+    - fibrillatory baseline
+    - fibrillatory waves
+    - fine fibrillatory baseline
+    - first-detected atrial fibrillation
+    - first-episode atrial fibrillation
+    - hemodynamic compromise
+    - high-sensitivity cardiac troponin
+    - his-bundle pacing
+    - hybrid maze procedure
+    - idiopathic atrial fibrillation
+    - implantable loop recorder implantation
+    - international normalized ratio measurement
+    - intracardiac electrical mapping
+    - irregular heart sounds
+    - irregular jugular venous pulsations
+    - irregular r-r intervals
+    - irregular ventricular response
+    - irregularly irregular pulse
+    - irregularly irregular rhythm
+    - irregularly irregular ventricular response
+    - lead electrocardiogram
+    - left atrial appendage thrombus
+    - left atrial spontaneous echo contrast
+    - liver function testing
+    - long-standing persistent atrial fibrillation
+    - loss of atrial kick
+    - loss of atrial systole
+    - n-terminal pro-brain natriuretic peptide
+    - pacemaker implantation
+    - permanent pacemaker implantation
+    - postoperative atrial fibrillation
+    - postprocedural atrial fibrillation
+    - pulmonary crackles
+    - pulmonary vein computed tomography angiography
+    - reduced left atrial appendage flow velocity
+    - renal function testing
+    - rheumatic atrial fibrillation
+    - signs of systemic venous congestion
+    - surgical left atrial appendage excision
+    - surgical left atrial appendage ligation
+    - synchronized cardioversion
+    - synchronized electrical cardioversion
+    - systemic arterial embolism
+    - tachycardia-mediated cardiomyopathy
+    - three-dimensional electroanatomic mapping
+    - transseptal puncture
+    - variable intensity of the first heart sound
+    - variable intensity s1
+    - variable r-r intervals
+    - variable ventricular rate
+    - wearable cardiac monitor
+    pass: 2
+    reviewed_n: 26
+    source: llm
+    stop_surfaces: []
+  chest_pain:
+    anchors:
+    - chest pain
+    - chest pains
+    - chest discomfort
+    - chest pressure
+    - chest tightness
+    - chest heaviness
+    - chest ache
+    - pain in chest
+    - pain of chest
+    - painful chest
+    - thoracic pain
+    - thorax pain
+    - pain in thorax
+    - precordial pain
+    - precordialgia
+    - thoracalgia
+    - thoracodynia
+    - retrosternal pain
+    - substernal pain
+    - chest wall pain
+    - chest-wall pain
+    - anterior chest pain
+    - anterior chest-wall pain
+    - central chest pain
+    - atypical chest pain
+    - noncardiac chest pain
+    - non-cardiac chest pain
+    - musculoskeletal chest pain
+    - pleuritic chest pain
+    - exertional chest pain
+    - chest pain at rest
+    - chest pain syndrome
+    - chest pain, unspecified
+    - other chest pain
+    - cp
+    - c/p
+    - c.p.
+    - chest px
+    associated:
+    - anginal chest pain
+    - asymmetric chest expansion
+    - asymmetric peripheral pulses
+    - b-type natriuretic peptide assay
+    - cardiac magnetic resonance imaging
+    - computed tomography aortography
+    - computed tomography coronary angiography
+    - computed tomography pulmonary angiography
+    - continuous telemetry monitoring
+    - cool clammy skin
+    - coronary artery stenting
+    - coronary calcium scoring
+    - coronary computed tomography angiography
+    - costochondral tenderness
+    - creatine kinase mb level
+    - creatine kinase myocardial band assay
+    - creatine kinase-mb fraction
+    - dullness to percussion
+    - dynamic change in cardiac troponin
+    - dynamic electrocardiographic changes
+    - elevated cardiac troponin
+    - event recorder monitoring
+    - exercise treadmill testing
+    - fractional flow reserve measurement
+    - high-sensitivity cardiac troponin assay
+    - high-sensitivity cardiac troponin i
+    - high-sensitivity cardiac troponin t
+    - high-sensitivity troponin
+    - intercostal chest pain
+    - invasive coronary angiography
+    - lead electrocardiogram
+    - lipase assay
+    - low-voltage qrs complexes
+    - lower-extremity venous duplex ultrasonography
+    - muffled heart sounds
+    - myocardial perfusion scintigraphy
+    - n-terminal pro-brain natriuretic peptide
+    - new cardiac murmur
+    - new heart murmur
+    - new left bundle branch block
+    - pain reproducible with movement
+    - paradoxical chest wall movement
+    - partial pressure of carbon dioxide
+    - pathologic q waves
+    - pharmacologic stress testing
+    - point tenderness
+    - point-of-care cardiac ultrasonography
+    - positive carnett sign
+    - positron emission tomography myocardial perfusion imaging
+    - precordial discomfort
+    - pregnancy-associated beta-human chorionic gonadotropin
+    - radiation to the back
+    - radiation to the jaw
+    - radiation to the left arm
+    - radiation to the neck
+    - radiation to the right arm
+    - regional wall-motion abnormality
+    - reproducible chest wall tenderness
+    - reproducible tenderness
+    - right heart strain pattern
+    - serial cardiac troponin measurements
+    - serial electrocardiograms
+    - serum troponin level
+    - typical chest pain
+    - unilateral absent breath sounds
+    - unilateral diminished breath sounds
+    - urine toxicology screening
+    pass: 2
+    reviewed_n: 38
+    source: llm
+    stop_surfaces: []
+  chronic_kidney_disease:
+    anchors:
+    - chronic kidney disease
+    - ckd
+    - chronic renal disease
+    - chronic renal insufficiency
+    - chronic kidney insufficiency
+    - chronic renal failure
+    - chronic kidney failure
+    - ckf
+    - chronic kidney disease stage 1
+    - ckd stage 1
+    - chronic kidney disease stage 2
+    - ckd stage 2
+    - chronic kidney disease stage 3
+    - ckd stage 3
+    - chronic kidney disease stage 3a
+    - ckd stage 3a
+    - chronic kidney disease stage 3b
+    - ckd stage 3b
+    - chronic kidney disease stage 4
+    - ckd stage 4
+    - chronic kidney disease stage 5
+    - ckd stage 5
+    - end-stage renal disease
+    - end stage renal disease
+    - esrd
+    - end-stage kidney disease
+    - end stage kidney disease
+    - eskd
+    - diabetic kidney disease
+    - diabetic nephropathy
+    - hypertensive chronic kidney disease
+    - hypertensive kidney disease
+    associated:
+    - advanced chronic kidney disease
+    - arteriovenous graft placement
+    - bilaterally decreased kidney size
+    - bone mineral density scan
+    - broad casts on urinalysis
+    - chronic kidney disease, unspecified stage
+    - chronic kidney dysfunction
+    - chronic kidney impairment
+    - chronic renal dysfunction
+    - computed tomography of the kidneys
+    - conservative kidney management
+    - decreased erythropoietin production
+    - decreased estimated glomerular filtration rate
+    - dialysis adequacy testing
+    - elevated blood urea nitrogen
+    - elevated parathyroid hormone level
+    - genetic testing for inherited kidney disease
+    - hypertensive renal disease with chronic kidney disease
+    - impaired urinary concentrating ability
+    - increased renal cortical echogenicity
+    - kidney biopsy histopathology
+    - low serum bicarbonate
+    - magnetic resonance imaging of the kidneys
+    - malnutrition-inflammation complex syndrome
+    - often asymptomatic
+    - peritoneal dialysis catheter insertion
+    - peritoneal dialysis catheter placement
+    - protein-energy wasting
+    - pulmonary crackles
+    - reduced estimated glomerular filtration rate
+    - renal artery imaging
+    - renal cortical thinning
+    - serum 25-hydroxyvitamin d
+    - serum cystatin c
+    - serum electrolyte panel
+    - serum free light chain assay
+    - serum free light chains
+    - tunneled dialysis catheter placement
+    - tunneled hemodialysis catheter placement
+    - twenty four hour urine protein
+    - twenty-four-hour creatinine clearance
+    - twenty-four-hour urine creatinine
+    - twenty-four-hour urine protein
+    - urine albumin to creatinine ratio
+    - urine albumin-to-creatinine ratio
+    - urine protein to creatinine ratio
+    - urine protein-to-creatinine ratio
+    - urine red blood cells
+    - waxy casts on urinalysis
+    - weight gain from fluid retention
+    pass: 2
+    reviewed_n: 35
+    source: llm
+    stop_surfaces: []
+  clostridioides_difficile:
+    anchors:
+    - clostridioides difficile infection
+    - clostridium difficile infection
+    - c. difficile infection
+    - c difficile infection
+    - c. diff infection
+    - c diff infection
+    - cdiff infection
+    - cdi
+    - clostridioides difficile
+    - clostridium difficile
+    - c. difficile
+    - c difficile
+    - c. diff
+    - c diff
+    - cdiff
+    - clostridioides difficile colitis
+    - clostridium difficile colitis
+    - c. difficile colitis
+    - c difficile colitis
+    - c. diff colitis
+    - c diff colitis
+    - cdiff colitis
+    - clostridioides difficile enterocolitis
+    - clostridium difficile enterocolitis
+    - c. difficile enterocolitis
+    - c difficile enterocolitis
+    - c. diff enterocolitis
+    - c diff enterocolitis
+    - clostridioides difficile-associated disease
+    - clostridium difficile-associated disease
+    - c. difficile-associated disease
+    - c difficile-associated disease
+    - c. diff-associated disease
+    - c diff-associated disease
+    - cdad
+    - clostridioides difficile-associated diarrhea
+    - clostridium difficile-associated diarrhea
+    - c. difficile-associated diarrhea
+    - c difficile-associated diarrhea
+    - c. diff-associated diarrhea
+    - c diff-associated diarrhea
+    - clostridioides difficile diarrhea
+    - clostridium difficile diarrhea
+    - c. difficile diarrhea
+    - c difficile diarrhea
+    - c. diff diarrhea
+    - c diff diarrhea
+    - enterocolitis due to clostridioides difficile
+    - enterocolitis due to clostridium difficile
+    - enterocolitis due to c. difficile
+    - enterocolitis due to c difficile
+    - recurrent clostridioides difficile infection
+    - recurrent clostridium difficile infection
+    - recurrent c. difficile infection
+    - recurrent c difficile infection
+    - recurrent c. diff infection
+    - recurrent c diff infection
+    - recurrent cdi
+    - fulminant clostridioides difficile infection
+    - fulminant clostridium difficile infection
+    - fulminant c. difficile infection
+    - fulminant c difficile infection
+    - fulminant c. diff infection
+    - fulminant c diff infection
+    associated:
+    - accordion sign
+    - acute renal dysfunction
+    - antibiotic-associated colitis due to clostridioides difficile
+    - antibiotic-associated colitis due to clostridium difficile
+    - antibiotic-associated pseudomembranous colitis
+    - bezlotoxumab infusion
+    - capsule-delivered fecal microbiota transplantation
+    - clostridioides difficile nucleic acid
+    - clostridioides difficile nucleic acid amplification test
+    - clostridioides difficile polymerase chain reaction assay
+    - clostridioides difficile pseudomembranous colitis
+    - clostridioides difficile stool culture
+    - clostridioides difficile toxin a and b assay
+    - clostridioides difficile toxin enzyme immunoassay
+    - clostridioides difficile-associated colitis
+    - clostridium difficile pseudomembranous colitis
+    - clostridium difficile-associated colitis
+    - colonic dilation
+    - colonic wall thickening
+    - colonoscopic fecal microbiota transplantation
+    - computed tomography of the abdomen and pelvis
+    - diffuse colonic inflammation
+    - diverting loop ileostomy
+    - diverting loop ileostomy with colonic lavage
+    - electrolyte derangement
+    - fecal calprotectin testing
+    - fecal leukocyte testing
+    - fecal microbiota product administration
+    - free intraperitoneal air
+    - frequent loose stools
+    - fulminant clostridioides difficile colitis
+    - fulminant clostridium difficile colitis
+    - fulminant colitis
+    - gastroenterology consultation
+    - glutamate dehydrogenase antigen
+    - glutamate dehydrogenase antigen assay
+    - glutamate dehydrogenase antigen detected in stool
+    - histopathologic examination of colonic biopsy
+    - infectious colitis due to clostridioides difficile
+    - infectious colitis due to clostridium difficile
+    - infectious diseases consultation
+    - loss of colonic haustra
+    - lower gastrointestinal endoscopy
+    - malodorous stool
+    - marked leukocytosis
+    - multiplex gastrointestinal pathogen panel
+    - multistep stool testing algorithm
+    - pericolic fat stranding
+    - pericolonic fat stranding
+    - peritoneal signs
+    - positive nucleic acid amplification test
+    - positive stool toxin assay
+    - positive toxigenic stool culture
+    - profuse diarrhea
+    - profuse watery stool
+    - pseudomembranes on colonoscopy
+    - rectal fecal microbiota transplantation
+    - recurrent clostridioides difficile colitis
+    - recurrent clostridium difficile colitis
+    - serial abdominal imaging
+    - serial laboratory monitoring
+    - serum anion gap
+    - severe clostridioides difficile infection
+    - severe clostridium difficile infection
+    - stool cytotoxicity assay
+    - stool frequency monitoring
+    - stool glutamate dehydrogenase assay
+    - stool nucleic acid amplification test
+    - stool toxin assay
+    - stool toxin cytotoxicity assay
+    - thumbprinting
+    - toxigenic clostridioides difficile culture
+    - toxigenic stool culture
+    - tympanitic abdomen
+    - unexplained leukocytosis
+    - vancomycin retention enema
+    - yellow-white colonic plaques
+    - yellowish mucosal plaques
+    pass: 2
+    reviewed_n: 66
+    source: llm
+    stop_surfaces: []
+  deep_vein_thrombosis:
+    anchors:
+    - deep vein thrombosis
+    - deep venous thrombosis
+    - deep vein thrombus
+    - deep venous thrombus
+    - deep vein clot
+    - deep venous clot
+    - deep thrombophlebitis
+    - deep vein thrombophlebitis
+    - deep venous thrombophlebitis
+    - deep phlebothrombosis
+    - phlebothrombosis
+    - dvt
+    - d.v.t.
+    - acute deep vein thrombosis
+    - acute deep venous thrombosis
+    - acute dvt
+    - chronic deep vein thrombosis
+    - chronic deep venous thrombosis
+    - chronic dvt
+    - recurrent deep vein thrombosis
+    - recurrent deep venous thrombosis
+    - recurrent dvt
+    - proximal deep vein thrombosis
+    - proximal deep venous thrombosis
+    - proximal dvt
+    - distal deep vein thrombosis
+    - distal deep venous thrombosis
+    - distal dvt
+    - lower extremity deep vein thrombosis
+    - lower extremity deep venous thrombosis
+    - lower extremity dvt
+    - lower limb deep vein thrombosis
+    - lower limb deep venous thrombosis
+    - lower limb dvt
+    - upper extremity deep vein thrombosis
+    - upper extremity deep venous thrombosis
+    - upper extremity dvt
+    - upper limb deep vein thrombosis
+    - upper limb deep venous thrombosis
+    - upper limb dvt
+    - calf vein thrombosis
+    - calf dvt
+    - iliofemoral dvt
+    - femoropopliteal dvt
+    associated:
+    - absent color doppler flow
+    - absent venous compressibility
+    - absent venous flow
+    - anti-cardiolipin antibody assay
+    - anti-factor xa activity
+    - anticardiolipin antibody testing
+    - anticardiolipin immunoglobulin g antibody
+    - anticardiolipin immunoglobulin m antibody
+    - antiphospholipid antibody testing
+    - antithrombin activity
+    - antithrombin activity assay
+    - antithrombin iii activity
+    - antithrombin iii activity assay
+    - apixaban concentration
+    - asymmetric calf circumference
+    - asymmetric calf swelling
+    - asymmetric leg edema
+    - axillary-subclavian vein thrombosis
+    - beta-2 glycoprotein i antibody testing
+    - beta-2 glycoprotein i immunoglobulin g antibody
+    - beta-2 glycoprotein i immunoglobulin m antibody
+    - blood type and antibody screen
+    - brachial vein thrombosis
+    - calf deep vein thrombosis
+    - calf muscle vein thrombosis
+    - calf tightness
+    - chronic leg pain
+    - chronic leg swelling
+    - chronic venous reflux
+    - collateral superficial veins
+    - compression stocking therapy
+    - compression ultrasonography
+    - compression ultrasonography of lower extremity
+    - computed tomography venography
+    - contrast venography
+    - cool extremity
+    - coolness of the affected limb
+    - cyanosis of the affected limb
+    - cyanotic extremity
+    - deep vein thrombosis of the arm
+    - deep vein thrombosis of the leg
+    - dilated superficial veins
+    - direct oral anticoagulant therapy
+    - duplex venous ultrasonography
+    - echogenic intraluminal material
+    - erythema of the affected limb
+    - factor ix activity
+    - factor v leiden mutation testing
+    - factor viii activity
+    - factor xi activity
+    - femoral vein thrombosis
+    - femoropopliteal deep vein thrombosis
+    - free-floating thrombus
+    - gastrocnemius vein thrombosis
+    - graduated compression therapy
+    - hepatic function testing
+    - hypercoagulability panel
+    - hyperpigmentation of the lower extremity
+    - iliac vein angioplasty
+    - iliac vein stent placement
+    - iliac vein stenting
+    - ilio-caval thrombosis
+    - impaired venous compressibility
+    - increased calf circumference
+    - increased venous diameter
+    - inferior vena cava filter placement
+    - inferior vena cava filter retrieval
+    - intraluminal venous thrombus
+    - lack of venous augmentation
+    - leg fullness
+    - leg heaviness
+    - leg tightness
+    - localized calf erythema
+    - localized lower extremity warmth
+    - localized warmth
+    - loss of flow augmentation
+    - loss of respiratory phasicity
+    - low-molecular-weight heparin concentration
+    - lower extremity venous duplex ultrasound
+    - lower extremity venous engorgement
+    - lower extremity venous ultrasound
+    - lower extremity warmth
+    - lower-extremity deep vein thrombosis
+    - lupus anticoagulant testing
+    - noncompressible deep vein
+    - noncompressible vein
+    - pain aggravated by standing
+    - pain along the deep venous distribution
+    - pain on passive dorsiflexion of the foot
+    - pain with passive ankle dorsiflexion
+    - pale extremity
+    - pallor of the affected limb
+    - percutaneous mechanical thrombectomy
+    - pharmacomechanical thrombolysis
+    - pitting edema of the lower extremity
+    - platelet factor 4 antibody
+    - popliteal fossa tenderness
+    - positive homan sign
+    - positive lowenberg sign
+    - post-thrombotic skin changes
+    - prominent collateral veins
+    - prominent superficial collateral veins
+    - protein c activity
+    - protein c activity assay
+    - protein s activity
+    - protein s activity assay
+    - prothrombin g20210a mutation testing
+    - prothrombin gene mutation testing
+    - proximal compression ultrasound
+    - proximal extension of thrombus
+    - reduced venous flow
+    - renal function testing
+    - residual venous obstruction
+    - rivaroxaban concentration
+    - serial venous ultrasonography
+    - soleal vein thrombosis
+    - superficial venous distension
+    - surgical venous thrombectomy
+    - tenderness along the deep veins
+    - tenderness along the deep venous system
+    - tenderness in the femoral triangle
+    - tenderness in the popliteal fossa
+    - tenderness on calf palpation
+    - thrombophilia testing
+    - unfractionated heparin concentration
+    - unfractionated heparin therapy
+    - unilateral calf edema
+    - unilateral lower extremity edema
+    - unilateral lower extremity erythema
+    - unilateral lower extremity swelling
+    - unilateral lower-extremity edema
+    - unilateral upper-extremity edema
+    - upper-extremity deep venous thrombosis
+    - upper-extremity venous distention
+    - upper-limb deep vein thrombosis
+    - venous distension
+    - venous gangrene
+    - venous luminal distension
+    - venous stasis dermatitis
+    - vitamin k antagonist therapy
+    - warmth of the affected limb
+    - wells score for venous thromboembolism
+    - whole-leg swelling
+    - whole-leg venous ultrasound
+    pass: 2
+    reviewed_n: 44
+    source: llm
+    stop_surfaces: []
+  dementia:
+    anchors:
+    - dementia
+    - dementia syndrome
+    - dementing illness
+    - major neurocognitive disorder
+    - major cognitive disorder
+    - major ncd
+    - unspecified dementia
+    - dementia nos
+    - dementia n.o.s.
+    - dementia, unspecified
+    - senile dementia
+    - presenile dementia
+    - senility
+    - chronic organic brain syndrome
+    - primary degenerative dementia
+    - degenerative dementia
+    - cortical dementia
+    - subcortical dementia
+    - progressive dementia
+    - early-onset dementia
+    - young-onset dementia
+    - late-onset dementia
+    - mixed dementia
+    - dementia of the alzheimer type
+    - dementia of alzheimer type
+    - alzheimer-type dementia
+    - alzheimer dementia
+    - alzheimer's dementia
+    - ad dementia
+    - sdat
+    - s.d.a.t.
+    - pdat
+    - p.d.a.t.
+    - vascular dementia
+    - multi-infarct dementia
+    - multiinfarct dementia
+    - m.i.d.
+    - poststroke dementia
+    - post-stroke dementia
+    - arteriosclerotic dementia
+    - binswanger disease
+    - lewy body dementia
+    - dementia with lewy bodies
+    - lbd
+    - l.b.d.
+    - frontotemporal dementia
+    - fronto-temporal dementia
+    - ftd
+    - f.t.d.
+    - behavioral variant frontotemporal dementia
+    - bvftd
+    - bv-ftd
+    - pick disease
+    - pick's disease
+    - parkinson disease dementia
+    - parkinson's dementia
+    - parkinson dementia
+    - alcoholic dementia
+    - alcohol-related dementia
+    - alcohol-induced dementia
+    - etoh-related dementia
+    - etoh dementia
+    - hiv-associated dementia
+    - hiv dementia
+    - h.a.d.
+    - aids dementia complex
+    associated:
+    - addenbrooke's cognitive examination
+    - alzheimer disease dementia
+    - amnestic dementia
+    - amyloid positron emission tomography
+    - amyloid precursor protein gene testing
+    - apolipoprotein e genotype
+    - apolipoprotein e genotyping
+    - behavioral and psychological symptom assessment
+    - behavioral disinhibition
+    - behavioral disturbance
+    - blessed dementia scale
+    - c9orf72 repeat expansion testing
+    - cerebral perfusion single-photon emission computed tomography
+    - cerebrospinal fluid 14-3-3 protein
+    - cerebrospinal fluid 14-3-3 protein assay
+    - cerebrospinal fluid alpha-synuclein
+    - cerebrospinal fluid amyloid beta 42
+    - cerebrospinal fluid amyloid beta 42 to amyloid beta 40 ratio
+    - cerebrospinal fluid amyloid beta analysis
+    - cerebrospinal fluid amyloid beta level
+    - cerebrospinal fluid autoimmune encephalitis panel
+    - cerebrospinal fluid neurofilament light chain
+    - cerebrospinal fluid phosphorylated tau
+    - cerebrospinal fluid phosphorylated tau 181
+    - cerebrospinal fluid phosphorylated tau 217
+    - cerebrospinal fluid phosphorylated tau analysis
+    - cerebrospinal fluid real-time quaking-induced conversion assay
+    - cerebrospinal fluid tau protein level
+    - cerebrospinal fluid total tau
+    - cerebrospinal fluid total tau analysis
+    - cognitive fluctuation
+    - cognitive screening
+    - computed tomography of the head
+    - contactin-associated protein-like 2 antibody
+    - decision-making capacity assessment
+    - dementia due to another medical condition
+    - dementia due to traumatic brain injury
+    - dependence for activities of daily living
+    - difficulty managing finances
+    - difficulty managing medications
+    - difficulty recognizing familiar objects
+    - difficulty recognizing familiar people
+    - digit span test
+    - dopamine transporter scan
+    - dopamine transporter single-photon emission computed tomography
+    - early-onset alzheimer's dementia
+    - episodic memory impairment
+    - fluorodeoxyglucose positron emission tomography of the brain
+    - frontotemporal neurocognitive disorder
+    - genetic testing for inherited neurodegenerative disease
+    - glabellar tap reflex
+    - grasp reflex present
+    - hiv-associated major neurocognitive disorder
+    - hopkins verbal learning test
+    - human immunodeficiency virus testing
+    - human immunodeficiency virus type 1 and type 2 antigen and antibody
+    - huntington disease dementia
+    - huntington disease genetic testing
+    - impaired abstract reasoning
+    - impaired clock drawing
+    - impaired comprehension
+    - impaired delayed recall
+    - impaired episodic memory
+    - impaired instrumental activities of daily living
+    - impaired language comprehension
+    - impaired problem-solving
+    - impaired recent memory
+    - impaired remote memory
+    - impaired repetition
+    - impaired semantic memory
+    - impaired serial sevens
+    - impaired visuospatial processing
+    - impaired working memory
+    - magnetic resonance angiography of the brain
+    - magnetic resonance imaging of the brain
+    - major neurocognitive disorder due to alzheimer disease
+    - major neurocognitive disorder due to alzheimer's disease
+    - major neurocognitive disorder due to another medical condition
+    - major neurocognitive disorder due to frontotemporal lobar degeneration
+    - major neurocognitive disorder due to hiv infection
+    - major neurocognitive disorder due to huntington disease
+    - major neurocognitive disorder due to parkinson disease
+    - major neurocognitive disorder due to traumatic brain injury
+    - major neurocognitive disorder with behavioral disturbance
+    - major neurocognitive disorder with lewy bodies
+    - major neurocognitive disorder without behavioral disturbance
+    - mental status examination
+    - neurodegenerative dementia
+    - neuropsychological evaluation
+    - oligoclonal band testing
+    - person disorientation
+    - pick disease dementia
+    - posttraumatic dementia
+    - presenilin gene testing
+    - prospective memory impairment
+    - psychomotor slowing
+    - rapid plasma reagin
+    - reduplicative paramnesia
+    - semantic paraphasias
+    - serum thiamine measurement
+    - sleep-wake cycle reversal
+    - slowed information processing
+    - substance-induced major neurocognitive disorder
+    - swallowing assessment
+    - tau positron emission tomography
+    - thyroid stimulating hormone test
+    - treponemal antibody
+    - unspecified major neurocognitive disorder
+    - verbal fluency test
+    - visuospatial impairment
+    - working memory impairment
+    pass: 2
+    reviewed_n: 83
+    source: llm
+    stop_surfaces: []
+  depression:
+    anchors:
+    - depression
+    - clinical depression
+    - depressive disorder
+    - depressive illness
+    - major depression
+    - major depressive disorder
+    - major depressive illness
+    - major depressive episode
+    - major depressive affective disorder
+    - depressive episode
+    - unipolar depression
+    - unipolar disorder
+    - unipolar affective disorder
+    - monopolar depression
+    - recurrent depression
+    - recurrent depressive disorder
+    - single-episode depression
+    - persistent depressive disorder
+    - dysthymic disorder
+    - dysthymia
+    - unspecified depression
+    - unspecified depressive disorder
+    - depressive disorder nos
+    - depression nos
+    - other specified depressive disorder
+    - melancholia
+    - melancholic depression
+    - involutional melancholia
+    - neurotic depression
+    - depressive neurosis
+    - reactive depression
+    - endogenous depression
+    - atypical depression
+    - psychotic depression
+    - masked depression
+    - treatment-resistant depression
+    - postpartum depression
+    - postnatal depression
+    - antenatal depression
+    - seasonal depression
+    - geriatric depression
+    - mdd
+    - m.d.d.
+    - mde
+    - m.d.e.
+    - trd
+    associated:
+    - amitriptyline level
+    - anergia
+    - anxious distress
+    - atypical depression diagnostic scale
+    - behavioral disengagement
+    - bipolar depressive episode
+    - bipolar spectrum screening
+    - brain magnetic resonance imaging
+    - catatonic depression
+    - catatonic features
+    - children’s depression inventory
+    - delayed verbal responses
+    - depression due to another medical condition
+    - depression during pregnancy
+    - depressive disorder, unspecified
+    - desipramine level
+    - diurnal mood variation
+    - double depression
+    - dysphoric affect
+    - feelings of helplessness
+    - folate level
+    - free thyroxine test
+    - functional decline
+    - guilt delusions
+    - head computed tomography
+    - human immunodeficiency virus testing
+    - impaired activities of daily living
+    - increased response latency
+    - indecisive presentation
+    - interpersonal therapy
+    - interpersonal withdrawal
+    - inventory of depressive symptomatology
+    - ketamine infusion therapy
+    - lyme disease antibody
+    - major depressive disorder with atypical features
+    - major depressive disorder with catatonic features
+    - medication-induced depressive disorder
+    - melancholic features
+    - mental status examination
+    - mood disorder due to a medical condition, depressive type
+    - mood reactivity
+    - mood-congruent psychotic features
+    - nortriptyline level
+    - occupational impairment
+    - organic affective disorder, depressive type
+    - organic mood disorder, depressed type
+    - paucity of speech
+    - peripartum depression
+    - recurrent self-harm
+    - reduced self-care
+    - reduced speech output
+    - reduced spontaneity
+    - seasonal depressive disorder
+    - self-harm risk assessment
+    - single depressive episode
+    - single episode major depressive disorder
+    - slumped posture
+    - somatic preoccupation
+    - substance use assessment
+    - substance-induced depressive disorder
+    - subthreshold depression
+    - syphilis antibody
+    - tearful affect
+    - thoughts of death
+    - thyroid-stimulating hormone test
+    - valproic acid level
+    - vitamin d level
+    pass: 2
+    reviewed_n: 46
+    source: llm
+    stop_surfaces: []
+  diabetes_mellitus:
+    anchors:
+    - diabetes mellitus
+    - diabetes
+    - sugar diabetes
+    - type 1 diabetes mellitus
+    - type 1 diabetes
+    - type 1 dm
+    - type i diabetes mellitus
+    - type i diabetes
+    - type i dm
+    - diabetes mellitus type 1
+    - diabetes type 1
+    - t1dm
+    - t1 dm
+    - t1-dm
+    - t1d
+    - dm i
+    - dm-i
+    - insulin-dependent diabetes mellitus
+    - insulin dependent diabetes mellitus
+    - insulin-dependent diabetes
+    - insulin dependent diabetes
+    - iddm
+    - i.d.d.m.
+    - juvenile diabetes
+    - juvenile-onset diabetes
+    - juvenile-onset diabetes mellitus
+    - brittle diabetes
+    - type 2 diabetes mellitus
+    - type 2 diabetes
+    - type 2 dm
+    - type ii diabetes mellitus
+    - type ii diabetes
+    - type ii dm
+    - diabetes mellitus type 2
+    - diabetes type 2
+    - t2dm
+    - t2 dm
+    - t2-dm
+    - t2d
+    - dm2
+    - dm 2
+    - dm-2
+    - dm ii
+    - dm-ii
+    - non-insulin-dependent diabetes mellitus
+    - non-insulin dependent diabetes mellitus
+    - non-insulin-dependent diabetes
+    - non-insulin dependent diabetes
+    - niddm
+    - n.i.d.d.m.
+    - adult-onset diabetes
+    - adult-onset diabetes mellitus
+    - gestational diabetes mellitus
+    - gestational diabetes
+    - gdm
+    - g.d.m.
+    - maturity-onset diabetes of the young
+    - maturity onset diabetes of the young
+    - mody
+    - monogenic diabetes
+    - neonatal diabetes mellitus
+    - neonatal diabetes
+    - ndm
+    - latent autoimmune diabetes in adults
+    - lada
+    - type 1.5 diabetes
+    - type 1.5 diabetes mellitus
+    - secondary diabetes mellitus
+    - secondary diabetes
+    - diabetes due to an underlying condition
+    - drug-induced diabetes mellitus
+    - drug-induced diabetes
+    - steroid-induced diabetes mellitus
+    - steroid-induced diabetes
+    - pancreatogenic diabetes mellitus
+    - pancreatogenic diabetes
+    - pancreatic diabetes
+    - type 3c diabetes mellitus
+    - type 3c diabetes
+    - cystic fibrosis-related diabetes mellitus
+    - cystic fibrosis-related diabetes
+    - cf-related diabetes
+    - postpancreatectomy diabetes mellitus
+    - postpancreatectomy diabetes
+    - post-transplantation diabetes mellitus
+    - post-transplantation diabetes
+    - ptdm
+    - malnutrition-related diabetes mellitus
+    - malnutrition-related diabetes
+    - mr dm
+    - mr-dm
+    associated:
+    - ',5-anhydroglucitol'
+    - ankle-brachial index measurement
+    - blood ketones
+    - burning foot pain
+    - capillary blood glucose
+    - capillary blood glucose testing
+    - charcot foot deformity
+    - continuous subcutaneous insulin infusion
+    - controlled diabetes mellitus
+    - decreased monofilament sensation
+    - diabetes mellitus due to an underlying condition
+    - diabetes mellitus due to endocrinopathy
+    - diabetes mellitus due to exocrine pancreatic disease
+    - dilated retinal examination
+    - diminished pedal pulses
+    - elevated random plasma glucose
+    - elevated serum osmolality
+    - fasting insulin measurement
+    - fasting plasma glucose test
+    - fasting serum insulin
+    - fruity breath odor
+    - glove and stocking sensory loss
+    - glucagon administration
+    - glutamic acid decarboxylase 65 antibody
+    - glutamic acid decarboxylase 65 antibody testing
+    - glutamic acid decarboxylase antibodies
+    - glutamic acid decarboxylase antibody test
+    - glycated albumin test
+    - glycemic lability
+    - hybrid closed-loop insulin delivery
+    - insulin autoantibody testing
+    - insulin pump placement
+    - intravenous dextrose administration
+    - intravenous insulin infusion
+    - intravitreal anti-vascular endothelial growth factor injection
+    - islet antigen-2 antibody
+    - islet antigen-2 antibody testing
+    - islet cell autoantibodies
+    - labile glycemic control
+    - lipid profile
+    - liver function testing
+    - loss of protective sensation
+    - lower-extremity arterial doppler ultrasonography
+    - monofilament foot examination
+    - monofilament testing
+    - monogenic diabetes mellitus
+    - non-healing ulcer
+    - pancreatic islet cell transplantation
+    - peripheral numbness
+    - peripheral paresthesia
+    - postprandial glucose
+    - random plasma glucose test
+    - reduced ankle reflexes
+    - reduced estimated glomerular filtration rate
+    - retinal optical coherence tomography
+    - serum beta-hydroxybutyrate measurement
+    - serum c-peptide
+    - serum c-peptide level
+    - serum osmolality measurement
+    - severely increased albuminuria
+    - slowly progressive type 1 diabetes mellitus
+    - stocking-glove sensory loss
+    - subcutaneous insulin injection
+    - twenty-four-hour urine protein measurement
+    - two-hour plasma glucose test
+    - two-hour postprandial glucose
+    - tyrosine phosphatase autoantibodies
+    - uncontrolled diabetes mellitus
+    - urine albumin to creatinine ratio
+    - urine albumin-to-creatinine ratio
+    - urine glucose testing
+    - urine ketone testing
+    - urine microalbumin test
+    - urine protein-to-creatinine ratio
+    - venous blood gas analysis
+    - vibration perception testing
+    - zinc transporter 8 antibody testing
+    - zinc transporter 8 autoantibodies
+    pass: 2
+    reviewed_n: 96
+    source: llm
+    stop_surfaces: []
+  dyspnea:
+    anchors:
+    - dyspnea
+    - dyspnoea
+    - shortness of breath
+    - sob
+    - s.o.b.
+    - breathlessness
+    - difficulty breathing
+    - breathing difficulty
+    - labored breathing
+    - laborious breathing
+    - air hunger
+    - exertional dyspnea
+    - dyspnea on exertion
+    - doe
+    - d.o.e.
+    - shortness of breath on exertion
+    - exertional shortness of breath
+    associated:
+    - abdominal paradox
+    - airway clearance therapy
+    - asymmetric chest expansion
+    - bronchodilator responsiveness testing
+    - cardiac magnetic resonance imaging
+    - chest ultrasonography
+    - cheyne-stokes respirations
+    - coarse crackles
+    - computed tomography pulmonary angiogram
+    - computed tomography pulmonary angiography
+    - continuous oxygen saturation monitoring
+    - diffusing capacity for carbon monoxide
+    - diminished chest excursion
+    - end-tidal carbon dioxide monitoring
+    - exercise laryngoscopy
+    - exertional intolerance
+    - fine inspiratory crackles
+    - flexible laryngoscopy
+    - full pulmonary function testing
+    - gasping respirations
+    - high-flow nasal cannula
+    - high-resolution computed tomography of the chest
+    - impending respiratory failure
+    - inability to speak in full sentences
+    - influenza a rna
+    - influenza b rna
+    - maximal inspiratory pressure measurement
+    - methacholine challenge testing
+    - nebulized bronchodilator treatment
+    - noninvasive positive pressure ventilation
+    - orthopneic position
+    - overnight oximetry
+    - paradoxical abdominal movement
+    - partial pressure of arterial carbon dioxide
+    - partial pressure of arterial oxygen
+    - partial pressure of carbon dioxide
+    - perioral cyanosis
+    - pleural ultrasonography
+    - point-of-care lung ultrasonography
+    - poor air entry
+    - prolonged expiratory phase
+    - reduced exercise tolerance
+    - respiratory muscle strength testing
+    - resting dyspnea
+    - silent chest
+    - speaking in short phrases
+    - speaking in single words
+    - sternocleidomastoid muscle use
+    - subcostal retractions
+    - supplemental oxygen therapy
+    - supraclavicular retractions
+    - suprasternal retractions
+    - thoracoabdominal asynchrony
+    - total carbon dioxide
+    - tripod positioning
+    - venous blood gas analysis
+    pass: 2
+    reviewed_n: 27
+    source: llm
+    stop_surfaces: []
+  fever:
+    anchors:
+    - fever
+    - pyrexia
+    - febrile illness
+    - acute febrile illness
+    - febrile syndrome
+    - febrile
+    - elevated temperature
+    - elevated temp
+    - fever unspecified
+    - unspecified fever
+    - fever nos
+    - fever n.o.s.
+    - pyrexia nos
+    - pyrexia n.o.s.
+    - fever of unknown origin
+    - pyrexia of unknown origin
+    - fever of unknown etiology
+    - fever of undetermined origin
+    - fuo
+    - f.u.o.
+    - puo
+    - p.u.o.
+    - hyperpyrexia
+    - neutropenic fever
+    - febrile neutropenia
+    - tumor fever
+    - tumour fever
+    - drug fever
+    - postoperative fever
+    - post-operative fever
+    - central fever
+    - relapsing fever
+    - remittent fever
+    - intermittent fever
+    - continuous fever
+    - saddleback fever
+    - pel-ebstein fever
+    - viral fever
+    - bacterial fever
+    - infectious fever
+    associated:
+    - abdominal and pelvic computed tomography
+    - abdominal ultrasonography
+    - acid-fast bacillus smear
+    - acute fever
+    - antinuclear antibody testing
+    - axillary temperature measurement
+    - band percentage
+    - blood culture and sensitivity
+    - clostridioides difficile testing
+    - continuous core temperature monitoring
+    - cooling blanket application
+    - cytomegalovirus testing
+    - dengue virus immunoglobulin m
+    - dengue virus testing
+    - diaphoretic skin
+    - elevated procalcitonin
+    - endotracheal aspirate culture
+    - febrile episode
+    - febrile state
+    - fever of unknown cause
+    - fever of unknown source
+    - fever without focus
+    - fever without source
+    - fluorodeoxyglucose positron emission tomography with computed tomography
+    - flushed facies
+    - human immunodeficiency virus antigen-antibody test
+    - hyperdynamic pulse
+    - ice pack application
+    - ill appearance
+    - ill-appearing
+    - influenza a rna
+    - influenza b rna
+    - influenza molecular assay
+    - malaria parasite smear
+    - mottled extremities
+    - mycobacterial culture
+    - mycobacterial nucleic acid amplification test
+    - neoplastic fever
+    - oral temperature measurement
+    - peripheral blood smear
+    - pulse-temperature dissociation
+    - pyrexial illness
+    - rapid group a streptococcal test
+    - rapid influenza test
+    - rectal temperature measurement
+    - relative bradycardia
+    - relative lymphopenia
+    - rheumatoid factor testing
+    - severe acute respiratory syndrome coronavirus 2 molecular assay
+    - tagged white blood cell scan
+    - temporal artery temperature measurement
+    - toxic appearance
+    - tympanic temperature measurement
+    - urine red blood cell count
+    - urine white blood cell count
+    - white blood cell differential count
+    pass: 2
+    reviewed_n: 40
+    source: llm
+    stop_surfaces: []
+  heart_failure:
+    anchors:
+    - heart failure
+    - cardiac failure
+    - congestive heart failure
+    - congestive cardiac failure
+    - congestive failure
+    - cardiac insufficiency
+    - heart insufficiency
+    - myocardial failure
+    - cardiac decompensation
+    - heart failure syndrome
+    - ventricular failure
+    - cardiac pump failure
+    - hf
+    - h.f.
+    - chf
+    - c.h.f.
+    - ccf
+    - c.c.f.
+    - acute heart failure
+    - acute cardiac failure
+    - acute congestive heart failure
+    - acute decompensated heart failure
+    - acute decompensated congestive heart failure
+    - acute decompensated cardiac failure
+    - acute heart failure syndrome
+    - adhf
+    - a.d.h.f.
+    - chronic heart failure
+    - chronic congestive heart failure
+    - chronic cardiac failure
+    - acute-on-chronic heart failure
+    - acute on chronic heart failure
+    - acute-on-chronic congestive heart failure
+    - acute on chronic congestive heart failure
+    - decompensated heart failure
+    - decompensated congestive heart failure
+    - decompensated cardiac failure
+    - heart failure exacerbation
+    - chf exacerbation
+    - systolic heart failure
+    - systolic cardiac failure
+    - systolic congestive heart failure
+    - diastolic heart failure
+    - diastolic cardiac failure
+    - diastolic congestive heart failure
+    - combined systolic and diastolic heart failure
+    - heart failure with reduced ejection fraction
+    - heart failure with mid-range ejection fraction
+    - heart failure with preserved ejection fraction
+    - heart failure with improved ejection fraction
+    - heart failure with recovered ejection fraction
+    - hfref
+    - hfmr ef
+    - hfmref
+    - hfpef
+    - hfimpef
+    - hfrecef
+    - right heart failure
+    - right-sided heart failure
+    - right ventricular failure
+    - left heart failure
+    - left-sided heart failure
+    - left ventricular failure
+    - biventricular heart failure
+    - biventricular failure
+    - high-output heart failure
+    - high-output cardiac failure
+    - low-output heart failure
+    - low-output cardiac failure
+    - advanced heart failure
+    - end-stage heart failure
+    - end stage heart failure
+    - refractory heart failure
+    - terminal heart failure
+    associated:
+    - alveolar pulmonary edema
+    - arterial carbon dioxide partial pressure
+    - bibasilar crackles
+    - cardiac computed tomography
+    - cardiac magnetic resonance imaging
+    - central venous oxygen saturation
+    - cephalization of pulmonary vessels
+    - cool extremities
+    - coronary computed tomography angiography
+    - daily weight monitoring
+    - digoxin concentration
+    - displaced apical impulse
+    - elevated b-type natriuretic peptide
+    - elevated central venous pressure
+    - elevated left ventricular filling pressure
+    - elevated n-terminal pro-b-type natriuretic peptide
+    - heart failure with mildly reduced ejection fraction
+    - implantable cardioverter-defibrillator implantation
+    - implantable hemodynamic monitoring
+    - intra-aortic balloon pump insertion
+    - intra-aortic balloon pump support
+    - intravenous diuretic therapy
+    - kerley b lines
+    - left ventricular assist device implantation
+    - liver function testing
+    - low cardiac output state
+    - mid-regional pro-adrenomedullin
+    - perihilar airspace opacities
+    - permanent pacemaker implantation
+    - pharmacologic stress testing
+    - pink frothy sputum
+    - pitting lower extremity edema
+    - positive hepatojugular reflux
+    - preserved left ventricular ejection fraction
+    - pulmonary crackles
+    - rapid weight gain
+    - reduced exercise tolerance
+    - renal function testing
+    - right upper quadrant discomfort
+    - soluble st2
+    - soluble suppression of tumorigenicity 2
+    - surgical aortic valve replacement
+    - synchronized cardioversion
+    - telemetry monitoring
+    - thyroid function testing
+    pass: 2
+    reviewed_n: 74
+    source: llm
+    stop_surfaces: []
+  hfpef:
+    anchors:
+    - heart failure with preserved ejection fraction
+    - heart failure with preserved ef
+    - heart failure with preserved systolic function
+    - heart failure with normal ejection fraction
+    - heart failure with normal ef
+    - heart failure with normal systolic function
+    - preserved ejection fraction heart failure
+    - preserved ef heart failure
+    - hf with preserved ejection fraction
+    - hf with preserved ef
+    - hf with preserved systolic function
+    - hfpef
+    - hf-pef
+    - hfnef
+    - hf-nef
+    - hfpsf
+    - hf-psf
+    - diastolic heart failure
+    - diastolic hf
+    - diastolic congestive heart failure
+    - congestive diastolic heart failure
+    - diastolic chf
+    - dchf
+    - dhf
+    - chf with preserved ejection fraction
+    - chf with preserved ef
+    - acute diastolic heart failure
+    - chronic diastolic heart failure
+    - acute on chronic diastolic heart failure
+    - acute diastolic congestive heart failure
+    - chronic diastolic congestive heart failure
+    associated:
+    - abnormal left ventricular filling pattern
+    - acute heart failure with preserved ejection fraction
+    - acute on chronic heart failure with preserved ejection fraction
+    - alveolar pulmonary edema
+    - bibasilar crackles
+    - bibasilar inspiratory crackles
+    - bilateral lower extremity pitting edema
+    - cardiac magnetic resonance imaging
+    - cardiac troponin testing
+    - chronic heart failure with preserved ejection fraction
+    - computed tomography coronary angiography
+    - concentric left ventricular remodeling
+    - congestive heart failure due to diastolic dysfunction
+    - congestive heart failure with normal ejection fraction
+    - congestive heart failure with preserved ejection fraction
+    - congestive heart failure with preserved systolic function
+    - congestive hepatomegaly
+    - cool extremities
+    - diastolic stress echocardiography
+    - elevated b-type natriuretic peptide
+    - elevated left ventricular filling pressure
+    - elevated pulmonary artery systolic pressure
+    - elevated pulmonary capillary wedge pressure
+    - exercise right heart catheterization
+    - exercise treadmill testing
+    - exercise-induced elevation of left ventricular filling pressure
+    - exercise-induced pulmonary hypertension
+    - exertional hypoxemia
+    - fine inspiratory crackles
+    - fluid challenge during right heart catheterization
+    - heart failure with normal left ventricular ejection fraction
+    - heart failure with normal left ventricular systolic function
+    - heart failure with preserved left ventricular ejection fraction
+    - heart failure with preserved left ventricular systolic function
+    - high-sensitivity troponin i
+    - high-sensitivity troponin t
+    - hypertensive response to exercise
+    - impaired left ventricular relaxation
+    - impaired ventricular-arterial coupling
+    - implantable pulmonary artery pressure monitoring
+    - increased left atrial volume
+    - increased left atrial volume index
+    - increased left ventricular stiffness
+    - increased ratio of early mitral inflow velocity to mitral annular early diastolic velocity
+    - increased tricuspid regurgitation velocity
+    - inferior vena cava assessment
+    - intravenous diuretic therapy
+    - invasive exercise hemodynamic testing
+    - irregularly irregular rhythm
+    - isolated diastolic heart failure
+    - left atrial volume measurement
+    - left ventricular diastolic function assessment
+    - left ventricular diastolic heart failure
+    - left ventricular ejection fraction measurement
+    - left ventricular filling pressure estimation
+    - left ventricular mass measurement
+    - left ventricular wall thickness measurement
+    - liver function testing
+    - mitral annular velocity measurement
+    - peak oxygen consumption measurement
+    - peripheral pitting edema
+    - positive hepatojugular reflux
+    - preserved left ventricular ejection fraction
+    - pseudonormal left ventricular filling pattern
+    - pulmonary artery systolic pressure estimation
+    - pulmonary crackles
+    - pulmonary interstitial edema
+    - pulmonary venous flow assessment
+    - rapid weight gain
+    - reduced early mitral inflow deceleration time
+    - reduced functional capacity
+    - reduced left atrial reservoir strain
+    - reduced left ventricular compliance
+    - reduced mitral annular early diastolic velocity
+    - reduced right ventricular-pulmonary artery coupling
+    - renal function testing
+    - resting hypoxemia
+    - restrictive left ventricular filling pattern
+    - right upper quadrant discomfort
+    - right ventricular function assessment
+    - soluble suppression of tumorigenicity 2
+    - systemic venous congestion
+    - thyroid function testing
+    - tissue doppler imaging
+    - transmitral flow assessment
+    - urine albumin-to-creatinine ratio
+    pass: 2
+    reviewed_n: 31
+    source: llm
+    stop_surfaces: []
+  hfref:
+    anchors:
+    - heart failure with reduced ejection fraction
+    - heart failure with reduced ef
+    - heart failure with low ejection fraction
+    - heart failure with depressed ejection fraction
+    - heart failure with impaired ejection fraction
+    - heart failure with decreased ejection fraction
+    - reduced ejection fraction heart failure
+    - reduced ef heart failure
+    - low ejection fraction heart failure
+    - low ef heart failure
+    - systolic heart failure
+    - systolic hf
+    - systolic congestive heart failure
+    - systolic chf
+    - chf with reduced ef
+    - heart failure with systolic dysfunction
+    - hfref
+    - hf-ref
+    - hf ref
+    - hfr ef
+    - acute systolic heart failure
+    - acute on chronic systolic heart failure
+    - chronic systolic heart failure
+    - acute systolic chf
+    - acute on chronic systolic chf
+    - chronic systolic chf
+    - acute decompensated hfr ef
+    - acute decompensated systolic heart failure
+    associated:
+    - acute decompensated heart failure with reduced ejection fraction
+    - acute heart failure with reduced ejection fraction
+    - alveolar pulmonary edema
+    - bibasilar crackles
+    - bilateral pleural effusions
+    - biventricular systolic dysfunction
+    - cardiac magnetic resonance imaging
+    - cardiac positron emission tomography
+    - cardiac resynchronization therapy implantation
+    - cardiac wheeze
+    - cephalization of pulmonary vessels
+    - chagas disease serology
+    - congestive heart failure with reduced ejection fraction
+    - continuous hemodynamic monitoring
+    - cool extremities
+    - coronary computed tomography angiography
+    - decreased peripheral perfusion
+    - depressed left ventricular ejection fraction
+    - diffuse left ventricular hypokinesis
+    - digoxin concentration
+    - dilated cardiomyopathy
+    - displaced apical impulse
+    - dobutamine stress echocardiogram
+    - elevated b-type natriuretic peptide
+    - elevated b-type natriuretic peptide level
+    - elevated left ventricular filling pressure
+    - elevated n-terminal pro-b-type natriuretic peptide
+    - elevated pulmonary artery wedge pressure
+    - elevated pulmonary capillary wedge pressure
+    - genetic testing for inherited cardiomyopathy
+    - global hypokinesis
+    - global left ventricular hypokinesis
+    - heart failure with reduced left ventricular ejection fraction
+    - heart failure with reduced systolic function
+    - human immunodeficiency virus testing
+    - idiopathic dilated cardiomyopathy
+    - implantable cardioverter-defibrillator implantation
+    - implantable pulmonary artery pressure monitoring
+    - implantation of cardiac resynchronization therapy defibrillator
+    - implantation of cardiac resynchronization therapy pacemaker
+    - implantation of implantable cardioverter defibrillator
+    - increased left ventricular end-systolic volume
+    - intra-aortic balloon pump placement
+    - invasive coronary angiography
+    - ischemic cardiomyopathy
+    - kerley b lines
+    - late gadolinium enhancement imaging
+    - left ventricular assist device implantation
+    - left ventricular ejection fraction measurement
+    - left ventricular hypokinesis
+    - left ventricular systolic dysfunction
+    - left ventricular systolic heart failure
+    - liver function testing
+    - lv systolic dysfunction
+    - non-ischemic cardiomyopathy
+    - nonischemic cardiomyopathy
+    - nuclear myocardial perfusion imaging
+    - partial pressure of carbon dioxide
+    - peripheral pitting edema
+    - pink frothy sputum
+    - positive hepatojugular reflux
+    - pulmonary crackles
+    - rapid weight gain
+    - reduced cardiac index
+    - reduced functional capacity
+    - reduced-ejection-fraction heart failure
+    - regional wall motion abnormality
+    - serum and urine protein electrophoresis
+    - serum free light chain assay
+    - soluble suppression of tumorigenicity 2
+    - surgical mitral valve repair
+    - surgical mitral valve replacement
+    - systolic congestive cardiac failure
+    - systolic dysfunction
+    - thyroid function testing
+    pass: 2
+    reviewed_n: 30
+    source: llm
+    stop_surfaces: []
+  hypertension:
+    anchors:
+    - hypertension
+    - htn
+    - hbp
+    - high blood pressure
+    - arterial hypertension
+    - systemic hypertension
+    - systemic arterial hypertension
+    - essential hypertension
+    - primary hypertension
+    - idiopathic hypertension
+    - secondary hypertension
+    - benign hypertension
+    - malignant hypertension
+    - chronic hypertension
+    - resistant hypertension
+    - refractory hypertension
+    - white coat hypertension
+    - isolated systolic hypertension
+    - isolated diastolic hypertension
+    - accelerated hypertension
+    associated:
+    - accentuated second heart sound
+    - adrenal computed tomography
+    - adrenal magnetic resonance imaging
+    - aldosterone to renin ratio
+    - aldosterone-to-renin ratio
+    - ankle-brachial index measurement
+    - automated office blood pressure measurement
+    - baroreflex activation therapy
+    - bounding peripheral pulses
+    - central blood pressure measurement
+    - cerebral white matter hyperintensities
+    - chronic hypertension in pregnancy
+    - computed tomography angiography of renal arteries
+    - computed tomography angiography of the renal arteries
+    - computed tomography of the head
+    - concentric left ventricular remodeling
+    - copper wiring of retinal arterioles
+    - direct renin concentration
+    - displaced apical impulse
+    - drug-induced hypertension
+    - electrocardiographic left ventricular strain pattern
+    - elevated aldosterone concentration
+    - elschnig spots
+    - flame-shaped retinal hemorrhages
+    - home sleep apnea testing
+    - hour urine collection for protein
+    - hour urine metanephrines
+    - increased left ventricular mass
+    - intra-arterial blood pressure monitoring
+    - late-night salivary cortisol measurement
+    - left ventricular mass measurement
+    - lipid profile
+    - magnetic resonance angiography of the renal arteries
+    - magnetic resonance imaging of the brain
+    - manual blood pressure measurement
+    - office blood pressure measurement
+    - orthostatic blood pressure measurement
+    - overnight dexamethasone suppression test
+    - plasma aldosterone concentration
+    - plasma aldosterone concentration measurement
+    - plasma free metanephrine
+    - plasma free metanephrine measurement
+    - plasma free metanephrines
+    - plasma free normetanephrine
+    - plasma renin activity measurement
+    - poorly controlled blood pressure
+    - poorly controlled hypertension
+    - pre-existing hypertension in pregnancy
+    - pulse pressure measurement
+    - pulse wave velocity measurement
+    - reduced estimated glomerular filtration rate
+    - renal artery angiography
+    - renal artery doppler ultrasound
+    - renal artery duplex ultrasonography
+    - renal cortical thinning
+    - renal sympathetic denervation
+    - renal ultrasonography
+    - retinal arteriolar sclerosis
+    - secondary arterial hypertension
+    - secondary systemic hypertension
+    - serum hemoglobin
+    - siegrist streaks
+    - silver wiring of retinal arterioles
+    - twenty-four hour urine free cortisol
+    - twenty-four-hour urinary fractionated metanephrine measurement
+    - twenty-four-hour urinary free cortisol measurement
+    - twenty-four-hour urine protein measurement
+    - uncontrolled blood pressure
+    - unspecified hypertension
+    - upper and lower extremity blood pressure measurement
+    - urinary catecholamines
+    - urinary fractionated metanephrines
+    - urine albumin to creatinine ratio
+    - urine albumin-to-creatinine ratio
+    - urine protein to creatinine ratio
+    - urine protein-to-creatinine ratio
+    - urine red blood cells
+    pass: 2
+    reviewed_n: 20
+    source: llm
+    stop_surfaces: []
+  metastatic_cancer:
+    anchors:
+    - metastatic malignant neoplasm
+    - metastatic malignancy
+    - metastatic cancer
+    - metastatic carcinoma
+    - metastatic neoplasm
+    - metastatic disease
+    - metastatic tumor
+    - metastatic ca
+    - met ca
+    - metastases
+    - metastasis
+    - mets
+    - secondary malignant neoplasm
+    - secondary malignancy
+    - secondary cancer
+    - secondary carcinoma
+    - secondary neoplasm
+    - secondary tumor
+    - disseminated malignant neoplasm
+    - disseminated malignancy
+    - disseminated cancer
+    - disseminated carcinoma
+    - disseminated neoplasm
+    - disseminated tumor
+    - malignant neoplasm with metastases
+    - cancer with metastases
+    - carcinoma with metastases
+    - cancer metastatic
+    - carcinoma metastatic
+    - metastatic
+    associated:
+    - ascitic fluid cytology
+    - bowel or bladder dysfunction
+    - bulky lymphadenopathy
+    - cancer of unknown primary with metastases
+    - cancer with distant metastases
+    - cerebrospinal fluid cytology
+    - circulating tumor dna assay
+    - comprehensive genomic profiling
+    - computed tomography of the chest abdomen and pelvis
+    - computed tomography of the chest, abdomen and pelvis
+    - contrast-enhanced ultrasonography
+    - diffuse bone marrow replacement
+    - diffuse osseous sclerosis
+    - disseminated metastatic disease
+    - distant metastases
+    - distant metastatic disease
+    - epidural spinal mass
+    - epidural tumor extension
+    - firm fixed mass
+    - fixed lymphadenopathy
+    - focal neurological deficit
+    - generalized metastatic cancer
+    - hard non-tender lymph node
+    - hematogenous metastasis
+    - image-guided core needle biopsy
+    - indwelling pleural catheter placement
+    - intracranial mass effect
+    - lytic bone lesions
+    - magnetic resonance imaging of the brain
+    - malignant metastases
+    - malignant metastasis
+    - malignant neoplasm with distant metastases
+    - malignant ureteral obstruction
+    - metastatic cancer of unknown primary
+    - mixed lytic and sclerotic bone lesions
+    - multiple hepatic lesions
+    - multiple osteoblastic bone lesions
+    - multiple osteolytic bone lesions
+    - nodular hepatomegaly
+    - omental caking
+    - palpable subcutaneous nodules
+    - peritoneal nodularity
+    - peritoneal tumor seeding
+    - pleural nodularity
+    - regional lymph node metastasis
+    - ring-enhancing brain lesions
+    - sclerotic bone lesions
+    - secondary malignant neoplasm of intrahepatic bile duct
+    - secondary malignant neoplasm of lymph nodes
+    - secondary malignant neoplasm of other parts of the nervous system
+    - serial tumor marker measurement
+    - serum free light chains
+    - serum tumor marker assay
+    - somatostatin receptor imaging
+    - stage iv cancer
+    - stage iv malignancy
+    - tumor tissue next generation sequencing
+    - vertebral body collapse
+    - whole body bone scan
+    - widely metastatic cancer
+    pass: 2
+    reviewed_n: 31
+    source: llm
+    stop_surfaces: []
+  obesity:
+    anchors:
+    - obesity
+    - obese
+    - obes.
+    - adiposity
+    - morbid obesity
+    - morbidly obese
+    - severe obesity
+    - severely obese
+    - clinically severe obesity
+    - extreme obesity
+    - super obesity
+    - class i obesity
+    - class ii obesity
+    - class iii obesity
+    - class 1 obesity
+    - class 2 obesity
+    - class 3 obesity
+    - primary obesity
+    - secondary obesity
+    - simple obesity
+    - exogenous obesity
+    - endogenous obesity
+    - constitutional obesity
+    - nutritional obesity
+    - caloric obesity
+    - obesity due to excess calories
+    - other obesity due to excess calories
+    - drug-induced obesity
+    - morbid obesity due to excess calories
+    - generalized obesity
+    - central obesity
+    - abdominal obesity
+    - visceral obesity
+    - truncal obesity
+    - android obesity
+    - gynoid obesity
+    - hypertrophic obesity
+    - hyperplastic obesity
+    - morbid adiposity
+    - adiposity-based chronic disease
+    - obesity nos
+    - obesity, unspecified
+    associated:
+    - abdominal adiposity
+    - abdominal computed tomography
+    - abdominal magnetic resonance imaging
+    - abdominal skin folds
+    - abdominal ultrasonography
+    - adjustable gastric banding
+    - adult obesity
+    - air displacement plethysmography
+    - android body habitus
+    - body mass index calculation
+    - body mass index percentile assessment
+    - centripetal fat distribution
+    - chronic venous stasis changes
+    - crowded oropharynx
+    - deconditioning
+    - difficult airway
+    - difficulty ambulating
+    - diffuse subcutaneous adipose tissue
+    - elevated aspartate aminotransferase
+    - elevated intra-abdominal pressure
+    - extensive subcutaneous fat
+    - fasting insulin
+    - growth chart assessment
+    - height measurement
+    - home sleep apnea test
+    - hydrostatic weighing
+    - increased neck circumference
+    - increased skinfold thickness
+    - increased waist circumference
+    - intensive behavioral therapy
+    - intertriginous erythema
+    - intertriginous maceration
+    - intertriginous skin folds
+    - intragastric balloon placement
+    - large abdominal pannus
+    - large body habitus
+    - large neck circumference
+    - late-night salivary cortisol test
+    - massive localized lymphedema
+    - massive pannus
+    - medication-induced obesity
+    - metabolically unhealthy obesity
+    - morbid severe obesity
+    - neck circumference measurement
+    - one-anastomosis gastric bypass
+    - overnight dexamethasone suppression test
+    - prominent abdominal fat pad
+    - rapid weight gain
+    - reduced exercise capacity
+    - reduced exercise tolerance
+    - redundant pharyngeal soft tissue
+    - resting metabolic rate measurement
+    - revisional bariatric surgery
+    - serial weight measurement
+    - severe obesity due to excess calories
+    - short thick neck
+    - skin fold rash
+    - skinfold thickness measurement
+    - super-super obesity
+    - supraclavicular fat pad
+    - thick neck habitus
+    - thyroid-stimulating hormone test
+    - truncal adiposity
+    - truncal fat deposition
+    - twenty-four-hour urinary free cortisol test
+    - venous stasis dermatitis
+    - visceral adiposity
+    - visual obscurations
+    - waist circumference measurement
+    - waist-to-hip ratio measurement
+    - witnessed apneas
+    pass: 2
+    reviewed_n: 45
+    source: llm
+    stop_surfaces: []
+  pulmonary_embolism:
+    anchors:
+    - pulmonary embolism
+    - pulmonary embolus
+    - pulmonary emboli
+    - pulmonary thromboembolism
+    - pulmonary thromboembolus
+    - pulmonary thromboemboli
+    - pulmonary artery embolism
+    - pulmonary arterial embolism
+    - pulmonary artery thromboembolism
+    - pulmonary arterial thromboembolism
+    - pulmonary embolic disease
+    - pulmonary embolic event
+    - pulm embolism
+    - pulm embolus
+    - pulm emboli
+    - lung embolism
+    - lung embolus
+    - pes
+    - pte
+    - acute pulmonary embolism
+    - acute pulmonary embolus
+    - acute pulmonary thromboembolism
+    - chronic pulmonary embolism
+    - chronic pulmonary embolus
+    - massive pulmonary embolism
+    - massive pe
+    - submassive pulmonary embolism
+    - submassive pe
+    - nonmassive pulmonary embolism
+    - nonmassive pe
+    - saddle pulmonary embolism
+    - saddle pe
+    - bilateral pulmonary embolism
+    - bilateral pulmonary emboli
+    - unilateral pulmonary embolism
+    - segmental pulmonary embolism
+    - segmental pe
+    - subsegmental pulmonary embolism
+    - subsegmental pe
+    - lobar pulmonary embolism
+    - lobar pe
+    - recurrent pulmonary embolism
+    - recurrent pe
+    associated:
+    - accentuated pulmonary component of the second heart sound
+    - accentuated pulmonic component of the second heart sound
+    - acute-on-chronic pulmonary embolism
+    - anti-factor xa activity
+    - antithrombin activity
+    - arterial bicarbonate
+    - asymmetric calf circumference
+    - b-type natriuretic peptide assay
+    - cardiac troponin assay
+    - catheter-based mechanical thrombectomy
+    - central pulmonary embolism
+    - computed tomography pulmonary angiogram
+    - computed tomography pulmonary angiography
+    - computed tomography venography
+    - contrast reflux into the inferior vena cava
+    - conventional pulmonary angiography
+    - direct oral anticoagulant therapy
+    - elevated b-type natriuretic peptide level
+    - elevated d-dimer level
+    - elevated n-terminal pro-b-type natriuretic peptide level
+    - elevated right ventricular to left ventricular diameter ratio
+    - elevated serum lactate level
+    - elevated troponin level
+    - embolism of pulmonary artery
+    - erythema of the affected leg
+    - hampton hump
+    - high-risk pulmonary embolism
+    - idiopathic pulmonary embolism
+    - increased alveolar-arterial oxygen gradient
+    - inferior vena cava filter placement
+    - inferior vena cava filter retrieval
+    - intermediate-risk pulmonary embolism
+    - interventricular septal bowing
+    - interventricular septal flattening
+    - leg heaviness
+    - liver function testing
+    - loud pulmonic component of the second heart sound
+    - loud second heart sound
+    - low-risk pulmonary embolism
+    - lower extremity venous duplex ultrasound
+    - lower-extremity compression ultrasonography
+    - lower-extremity venography
+    - lower-extremity venous duplex ultrasonography
+    - magnetic resonance pulmonary angiography
+    - n-terminal pro-b-type natriuretic peptide assay
+    - n-terminal pro-brain natriuretic peptide
+    - n-terminal prohormone of brain natriuretic peptide
+    - non-massive pulmonary embolism
+    - palla sign
+    - palpable superficial venous cord
+    - partial pressure of carbon dioxide
+    - percutaneous mechanical thrombectomy
+    - peripheral pulmonary opacity
+    - peripheral wedge-shaped pulmonary opacity
+    - point-of-care cardiac ultrasound
+    - positive homans sign
+    - protein c activity
+    - protein s activity
+    - provoked pulmonary embolism
+    - pulmonary artery filling defect
+    - pulmonary artery pressure measurement
+    - pulmonary embolism severity index calculation
+    - reduced breath sounds
+    - reduced peripheral pulmonary vascular markings
+    - reduced tricuspid annular plane systolic excursion
+    - renal function testing
+    - revised geneva score calculation
+    - right heart strain
+    - right ventricular pressure overload
+    - right ventricular strain
+    - right ventricular to left ventricular ratio
+    - s1q3t3 pattern
+    - septic pulmonary thromboembolism
+    - simplified pulmonary embolism severity index calculation
+    - sudden-onset dyspnea
+    - surgical embolectomy
+    - systemic thrombolytic therapy
+    - t-wave inversions in the right precordial leads
+    - thromboembolism of the pulmonary artery
+    - thrombophilia testing
+    - unfractionated heparin therapy
+    - unilateral calf tenderness
+    - unilateral lower extremity edema
+    - unilateral lower-extremity edema
+    - unilateral lower-extremity swelling
+    - unprovoked pulmonary embolism
+    - ventilation-perfusion single-photon emission computed tomography
+    - warmth of the affected leg
+    - wedge-shaped subpleural opacity
+    - wells score calculation
+    - westermark sign
+    pass: 2
+    reviewed_n: 49
+    source: llm
+    stop_surfaces: []
+  rheumatoid_arthritis:
+    anchors:
+    - rheumatoid arthritis
+    - rheumatoid disease
+    - atrophic arthritis
+    - rheumatoid polyarthritis
+    - seropositive rheumatoid arthritis
+    - seronegative rheumatoid arthritis
+    - seropositive ra
+    - seronegative ra
+    - rheumatoid arthritis with rheumatoid factor
+    - rheumatoid arthritis without rheumatoid factor
+    - rheumatoid arthritis mutilans
+    - rheumatoid arthritis, unspecified
+    associated:
+    - active synovitis
+    - adult-onset rheumatoid arthritis
+    - anemia-related pallor
+    - anti-carbamylated protein antibody
+    - anti-cyclic citrullinated peptide antibody positive rheumatoid arthritis
+    - anti-cyclic citrullinated peptide antibody test
+    - antinuclear antibody test
+    - assistive device assessment
+    - boggy joint swelling
+    - boggy synovitis
+    - bone mineral density scan
+    - cervical spine magnetic resonance imaging
+    - cervical spine stabilization
+    - chronic rheumatoid arthritis
+    - cock-up toe deformities
+    - computed tomography of affected joints
+    - cutaneous vasculitic ulcers
+    - disease activity score assessment
+    - distal interphalangeal joint sparing
+    - erosive rheumatoid arthritis
+    - eta protein
+    - extensor tendon rupture
+    - flexor tendon tenosynovitis
+    - fragility fractures
+    - hand radiography
+    - high-resolution computed tomography of the chest
+    - human immunodeficiency virus antigen and antibody
+    - intra-articular corticosteroid injection
+    - intra-articular glucocorticoid injection
+    - intramuscular glucocorticoid injection
+    - joint swelling count
+    - joint tenderness count
+    - juxta-articular osteopenia
+    - loss of joint function
+    - magnetic resonance imaging of affected joints
+    - magnetic resonance imaging of hands
+    - mallet finger deformity
+    - marginal bone erosions
+    - metacarpophalangeal joint arthroplasty
+    - metacarpophalangeal joint subluxation
+    - metacarpophalangeal joint tenderness
+    - metatarsophalangeal joint subluxation
+    - nonerosive rheumatoid arthritis
+    - periarticular muscle wasting
+    - persistent synovitis
+    - physician global assessment
+    - plain radiography of affected joints
+    - plain radiography of the hands and feet
+    - prolonged morning stiffness
+    - proximal interphalangeal joint tenderness
+    - pulmonary rheumatoid nodules
+    - reduced grip strength
+    - reduced range of motion
+    - restricted joint range of motion
+    - rheumatoid arthritis involving multiple joints
+    - rheumatoid arthritis involving multiple sites
+    - rheumatoid arthritis of multiple sites
+    - rheumatoid arthritis with positive rheumatoid factor
+    - rheumatoid cachexia
+    - rheumatoid factor negative rheumatoid arthritis
+    - rheumatoid factor-negative rheumatoid arthritis
+    - rheumatoid foot
+    - rheumatoid hand
+    - rheumatoid-associated interstitial lung disease
+    - small-joint polyarthritis
+    - symmetric inflammatory polyarthritis
+    - symmetric metacarpophalangeal joint involvement
+    - symmetric polyarticular synovitis
+    - symmetric proximal interphalangeal joint involvement
+    - symmetric small joint swelling
+    - symmetric small-joint polyarthritis
+    - synovial fluid cell count and differential
+    - synovial fluid crystal analysis
+    - synovial fluid gram stain and culture
+    - synovial fluid neutrophil percentage
+    - synovial fluid white blood cell count
+    - temporomandibular joint involvement
+    - thumb z-deformity
+    - ulnar head instability
+    - warm joints
+    - wrist subluxation
+    - z-thumb deformity
+    pass: 2
+    reviewed_n: 14
+    source: llm
+    stop_surfaces: []
+  systemic_lupus_erythematosus:
+    anchors:
+    - systemic lupus erythematosus
+    - systemic lupus
+    - lupus erythematosus
+    - lupus
+    - sle
+    - s.l.e.
+    - lupus erythematosus disseminatus
+    - disseminated lupus erythematosus
+    - acute disseminated lupus erythematosus
+    - juvenile systemic lupus erythematosus
+    - juvenile sle
+    - childhood-onset systemic lupus erythematosus
+    - pediatric systemic lupus erythematosus
+    - late-onset systemic lupus erythematosus
+    - neuropsychiatric systemic lupus erythematosus
+    associated:
+    - acute lupus pneumonitis
+    - anti-beta-2 glycoprotein 1 antibody test
+    - anti-beta-2 glycoprotein i antibody test
+    - anti-c1q antibody
+    - anti-cardiolipin antibody test
+    - anti-double-stranded dna antibody test
+    - anti-la antibody test
+    - anti-ribonucleoprotein antibody test
+    - anti-ribosomal p antibody
+    - anti-ro antibody test
+    - anti-ssa antibody
+    - anti-ssb antibody
+    - anti-u1 ribonucleoprotein antibody test
+    - anticardiolipin antibody test
+    - antihistone antibody
+    - antihistone antibody test
+    - antinuclear antibody test
+    - antinuclear antibody test by indirect immunofluorescence
+    - antiphosphatidylserine antibody
+    - antiphosphatidylserine-prothrombin antibody
+    - antiphospholipid antibody panel
+    - automated visual field testing
+    - bone mineral density scan
+    - brain magnetic resonance imaging
+    - bullous lupus eruption
+    - cardiac magnetic resonance imaging
+    - complement c3 level
+    - complement c4 level
+    - complement component 3 measurement
+    - complement component 4 measurement
+    - cryoglobulin testing
+    - discoid lesions
+    - glucose-6-phosphate dehydrogenase activity assay
+    - high-resolution computed tomography of the chest
+    - hour urine protein
+    - hour urine protein test
+    - low complement c3 level
+    - low complement c4 level
+    - nailfold capillary abnormalities
+    - nasal ulceration
+    - positive anti-double-stranded dna antibody
+    - positive anti-smith antibody
+    - positive antinuclear antibody
+    - positive antiphospholipid antibody
+    - renal ultrasonography
+    - skin biopsy with direct immunofluorescence
+    - subacute cutaneous lupus eruption
+    - symmetric synovitis
+    - twenty-four-hour urine protein
+    - twenty-four-hour urine protein measurement
+    - urine albumin to creatinine ratio
+    - urine albumin-to-creatinine ratio
+    - urine protein to creatinine ratio
+    - urine protein-to-creatinine ratio
+    - urine red blood cells
+    - urine sediment microscopy
+    pass: 2
+    reviewed_n: 15
+    source: llm
+    stop_surfaces: []
+  type_1_diabetes:
+    anchors:
+    - type 1 diabetes mellitus
+    - type 1 diabetes
+    - type 1 dm
+    - type i diabetes mellitus
+    - type i diabetes
+    - type i dm
+    - diabetes mellitus type 1
+    - diabetes type 1
+    - diabetes mellitus type i
+    - diabetes type i
+    - t1dm
+    - t1d
+    - dm1
+    - dmt1
+    - insulin-dependent diabetes mellitus
+    - insulin-dependent diabetes
+    - insulin-dependent dm
+    - insulin dependent diabetes mellitus
+    - insulin dependent diabetes
+    - insulin dependent dm
+    - iddm
+    - juvenile diabetes mellitus
+    - juvenile diabetes
+    - juvenile-onset diabetes mellitus
+    - juvenile-onset diabetes
+    - autoimmune diabetes mellitus
+    - autoimmune diabetes
+    - type 1a diabetes
+    - type 1a diabetes mellitus
+    - type 1b diabetes
+    - type 1b diabetes mellitus
+    - brittle diabetes
+    - brittle diabetes mellitus
+    associated:
+    - abnormal ankle reflexes
+    - absent endogenous insulin secretion
+    - absolute insulin deficiency
+    - adult-onset type 1 diabetes mellitus
+    - anion gap elevation
+    - ankle-brachial index measurement
+    - autoimmune type 1 diabetes mellitus
+    - automated insulin delivery
+    - basal-bolus insulin
+    - blood beta-hydroxybutyrate
+    - blood ketone testing
+    - childhood-onset diabetes mellitus
+    - clinical dehydration
+    - closed-loop insulin delivery
+    - comprehensive foot examination
+    - continuous glucose monitor
+    - continuous subcutaneous insulin infusion
+    - declining estimated glomerular filtration rate
+    - decreased monofilament sensation
+    - digital retinal photography
+    - dilated funduscopic examination
+    - dilated retinal examination
+    - distal symmetric sensory loss
+    - fasting c-peptide
+    - fasting plasma glucose test
+    - fingerstick blood glucose measurement
+    - fruity breath odor
+    - fruity-smelling breath
+    - gad65 antibody
+    - glucagon administration
+    - glutamic acid decarboxylase 65 antibody
+    - glutamic acid decarboxylase antibody
+    - glutamic acid decarboxylase antibody test
+    - glutamic acid decarboxylase antibody testing
+    - hard exudates on fundoscopy
+    - hydroxylase antibody
+    - idiopathic type 1 diabetes
+    - immune-mediated diabetes mellitus
+    - impaired hypoglycemia awareness
+    - injection site lipoatrophy
+    - insulin autoantibody test
+    - insulin autoantibody testing
+    - insulin pump
+    - insulinoma-associated antigen-2 antibody testing
+    - intermittently scanned glucose monitoring
+    - intravenous insulin infusion
+    - islet antigen-2 antibody
+    - islet cell antibody
+    - islet cell antibody test
+    - islet cell antibody testing
+    - juvenile-onset insulin-dependent diabetes mellitus
+    - labile diabetes mellitus
+    - latent autoimmune diabetes of adulthood
+    - lipid profile
+    - loss of protective sensation
+    - low c-peptide level
+    - monofilament sensory testing
+    - pancreatic autoantibody testing
+    - peripheral sensory loss
+    - point-of-care blood glucose testing
+    - poor skin turgor
+    - positive glutamic acid decarboxylase autoantibodies
+    - positive insulin autoantibodies
+    - positive insulinoma-associated-2 autoantibodies
+    - positive islet cell autoantibodies
+    - positive zinc transporter 8 autoantibodies
+    - postprandial plasma glucose
+    - random plasma glucose test
+    - reduced temperature sensation
+    - reduced vibration sense
+    - semmes-weinstein monofilament testing
+    - serum beta-hydroxybutyrate measurement
+    - serum c-peptide level
+    - serum osmolality measurement
+    - slow wound healing
+    - slowly progressive insulin-dependent diabetes mellitus
+    - slowly progressive type 1 diabetes mellitus
+    - stimulated c-peptide
+    - stimulated c-peptide test
+    - stocking distribution sensory loss
+    - subcutaneous insulin injection
+    - thyroid peroxidase antibody testing
+    - tissue transglutaminase antibody testing
+    - total immunoglobulin a
+    - total immunoglobulin a measurement
+    - tyrosine phosphatase ia-2 antibody
+    - urine albumin to creatinine ratio
+    - urine albumin-to-creatinine ratio
+    - urine ketone testing
+    - venous blood gas analysis
+    - vibration perception testing
+    - zinc transporter 8 antibody test
+    - zinc transporter 8 antibody testing
+    pass: 2
+    reviewed_n: 33
+    source: llm
+    stop_surfaces: []
+  type_2_diabetes:
+    anchors:
+    - type 2 diabetes mellitus
+    - type 2 diabetes
+    - type 2 dm
+    - type ii diabetes mellitus
+    - type ii diabetes
+    - type ii dm
+    - diabetes mellitus type 2
+    - diabetes mellitus type ii
+    - diabetes type 2
+    - diabetes type ii
+    - dm type 2
+    - dm type ii
+    - dm2
+    - dmt2
+    - t2dm
+    - t2 dm
+    - t2-dm
+    - t2d
+    - non-insulin-dependent diabetes mellitus
+    - non-insulin-dependent diabetes
+    - non-insulin-dependent dm
+    - niddm
+    - adult-onset diabetes mellitus
+    - adult-onset diabetes
+    - adult-onset dm
+    associated:
+    - body mass index measurement
+    - burning foot pain
+    - capillary blood glucose monitoring
+    - charcot neuroarthropathy
+    - controlled type 2 diabetes mellitus
+    - decreased ankle reflexes
+    - decreased pedal pulses
+    - diabetes self-management education
+    - dilated retinal examination
+    - elevated random plasma glucose
+    - elevated urine albumin-to-creatinine ratio
+    - fasting plasma glucose test
+    - fasting serum insulin
+    - fingerstick blood glucose
+    - glutamic acid decarboxylase antibodies
+    - glycated albumin test
+    - insulin pump placement
+    - intermittently scanned glucose monitoring
+    - intravitreal anti-vascular endothelial growth factor injection
+    - islet antigen-2 antibodies
+    - islet autoantibody testing
+    - loss of protective sensation
+    - lower extremity arterial doppler ultrasound
+    - lower extremity revascularization
+    - monofilament testing
+    - non-healing foot ulcer
+    - non-healing skin ulcer
+    - obesity-associated type 2 diabetes mellitus
+    - oral glucose tolerance test glucose
+    - podiatric wound debridement
+    - point-of-care blood glucose testing
+    - random plasma glucose test
+    - reduced estimated glomerular filtration rate
+    - reduced vibration sense
+    - semmes-weinstein monofilament testing
+    - serum ketone testing
+    - slow wound healing
+    - small dense low-density lipoprotein particles
+    - subcutaneous insulin injection
+    - twenty-four-hour urine protein measurement
+    - two-hour plasma glucose test
+    - two-hour postprandial glucose
+    - two-hour postprandial plasma glucose
+    - uncontrolled hyperglycemia
+    - urine albumin to creatinine ratio
+    - urine albumin-to-creatinine ratio
+    - urine glucose testing
+    - urine ketone testing
+    - urine protein-to-creatinine ratio
+    - vibration perception testing
+    - visceral adiposity
+    - zinc transporter 8 antibodies
+    pass: 2
+    reviewed_n: 25
+    source: llm
+    stop_surfaces: []
+schema_version: '1.0'
+stop_surfaces:
+- status
+- secondary
+- light
+- ice
+- aspect
+- doe
+- present
+- positive
+- negative
+- history
+undecided_policy: excluded
+vetted_by: llm+hand
+what: 'candidate surface forms that ARE each phenotype''s diagnosis, matched literally against
+  note text. A second warrant beside concept-set membership, admitting evidence the hierarchy
+  cannot reach: the causative organism, the qualifying adjective, and abbreviations the matcher
+  produces no candidate for.'

@@ -1,0 +1,8 @@
+{
+  "license": "Apache-2.0",
+  "min_zipf": 3.0,
+  "rule": "common English at Zipf >= 3.0, with nothing subtracted. The question is whether a reader would recognise the word, not whether a terminology also claims it.",
+  "source": "wordfreq 3.1.1",
+  "used_for": "deciding what is not an abbreviation. Distinct from general_english.txt, which subtracts clinically-typed words so that resolve_tags lets the terminology speak for them \u2014 correct there, and wrong here.",
+  "words": 28329
+}

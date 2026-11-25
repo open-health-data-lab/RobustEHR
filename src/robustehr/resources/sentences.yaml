@@ -1,0 +1,161 @@
+# Abbreviations whose trailing period is not a sentence boundary.
+#
+# Sentence boundaries define the denominator of every sentence-level operator,
+# so this list is versioned and its content hash goes into every dose record.
+# Entries are matched case-insensitively against the word immediately before a
+# period, with the period excluded.
+schema_version: "1.0"
+
+# A single capital letter before a period is almost always a genus abbreviation
+# or an initial in this domain: "E. coli", "C. difficile", "S. aureus",
+# "Dr. J. Smith". Treating it as a boundary splits an organism name in half.
+single_letter_is_abbreviation: true
+
+abbreviations:
+  # --- titles and names ---------------------------------------------------
+  - dr
+  - drs
+  - mr
+  - mrs
+  - ms
+  - prof
+  - sr
+  - jr
+  - st
+  - rev
+
+  # --- general prose ------------------------------------------------------
+  - approx
+  - cf
+  - eg
+  - etc
+  - ie
+  - vs
+  - no
+  - dept
+  - univ
+  - inc
+  - ltd
+  - co
+  - est
+  - fig
+  - vol
+
+  # --- dosing and administration -----------------------------------------
+  # These frequently appear mid-sentence with a period and are a large share of
+  # false boundaries in medication and plan sections.
+  - qd
+  - bid
+  - tid
+  - qid
+  - qhs
+  - qam
+  - qpm
+  - prn
+  - po
+  - pr
+  - iv
+  - im
+  - sc
+  - sq
+  - sl
+  - ng
+  - pv
+  - npo
+  - hs
+  - ac
+  - pc
+  - stat
+  - gtt
+  - amp
+  - tab
+  - cap
+  - susp
+  - soln
+  - inj
+  - supp
+
+  # --- units --------------------------------------------------------------
+  - mg
+  - mcg
+  - kg
+  - lb
+  - gm
+  - ml
+  - dl
+  - cc
+  - cm
+  - mm
+  - in
+  - ft
+  - oz
+  - meq
+  - mmol
+  - mosm
+  - iu
+  - units
+
+  # --- clinical shorthand -------------------------------------------------
+  - hx
+  - dx
+  - tx
+  - rx
+  - sx
+  - fx
+  - hpi
+  - pmh
+  - psh
+  - fhx
+  - shx
+  - ros
+  - pe
+  - vs
+  - wt
+  - ht
+  - bp
+  - hr
+  - rr
+  - temp
+  - sat
+  - sats
+  - yo
+  - yrs
+  - yr
+  - mo
+  - wk
+  - min
+  - sec
+  - hr
+  - hrs
+  - am
+  - pm
+  - adm
+  - dc
+  - dispo
+  - f
+  - u
+
+  # --- specialties and services ------------------------------------------
+  - med
+  - surg
+  - ortho
+  - neuro
+  - psych
+  - obs
+  - gyn
+  - peds
+  - derm
+  - rad
+  - path
+  - anes
+  - ent
+  - gi
+  - gu
+  - id
+  - icu
+  - ccu
+  - ed
+  - er
+  - or
+  - pacu
+  - ltc

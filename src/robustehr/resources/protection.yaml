@@ -1,0 +1,43 @@
+# Units of measure that bind an adjacent number into a dosage or measurement.
+#
+# A number with a unit is a stronger claim than a bare number, and it is what a
+# medication or numeric operator needs to see as one thing. This file is
+# content-hashed into the version of every operator that consults it, so
+# extending it invalidates the affected seeds rather than silently changing
+# previously reported protected-span counts.
+#
+# Spelled-out forms matter: real notes write "18 micrograms once daily" and
+# "500 milligrams". An abbreviation-only list leaves those unprotected.
+#
+# Durations and frequencies ("3 days", "2 weeks") are deliberately absent. They
+# are measurements, but protecting them would withhold a large share of ordinary
+# prose from every character-level operator for no safety gain.
+schema_version: "1.0"
+
+units:
+  mass:
+    [mg, mcg, ug, g, gm, kg, lb, lbs, oz,
+     milligram, milligrams, microgram, micrograms, gram, grams,
+     kilogram, kilograms, pound, pounds, ounce, ounces]
+
+  volume:
+    [ml, l, dl, cc,
+     millilitre, millilitres, milliliter, milliliters,
+     litre, litres, liter, liters,
+     decilitre, decilitres, deciliter, deciliters]
+
+  substance:
+    [mmol, mol, meq, mosm, iu, unit, units,
+     milliequivalent, milliequivalents, millimole, millimoles]
+
+  length:
+    [cm, mm, m, in, ft,
+     centimetre, centimetres, centimeter, centimeters,
+     millimetre, millimetres, millimeter, millimeters,
+     metre, metres, meter, meters, inch, inches, foot, feet]
+
+  derived:
+    [kpa, mmhg, bpm, mgdl, mmoll, gdl, mcgkgmin, unitshr, percent]
+
+  dose_form:
+    [tablet, tablets, capsule, capsules, puff, puffs, drop, drops]

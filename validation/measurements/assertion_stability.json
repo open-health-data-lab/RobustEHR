@@ -1,0 +1,135 @@
+{
+  "boundaries": "ours",
+  "comparison_other_segmenter": {
+    "boundaries": "pyrush",
+    "operators": [
+      {
+        "assertions_flipped": 105,
+        "flip_rate": 0.0072,
+        "mentions_compared": 14637,
+        "not_realignable": 45,
+        "operator": "render.bullet_to_prose",
+        "top_transitions": {
+          "affirmed -> historical": 11,
+          "affirmed -> hypothetical": 9,
+          "affirmed -> negated": 6,
+          "historical -> affirmed": 52,
+          "negated -> affirmed": 9,
+          "uncertain -> affirmed": 8
+        }
+      },
+      {
+        "assertions_flipped": 2,
+        "flip_rate": 0.0001,
+        "mentions_compared": 14682,
+        "not_realignable": 0,
+        "operator": "render.deid_restyle",
+        "top_transitions": {
+          "negated -> affirmed": 2
+        }
+      },
+      {
+        "assertions_flipped": 28,
+        "flip_rate": 0.002,
+        "mentions_compared": 14210,
+        "not_realignable": 472,
+        "operator": "render.header_style",
+        "top_transitions": {
+          "affirmed -> historical": 16,
+          "historical -> affirmed": 7,
+          "historical+negated -> negated": 5
+        }
+      },
+      {
+        "assertions_flipped": 38,
+        "flip_rate": 0.0026,
+        "mentions_compared": 14681,
+        "not_realignable": 1,
+        "operator": "render.lab_block_collapse",
+        "top_transitions": {
+          "affirmed -> negated": 38
+        }
+      },
+      {
+        "assertions_flipped": 64,
+        "flip_rate": 0.0044,
+        "mentions_compared": 14395,
+        "not_realignable": 287,
+        "operator": "render.whitespace_collapse",
+        "top_transitions": {
+          "affirmed -> negated": 39,
+          "negated -> affirmed": 25
+        }
+      }
+    ],
+    "overall_flip_rate": 0.0033,
+    "why": "the two segmenters are run on identical notes and identical spans so the difference is attributed rather than guessed. It is a trade, not a win: our boundaries take the structural operators (header, lab-block, bullet, whitespace) toward zero because they model list and header structure, and lose badly on deid_restyle because they also model de-identification placeholders \u2014 so the placeholder convention is an input to their own rules. PyRuSH models neither, which is why restyling barely moves it and list structure moves it a lot."
+  },
+  "how_to_read": "zero is the only good answer. A non-zero flip rate is the size of a confound, not a performance number, and it bounds what an assertion-conditioned result can claim. Read the two segmenters per operator rather than on the overall figure: the overall numbers are close and their composition is completely different.",
+  "notes": 20,
+  "operators": [
+    {
+      "assertions_flipped": 73,
+      "flip_rate": 0.005,
+      "mentions_compared": 14637,
+      "not_realignable": 45,
+      "operator": "render.bullet_to_prose",
+      "top_transitions": {
+        "affirmed -> historical": 4,
+        "affirmed -> negated": 8,
+        "historical -> affirmed": 10,
+        "historical+negated -> negated": 9,
+        "negated -> affirmed": 27,
+        "negated+uncertain -> affirmed": 10
+      }
+    },
+    {
+      "assertions_flipped": 170,
+      "flip_rate": 0.0116,
+      "mentions_compared": 14682,
+      "not_realignable": 0,
+      "operator": "render.deid_restyle",
+      "top_transitions": {
+        "affirmed -> historical": 34,
+        "hypothetical -> affirmed": 8,
+        "negated -> affirmed": 75,
+        "negated+uncertain -> affirmed": 14,
+        "negated+uncertain -> negated": 8,
+        "uncertain -> affirmed": 8
+      }
+    },
+    {
+      "assertions_flipped": 0,
+      "flip_rate": 0.0,
+      "mentions_compared": 14210,
+      "not_realignable": 472,
+      "operator": "render.header_style",
+      "top_transitions": {}
+    },
+    {
+      "assertions_flipped": 0,
+      "flip_rate": 0.0,
+      "mentions_compared": 14681,
+      "not_realignable": 1,
+      "operator": "render.lab_block_collapse",
+      "top_transitions": {}
+    },
+    {
+      "assertions_flipped": 37,
+      "flip_rate": 0.0026,
+      "mentions_compared": 14395,
+      "not_realignable": 287,
+      "operator": "render.whitespace_collapse",
+      "top_transitions": {
+        "affirmed -> negated": 2,
+        "negated+uncertain -> negated": 21,
+        "uncertain -> affirmed": 14
+      }
+    }
+  ],
+  "overall_flip_rate": 0.0039,
+  "prior_finding": "probe_deid_assertion.py found one instance on ONE note: three de-id conventions, including MIMIC-III's and MIMIC-IV's, merge two list items so a negation cue takes scope over the next. This is the same question at corpus scale over every invariant operator.",
+  "question": "Does an assertion survive a perturbation proved not to change clinical reference?",
+  "severity": "1.00",
+  "why_these_operators": "each declares a canonicalizer kappa and CI proves kappa(apply(d)) == kappa(d) over the corpus at every severity, so no clinical reference can change. A flip therefore means the assertion layer is reading something that is not clinical content, and every result conditioned on assertion inherits it as a confound."
+}

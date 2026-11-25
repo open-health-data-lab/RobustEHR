@@ -1,0 +1,1276 @@
+{
+  "broken_vs_unusable": "broken means the declaration is malformed and gates the exit code. unusable means every link holds and the matcher still recovers nothing \u2014 a real set the pipeline cannot reach. Those definitions say DO NOT USE; they are kept declared so the failure stays visible and so they start working when the abbreviation resolver lands.",
+  "isa": "data/umls_isa_mth.json",
+  "licence": "identifiers and counts only; no UMLS string appears here",
+  "links_checked": [
+    "seed -> CUI",
+    "CUI -> closure",
+    "closure -> surface",
+    "surface -> match"
+  ],
+  "max_depth": 6,
+  "membership_not_linking": "a probe returning a different CUI inside the set is a success. found_exact is the stricter linking rate, reported separately.",
+  "phenotypes": {
+    "alcohol_use_disorder": {
+      "atoms_total": 660,
+      "cuis_with_an_english_string": 47,
+      "declared_measured_set_recall": 0.5,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.0851,
+      "probe_preferred_term": {
+        "found_anything": 47,
+        "found_exact": 30,
+        "found_in_set": 35,
+        "probed": 47,
+        "rate_exact": 0.6383,
+        "rate_in_set": 0.7447,
+        "unreachable_examples": [
+          "C0337678",
+          "C0338709",
+          "C0338741",
+          "C0338787",
+          "C0338788",
+          "C0349269",
+          "C0349767",
+          "C0425319",
+          "C0679260",
+          "C1622892"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 47,
+        "found_exact": 35,
+        "found_in_set": 39,
+        "probed": 47,
+        "rate_exact": 0.7447,
+        "rate_in_set": 0.8298,
+        "unreachable_examples": [
+          "C0238265",
+          "C0337678",
+          "C0338741",
+          "C0338787",
+          "C0338788",
+          "C0349269",
+          "C0425319",
+          "C1622892"
+        ]
+      },
+      "seed_codes": [
+        "15167005"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0085762"
+      ],
+      "set_size_codes": 65,
+      "set_size_cuis": 47,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "atrial_fibrillation": {
+      "atoms_total": 271,
+      "cuis_with_an_english_string": 23,
+      "declared_measured_set_recall": 0.731,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": 0.0435,
+      "probe_preferred_term": {
+        "found_anything": 23,
+        "found_exact": 9,
+        "found_in_set": 23,
+        "probed": 23,
+        "rate_exact": 0.3913,
+        "rate_in_set": 1.0,
+        "unreachable_examples": []
+      },
+      "probe_shortest_term": {
+        "found_anything": 22,
+        "found_exact": 12,
+        "found_in_set": 22,
+        "probed": 23,
+        "rate_exact": 0.5217,
+        "rate_in_set": 0.9565,
+        "unreachable_examples": [
+          "C0004238"
+        ]
+      },
+      "seed_codes": [
+        "49436004"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0004238"
+      ],
+      "set_size_codes": 23,
+      "set_size_cuis": 23,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "chest_pain": {
+      "atoms_total": 1662,
+      "cuis_with_an_english_string": 175,
+      "declared_measured_set_recall": 0.614,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": 0.0171,
+      "probe_preferred_term": {
+        "found_anything": 175,
+        "found_exact": 119,
+        "found_in_set": 147,
+        "probed": 175,
+        "rate_exact": 0.68,
+        "rate_in_set": 0.84,
+        "unreachable_examples": [
+          "C0151826",
+          "C0265131",
+          "C0393899",
+          "C0406844",
+          "C0423633",
+          "C0423734",
+          "C0476278",
+          "C0856578",
+          "C0858530",
+          "C0858787"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 175,
+        "found_exact": 117,
+        "found_in_set": 144,
+        "probed": 175,
+        "rate_exact": 0.6686,
+        "rate_in_set": 0.8229,
+        "unreachable_examples": [
+          "C0086666",
+          "C0152172",
+          "C0265131",
+          "C0406844",
+          "C0423633",
+          "C0423637",
+          "C0423734",
+          "C0458226",
+          "C0458228",
+          "C0476278"
+        ]
+      },
+      "seed_codes": [
+        "29857009"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0008031"
+      ],
+      "set_size_codes": 241,
+      "set_size_cuis": 175,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "chronic_kidney_disease": {
+      "atoms_total": 927,
+      "cuis_with_an_english_string": 129,
+      "declared_measured_set_recall": 0.889,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.1783,
+      "probe_preferred_term": {
+        "found_anything": 129,
+        "found_exact": 17,
+        "found_in_set": 45,
+        "probed": 129,
+        "rate_exact": 0.1318,
+        "rate_in_set": 0.3488,
+        "unreachable_examples": [
+          "C0035086",
+          "C0403484",
+          "C0403539",
+          "C0403542",
+          "C1561643",
+          "C1719469",
+          "C2316401",
+          "C2316786",
+          "C2316787",
+          "C2316810"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 129,
+        "found_exact": 28,
+        "found_in_set": 68,
+        "probed": 129,
+        "rate_exact": 0.2171,
+        "rate_in_set": 0.5271,
+        "unreachable_examples": [
+          "C0022661",
+          "C0403447",
+          "C0403539",
+          "C0403542",
+          "C1719469",
+          "C3494551",
+          "C3494588",
+          "C3494589",
+          "C3494590",
+          "C3494591"
+        ]
+      },
+      "seed_codes": [
+        "709044004"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0403447",
+        "C1561643"
+      ],
+      "set_size_codes": 146,
+      "set_size_cuis": 129,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "clostridioides_difficile": {
+      "atoms_total": 103,
+      "cuis_with_an_english_string": 10,
+      "declared_measured_set_recall": null,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": 0.0,
+      "probe_preferred_term": {
+        "found_anything": 10,
+        "found_exact": 4,
+        "found_in_set": 10,
+        "probed": 10,
+        "rate_exact": 0.4,
+        "rate_in_set": 1.0,
+        "unreachable_examples": []
+      },
+      "probe_shortest_term": {
+        "found_anything": 10,
+        "found_exact": 5,
+        "found_in_set": 10,
+        "probed": 10,
+        "rate_exact": 0.5,
+        "rate_in_set": 1.0,
+        "unreachable_examples": []
+      },
+      "seed_codes": [
+        "186431008"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0343386"
+      ],
+      "set_size_codes": 11,
+      "set_size_cuis": 10,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "deep_vein_thrombosis": {
+      "atoms_total": 1301,
+      "cuis_with_an_english_string": 241,
+      "declared_measured_set_recall": 0.679,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.0996,
+      "probe_preferred_term": {
+        "found_anything": 241,
+        "found_exact": 58,
+        "found_in_set": 108,
+        "probed": 241,
+        "rate_exact": 0.2407,
+        "rate_in_set": 0.4481,
+        "unreachable_examples": [
+          "C0265058",
+          "C0265065",
+          "C0265066",
+          "C0265067",
+          "C0265068",
+          "C0340718",
+          "C0340720",
+          "C0347884",
+          "C0347885",
+          "C0347886"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 241,
+        "found_exact": 68,
+        "found_in_set": 132,
+        "probed": 241,
+        "rate_exact": 0.2822,
+        "rate_in_set": 0.5477,
+        "unreachable_examples": [
+          "C0265058",
+          "C0265065",
+          "C0265067",
+          "C0265068",
+          "C0347887",
+          "C0521539",
+          "C0743004",
+          "C0856761",
+          "C1998193",
+          "C2103937"
+        ]
+      },
+      "seed_codes": [
+        "128053003"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0149871"
+      ],
+      "set_size_codes": 262,
+      "set_size_cuis": 241,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "dementia": {
+      "atoms_total": 3131,
+      "cuis_with_an_english_string": 280,
+      "declared_measured_set_recall": 0.867,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.0285,
+      "probe_preferred_term": {
+        "found_anything": 280,
+        "found_exact": 129,
+        "found_in_set": 246,
+        "probed": 280,
+        "rate_exact": 0.4607,
+        "rate_in_set": 0.8786,
+        "unreachable_examples": [
+          "C0026847",
+          "C0338451",
+          "C0338452",
+          "C0338453",
+          "C0338456",
+          "C0393543",
+          "C0393544",
+          "C0543859",
+          "C0598275",
+          "C0751335"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 278,
+        "found_exact": 173,
+        "found_in_set": 254,
+        "probed": 280,
+        "rate_exact": 0.6179,
+        "rate_in_set": 0.9071,
+        "unreachable_examples": [
+          "C0002395",
+          "C0020179",
+          "C0154308",
+          "C0154315",
+          "C0236647",
+          "C0236648",
+          "C0236649",
+          "C0338453",
+          "C0338456",
+          "C0393543"
+        ]
+      },
+      "seed_codes": [
+        "52448006"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0497327"
+      ],
+      "set_size_codes": 311,
+      "set_size_cuis": 280,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "depression": {
+      "atoms_total": 1949,
+      "cuis_with_an_english_string": 221,
+      "declared_measured_set_recall": 0.111,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.1086,
+      "probe_preferred_term": {
+        "found_anything": 221,
+        "found_exact": 84,
+        "found_in_set": 166,
+        "probed": 221,
+        "rate_exact": 0.3801,
+        "rate_in_set": 0.7511,
+        "unreachable_examples": [
+          "C0011573",
+          "C0011574",
+          "C0011581",
+          "C0154408",
+          "C0154413",
+          "C0236653",
+          "C0236700",
+          "C0236701",
+          "C0236703",
+          "C0236706"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 221,
+        "found_exact": 97,
+        "found_in_set": 190,
+        "probed": 221,
+        "rate_exact": 0.4389,
+        "rate_in_set": 0.8597,
+        "unreachable_examples": [
+          "C0005587",
+          "C0011574",
+          "C0011581",
+          "C0013415",
+          "C0154408",
+          "C0236895",
+          "C0236896",
+          "C0270497",
+          "C0338893",
+          "C0520666"
+        ]
+      },
+      "seed_codes": [
+        "35489007"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0011581",
+        "C0025193",
+        "C0344315",
+        "C0349217",
+        "C1269683"
+      ],
+      "set_size_codes": 270,
+      "set_size_cuis": 221,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "diabetes_mellitus": {
+      "atoms_total": 3314,
+      "cuis_with_an_english_string": 381,
+      "declared_measured_set_recall": 0.397,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.063,
+      "probe_preferred_term": {
+        "found_anything": 381,
+        "found_exact": 92,
+        "found_in_set": 218,
+        "probed": 381,
+        "rate_exact": 0.2415,
+        "rate_in_set": 0.5722,
+        "unreachable_examples": [
+          "C0004606",
+          "C0011849",
+          "C0011854",
+          "C0011860",
+          "C0011871",
+          "C0011884",
+          "C0085207",
+          "C0154183",
+          "C0154830",
+          "C0156878"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 380,
+        "found_exact": 164,
+        "found_in_set": 242,
+        "probed": 381,
+        "rate_exact": 0.4304,
+        "rate_in_set": 0.6352,
+        "unreachable_examples": [
+          "C0011849",
+          "C0011871",
+          "C0011884",
+          "C0149942",
+          "C0154178",
+          "C0154183",
+          "C0156878",
+          "C0238086",
+          "C0271064",
+          "C0271640"
+        ]
+      },
+      "seed_codes": [
+        "73211009"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0011849"
+      ],
+      "set_size_codes": 442,
+      "set_size_cuis": 382,
+      "surface_coverage": 0.9974,
+      "unusable": []
+    },
+    "dyspnea": {
+      "atoms_total": 1895,
+      "cuis_with_an_english_string": 142,
+      "declared_measured_set_recall": 0.914,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": 0.007,
+      "probe_preferred_term": {
+        "found_anything": 142,
+        "found_exact": 88,
+        "found_in_set": 135,
+        "probed": 142,
+        "rate_exact": 0.6197,
+        "rate_in_set": 0.9507,
+        "unreachable_examples": [
+          "C0475712",
+          "C0476273",
+          "C0748355",
+          "C1319921",
+          "C4281993",
+          "C5190853",
+          "C5685969"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 142,
+        "found_exact": 93,
+        "found_in_set": 134,
+        "probed": 142,
+        "rate_exact": 0.6549,
+        "rate_in_set": 0.9437,
+        "unreachable_examples": [
+          "C0475712",
+          "C0475715",
+          "C0541813",
+          "C0748355",
+          "C0795703",
+          "C1319921",
+          "C5190853",
+          "C5685969"
+        ]
+      },
+      "seed_codes": [
+        "267036007"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0013404"
+      ],
+      "set_size_codes": 216,
+      "set_size_cuis": 142,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "fever": {
+      "atoms_total": 3224,
+      "cuis_with_an_english_string": 246,
+      "declared_measured_set_recall": 0.774,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.0488,
+      "probe_preferred_term": {
+        "found_anything": 246,
+        "found_exact": 148,
+        "found_in_set": 221,
+        "probed": 246,
+        "rate_exact": 0.6016,
+        "rate_in_set": 0.8984,
+        "unreachable_examples": [
+          "C0026691",
+          "C0343068",
+          "C0409818",
+          "C0424781",
+          "C0751422",
+          "C1275126",
+          "C1384600",
+          "C2230127",
+          "C2316212",
+          "C4082167"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 243,
+        "found_exact": 175,
+        "found_in_set": 233,
+        "probed": 246,
+        "rate_exact": 0.7114,
+        "rate_in_set": 0.9472,
+        "unreachable_examples": [
+          "C0026691",
+          "C0085077",
+          "C5779784",
+          "C5817805",
+          "C5817806",
+          "C5817814",
+          "C5817816",
+          "C5817818",
+          "C5817827",
+          "C5817829"
+        ]
+      },
+      "seed_codes": [
+        "386661006"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0015967"
+      ],
+      "set_size_codes": 313,
+      "set_size_cuis": 246,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "heart_failure": {
+      "atoms_total": 1472,
+      "cuis_with_an_english_string": 161,
+      "declared_measured_set_recall": 0.449,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.0062,
+      "probe_preferred_term": {
+        "found_anything": 161,
+        "found_exact": 46,
+        "found_in_set": 139,
+        "probed": 161,
+        "rate_exact": 0.2857,
+        "rate_in_set": 0.8634,
+        "unreachable_examples": [
+          "C0265832",
+          "C0265911",
+          "C0274379",
+          "C0345016",
+          "C2063735",
+          "C2063736",
+          "C2063813",
+          "C3164619",
+          "C3165054",
+          "C3165055"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 161,
+        "found_exact": 64,
+        "found_in_set": 140,
+        "probed": 161,
+        "rate_exact": 0.3975,
+        "rate_in_set": 0.8696,
+        "unreachable_examples": [
+          "C0018802",
+          "C0155586",
+          "C0155589",
+          "C0238397",
+          "C0265832",
+          "C0345016",
+          "C0685095",
+          "C2063735",
+          "C2063736",
+          "C3164619"
+        ]
+      },
+      "seed_codes": [
+        "84114007"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0018801",
+        "C1959583"
+      ],
+      "set_size_codes": 203,
+      "set_size_cuis": 161,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "hfpef": {
+      "atoms_total": 45,
+      "cuis_with_an_english_string": 8,
+      "declared_measured_set_recall": 0.0,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": 0.0,
+      "probe_preferred_term": {
+        "found_anything": 8,
+        "found_exact": 0,
+        "found_in_set": 0,
+        "probed": 8,
+        "rate_exact": 0.0,
+        "rate_in_set": 0.0,
+        "unreachable_examples": [
+          "C2960127",
+          "C4280902",
+          "C4280903",
+          "C4280904",
+          "C5686755",
+          "C5686758",
+          "C5686759",
+          "C5686888"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 8,
+        "found_exact": 0,
+        "found_in_set": 0,
+        "probed": 8,
+        "rate_exact": 0.0,
+        "rate_in_set": 0.0,
+        "unreachable_examples": [
+          "C2960127",
+          "C4280902",
+          "C4280903",
+          "C4280904",
+          "C5686755",
+          "C5686758",
+          "C5686759",
+          "C5686888"
+        ]
+      },
+      "seed_codes": [
+        "446221000"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C2960127"
+      ],
+      "set_size_codes": 8,
+      "set_size_cuis": 8,
+      "surface_coverage": 1.0,
+      "unusable": [
+        "the matcher recovers no concept in the set from its own name"
+      ]
+    },
+    "hfref": {
+      "atoms_total": 37,
+      "cuis_with_an_english_string": 8,
+      "declared_measured_set_recall": 0.0,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": 0.0,
+      "probe_preferred_term": {
+        "found_anything": 8,
+        "found_exact": 0,
+        "found_in_set": 0,
+        "probed": 8,
+        "rate_exact": 0.0,
+        "rate_in_set": 0.0,
+        "unreachable_examples": [
+          "C3839169",
+          "C3839346",
+          "C3839467",
+          "C3839695",
+          "C3839720",
+          "C4280933",
+          "C4280934",
+          "C4280935"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 8,
+        "found_exact": 0,
+        "found_in_set": 0,
+        "probed": 8,
+        "rate_exact": 0.0,
+        "rate_in_set": 0.0,
+        "unreachable_examples": [
+          "C3839169",
+          "C3839346",
+          "C3839467",
+          "C3839695",
+          "C3839720",
+          "C4280933",
+          "C4280934",
+          "C4280935"
+        ]
+      },
+      "seed_codes": [
+        "703272007"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C3839346"
+      ],
+      "set_size_codes": 8,
+      "set_size_cuis": 8,
+      "surface_coverage": 1.0,
+      "unusable": [
+        "the matcher recovers no concept in the set from its own name"
+      ]
+    },
+    "hypertension": {
+      "atoms_total": 2937,
+      "cuis_with_an_english_string": 361,
+      "declared_measured_set_recall": 0.817,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": 0.0139,
+      "probe_preferred_term": {
+        "found_anything": 361,
+        "found_exact": 116,
+        "found_in_set": 275,
+        "probed": 361,
+        "rate_exact": 0.3213,
+        "rate_in_set": 0.7618,
+        "unreachable_examples": [
+          "C0020538",
+          "C0151620",
+          "C0155584",
+          "C0155586",
+          "C0155587",
+          "C0155589",
+          "C0155591",
+          "C0155593",
+          "C0155596",
+          "C0155598"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 361,
+        "found_exact": 138,
+        "found_in_set": 270,
+        "probed": 361,
+        "rate_exact": 0.3823,
+        "rate_in_set": 0.7479,
+        "unreachable_examples": [
+          "C0151620",
+          "C0155584",
+          "C0155586",
+          "C0155587",
+          "C0155589",
+          "C0155591",
+          "C0155593",
+          "C0155596",
+          "C0155598",
+          "C0155602"
+        ]
+      },
+      "seed_codes": [
+        "38341003"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0020538",
+        "C0497247"
+      ],
+      "set_size_codes": 427,
+      "set_size_cuis": 361,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "metastatic_cancer": {
+      "atoms_total": 9672,
+      "cuis_with_an_english_string": 1079,
+      "declared_measured_set_recall": 0.463,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": 0.0102,
+      "probe_preferred_term": {
+        "found_anything": 1079,
+        "found_exact": 266,
+        "found_in_set": 495,
+        "probed": 1079,
+        "rate_exact": 0.2465,
+        "rate_in_set": 0.4588,
+        "unreachable_examples": [
+          "C0153668",
+          "C0153671",
+          "C0153675",
+          "C0153676",
+          "C0153686",
+          "C0153687",
+          "C0153688",
+          "C0153691",
+          "C0153693",
+          "C0153826"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 1079,
+        "found_exact": 410,
+        "found_in_set": 484,
+        "probed": 1079,
+        "rate_exact": 0.38,
+        "rate_in_set": 0.4486,
+        "unreachable_examples": [
+          "C0036528",
+          "C0153668",
+          "C0153671",
+          "C0153675",
+          "C0153686",
+          "C0153826",
+          "C0153827",
+          "C0153828",
+          "C0153829",
+          "C0153830"
+        ]
+      },
+      "seed_codes": [
+        "128462008"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C2939419"
+      ],
+      "set_size_codes": 1195,
+      "set_size_cuis": 1080,
+      "surface_coverage": 0.9991,
+      "unusable": []
+    },
+    "obesity": {
+      "atoms_total": 1233,
+      "cuis_with_an_english_string": 99,
+      "declared_measured_set_recall": 1.0,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.0202,
+      "probe_preferred_term": {
+        "found_anything": 99,
+        "found_exact": 65,
+        "found_in_set": 89,
+        "probed": 99,
+        "rate_exact": 0.6566,
+        "rate_in_set": 0.899,
+        "unreachable_examples": [
+          "C0752166",
+          "C1275078",
+          "C1839736",
+          "C1846170",
+          "C3472676",
+          "C3494506",
+          "C5190989",
+          "C5438727",
+          "C5681122",
+          "C5924786"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 98,
+        "found_exact": 81,
+        "found_in_set": 91,
+        "probed": 99,
+        "rate_exact": 0.8182,
+        "rate_in_set": 0.9192,
+        "unreachable_examples": [
+          "C0752166",
+          "C1563743",
+          "C3472676",
+          "C4273958",
+          "C4706414",
+          "C5190989",
+          "C5681122",
+          "C5924786"
+        ]
+      },
+      "seed_codes": [
+        "414916001"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0028754",
+        "C1563743"
+      ],
+      "set_size_codes": 124,
+      "set_size_cuis": 99,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "pulmonary_embolism": {
+      "atoms_total": 283,
+      "cuis_with_an_english_string": 30,
+      "declared_measured_set_recall": 0.36,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.0333,
+      "probe_preferred_term": {
+        "found_anything": 30,
+        "found_exact": 12,
+        "found_in_set": 18,
+        "probed": 30,
+        "rate_exact": 0.4,
+        "rate_in_set": 0.6,
+        "unreachable_examples": [
+          "C0034065",
+          "C0042373",
+          "C0269587",
+          "C0340536",
+          "C1955781",
+          "C2882221",
+          "C3161091",
+          "C3662166",
+          "C4076489",
+          "C4510129"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 29,
+        "found_exact": 14,
+        "found_in_set": 19,
+        "probed": 30,
+        "rate_exact": 0.4667,
+        "rate_in_set": 0.6333,
+        "unreachable_examples": [
+          "C0034065",
+          "C0269587",
+          "C0340536",
+          "C0340537",
+          "C2882221",
+          "C3161091",
+          "C3662166",
+          "C4076489",
+          "C4510129",
+          "C5396109"
+        ]
+      },
+      "seed_codes": [
+        "59282003"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0034065"
+      ],
+      "set_size_codes": 36,
+      "set_size_cuis": 30,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "rheumatoid_arthritis": {
+      "atoms_total": 1674,
+      "cuis_with_an_english_string": 257,
+      "declared_measured_set_recall": null,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.0117,
+      "probe_preferred_term": {
+        "found_anything": 257,
+        "found_exact": 91,
+        "found_in_set": 220,
+        "probed": 257,
+        "rate_exact": 0.3541,
+        "rate_in_set": 0.856,
+        "unreachable_examples": [
+          "C0038013",
+          "C0241985",
+          "C0409635",
+          "C0409637",
+          "C0409638",
+          "C0409639",
+          "C0409640",
+          "C0409641",
+          "C0409643",
+          "C0409646"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 256,
+        "found_exact": 105,
+        "found_in_set": 223,
+        "probed": 257,
+        "rate_exact": 0.4086,
+        "rate_in_set": 0.8677,
+        "unreachable_examples": [
+          "C0003873",
+          "C0241985",
+          "C0265176",
+          "C0409639",
+          "C0409640",
+          "C0409641",
+          "C0409646",
+          "C0409650",
+          "C0409667",
+          "C0409673"
+        ]
+      },
+      "seed_codes": [
+        "69896004"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0003873",
+        "C1306838"
+      ],
+      "set_size_codes": 282,
+      "set_size_cuis": 257,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "systemic_lupus_erythematosus": {
+      "atoms_total": 554,
+      "cuis_with_an_english_string": 38,
+      "declared_measured_set_recall": null,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": 0.0,
+      "probe_preferred_term": {
+        "found_anything": 38,
+        "found_exact": 17,
+        "found_in_set": 26,
+        "probed": 38,
+        "rate_exact": 0.4474,
+        "rate_in_set": 0.6842,
+        "unreachable_examples": [
+          "C0264514",
+          "C0265175",
+          "C0339908",
+          "C0343205",
+          "C0409976",
+          "C0409977",
+          "C0521471",
+          "C0752332",
+          "C1274856",
+          "C1275457"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 38,
+        "found_exact": 19,
+        "found_in_set": 26,
+        "probed": 38,
+        "rate_exact": 0.5,
+        "rate_in_set": 0.6842,
+        "unreachable_examples": [
+          "C0024141",
+          "C0264514",
+          "C0265175",
+          "C0339908",
+          "C0343205",
+          "C0409976",
+          "C0409977",
+          "C0521471",
+          "C0587239",
+          "C1274856"
+        ]
+      },
+      "seed_codes": [
+        "55464009"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0024141"
+      ],
+      "set_size_codes": 47,
+      "set_size_cuis": 38,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "type_1_diabetes": {
+      "atoms_total": 419,
+      "cuis_with_an_english_string": 36,
+      "declared_measured_set_recall": 0.625,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.0834,
+      "probe_preferred_term": {
+        "found_anything": 36,
+        "found_exact": 9,
+        "found_in_set": 16,
+        "probed": 36,
+        "rate_exact": 0.25,
+        "rate_in_set": 0.4444,
+        "unreachable_examples": [
+          "C0011854",
+          "C0154178",
+          "C0342261",
+          "C0342294",
+          "C0348917",
+          "C0375114",
+          "C0494279",
+          "C0494284",
+          "C0579065",
+          "C0581383"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 36,
+        "found_exact": 13,
+        "found_in_set": 19,
+        "probed": 36,
+        "rate_exact": 0.3611,
+        "rate_in_set": 0.5278,
+        "unreachable_examples": [
+          "C0154178",
+          "C0154182",
+          "C0342261",
+          "C0348917",
+          "C0494279",
+          "C0494284",
+          "C0579065",
+          "C0581383",
+          "C0851207",
+          "C1279303"
+        ]
+      },
+      "seed_codes": [
+        "46635009"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0011854"
+      ],
+      "set_size_codes": 41,
+      "set_size_cuis": 36,
+      "surface_coverage": 1.0,
+      "unusable": []
+    },
+    "type_2_diabetes": {
+      "atoms_total": 588,
+      "cuis_with_an_english_string": 41,
+      "declared_measured_set_recall": 0.222,
+      "expanded_beyond_seed": true,
+      "links_broken": [],
+      "probe_delta_preferred_minus_shortest": -0.1951,
+      "probe_preferred_term": {
+        "found_anything": 41,
+        "found_exact": 3,
+        "found_in_set": 20,
+        "probed": 41,
+        "rate_exact": 0.0732,
+        "rate_in_set": 0.4878,
+        "unreachable_examples": [
+          "C0011860",
+          "C0271635",
+          "C0271638",
+          "C0342247",
+          "C0342262",
+          "C0342266",
+          "C0342277",
+          "C0342295",
+          "C0342297",
+          "C0342306"
+        ]
+      },
+      "probe_shortest_term": {
+        "found_anything": 41,
+        "found_exact": 20,
+        "found_in_set": 28,
+        "probed": 41,
+        "rate_exact": 0.4878,
+        "rate_in_set": 0.6829,
+        "unreachable_examples": [
+          "C0154181",
+          "C0342247",
+          "C0342262",
+          "C0342297",
+          "C0348921",
+          "C0494285",
+          "C0579066",
+          "C0851208",
+          "C1299614",
+          "C2733146"
+        ]
+      },
+      "seed_codes": [
+        "44054006"
+      ],
+      "seed_codes_unresolved": [],
+      "seed_cuis": [
+        "C0011860"
+      ],
+      "set_size_codes": 62,
+      "set_size_cuis": 41,
+      "surface_coverage": 1.0,
+      "unusable": []
+    }
+  },
+  "phenotypes_unusable": [
+    "hfpef",
+    "hfref"
+  ],
+  "phenotypes_with_a_broken_link": [],
+  "probe": "each concept's own preferred English string is fed to the real matcher; found_in_set means the answer was a member, which is what phenotype evidence tests. A shortest-string probe runs beside it, and the signed delta between them is negative for five of eight: UMLS preferred terms carry qualifiers the matcher cannot absorb, so the bare short atom is often the easier surface, not the harder.",
+  "question": "does every declared phenotype have concepts linked to it, all the way to text?",
+  "reachability_is_not_recall": "self-name reachability is necessary and not sufficient, and it does NOT estimate measured_set_recall. Every concept counts once here while real evidence is dominated by a few common ones, so the two diverge in both directions: chronic_kidney_disease 0.349 vs 0.889 (a poorly-matching tail no note writes), heart_failure 0.863 vs 0.449 (concepts reachable by their own names, surfaces clinicians type that are not). Read this for broken links; read measured_set_recall for how much evidence a run will find.",
+  "why": "a non-empty concept set is not the question. A set the matcher cannot emit is functionally empty and fails silently: the run reports evidence_touch 0, which reads exactly like a note that never mentioned the phenotype."
+}

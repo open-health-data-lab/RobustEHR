@@ -1,0 +1,51 @@
+{
+  "categories": {
+    "anatomy": {
+      "token_share": 0.1011,
+      "types": 712
+    },
+    "device": {
+      "token_share": 0.0163,
+      "types": 219
+    },
+    "diagnostic_procedure": {
+      "token_share": 0.0434,
+      "types": 358
+    },
+    "disease": {
+      "token_share": 0.0809,
+      "types": 1061
+    },
+    "disorder": {
+      "token_share": 0.2108,
+      "types": 1940
+    },
+    "finding": {
+      "token_share": 0.1032,
+      "types": 834
+    },
+    "lab_result": {
+      "token_share": 0.0089,
+      "types": 25
+    },
+    "medication": {
+      "token_share": 0.0927,
+      "types": 1176
+    },
+    "procedure": {
+      "token_share": 0.1167,
+      "types": 935
+    },
+    "symptom": {
+      "token_share": 0.0437,
+      "types": 226
+    },
+    "therapeutic_procedure": {
+      "token_share": 0.0317,
+      "types": 437
+    }
+  },
+  "content_tokens": 249971,
+  "corpus": "golden_notes.csv",
+  "notes": 200
+}

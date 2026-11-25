@@ -1,0 +1,2411 @@
+{
+  "categories": "what the concept IS, from MRSTY semantic types grouped by robustehr.categories. A concept carrying several types lands in several categories, so category counts SUM TO MORE than the set size. `uncategorised` maps to none of the twelve.",
+  "exclusive_partition": {
+    "lab_measurement_is_not_a_column": "lab_measurement is the union T034 (lab_result) and T059 (a procedure), because it deliberately spans both readings of an analyte like `Hgb-9.9`. With procedure and lab_result both present it has no exclusive territory, so listing it would report a structural zero as a measurement. `lab_measurement_union` carries the total instead.",
+    "order": [
+      "disease",
+      "finding",
+      "symptom",
+      "medication",
+      "anatomy",
+      "procedure",
+      "lab_result",
+      "device"
+    ],
+    "other": "in none of the eight \u2014 organisms, non-drug chemicals, qualifiers",
+    "rule": "a concept is counted under the FIRST category in this order it matches, so the columns sum to the set size. The shipped taxonomy is a lattice \u2014 disorder is the parent of disease, symptom and finding \u2014 which is right for targeting and wrong for a table a reader sums."
+  },
+  "facets": "how the concept got in: disorder = descendant closure, medication = MED-RT may_treat with bounded ancestor lift plus declared seeds, finding = declared seeds expanded by closure (UMLS has no usable disease->symptom relation; see concepts/facets.py)",
+  "licence": "identifiers and counts only; no UMLS string appears here",
+  "phenotypes": {
+    "alcohol_use_disorder": {
+      "by_category": {
+        "diagnostic_procedure": 5,
+        "disease": 84,
+        "disorder": 107,
+        "finding": 14,
+        "lab_measurement": 6,
+        "lab_result": 1,
+        "medication": 61,
+        "procedure": 8,
+        "symptom": 9,
+        "therapeutic_procedure": 2,
+        "uncategorised": 7
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 36
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 36,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 47
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 47,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 0,
+          "source": "declared finding seeds"
+        },
+        "medication": {
+          "by_provenance": {
+            "closure": 5,
+            "identity": 50
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 55,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 55
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 55,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "disease": 22,
+          "disorder": 24,
+          "finding": 1,
+          "medication": 6,
+          "symptom": 1,
+          "uncategorised": 6
+        },
+        "disorder": {
+          "disease": 44,
+          "disorder": 46,
+          "finding": 2,
+          "uncategorised": 1
+        },
+        "finding": {},
+        "medication": {
+          "medication": 55
+        },
+        "proposed": {
+          "diagnostic_procedure": 5,
+          "disease": 27,
+          "disorder": 46,
+          "finding": 11,
+          "lab_measurement": 6,
+          "lab_result": 1,
+          "procedure": 8,
+          "symptom": 8,
+          "therapeutic_procedure": 2
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 84,
+        "finding": 14,
+        "lab_result": 1,
+        "medication": 61,
+        "other": 7,
+        "procedure": 8,
+        "symptom": 9
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 6,
+      "total_distinct_cuis": 184
+    },
+    "atrial_fibrillation": {
+      "by_category": {
+        "diagnostic_procedure": 7,
+        "disease": 39,
+        "disorder": 61,
+        "finding": 11,
+        "lab_measurement": 4,
+        "lab_result": 2,
+        "medication": 499,
+        "procedure": 19,
+        "symptom": 11,
+        "therapeutic_procedure": 12
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 10
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 10,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 23
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 23,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 0,
+          "source": "declared finding seeds"
+        },
+        "medication": {
+          "by_provenance": {
+            "identity": 456,
+            "seed": 43
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 499,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 59
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 59,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "disease": 5,
+          "disorder": 5,
+          "lab_measurement": 1,
+          "lab_result": 1,
+          "procedure": 4,
+          "therapeutic_procedure": 4
+        },
+        "disorder": {
+          "disease": 20,
+          "disorder": 22,
+          "finding": 2,
+          "lab_measurement": 1,
+          "lab_result": 1
+        },
+        "finding": {},
+        "medication": {
+          "medication": 499
+        },
+        "proposed": {
+          "diagnostic_procedure": 7,
+          "disease": 24,
+          "disorder": 44,
+          "finding": 9,
+          "lab_measurement": 2,
+          "procedure": 15,
+          "symptom": 11,
+          "therapeutic_procedure": 8
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 39,
+        "finding": 11,
+        "lab_result": 2,
+        "medication": 499,
+        "procedure": 19,
+        "symptom": 11
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 4,
+      "total_distinct_cuis": 581
+    },
+    "chest_pain": {
+      "by_category": {
+        "diagnostic_procedure": 24,
+        "disease": 85,
+        "disorder": 229,
+        "finding": 27,
+        "lab_measurement": 12,
+        "medication": 926,
+        "procedure": 31,
+        "symptom": 117,
+        "therapeutic_procedure": 7,
+        "uncategorised": 1
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 27
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 27,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 175
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 175,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 0,
+          "source": "declared finding seeds"
+        },
+        "medication": {
+          "by_provenance": {
+            "closure": 54,
+            "identity": 872
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 926,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 84
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 84,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 5,
+          "disease": 4,
+          "disorder": 18,
+          "finding": 2,
+          "lab_measurement": 4,
+          "procedure": 8,
+          "symptom": 12,
+          "therapeutic_procedure": 3,
+          "uncategorised": 1
+        },
+        "disorder": {
+          "disease": 76,
+          "disorder": 175,
+          "finding": 9,
+          "symptom": 90
+        },
+        "finding": {},
+        "medication": {
+          "medication": 926
+        },
+        "proposed": {
+          "diagnostic_procedure": 19,
+          "disease": 9,
+          "disorder": 61,
+          "finding": 16,
+          "lab_measurement": 8,
+          "procedure": 23,
+          "symptom": 36,
+          "therapeutic_procedure": 4
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 85,
+        "finding": 27,
+        "medication": 926,
+        "other": 1,
+        "procedure": 31,
+        "symptom": 117
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 12,
+      "total_distinct_cuis": 1187
+    },
+    "chronic_kidney_disease": {
+      "by_category": {
+        "diagnostic_procedure": 15,
+        "disease": 225,
+        "disorder": 269,
+        "finding": 33,
+        "lab_measurement": 10,
+        "medication": 976,
+        "procedure": 37,
+        "symptom": 11,
+        "therapeutic_procedure": 22,
+        "uncategorised": 2
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 110
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 110,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 129
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 129,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 1,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "closure": 6,
+            "declared": 3,
+            "identity": 968
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 977,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 81
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 81,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 3,
+          "disease": 76,
+          "disorder": 89,
+          "finding": 13,
+          "lab_measurement": 2,
+          "procedure": 20,
+          "therapeutic_procedure": 17,
+          "uncategorised": 1
+        },
+        "disorder": {
+          "disease": 128,
+          "disorder": 129,
+          "finding": 1
+        },
+        "finding": {
+          "disorder": 1,
+          "symptom": 1
+        },
+        "medication": {
+          "medication": 976,
+          "uncategorised": 1
+        },
+        "proposed": {
+          "diagnostic_procedure": 12,
+          "disease": 34,
+          "disorder": 64,
+          "finding": 19,
+          "lab_measurement": 8,
+          "procedure": 17,
+          "symptom": 11,
+          "therapeutic_procedure": 5
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 225,
+        "finding": 33,
+        "medication": 976,
+        "other": 2,
+        "procedure": 37,
+        "symptom": 11
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 10,
+      "total_distinct_cuis": 1284
+    },
+    "clostridioides_difficile": {
+      "by_category": {
+        "diagnostic_procedure": 5,
+        "disease": 25,
+        "disorder": 47,
+        "finding": 10,
+        "lab_measurement": 3,
+        "medication": 141,
+        "procedure": 8,
+        "symptom": 12,
+        "therapeutic_procedure": 3
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 7
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 7,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 10
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 10,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 2,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "declared": 3,
+            "identity": 138
+          },
+          "facet": "medication",
+          "lift": 1,
+          "n": 141,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 42
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 42,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "disease": 7,
+          "disorder": 7
+        },
+        "disorder": {
+          "disease": 10,
+          "disorder": 10
+        },
+        "finding": {
+          "disorder": 2,
+          "symptom": 2
+        },
+        "medication": {
+          "medication": 141
+        },
+        "proposed": {
+          "diagnostic_procedure": 5,
+          "disease": 12,
+          "disorder": 34,
+          "finding": 10,
+          "lab_measurement": 3,
+          "procedure": 8,
+          "symptom": 12,
+          "therapeutic_procedure": 3
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 25,
+        "finding": 10,
+        "medication": 141,
+        "procedure": 8,
+        "symptom": 12
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 3,
+      "total_distinct_cuis": 196
+    },
+    "deep_vein_thrombosis": {
+      "by_category": {
+        "diagnostic_procedure": 16,
+        "disease": 307,
+        "disorder": 319,
+        "finding": 6,
+        "lab_measurement": 13,
+        "lab_result": 1,
+        "medication": 15,
+        "procedure": 19,
+        "symptom": 6,
+        "therapeutic_procedure": 3
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 61
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 61,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 241
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 241,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 1,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "identity": 13,
+            "seed": 2
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 15,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 50
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 50,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 2,
+          "disease": 58,
+          "disorder": 59,
+          "finding": 1,
+          "lab_measurement": 1,
+          "procedure": 2
+        },
+        "disorder": {
+          "disease": 241,
+          "disorder": 241
+        },
+        "finding": {
+          "disease": 1,
+          "disorder": 1
+        },
+        "medication": {
+          "medication": 15
+        },
+        "proposed": {
+          "diagnostic_procedure": 14,
+          "disease": 21,
+          "disorder": 32,
+          "finding": 5,
+          "lab_measurement": 12,
+          "lab_result": 1,
+          "procedure": 17,
+          "symptom": 6,
+          "therapeutic_procedure": 3
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 307,
+        "finding": 6,
+        "lab_result": 1,
+        "medication": 15,
+        "procedure": 19,
+        "symptom": 6
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 13,
+      "total_distinct_cuis": 354
+    },
+    "dementia": {
+      "by_category": {
+        "diagnostic_procedure": 10,
+        "disease": 416,
+        "disorder": 448,
+        "finding": 25,
+        "lab_measurement": 3,
+        "medication": 224,
+        "procedure": 14,
+        "symptom": 7,
+        "uncategorised": 1
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 131
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 131,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 280
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 280,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 3,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "closure": 12,
+            "identity": 198,
+            "seed": 12
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 222,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 71
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 71,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "disease": 113,
+          "disorder": 128,
+          "finding": 14,
+          "medication": 2,
+          "procedure": 1,
+          "symptom": 1
+        },
+        "disorder": {
+          "disease": 277,
+          "disorder": 279,
+          "finding": 2,
+          "uncategorised": 1
+        },
+        "finding": {
+          "disease": 3,
+          "disorder": 3
+        },
+        "medication": {
+          "medication": 222
+        },
+        "proposed": {
+          "diagnostic_procedure": 10,
+          "disease": 40,
+          "disorder": 58,
+          "finding": 11,
+          "lab_measurement": 3,
+          "procedure": 13,
+          "symptom": 7
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 416,
+        "finding": 25,
+        "medication": 224,
+        "other": 1,
+        "procedure": 14,
+        "symptom": 7
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 3,
+      "total_distinct_cuis": 687
+    },
+    "depression": {
+      "by_category": {
+        "diagnostic_procedure": 7,
+        "disease": 282,
+        "disorder": 343,
+        "finding": 52,
+        "lab_measurement": 4,
+        "medication": 1156,
+        "procedure": 22,
+        "symptom": 9,
+        "therapeutic_procedure": 14,
+        "uncategorised": 12
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 100
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 100,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 221
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 221,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 3,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "closure": 7,
+            "identity": 1038,
+            "seed": 104
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 1149,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 90
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 90,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 1,
+          "disease": 56,
+          "disorder": 78,
+          "finding": 17,
+          "lab_measurement": 1,
+          "medication": 10,
+          "procedure": 3,
+          "symptom": 5,
+          "therapeutic_procedure": 2,
+          "uncategorised": 9
+        },
+        "disorder": {
+          "disease": 213,
+          "disorder": 221,
+          "finding": 8
+        },
+        "finding": {
+          "disease": 1,
+          "disorder": 3,
+          "finding": 2
+        },
+        "medication": {
+          "medication": 1146,
+          "uncategorised": 3
+        },
+        "proposed": {
+          "diagnostic_procedure": 6,
+          "disease": 40,
+          "disorder": 71,
+          "finding": 27,
+          "lab_measurement": 3,
+          "procedure": 19,
+          "symptom": 4,
+          "therapeutic_procedure": 12
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 282,
+        "finding": 52,
+        "medication": 1156,
+        "other": 12,
+        "procedure": 22,
+        "symptom": 9
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 4,
+      "total_distinct_cuis": 1533
+    },
+    "diabetes_mellitus": {
+      "by_category": {
+        "anatomy": 3,
+        "diagnostic_procedure": 40,
+        "disease": 461,
+        "disorder": 511,
+        "finding": 44,
+        "lab_measurement": 39,
+        "lab_result": 4,
+        "medication": 764,
+        "procedure": 45,
+        "symptom": 6,
+        "therapeutic_procedure": 2,
+        "uncategorised": 6
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 135
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 135,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 382
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 382,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 0,
+          "source": "declared finding seeds"
+        },
+        "medication": {
+          "by_provenance": {
+            "closure": 80,
+            "identity": 665,
+            "seed": 1
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 746,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 100
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 100,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 21,
+          "disease": 65,
+          "disorder": 83,
+          "finding": 17,
+          "lab_measurement": 22,
+          "lab_result": 3,
+          "medication": 23,
+          "procedure": 22,
+          "symptom": 1,
+          "uncategorised": 4
+        },
+        "disorder": {
+          "disease": 372,
+          "disorder": 382,
+          "finding": 10
+        },
+        "finding": {},
+        "medication": {
+          "anatomy": 3,
+          "medication": 741,
+          "uncategorised": 2
+        },
+        "proposed": {
+          "diagnostic_procedure": 21,
+          "disease": 52,
+          "disorder": 74,
+          "finding": 17,
+          "lab_measurement": 18,
+          "lab_result": 1,
+          "procedure": 25,
+          "symptom": 5,
+          "therapeutic_procedure": 2
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "anatomy": 3,
+        "disease": 461,
+        "finding": 44,
+        "lab_result": 4,
+        "medication": 764,
+        "other": 6,
+        "procedure": 45,
+        "symptom": 6
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 39,
+      "total_distinct_cuis": 1333
+    },
+    "dyspnea": {
+      "by_category": {
+        "diagnostic_procedure": 34,
+        "disease": 87,
+        "disorder": 207,
+        "finding": 76,
+        "lab_measurement": 10,
+        "medication": 526,
+        "procedure": 45,
+        "symptom": 44,
+        "therapeutic_procedure": 10
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 44
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 44,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 142
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 142,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 0,
+          "source": "declared finding seeds"
+        },
+        "medication": {
+          "by_provenance": {
+            "closure": 10,
+            "identity": 511,
+            "seed": 5
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 526,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 82
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 82,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 9,
+          "disease": 13,
+          "disorder": 35,
+          "finding": 14,
+          "lab_measurement": 1,
+          "procedure": 9,
+          "symptom": 8
+        },
+        "disorder": {
+          "disease": 73,
+          "disorder": 141,
+          "finding": 44,
+          "procedure": 1,
+          "symptom": 24,
+          "therapeutic_procedure": 1
+        },
+        "finding": {},
+        "medication": {
+          "medication": 526
+        },
+        "proposed": {
+          "diagnostic_procedure": 25,
+          "disease": 2,
+          "disorder": 47,
+          "finding": 25,
+          "lab_measurement": 9,
+          "procedure": 35,
+          "symptom": 20,
+          "therapeutic_procedure": 9
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 87,
+        "finding": 76,
+        "medication": 526,
+        "procedure": 45,
+        "symptom": 44
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 10,
+      "total_distinct_cuis": 778
+    },
+    "fever": {
+      "by_category": {
+        "diagnostic_procedure": 15,
+        "disease": 209,
+        "disorder": 291,
+        "finding": 59,
+        "lab_measurement": 14,
+        "medication": 2399,
+        "procedure": 20,
+        "symptom": 23,
+        "therapeutic_procedure": 2,
+        "uncategorised": 2
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 21
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 21,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 246
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 246,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 0,
+          "source": "declared finding seeds"
+        },
+        "medication": {
+          "by_provenance": {
+            "identity": 2375,
+            "seed": 26
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 2401,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 61
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 61,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "disease": 18,
+          "disorder": 20,
+          "finding": 2,
+          "procedure": 1,
+          "therapeutic_procedure": 1
+        },
+        "disorder": {
+          "disease": 188,
+          "disorder": 246,
+          "finding": 46,
+          "symptom": 12
+        },
+        "finding": {},
+        "medication": {
+          "medication": 2399,
+          "uncategorised": 2
+        },
+        "proposed": {
+          "diagnostic_procedure": 15,
+          "disease": 11,
+          "disorder": 42,
+          "finding": 18,
+          "lab_measurement": 14,
+          "procedure": 19,
+          "symptom": 13,
+          "therapeutic_procedure": 1
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 209,
+        "finding": 59,
+        "medication": 2399,
+        "other": 2,
+        "procedure": 20,
+        "symptom": 23
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 14,
+      "total_distinct_cuis": 2712
+    },
+    "heart_failure": {
+      "by_category": {
+        "diagnostic_procedure": 18,
+        "disease": 202,
+        "disorder": 259,
+        "finding": 41,
+        "lab_measurement": 4,
+        "lab_result": 1,
+        "medication": 1922,
+        "procedure": 25,
+        "symptom": 16,
+        "therapeutic_procedure": 7,
+        "uncategorised": 11
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 90
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 90,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 161
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 161,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 4,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "closure": 1,
+            "declared": 3,
+            "identity": 1796,
+            "seed": 108
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 1908,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 89
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 89,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 3,
+          "disease": 40,
+          "disorder": 67,
+          "finding": 19,
+          "medication": 14,
+          "procedure": 6,
+          "symptom": 8,
+          "therapeutic_procedure": 3,
+          "uncategorised": 3
+        },
+        "disorder": {
+          "disease": 148,
+          "disorder": 153,
+          "finding": 5,
+          "uncategorised": 8
+        },
+        "finding": {
+          "disease": 2,
+          "disorder": 4,
+          "finding": 1,
+          "symptom": 1
+        },
+        "medication": {
+          "medication": 1908
+        },
+        "proposed": {
+          "diagnostic_procedure": 15,
+          "disease": 44,
+          "disorder": 69,
+          "finding": 17,
+          "lab_measurement": 4,
+          "lab_result": 1,
+          "procedure": 19,
+          "symptom": 8,
+          "therapeutic_procedure": 4
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 202,
+        "finding": 41,
+        "lab_result": 1,
+        "medication": 1922,
+        "other": 11,
+        "procedure": 25,
+        "symptom": 16
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 4,
+      "total_distinct_cuis": 2218
+    },
+    "hfpef": {
+      "by_category": {
+        "diagnostic_procedure": 15,
+        "disease": 54,
+        "disorder": 102,
+        "finding": 33,
+        "lab_measurement": 1,
+        "medication": 1058,
+        "procedure": 16,
+        "symptom": 15,
+        "therapeutic_procedure": 1,
+        "uncategorised": 1
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 81
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 81,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 8
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 8,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 4,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "declared": 3,
+            "identity": 991,
+            "lift": 50
+          },
+          "facet": "medication",
+          "lift": 1,
+          "n": 1044,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 46
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 46,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 8,
+          "disease": 34,
+          "disorder": 58,
+          "finding": 16,
+          "medication": 14,
+          "procedure": 8,
+          "symptom": 8,
+          "uncategorised": 1
+        },
+        "disorder": {
+          "disease": 8,
+          "disorder": 8
+        },
+        "finding": {
+          "disease": 2,
+          "disorder": 4,
+          "finding": 1,
+          "symptom": 1
+        },
+        "medication": {
+          "medication": 1044
+        },
+        "proposed": {
+          "diagnostic_procedure": 7,
+          "disease": 15,
+          "disorder": 38,
+          "finding": 16,
+          "lab_measurement": 1,
+          "procedure": 8,
+          "symptom": 7,
+          "therapeutic_procedure": 1
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 54,
+        "finding": 33,
+        "medication": 1058,
+        "other": 1,
+        "procedure": 16,
+        "symptom": 15
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 1,
+      "total_distinct_cuis": 1177
+    },
+    "hfref": {
+      "by_category": {
+        "diagnostic_procedure": 15,
+        "disease": 45,
+        "disorder": 89,
+        "finding": 31,
+        "lab_measurement": 2,
+        "medication": 1288,
+        "procedure": 21,
+        "symptom": 13,
+        "therapeutic_procedure": 6,
+        "uncategorised": 1
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 49
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 49,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 8
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 8,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 4,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "declared": 4,
+            "identity": 1206,
+            "lift": 72
+          },
+          "facet": "medication",
+          "lift": 1,
+          "n": 1282,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 64
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 64,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 4,
+          "disease": 19,
+          "disorder": 36,
+          "finding": 12,
+          "medication": 6,
+          "procedure": 6,
+          "symptom": 5,
+          "therapeutic_procedure": 2,
+          "uncategorised": 1
+        },
+        "disorder": {
+          "disease": 5,
+          "disorder": 8,
+          "finding": 3
+        },
+        "finding": {
+          "disease": 2,
+          "disorder": 4,
+          "finding": 1,
+          "symptom": 1
+        },
+        "medication": {
+          "medication": 1282
+        },
+        "proposed": {
+          "diagnostic_procedure": 12,
+          "disease": 24,
+          "disorder": 48,
+          "finding": 16,
+          "lab_measurement": 2,
+          "procedure": 16,
+          "symptom": 8,
+          "therapeutic_procedure": 4
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 45,
+        "finding": 31,
+        "medication": 1288,
+        "other": 1,
+        "procedure": 21,
+        "symptom": 13
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 2,
+      "total_distinct_cuis": 1399
+    },
+    "hypertension": {
+      "by_category": {
+        "diagnostic_procedure": 3,
+        "disease": 371,
+        "disorder": 429,
+        "finding": 45,
+        "lab_measurement": 1,
+        "lab_result": 1,
+        "medication": 2727,
+        "procedure": 6,
+        "symptom": 13,
+        "therapeutic_procedure": 2,
+        "uncategorised": 4
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 55
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 55,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 361
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 361,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 0,
+          "source": "declared finding seeds"
+        },
+        "medication": {
+          "by_provenance": {
+            "closure": 29,
+            "identity": 2491,
+            "seed": 185
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 2705,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 74
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 74,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "disease": 25,
+          "disorder": 30,
+          "finding": 4,
+          "medication": 23,
+          "symptom": 1,
+          "uncategorised": 2
+        },
+        "disorder": {
+          "disease": 337,
+          "disorder": 359,
+          "finding": 21,
+          "lab_measurement": 1,
+          "lab_result": 1,
+          "symptom": 1,
+          "uncategorised": 1
+        },
+        "finding": {},
+        "medication": {
+          "medication": 2704,
+          "uncategorised": 1
+        },
+        "proposed": {
+          "diagnostic_procedure": 3,
+          "disease": 37,
+          "disorder": 68,
+          "finding": 20,
+          "procedure": 6,
+          "symptom": 11,
+          "therapeutic_procedure": 2
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 371,
+        "finding": 45,
+        "lab_result": 1,
+        "medication": 2727,
+        "other": 4,
+        "procedure": 6,
+        "symptom": 13
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 1,
+      "total_distinct_cuis": 3167
+    },
+    "metastatic_cancer": {
+      "by_category": {
+        "anatomy": 4,
+        "diagnostic_procedure": 23,
+        "disease": 1122,
+        "disorder": 1140,
+        "finding": 6,
+        "lab_measurement": 12,
+        "medication": 1106,
+        "procedure": 40,
+        "symptom": 12,
+        "therapeutic_procedure": 17,
+        "uncategorised": 4
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 36
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 36,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 1080
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 1080,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 0,
+          "source": "declared finding seeds"
+        },
+        "medication": {
+          "by_provenance": {
+            "identity": 941,
+            "lift": 166
+          },
+          "facet": "medication",
+          "lift": 1,
+          "n": 1107,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 98
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 98,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 2,
+          "disease": 26,
+          "disorder": 27,
+          "finding": 1,
+          "lab_measurement": 2,
+          "medication": 3,
+          "procedure": 4,
+          "therapeutic_procedure": 2,
+          "uncategorised": 2
+        },
+        "disorder": {
+          "disease": 1080,
+          "disorder": 1080
+        },
+        "finding": {},
+        "medication": {
+          "anatomy": 4,
+          "medication": 1103,
+          "uncategorised": 2
+        },
+        "proposed": {
+          "diagnostic_procedure": 21,
+          "disease": 45,
+          "disorder": 62,
+          "finding": 5,
+          "lab_measurement": 10,
+          "procedure": 36,
+          "symptom": 12,
+          "therapeutic_procedure": 15
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "anatomy": 2,
+        "disease": 1122,
+        "finding": 6,
+        "medication": 1106,
+        "other": 4,
+        "procedure": 40,
+        "symptom": 12
+      },
+      "exclusive_contested": 2,
+      "lab_measurement_union": 12,
+      "total_distinct_cuis": 2292
+    },
+    "obesity": {
+      "by_category": {
+        "diagnostic_procedure": 4,
+        "disease": 104,
+        "disorder": 138,
+        "finding": 25,
+        "lab_measurement": 3,
+        "lab_result": 1,
+        "medication": 706,
+        "procedure": 12,
+        "symptom": 9,
+        "therapeutic_procedure": 8,
+        "uncategorised": 3
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 21
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 21,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 99
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 99,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 1,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "declared": 2,
+            "identity": 668,
+            "seed": 31
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 701,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 52
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 52,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 1,
+          "disease": 4,
+          "disorder": 9,
+          "finding": 5,
+          "lab_measurement": 1,
+          "medication": 6,
+          "procedure": 5,
+          "therapeutic_procedure": 4,
+          "uncategorised": 1
+        },
+        "disorder": {
+          "disease": 87,
+          "disorder": 98,
+          "finding": 10,
+          "symptom": 1,
+          "uncategorised": 1
+        },
+        "finding": {
+          "disorder": 1,
+          "finding": 1
+        },
+        "medication": {
+          "medication": 700,
+          "uncategorised": 1
+        },
+        "proposed": {
+          "diagnostic_procedure": 3,
+          "disease": 24,
+          "disorder": 44,
+          "finding": 12,
+          "lab_measurement": 2,
+          "lab_result": 1,
+          "procedure": 7,
+          "symptom": 8,
+          "therapeutic_procedure": 4
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 104,
+        "finding": 25,
+        "lab_result": 1,
+        "medication": 706,
+        "other": 3,
+        "procedure": 12,
+        "symptom": 9
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 3,
+      "total_distinct_cuis": 860
+    },
+    "pulmonary_embolism": {
+      "by_category": {
+        "diagnostic_procedure": 21,
+        "disease": 69,
+        "disorder": 96,
+        "finding": 16,
+        "lab_measurement": 12,
+        "medication": 398,
+        "procedure": 23,
+        "symptom": 11,
+        "therapeutic_procedure": 2,
+        "uncategorised": 1
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 36
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 36,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 30
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 30,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 3,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "identity": 344,
+            "seed": 53
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 397,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 62
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 62,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 5,
+          "disease": 29,
+          "disorder": 29,
+          "lab_measurement": 1,
+          "medication": 2,
+          "procedure": 5
+        },
+        "disorder": {
+          "disease": 30,
+          "disorder": 30
+        },
+        "finding": {
+          "disorder": 3,
+          "symptom": 3
+        },
+        "medication": {
+          "medication": 396,
+          "uncategorised": 1
+        },
+        "proposed": {
+          "diagnostic_procedure": 16,
+          "disease": 17,
+          "disorder": 44,
+          "finding": 16,
+          "lab_measurement": 11,
+          "procedure": 18,
+          "symptom": 11,
+          "therapeutic_procedure": 2
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 69,
+        "finding": 16,
+        "medication": 398,
+        "other": 1,
+        "procedure": 23,
+        "symptom": 11
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 12,
+      "total_distinct_cuis": 518
+    },
+    "rheumatoid_arthritis": {
+      "by_category": {
+        "diagnostic_procedure": 7,
+        "disease": 343,
+        "disorder": 363,
+        "finding": 16,
+        "lab_measurement": 8,
+        "lab_result": 3,
+        "medication": 2659,
+        "procedure": 11,
+        "symptom": 4,
+        "therapeutic_procedure": 4,
+        "uncategorised": 8
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 92
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 92,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 257
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 257,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 1,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "closure": 7,
+            "identity": 2533,
+            "seed": 117
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 2657,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 45
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 45,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "disease": 72,
+          "disorder": 79,
+          "finding": 7,
+          "lab_measurement": 3,
+          "lab_result": 3,
+          "medication": 5,
+          "procedure": 1,
+          "therapeutic_procedure": 1,
+          "uncategorised": 4
+        },
+        "disorder": {
+          "disease": 256,
+          "disorder": 256,
+          "uncategorised": 1
+        },
+        "finding": {
+          "disorder": 1,
+          "finding": 1
+        },
+        "medication": {
+          "medication": 2654,
+          "uncategorised": 3
+        },
+        "proposed": {
+          "diagnostic_procedure": 7,
+          "disease": 22,
+          "disorder": 35,
+          "finding": 9,
+          "lab_measurement": 5,
+          "procedure": 10,
+          "symptom": 4,
+          "therapeutic_procedure": 3
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 343,
+        "finding": 16,
+        "lab_result": 3,
+        "medication": 2659,
+        "other": 8,
+        "procedure": 11,
+        "symptom": 4
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 8,
+      "total_distinct_cuis": 3044
+    },
+    "systemic_lupus_erythematosus": {
+      "by_category": {
+        "diagnostic_procedure": 10,
+        "disease": 91,
+        "disorder": 116,
+        "finding": 17,
+        "lab_measurement": 10,
+        "lab_result": 2,
+        "medication": 891,
+        "procedure": 12,
+        "symptom": 8,
+        "therapeutic_procedure": 2,
+        "uncategorised": 2
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 45
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 45,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 38
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 38,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 0,
+          "source": "declared finding seeds"
+        },
+        "medication": {
+          "by_provenance": {
+            "closure": 4,
+            "identity": 853,
+            "seed": 34
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 891,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 55
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 55,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 2,
+          "disease": 36,
+          "disorder": 40,
+          "finding": 4,
+          "lab_measurement": 3,
+          "lab_result": 1,
+          "medication": 2,
+          "procedure": 2
+        },
+        "disorder": {
+          "disease": 38,
+          "disorder": 38
+        },
+        "finding": {},
+        "medication": {
+          "medication": 889,
+          "uncategorised": 2
+        },
+        "proposed": {
+          "diagnostic_procedure": 8,
+          "disease": 23,
+          "disorder": 44,
+          "finding": 13,
+          "lab_measurement": 7,
+          "lab_result": 1,
+          "procedure": 10,
+          "symptom": 8,
+          "therapeutic_procedure": 2
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 91,
+        "finding": 17,
+        "lab_result": 2,
+        "medication": 891,
+        "other": 2,
+        "procedure": 12,
+        "symptom": 8
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 10,
+      "total_distinct_cuis": 1023
+    },
+    "type_1_diabetes": {
+      "by_category": {
+        "anatomy": 3,
+        "diagnostic_procedure": 22,
+        "disease": 74,
+        "disorder": 108,
+        "finding": 25,
+        "lab_measurement": 21,
+        "lab_result": 1,
+        "medication": 276,
+        "procedure": 26,
+        "symptom": 9,
+        "therapeutic_procedure": 3,
+        "uncategorised": 1
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 43
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 43,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 36
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 36,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 2,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "identity": 231,
+            "seed": 38
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 269,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 73
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 73,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 7,
+          "disease": 20,
+          "disorder": 25,
+          "finding": 4,
+          "lab_measurement": 7,
+          "medication": 11,
+          "procedure": 7,
+          "symptom": 1
+        },
+        "disorder": {
+          "disease": 34,
+          "disorder": 36,
+          "finding": 2
+        },
+        "finding": {
+          "disorder": 2,
+          "symptom": 2
+        },
+        "medication": {
+          "anatomy": 3,
+          "medication": 265,
+          "uncategorised": 1
+        },
+        "proposed": {
+          "diagnostic_procedure": 16,
+          "disease": 25,
+          "disorder": 52,
+          "finding": 19,
+          "lab_measurement": 15,
+          "lab_result": 1,
+          "procedure": 20,
+          "symptom": 8,
+          "therapeutic_procedure": 3
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "anatomy": 3,
+        "disease": 74,
+        "finding": 25,
+        "lab_result": 1,
+        "medication": 276,
+        "other": 1,
+        "procedure": 26,
+        "symptom": 9
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 21,
+      "total_distinct_cuis": 415
+    },
+    "type_2_diabetes": {
+      "by_category": {
+        "diagnostic_procedure": 20,
+        "disease": 92,
+        "disorder": 130,
+        "finding": 29,
+        "lab_measurement": 17,
+        "lab_result": 2,
+        "medication": 728,
+        "procedure": 24,
+        "symptom": 9,
+        "therapeutic_procedure": 3,
+        "uncategorised": 6
+      },
+      "by_facet": {
+        "closure": {
+          "by_provenance": {
+            "closure": 79
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 79,
+          "source": "one-hop hierarchy neighborhood, vetting-gated (strict)"
+        },
+        "disorder": {
+          "by_provenance": {
+            "closure": 41
+          },
+          "facet": "disorder",
+          "lift": 0,
+          "n": 41,
+          "source": "descendant closure"
+        },
+        "finding": {
+          "by_provenance": {},
+          "facet": "finding",
+          "lift": 0,
+          "n": 2,
+          "source": "declared finding seeds (depth 0)"
+        },
+        "medication": {
+          "by_provenance": {
+            "declared": 4,
+            "identity": 629,
+            "seed": 74
+          },
+          "facet": "medication",
+          "lift": 0,
+          "n": 707,
+          "source": "MED-RT may_treat|may_prevent + declared (vetted)"
+        },
+        "proposed": {
+          "by_provenance": {
+            "proposed": 69
+          },
+          "facet": "finding",
+          "lift": 0,
+          "n": 69,
+          "source": "LLM-proposed terms grounded against the release, vetting-gated"
+        }
+      },
+      "by_facet_and_category": {
+        "closure": {
+          "diagnostic_procedure": 4,
+          "disease": 35,
+          "disorder": 47,
+          "finding": 11,
+          "lab_measurement": 4,
+          "lab_result": 1,
+          "medication": 23,
+          "procedure": 4,
+          "symptom": 1,
+          "uncategorised": 4
+        },
+        "disorder": {
+          "disease": 38,
+          "disorder": 41,
+          "finding": 3
+        },
+        "finding": {
+          "disorder": 2,
+          "symptom": 2
+        },
+        "medication": {
+          "medication": 705,
+          "uncategorised": 2
+        },
+        "proposed": {
+          "diagnostic_procedure": 17,
+          "disease": 23,
+          "disorder": 47,
+          "finding": 16,
+          "lab_measurement": 14,
+          "lab_result": 1,
+          "procedure": 21,
+          "symptom": 8,
+          "therapeutic_procedure": 3
+        }
+      },
+      "cuis_with_no_semantic_type": 0,
+      "exclusive": {
+        "disease": 92,
+        "finding": 29,
+        "lab_result": 2,
+        "medication": 728,
+        "other": 6,
+        "procedure": 24,
+        "symptom": 9
+      },
+      "exclusive_contested": 0,
+      "lab_measurement_union": 17,
+      "total_distinct_cuis": 890
+    }
+  },
+  "question": "what is in each phenotype's concept set, by facet and by category?",
+  "totals": {
+    "by_facet": {
+      "closure": 1309,
+      "disorder": 4015,
+      "finding": 31,
+      "medication": 21325,
+      "proposed": 1502
+    },
+    "distinct_cuis_over_all_phenotypes": 18553,
+    "exclusive": {
+      "anatomy": 5,
+      "disease": 4416,
+      "finding": 483,
+      "lab_result": 16,
+      "medication": 12931,
+      "other": 61,
+      "procedure": 378,
+      "symptom": 263
+    },
+    "lab_measurement_union": 157
+  },
+  "why_both": "facets are checked for coverage gaps, categories for contamination. A disorder facet full of anatomy concepts is a closure that wandered."
+}

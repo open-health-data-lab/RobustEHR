@@ -1,0 +1,99 @@
+{
+  "arm": "medspacy_extended",
+  "boundaries": "this package's sentence boundaries (CTX-B composition)",
+  "by_dimension": {
+    "family": {
+      "bottleneck": "recall \u2014 cue vocabulary",
+      "false_negative_cue_direction": {},
+      "false_negatives_by_cause": {
+        "cue absent from the sentence": 1
+      },
+      "false_positives_by_cause": {},
+      "fn": 1,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.75,
+      "tn": 396,
+      "tp": 3
+    },
+    "historical": {
+      "bottleneck": "recall \u2014 cue vocabulary",
+      "false_negative_cue_direction": {
+        "FORWARD": 11
+      },
+      "false_negatives_by_cause": {
+        "cue absent from the sentence": 21,
+        "cue present but unscoped, cue after target": 11
+      },
+      "false_positives_by_cause": {
+        "different lines": 6,
+        "one inside a list item, one outside": 2,
+        "same line, scope error": 3
+      },
+      "fn": 32,
+      "fp": 11,
+      "precision": 0.3529,
+      "recall": 0.1579,
+      "tn": 351,
+      "tp": 6
+    },
+    "negated": {
+      "bottleneck": "precision \u2014 over-scoping",
+      "false_negative_cue_direction": {
+        "FORWARD": 7
+      },
+      "false_negatives_by_cause": {
+        "cue absent from the sentence": 3,
+        "cue present but unscoped, cue after target": 7
+      },
+      "false_positives_by_cause": {
+        "different lines": 9,
+        "one inside a list item, one outside": 1,
+        "same line, scope error": 11
+      },
+      "fn": 10,
+      "fp": 21,
+      "precision": 0.5333,
+      "recall": 0.7059,
+      "tn": 345,
+      "tp": 24
+    },
+    "uncertain": {
+      "bottleneck": "recall \u2014 scope reach",
+      "false_negative_cue_direction": {
+        "FORWARD": 15
+      },
+      "false_negatives_by_cause": {
+        "cue absent from the sentence": 8,
+        "cue present but unscoped, cue after target": 15
+      },
+      "false_positives_by_cause": {
+        "different lines": 4,
+        "different rows of an aligned block": 1,
+        "one inside a list item, one outside": 4,
+        "same line, scope error": 9
+      },
+      "fn": 23,
+      "fp": 18,
+      "precision": 0.4375,
+      "recall": 0.3784,
+      "tn": 345,
+      "tp": 14
+    }
+  },
+  "dimensions": [
+    "negated",
+    "historical",
+    "family",
+    "uncertain"
+  ],
+  "how_to_read": "A false negative with the cue ABSENT is a vocabulary problem; one with the cue PRESENT is a scope problem, and if the cue sits after the target a FORWARD-only rule can never reach it whatever the vocabulary. A false positive attributed to a structural separation is a boundary problem \u2014 the cue and the target are in different lines, list items or table rows, so the sentence the scope ran to is not a unit the note's author wrote. What is left is the published algorithm's own residual error on this corpus.",
+  "n_items": 400,
+  "n_notes": 40,
+  "question": "Why is stage 8 wrong when it is wrong?",
+  "restricted_source": true,
+  "split": "held_out",
+  "unqualified_note": "spans qualify() dropped \u2014 char_span widening or the widest-wins overlap rule. They score as affirmed, so a dropped gold positive would be an automatic false negative no cue change could repair.",
+  "unqualified_spans": 24,
+  "why": "The F1 tables say how often, never why, and the answer differs by dimension \u2014 so a fix chosen from them alone is a guess. This partitions every error into a cause that names the change which would repair it."
+}

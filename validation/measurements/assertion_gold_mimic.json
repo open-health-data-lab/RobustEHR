@@ -1,0 +1,1840 @@
+{
+  "arms": {
+    "ctx_a_pyrush": {
+      "family": {
+        "cohens_kappa": 0.6886,
+        "fn": 0,
+        "fp": 8,
+        "gold_positives": 9,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 17,
+        "tn": 983,
+        "tp": 9
+      },
+      "historical": {
+        "cohens_kappa": 0.1856,
+        "f1": 0.2149,
+        "fn": 86,
+        "fp": 9,
+        "gold_positives": 99,
+        "precision": 0.5909,
+        "predicted_positives": 22,
+        "recall": 0.1313,
+        "tn": 892,
+        "tp": 13
+      },
+      "negated": {
+        "cohens_kappa": 0.5938,
+        "f1": 0.6316,
+        "fn": 21,
+        "fp": 49,
+        "gold_positives": 81,
+        "precision": 0.5505,
+        "predicted_positives": 109,
+        "recall": 0.7407,
+        "tn": 870,
+        "tp": 60
+      },
+      "uncertain": {
+        "cohens_kappa": 0.2945,
+        "f1": 0.3375,
+        "fn": 92,
+        "fp": 14,
+        "gold_positives": 119,
+        "precision": 0.6585,
+        "predicted_positives": 41,
+        "recall": 0.2269,
+        "tn": 867,
+        "tp": 27
+      }
+    },
+    "ctx_b_our_boundaries": {
+      "family": {
+        "cohens_kappa": 0.798,
+        "fn": 1,
+        "fp": 3,
+        "gold_positives": 9,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 11,
+        "tn": 988,
+        "tp": 8
+      },
+      "historical": {
+        "cohens_kappa": 0.1775,
+        "f1": 0.1964,
+        "fn": 88,
+        "fp": 2,
+        "gold_positives": 99,
+        "precision": 0.8462,
+        "predicted_positives": 13,
+        "recall": 0.1111,
+        "tn": 899,
+        "tp": 11
+      },
+      "negated": {
+        "cohens_kappa": 0.5807,
+        "f1": 0.6171,
+        "fn": 27,
+        "fp": 40,
+        "gold_positives": 81,
+        "precision": 0.5745,
+        "predicted_positives": 94,
+        "recall": 0.6667,
+        "tn": 879,
+        "tp": 54
+      },
+      "uncertain": {
+        "cohens_kappa": 0.2829,
+        "f1": 0.3226,
+        "fn": 94,
+        "fp": 11,
+        "gold_positives": 119,
+        "precision": 0.6944,
+        "predicted_positives": 36,
+        "recall": 0.2101,
+        "tn": 870,
+        "tp": 25
+      }
+    },
+    "ctx_c_extended_cues": {
+      "family": {
+        "cohens_kappa": 0.798,
+        "fn": 1,
+        "fp": 3,
+        "gold_positives": 9,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 11,
+        "tn": 988,
+        "tp": 8
+      },
+      "historical": {
+        "cohens_kappa": 0.2762,
+        "f1": 0.3268,
+        "fn": 74,
+        "fp": 29,
+        "gold_positives": 99,
+        "precision": 0.463,
+        "predicted_positives": 54,
+        "recall": 0.2525,
+        "tn": 872,
+        "tp": 25
+      },
+      "negated": {
+        "cohens_kappa": 0.557,
+        "f1": 0.5967,
+        "fn": 27,
+        "fp": 46,
+        "gold_positives": 81,
+        "precision": 0.54,
+        "predicted_positives": 100,
+        "recall": 0.6667,
+        "tn": 873,
+        "tp": 54
+      },
+      "uncertain": {
+        "cohens_kappa": 0.3755,
+        "f1": 0.433,
+        "fn": 77,
+        "fp": 33,
+        "gold_positives": 119,
+        "precision": 0.56,
+        "predicted_positives": 75,
+        "recall": 0.3529,
+        "tn": 848,
+        "tp": 42
+      }
+    },
+    "lexicon_cooccurrence": {
+      "family": {
+        "cohens_kappa": 0.37,
+        "fn": 6,
+        "fp": 4,
+        "gold_positives": 9,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 7,
+        "tn": 987,
+        "tp": 3
+      },
+      "historical": {
+        "cohens_kappa": 0.2059,
+        "f1": 0.2443,
+        "fn": 83,
+        "fp": 16,
+        "gold_positives": 99,
+        "precision": 0.5,
+        "predicted_positives": 32,
+        "recall": 0.1616,
+        "tn": 885,
+        "tp": 16
+      },
+      "negated": {
+        "cohens_kappa": 0.3658,
+        "f1": 0.4344,
+        "fn": 28,
+        "fp": 110,
+        "gold_positives": 81,
+        "precision": 0.3252,
+        "predicted_positives": 163,
+        "recall": 0.6543,
+        "tn": 809,
+        "tp": 53
+      },
+      "uncertain": {
+        "cohens_kappa": 0.2535,
+        "f1": 0.303,
+        "fn": 94,
+        "fp": 21,
+        "gold_positives": 119,
+        "precision": 0.5435,
+        "predicted_positives": 46,
+        "recall": 0.2101,
+        "tn": 860,
+        "tp": 25
+      }
+    },
+    "negspacy": {
+      "family": {
+        "cohens_kappa": null,
+        "fn": 0,
+        "fp": 0,
+        "gold_positives": 0,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 0,
+        "tn": 0,
+        "tp": 0
+      },
+      "historical": {
+        "cohens_kappa": null,
+        "fn": 0,
+        "fp": 0,
+        "gold_positives": 0,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 0,
+        "tn": 0,
+        "tp": 0
+      },
+      "negated": {
+        "cohens_kappa": 0.3561,
+        "f1": 0.4315,
+        "fn": 18,
+        "fp": 148,
+        "gold_positives": 81,
+        "precision": 0.2986,
+        "predicted_positives": 211,
+        "recall": 0.7778,
+        "tn": 771,
+        "tp": 63
+      },
+      "uncertain": {
+        "cohens_kappa": null,
+        "fn": 0,
+        "fp": 0,
+        "gold_positives": 0,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 0,
+        "tn": 0,
+        "tp": 0
+      }
+    }
+  },
+  "corpus": "MIMIC-IV discharge summaries (data/golden_notes.csv)",
+  "ctx_b_disagreements": [
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "family"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": []
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "family",
+        "historical",
+        "negated"
+      ],
+      "gold": [
+        "family",
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": [
+        "historical",
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "family"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [
+        "negated",
+        "uncertain"
+      ],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": [
+        "historical",
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "family"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": [
+        "historical",
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": [
+        "historical",
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical",
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [
+        "negated",
+        "uncertain"
+      ],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": [
+        "historical",
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated",
+        "uncertain"
+      ],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": [
+        "negated",
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical",
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "uncertain"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "historical"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical",
+        "negated"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "negated"
+      ]
+    },
+    {
+      "context": [
+        "negated",
+        "uncertain"
+      ],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "gold": []
+    },
+    {
+      "context": [
+        "negated",
+        "uncertain"
+      ],
+      "gold": [
+        "uncertain"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "family",
+        "historical"
+      ]
+    },
+    {
+      "context": [],
+      "gold": [
+        "uncertain"
+      ]
+    }
+  ],
+  "gold_label_counts": {
+    "family": 9,
+    "historical": 99,
+    "negated": 81,
+    "uncertain": 119
+  },
+  "how_to_read": "kappa near 1 means the deterministic rule set and a careful reading reach the same conclusion; it does not establish that either is right. A dimension with high kappa is one where the rules can be trusted to behave predictably enough to anchor an operator. A dimension with low kappa is one where a SEMANTIC operator would be editing spans nobody can agree about.",
+  "n_affirmed": 704,
+  "n_items": 1000,
+  "prevalence_note": "dimensions with fewer than 10 gold positives report counts and kappa only. The fixture corpus is negation-dense and hedge-poor, so `uncertain` in particular is too thin here to score \u2014 scope_accuracy.json remains its only quantitative evidence.",
+  "question": "Does stage 8 agree with a careful reading of the note, on all five dimensions?",
+  "restricted": true,
+  "split": "all",
+  "status_of_this_gold": "a SECOND OPINION, not a ground truth. The annotator is an LLM with prior exposure to this codebase, so agreement is between two imperfect raters. Cohen's kappa is the headline for that reason, and the disagreement list matters more than the coefficient.",
+  "why": "negation had clinical gold and uncertainty an out-of-domain proxy; historical, family and hypothetical had nothing, yet three SEMANTIC operators would anchor on them."
+}

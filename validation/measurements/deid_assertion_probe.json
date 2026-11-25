@@ -1,0 +1,57 @@
+{
+  "expected_negated": false,
+  "finding": "The de-identification convention alone flips the negation verdict on an active diagnosis. The perturbation between conventions is INVARIANT_BY_CONSTRUCTION and cannot change clinical reference.",
+  "incorrect_conventions": [
+    "mimic_iv_underscore",
+    "mimic_iii_bracket",
+    "angle_redacted"
+  ],
+  "mechanism": "Masked placeholders defeat sentence segmentation, merging two list items into one sentence, which lets the negation cue in item 1 take scope over the diagnosis in item 2.",
+  "n_conventions": 6,
+  "n_incorrect": 3,
+  "results": [
+    {
+      "convention": "mimic_iv_underscore",
+      "correct": false,
+      "hypertension_negated": true,
+      "placeholder": "___",
+      "sentences": 4
+    },
+    {
+      "convention": "mimic_iii_bracket",
+      "correct": false,
+      "hypertension_negated": true,
+      "placeholder": "[** Name **]",
+      "sentences": 4
+    },
+    {
+      "convention": "angle_redacted",
+      "correct": false,
+      "hypertension_negated": true,
+      "placeholder": "<REDACTED>",
+      "sentences": 4
+    },
+    {
+      "convention": "xxx",
+      "correct": true,
+      "hypertension_negated": false,
+      "placeholder": "XXX",
+      "sentences": 6
+    },
+    {
+      "convention": "control_real_name",
+      "correct": true,
+      "hypertension_negated": false,
+      "placeholder": "Mr. Smith",
+      "sentences": 7
+    },
+    {
+      "convention": "control_generic_noun",
+      "correct": true,
+      "hypertension_negated": false,
+      "placeholder": "Patient",
+      "sentences": 6
+    }
+  ],
+  "tool": "medspacy 1.3.1"
+}

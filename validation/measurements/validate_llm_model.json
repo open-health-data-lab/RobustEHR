@@ -1,0 +1,53 @@
+{
+  "by_dimension": {
+    "family": {
+      "f1": 0.0,
+      "gold_positives": 1,
+      "precision": 0.0,
+      "predicted_positives": 5,
+      "recall": 0.0
+    },
+    "historical": {
+      "f1": 0.2778,
+      "gold_positives": 8,
+      "precision": 0.1786,
+      "predicted_positives": 28,
+      "recall": 0.625
+    },
+    "negated": {
+      "f1": 0.8478,
+      "gold_positives": 52,
+      "precision": 0.975,
+      "predicted_positives": 40,
+      "recall": 0.75
+    },
+    "uncertain": {
+      "f1": 0.5,
+      "gold_positives": 14,
+      "precision": 0.6,
+      "predicted_positives": 10,
+      "recall": 0.4286
+    },
+    "unmodified": {
+      "f1": 0.8967,
+      "gold_positives": 275,
+      "precision": 0.9101,
+      "predicted_positives": 267,
+      "recall": 0.8836
+    }
+  },
+  "cache": "data/llm_cache",
+  "caveat": "the packaged gold is negation-dense and hedge-poor, so it judges negation confidently and the other dimensions weakly. It is a smoke test with real numbers, not the corpus the published figures come from.",
+  "config_digest": "773e564c79256bfb",
+  "data_collection": "deny",
+  "exact_label_set_agreement": 0.8371,
+  "gold": "packaged synthetic fixtures (no credentials needed)",
+  "model": "google/gemini-2.5-flash",
+  "n_items": 350,
+  "negated_floor": 0.7,
+  "question": "Is this model good enough to flip assertions in my notes?",
+  "reproducibility": "the emitted edit script replays byte-identically forever. Regenerating it needs either the cache or the same model.",
+  "temperature": "0",
+  "unparsed_replies": 0,
+  "verdict": "USABLE \u2014 negated F1 0.848 clears the 0.7 floor"
+}

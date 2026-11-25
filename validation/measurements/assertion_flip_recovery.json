@@ -1,0 +1,186 @@
+{
+  "composition": "qualify_document on this package's sentence boundaries \u2014 the shipped configuration, not a hand-assembled one.",
+  "design": "injection-recovery, the same dual-instrument shape used for input.typo against the DQP misspelling estimator: inject a known change, then ask whether the independent detector recovers it.",
+  "how_to_read": "flip_rate near 1.0 means the operator does what it says. collateral_rate is the cost: spans whose *other* dimensions moved, which dose accounting cannot see because it counts edits applied rather than consequences. A high flip rate with high collateral is an operator that works and over-reaches, and the two must be read together. Read every row beside the detector's reliability for that dimension in assertion_gold_mimic.json: an operator anchored on a detector that mislabels cannot be more trustworthy than the label.",
+  "notes": 12,
+  "operators": [
+    {
+      "collateral_on_flipped_spans": 0,
+      "collateral_on_untouched_spans": 42,
+      "collateral_rate": 0.0043,
+      "dimension": "family",
+      "edits_applied": 48,
+      "eligible_cues": 48,
+      "flip_rate": 0.8312,
+      "not_realignable": 12,
+      "operator": "semantic.experiencer_shift",
+      "spans_carrying_dimension": 77,
+      "spans_compared": 9727,
+      "spans_flipped": 64,
+      "top_transitions": {
+        "family -> affirmed": 53,
+        "family+historical -> historical": 5,
+        "family+historical+negated -> historical+negated": 4,
+        "family+negated -> negated": 2
+      }
+    },
+    {
+      "collateral_on_flipped_spans": 0,
+      "collateral_on_untouched_spans": 35,
+      "collateral_rate": 0.0036,
+      "dimension": "family",
+      "edits_applied": 46,
+      "edits_matching_the_table_arm": 28,
+      "eligible_cues": 48,
+      "fallback_note": "an UPPER bound on how often a guard refused the rewrite. An LLM that independently produces the table's edit counts here too, so the true fallback rate is at most this.",
+      "fallback_rate_upper_bound": 0.6087,
+      "flip_rate": 0.7407,
+      "not_realignable": 38,
+      "operator": "semantic.experiencer_shift_llm",
+      "spans_carrying_dimension": 54,
+      "spans_compared": 9701,
+      "spans_flipped": 40,
+      "top_transitions": {
+        "family -> affirmed": 31,
+        "family+historical -> historical": 5,
+        "family+historical+negated -> historical+negated": 4
+      }
+    },
+    {
+      "collateral_on_flipped_spans": 40,
+      "collateral_on_untouched_spans": 44,
+      "collateral_rate": 0.0087,
+      "dimension": "negated",
+      "edits_applied": 490,
+      "eligible_cues": 490,
+      "flip_rate": 0.9808,
+      "not_realignable": 83,
+      "operator": "semantic.negation_flip",
+      "spans_carrying_dimension": 731,
+      "spans_compared": 9656,
+      "spans_flipped": 717,
+      "top_transitions": {
+        "historical+negated -> affirmed": 6,
+        "historical+negated -> historical": 13,
+        "negated -> affirmed": 628,
+        "negated+uncertain -> affirmed": 30,
+        "negated+uncertain -> uncertain": 30
+      }
+    },
+    {
+      "collateral_on_flipped_spans": 21,
+      "collateral_on_untouched_spans": 24,
+      "collateral_rate": 0.0048,
+      "dimension": "negated",
+      "edits_applied": 428,
+      "edits_matching_the_table_arm": 134,
+      "eligible_cues": 490,
+      "fallback_note": "an UPPER bound on how often a guard refused the rewrite. An LLM that independently produces the table's edit counts here too, so the true fallback rate is at most this.",
+      "fallback_rate_upper_bound": 0.3131,
+      "flip_rate": 0.9163,
+      "not_realignable": 454,
+      "operator": "semantic.negation_flip_llm",
+      "spans_carrying_dimension": 430,
+      "spans_compared": 9285,
+      "spans_flipped": 394,
+      "top_transitions": {
+        "family+historical+negated -> family+historical": 4,
+        "historical+negated -> historical": 12,
+        "negated -> affirmed": 335,
+        "negated+uncertain -> affirmed": 17,
+        "negated+uncertain -> uncertain": 20
+      }
+    },
+    {
+      "collateral_on_flipped_spans": 0,
+      "collateral_on_untouched_spans": 0,
+      "collateral_rate": 0.0,
+      "dimension": "historical",
+      "edits_applied": 89,
+      "eligible_cues": 89,
+      "flip_rate": 1.0,
+      "not_realignable": 65,
+      "operator": "semantic.temporality_shift",
+      "spans_carrying_dimension": 214,
+      "spans_compared": 9674,
+      "spans_flipped": 214,
+      "top_transitions": {
+        "family+historical -> family": 5,
+        "family+historical+negated -> family+negated": 4,
+        "historical -> affirmed": 183,
+        "historical+negated -> negated": 19,
+        "historical+uncertain -> uncertain": 3
+      }
+    },
+    {
+      "collateral_on_flipped_spans": 2,
+      "collateral_on_untouched_spans": 1,
+      "collateral_rate": 0.0003,
+      "dimension": "historical",
+      "edits_applied": 89,
+      "edits_matching_the_table_arm": 11,
+      "eligible_cues": 89,
+      "fallback_note": "an UPPER bound on how often a guard refused the rewrite. An LLM that independently produces the table's edit counts here too, so the true fallback rate is at most this.",
+      "fallback_rate_upper_bound": 0.1236,
+      "flip_rate": 0.9682,
+      "not_realignable": 149,
+      "operator": "semantic.temporality_shift_llm",
+      "spans_carrying_dimension": 157,
+      "spans_compared": 9590,
+      "spans_flipped": 152,
+      "top_transitions": {
+        "family+historical -> family": 5,
+        "family+historical+negated -> family+negated": 4,
+        "historical -> affirmed": 129,
+        "historical+negated -> negated": 12,
+        "historical+uncertain -> affirmed": 2
+      }
+    },
+    {
+      "collateral_on_flipped_spans": 5,
+      "collateral_on_untouched_spans": 14,
+      "collateral_rate": 0.002,
+      "dimension": "uncertain",
+      "edits_applied": 153,
+      "eligible_cues": 153,
+      "flip_rate": 1.0,
+      "not_realignable": 32,
+      "operator": "semantic.uncertainty_flip",
+      "spans_carrying_dimension": 301,
+      "spans_compared": 9707,
+      "spans_flipped": 301,
+      "top_transitions": {
+        "historical+uncertain -> historical": 3,
+        "negated+uncertain -> affirmed": 5,
+        "negated+uncertain -> negated": 56,
+        "uncertain -> affirmed": 237
+      }
+    },
+    {
+      "collateral_on_flipped_spans": 2,
+      "collateral_on_untouched_spans": 5,
+      "collateral_rate": 0.0007,
+      "dimension": "uncertain",
+      "edits_applied": 146,
+      "edits_matching_the_table_arm": 25,
+      "eligible_cues": 153,
+      "fallback_note": "an UPPER bound on how often a guard refused the rewrite. An LLM that independently produces the table's edit counts here too, so the true fallback rate is at most this.",
+      "fallback_rate_upper_bound": 0.1712,
+      "flip_rate": 0.9145,
+      "not_realignable": 138,
+      "operator": "semantic.uncertainty_flip_llm",
+      "spans_carrying_dimension": 234,
+      "spans_compared": 9601,
+      "spans_flipped": 214,
+      "top_transitions": {
+        "historical+uncertain -> affirmed": 1,
+        "negated+uncertain -> affirmed": 1,
+        "negated+uncertain -> negated": 38,
+        "uncertain -> affirmed": 174
+      }
+    }
+  ],
+  "question": "Do the SEMANTIC operators change the dimension they claim to?",
+  "severity": "1.00",
+  "why": "the gold says whether the detector reads a dimension correctly; this says whether the operator changes it. An operator can be eligible, dosed and applied and still leave the assertion where it was \u2014 the edit script would look healthy and the perturbation would be a no-op."
+}

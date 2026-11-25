@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use RobustEHR in your research, please cite it."
+title: "RobustEHR: deterministic, dose-calibrated perturbation of clinical free text"
+abstract: >-
+  Measurement infrastructure for clinical NLP robustness studies. Names a
+  versioned operator, reports realized dose against an explicit eligible unit,
+  measures whether an edit touched clinical evidence rather than assuming it,
+  and publishes edit scripts so a corrupted corpus can be regenerated
+  byte-identically from the original notes without redistributing them.
+type: software
+authors:
+  - name: "Open Health Data Lab"
+license: Apache-2.0
+repository-code: "https://github.com/open-health-data-lab/RobustEHR"
+url: "https://github.com/open-health-data-lab/RobustEHR"
+keywords:
+  - clinical-nlp
+  - robustness
+  - perturbation
+  - electronic-health-records
+  - umls
+  - reproducibility
+version: 0.2.0
+date-released: 2026-11-24

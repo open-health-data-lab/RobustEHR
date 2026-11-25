@@ -1,0 +1,78 @@
+{
+  "abbreviation_shaped": 8520,
+  "abbreviation_share": 0.3683,
+  "ambiguity_histogram": {
+    "1": 3009,
+    "10": 1,
+    "11": 2,
+    "15": 4,
+    "2": 1274,
+    "3": 970,
+    "4": 355,
+    "5": 265,
+    "6": 216,
+    "7": 72,
+    "8": 37,
+    "9": 58
+  },
+  "ceiling": {
+    "category_reachable": 4854,
+    "ceiling_accuracy": 0.5697,
+    "no_umls_candidate_at_all": 2257,
+    "unreachable_share": 0.4303
+  },
+  "definition": "abbreviation-shaped = a gold span that is one token of 2-6 alphabetic characters. Mechanical on purpose: judging what 'is really an abbreviation' would put the finding at the mercy of the judgement.",
+  "distinct_surfaces": 924,
+  "floor": {
+    "exact_accuracy": 0.5023,
+    "exact_lookup_correct": 4280,
+    "shipped_accuracy": 0.4533,
+    "shipped_matcher_correct": 3862
+  },
+  "gold_spans_total": 23131,
+  "how_to_read": "ceiling minus floor is the entire budget available to stage 3. unreachable_share is what no resolver at any policy can recover, and belongs in the limitations section rather than in a future work list.",
+  "notes": 68,
+  "placement": {
+    "all": {
+      "followed by a colon (HEENT:)": 793,
+      "free prose": 5466,
+      "inside a labelled-value line": 109,
+      "label of a value (creat 1.1)": 2152
+    },
+    "unreachable_only": {
+      "followed by a colon (HEENT:)": 570,
+      "free prose": 1832,
+      "inside a labelled-value line": 36,
+      "label of a value (creat 1.1)": 1228
+    },
+    "why_it_matters": "the first two positions are resolvable from STRUCTURE alone \u2014 no dictionary sense, no surrounding prose, only what stage 2 already computed. That is a third answer to 'does expansion need context?', and it covers the largest share of the miss set."
+  },
+  "question": "Is an abbreviation resolver worth building, and how much room is there?",
+  "top_unreachable_surfaces": {
+    "angap": 93,
+    "bp": 52,
+    "clear": 54,
+    "creat": 131,
+    "heent": 68,
+    "left": 67,
+    "lungs": 43,
+    "mild": 45,
+    "monos": 52,
+    "na": 100,
+    "neck": 46,
+    "neuro": 68,
+    "neuts": 51,
+    "phos": 80,
+    "rbc": 151,
+    "rdw": 137,
+    "rdwsd": 48,
+    "right": 59,
+    "rrr": 49,
+    "skin": 56,
+    "stable": 59,
+    "urean": 98,
+    "vitals": 46,
+    "vs": 46,
+    "wbc": 162
+  }
+}

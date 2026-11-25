@@ -1,0 +1,31 @@
+{
+  "brands": 2218,
+  "common_generic_coverage": {
+    "covered_n": 18,
+    "missing": [
+      "aspirin",
+      "insulin"
+    ],
+    "probe_n": 20
+  },
+  "dropped": {
+    "brand_derived_from_generic": 101,
+    "brand_equals_generic": 398,
+    "brand_is_english_word": 85,
+    "brand_is_misspelt_generic": 20,
+    "brand_maps_to_many_generics": 10,
+    "brand_not_single_token": 1117,
+    "generic_not_single_token": 375,
+    "placeholder_text": 7,
+    "surface_is_both_generic_and_brand": 5
+  },
+  "generics": 1076,
+  "pairs": 2223,
+  "sha256": "c0e274680a02043ca1f241dac020c848612665ce8ae5e78f3761c59b3cbd14c8",
+  "source": {
+    "brand_rows": 5152,
+    "brands": "drugs_commercial_name.csv",
+    "generic_rows": 1555,
+    "generics": "drugs.csv"
+  }
+}

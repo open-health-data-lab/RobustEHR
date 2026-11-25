@@ -1,0 +1,670 @@
+{
+  "arms": {
+    "ctx_a_pyrush": {
+      "family": {
+        "cohens_kappa": 0.2183,
+        "fn": 0,
+        "fp": 7,
+        "gold_positives": 1,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 8,
+        "tn": 342,
+        "tp": 1
+      },
+      "historical": {
+        "cohens_kappa": 0.4053,
+        "fn": 4,
+        "fp": 7,
+        "gold_positives": 8,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 11,
+        "tn": 335,
+        "tp": 4
+      },
+      "negated": {
+        "cohens_kappa": 0.7646,
+        "f1": 0.8034,
+        "fn": 5,
+        "fp": 18,
+        "gold_positives": 52,
+        "precision": 0.7231,
+        "predicted_positives": 65,
+        "recall": 0.9038,
+        "tn": 280,
+        "tp": 47
+      },
+      "uncertain": {
+        "cohens_kappa": 0.3437,
+        "f1": 0.3529,
+        "fn": 11,
+        "fp": 0,
+        "gold_positives": 14,
+        "precision": 1.0,
+        "predicted_positives": 3,
+        "recall": 0.2143,
+        "tn": 336,
+        "tp": 3
+      }
+    },
+    "ctx_b_our_boundaries": {
+      "family": {
+        "cohens_kappa": 0.2183,
+        "fn": 0,
+        "fp": 7,
+        "gold_positives": 1,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 8,
+        "tn": 342,
+        "tp": 1
+      },
+      "historical": {
+        "cohens_kappa": 0.4053,
+        "fn": 4,
+        "fp": 7,
+        "gold_positives": 8,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 11,
+        "tn": 335,
+        "tp": 4
+      },
+      "negated": {
+        "cohens_kappa": 0.7365,
+        "f1": 0.7788,
+        "fn": 8,
+        "fp": 17,
+        "gold_positives": 52,
+        "precision": 0.7213,
+        "predicted_positives": 61,
+        "recall": 0.8462,
+        "tn": 281,
+        "tp": 44
+      },
+      "uncertain": {
+        "cohens_kappa": 0.3437,
+        "f1": 0.3529,
+        "fn": 11,
+        "fp": 0,
+        "gold_positives": 14,
+        "precision": 1.0,
+        "predicted_positives": 3,
+        "recall": 0.2143,
+        "tn": 336,
+        "tp": 3
+      }
+    },
+    "ctx_c_extended_cues": {
+      "family": {
+        "cohens_kappa": 0.2183,
+        "fn": 0,
+        "fp": 7,
+        "gold_positives": 1,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 8,
+        "tn": 342,
+        "tp": 1
+      },
+      "historical": {
+        "cohens_kappa": 0.2729,
+        "fn": 4,
+        "fp": 15,
+        "gold_positives": 8,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 19,
+        "tn": 327,
+        "tp": 4
+      },
+      "negated": {
+        "cohens_kappa": 0.7365,
+        "f1": 0.7788,
+        "fn": 8,
+        "fp": 17,
+        "gold_positives": 52,
+        "precision": 0.7213,
+        "predicted_positives": 61,
+        "recall": 0.8462,
+        "tn": 281,
+        "tp": 44
+      },
+      "uncertain": {
+        "cohens_kappa": 0.364,
+        "f1": 0.381,
+        "fn": 10,
+        "fp": 3,
+        "gold_positives": 14,
+        "precision": 0.5714,
+        "predicted_positives": 7,
+        "recall": 0.2857,
+        "tn": 333,
+        "tp": 4
+      }
+    },
+    "lexicon_cooccurrence": {
+      "family": {
+        "cohens_kappa": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "gold_positives": 1,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 0,
+        "tn": 349,
+        "tp": 0
+      },
+      "historical": {
+        "cohens_kappa": 0.2234,
+        "fn": 4,
+        "fp": 20,
+        "gold_positives": 8,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 24,
+        "tn": 322,
+        "tp": 4
+      },
+      "negated": {
+        "cohens_kappa": 0.4027,
+        "f1": 0.5143,
+        "fn": 16,
+        "fp": 52,
+        "gold_positives": 52,
+        "precision": 0.4091,
+        "predicted_positives": 88,
+        "recall": 0.6923,
+        "tn": 246,
+        "tp": 36
+      },
+      "uncertain": {
+        "cohens_kappa": 0.5161,
+        "f1": 0.5263,
+        "fn": 9,
+        "fp": 0,
+        "gold_positives": 14,
+        "precision": 1.0,
+        "predicted_positives": 5,
+        "recall": 0.3571,
+        "tn": 336,
+        "tp": 5
+      }
+    },
+    "negspacy": {
+      "family": {
+        "cohens_kappa": null,
+        "fn": 0,
+        "fp": 0,
+        "gold_positives": 0,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 0,
+        "tn": 0,
+        "tp": 0
+      },
+      "historical": {
+        "cohens_kappa": null,
+        "fn": 0,
+        "fp": 0,
+        "gold_positives": 0,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 0,
+        "tn": 0,
+        "tp": 0
+      },
+      "negated": {
+        "cohens_kappa": 0.5362,
+        "f1": 0.6289,
+        "fn": 2,
+        "fp": 57,
+        "gold_positives": 52,
+        "precision": 0.4673,
+        "predicted_positives": 107,
+        "recall": 0.9615,
+        "tn": 241,
+        "tp": 50
+      },
+      "uncertain": {
+        "cohens_kappa": null,
+        "fn": 0,
+        "fp": 0,
+        "gold_positives": 0,
+        "metrics_withheld": "fewer than 10 gold positives; precision, recall and F1 would be false precision at this prevalence",
+        "predicted_positives": 0,
+        "tn": 0,
+        "tp": 0
+      }
+    }
+  },
+  "corpus": "tests/fixtures/clinical \u2014 synthetic, describes no real patient",
+  "ctx_b_disagreements": [
+    {
+      "context": [],
+      "fixture": "allcaps_legacy",
+      "gold": [
+        "historical"
+      ],
+      "surface": "ALCOHOL ABUSE"
+    },
+    {
+      "context": [],
+      "fixture": "allcaps_legacy",
+      "gold": [
+        "historical"
+      ],
+      "surface": "HYPERTENSION"
+    },
+    {
+      "context": [],
+      "fixture": "allcaps_legacy",
+      "gold": [
+        "historical"
+      ],
+      "surface": "GERD"
+    },
+    {
+      "context": [
+        "historical"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "comma"
+    },
+    {
+      "context": [
+        "historical"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "status"
+    },
+    {
+      "context": [
+        "historical"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "anterior"
+    },
+    {
+      "context": [
+        "historical"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "Date"
+    },
+    {
+      "context": [
+        "historical"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "comma"
+    },
+    {
+      "context": [
+        "historical"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "ejection fraction"
+    },
+    {
+      "context": [
+        "historical"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "period"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "period"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "Weight"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "period"
+    },
+    {
+      "context": [],
+      "fixture": "cardiology_dictated",
+      "gold": [
+        "negated"
+      ],
+      "surface": "palpitations"
+    },
+    {
+      "context": [],
+      "fixture": "cardiology_dictated",
+      "gold": [
+        "negated"
+      ],
+      "surface": "JVP"
+    },
+    {
+      "context": [],
+      "fixture": "cardiology_dictated",
+      "gold": [
+        "negated"
+      ],
+      "surface": "not elevated"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "period"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "Heart"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "sounds"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "normal"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "period"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "Chest clear"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "period"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [],
+      "surface": "period"
+    },
+    {
+      "context": [],
+      "fixture": "cardiology_dictated",
+      "gold": [
+        "negated"
+      ],
+      "surface": "ventricular"
+    },
+    {
+      "context": [],
+      "fixture": "cardiology_dictated",
+      "gold": [
+        "negated"
+      ],
+      "surface": "arrhythmias"
+    },
+    {
+      "context": [],
+      "fixture": "cardiology_dictated",
+      "gold": [
+        "uncertain"
+      ],
+      "surface": "echocardiogram"
+    },
+    {
+      "context": [],
+      "fixture": "epic_progress",
+      "gold": [
+        "negated"
+      ],
+      "surface": "chest imaging"
+    },
+    {
+      "context": [],
+      "fixture": "epic_progress",
+      "gold": [
+        "negated"
+      ],
+      "surface": "not indicated"
+    },
+    {
+      "context": [],
+      "fixture": "epic_progress",
+      "gold": [
+        "uncertain"
+      ],
+      "surface": "discharge"
+    },
+    {
+      "context": [],
+      "fixture": "epic_progress",
+      "gold": [
+        "uncertain"
+      ],
+      "surface": "stability"
+    },
+    {
+      "context": [],
+      "fixture": "family_med_freetext",
+      "gold": [
+        "uncertain"
+      ],
+      "surface": "lipids"
+    },
+    {
+      "context": [],
+      "fixture": "family_med_freetext",
+      "gold": [
+        "uncertain"
+      ],
+      "surface": "shingles vaccine"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "family_med_freetext",
+      "gold": [],
+      "surface": "visit"
+    },
+    {
+      "context": [],
+      "fixture": "pediatric_admission",
+      "gold": [
+        "historical"
+      ],
+      "surface": "Previously well"
+    },
+    {
+      "context": [
+        "family"
+      ],
+      "fixture": "pediatric_admission",
+      "gold": [],
+      "surface": "fever"
+    },
+    {
+      "context": [
+        "family"
+      ],
+      "fixture": "pediatric_admission",
+      "gold": [],
+      "surface": "decreased oral intake"
+    },
+    {
+      "context": [
+        "family"
+      ],
+      "fixture": "pediatric_admission",
+      "gold": [],
+      "surface": "increased"
+    },
+    {
+      "context": [
+        "family"
+      ],
+      "fixture": "pediatric_admission",
+      "gold": [],
+      "surface": "breathing"
+    },
+    {
+      "context": [
+        "family"
+      ],
+      "fixture": "pediatric_admission",
+      "gold": [],
+      "surface": "arms"
+    },
+    {
+      "context": [],
+      "fixture": "pediatric_admission",
+      "gold": [
+        "uncertain"
+      ],
+      "surface": "suctioning"
+    },
+    {
+      "context": [],
+      "fixture": "pediatric_admission",
+      "gold": [
+        "uncertain"
+      ],
+      "surface": "Trial"
+    },
+    {
+      "context": [],
+      "fixture": "pediatric_admission",
+      "gold": [
+        "uncertain"
+      ],
+      "surface": "NG feeds"
+    },
+    {
+      "context": [],
+      "fixture": "pediatric_admission",
+      "gold": [
+        "uncertain"
+      ],
+      "surface": "Acetaminophen 15 mg"
+    },
+    {
+      "context": [
+        "family"
+      ],
+      "fixture": "psychiatry_clinic",
+      "gold": [],
+      "surface": "asked"
+    },
+    {
+      "context": [
+        "family"
+      ],
+      "fixture": "psychiatry_clinic",
+      "gold": [],
+      "surface": "found"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "psychiatry_clinic",
+      "gold": [],
+      "surface": "Perception"
+    },
+    {
+      "context": [],
+      "fixture": "psychiatry_clinic",
+      "gold": [
+        "negated"
+      ],
+      "surface": "hallucinations"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "psychiatry_clinic",
+      "gold": [],
+      "surface": "current"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "radiology_report",
+      "gold": [
+        "uncertain"
+      ],
+      "surface": "pulmonary"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "radiology_report",
+      "gold": [
+        "uncertain"
+      ],
+      "surface": "embolism"
+    },
+    {
+      "context": [
+        "negated"
+      ],
+      "fixture": "radiology_report",
+      "gold": [],
+      "surface": "pulmonary arterial tree"
+    }
+  ],
+  "gold_label_counts": {
+    "family": 1,
+    "historical": 8,
+    "negated": 52,
+    "uncertain": 14
+  },
+  "how_to_read": "kappa near 1 means the deterministic rule set and a careful reading reach the same conclusion; it does not establish that either is right. A dimension with high kappa is one where the rules can be trusted to behave predictably enough to anchor an operator. A dimension with low kappa is one where a SEMANTIC operator would be editing spans nobody can agree about.",
+  "n_affirmed": 275,
+  "n_items": 350,
+  "prevalence_note": "dimensions with fewer than 10 gold positives report counts and kappa only. The fixture corpus is negation-dense and hedge-poor, so `uncertain` in particular is too thin here to score \u2014 scope_accuracy.json remains its only quantitative evidence.",
+  "question": "Does stage 8 agree with a careful reading of the note, on all five dimensions?",
+  "restricted": false,
+  "split": "all",
+  "status_of_this_gold": "a SECOND OPINION, not a ground truth. The annotator is an LLM with prior exposure to this codebase, so agreement is between two imperfect raters. Cohen's kappa is the headline for that reason, and the disagreement list matters more than the coefficient.",
+  "why": "negation had clinical gold and uncertainty an out-of-domain proxy; historical, family and hypothetical had nothing, yet three SEMANTIC operators would anchor on them."
+}

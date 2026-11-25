@@ -1,0 +1,147 @@
+{
+  "arms": {
+    "ctx_c_baseline": {
+      "family": {
+        "f1": 0.8571,
+        "fn": 1,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.75,
+        "tp": 3
+      },
+      "historical": {
+        "f1": 0.2941,
+        "fn": 28,
+        "fp": 20,
+        "precision": 0.3333,
+        "recall": 0.2632,
+        "tp": 10
+      },
+      "negated": {
+        "f1": 0.6076,
+        "fn": 10,
+        "fp": 21,
+        "precision": 0.5333,
+        "recall": 0.7059,
+        "tp": 24
+      },
+      "uncertain": {
+        "f1": 0.4419,
+        "fn": 18,
+        "fp": 30,
+        "precision": 0.3878,
+        "recall": 0.5135,
+        "tp": 19
+      }
+    },
+    "ctx_d_history_naive": {
+      "family": {
+        "f1": 0.8571,
+        "fn": 1,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.75,
+        "tp": 3
+      },
+      "historical": {
+        "f1": 0.4252,
+        "fn": 11,
+        "fp": 62,
+        "precision": 0.3034,
+        "recall": 0.7105,
+        "tp": 27
+      },
+      "negated": {
+        "f1": 0.6076,
+        "fn": 10,
+        "fp": 21,
+        "precision": 0.5333,
+        "recall": 0.7059,
+        "tp": 24
+      },
+      "uncertain": {
+        "f1": 0.4419,
+        "fn": 18,
+        "fp": 30,
+        "precision": 0.3878,
+        "recall": 0.5135,
+        "tp": 19
+      }
+    },
+    "ctx_d_past": {
+      "family": {
+        "f1": 0.8571,
+        "fn": 1,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.75,
+        "tp": 3
+      },
+      "historical": {
+        "f1": 0.525,
+        "fn": 17,
+        "fp": 21,
+        "precision": 0.5,
+        "recall": 0.5526,
+        "tp": 21
+      },
+      "negated": {
+        "f1": 0.6076,
+        "fn": 10,
+        "fp": 21,
+        "precision": 0.5333,
+        "recall": 0.7059,
+        "tp": 24
+      },
+      "uncertain": {
+        "f1": 0.4419,
+        "fn": 18,
+        "fp": 30,
+        "precision": 0.3878,
+        "recall": 0.5135,
+        "tp": 19
+      }
+    },
+    "ctx_d_past_defeasible": {
+      "family": {
+        "f1": 0.8571,
+        "fn": 1,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.75,
+        "tp": 3
+      },
+      "historical": {
+        "f1": 0.5063,
+        "fn": 18,
+        "fp": 21,
+        "precision": 0.4878,
+        "recall": 0.5263,
+        "tp": 20
+      },
+      "negated": {
+        "f1": 0.6076,
+        "fn": 10,
+        "fp": 21,
+        "precision": 0.5333,
+        "recall": 0.7059,
+        "tp": 24
+      },
+      "uncertain": {
+        "f1": 0.4419,
+        "fn": 18,
+        "fp": 30,
+        "precision": 0.3878,
+        "recall": 0.5135,
+        "tp": 19
+      }
+    }
+  },
+  "n_items": 400,
+  "n_notes": 40,
+  "question": "Can a section header supply `historical` without becoming a prior?",
+  "split": "held_out",
+  "what_makes_it_a_cue_not_a_prior": "the defeater. A span whose own sentence says now/new/acute/current keeps its own framing and the header does not override it. A prior would apply regardless, which is the thing this package's span-level rule rejects.",
+  "why": "21 of 32 held-out historical misses have no cue anywhere in the span's sentence. The dimension's bottleneck is vocabulary and no scope change can reach them.",
+  "why_past_and_not_history": "on development, `Past Medical History` is 22/22 historical and `History of Present Illness` is 10/71. A rule keying on `history` fires on the HPI, whose header contains the word by grammatical accident while its content is the CURRENT admission. The naive arm is measured rather than dismissed."
+}

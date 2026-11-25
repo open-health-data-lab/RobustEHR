@@ -1,0 +1,133 @@
+# ---------------------------------------------------------------------------
+# RESTRICTED DATA — DO NOT REMOVE
+#
+# data/ holds licensed content that must never be committed:
+#   - MIMIC-IV note text, under the PhysioNet Credentialed Health Data Use
+#     Agreement. Ship data/notes.sql (the extraction query) instead.
+#   - The UMLS Metathesaurus, under the UMLS Metathesaurus License Agreement,
+#     and everything derived from it (QuickUMLS indexes, lexicons, edge lists).
+#   - Corpora with no attached licence (NegEx, BioScope, CASI), which this
+#     project treats exactly like MIMIC. MTSamples is CC0 but is still kept
+#     out of the repository: it is 17 MB of text nothing in src/ needs.
+#
+# The data/ block is DEFAULT-DENY on purpose. An allowlist of extensions is one
+# unanticipated file type away from leaking (a .zip, a .RRF, a differently
+# cased directory), so everything under data/ is ignored and the few
+# publishable files are re-admitted by name.
+#
+# ORDER MATTERS. Git applies the LAST matching rule, so the belt-and-braces
+# directory patterns (**/umls/, **/quickumls_index/) sit ABOVE the data/
+# block: the block re-admits data/umls/ and data/quickumls_index/ so that
+# their placeholder READMEs can be tracked, and the same global pattern placed
+# below the block would silently re-exclude them. Add new global directory
+# patterns to the belt-and-braces group, never after the data/ block.
+# ---------------------------------------------------------------------------
+
+# Belt-and-braces: these must never be committed from anywhere in the tree,
+# whatever they are called or wherever they are dropped.
+*.RRF
+*.rrf
+*.zip
+*.duckdb
+**/[Uu][Mm][Ll][Ss]/
+**/[Mm][Ee][Tt][Aa]/
+# QuickUMLS indexes — derived from licensed UMLS content, never committed
+**/quickumls_index/
+**/quickumls_snomed/
+*.unqlite
+
+# data/: deny everything, then re-admit the publishable files by name.
+data/*
+!data/README.md
+!data/notes.sql
+
+# Placeholder directories, each holding only a README.md that says what goes
+# there and how to obtain or build it. Git cannot re-admit a file whose parent
+# directory is ignored, so each directory is re-admitted by name; `data/*/*`
+# then denies everything inside every re-admitted directory, and
+# `!data/*/README.md` lets only the README back through. Adding a directory is
+# ONE line here plus its README -- the deny-contents rule is shared, so it
+# cannot be forgotten. A directory listed here must contain a README.md.
+!data/umls/
+!data/quickumls_index/
+!data/snomed_el/
+!data/negex/
+!data/bioscope/
+!data/drugs/
+!data/lexicon/
+!data/casi/
+!data/assertion_gold_mimic/
+!data/phenotype_review/
+!data/mtsamples/
+data/*/*
+!data/*/README.md
+
+# Manuscript drafts. Written beside the code, never versioned with it: nothing
+# in src/, tests/ or validation/ reads them. Unanchored on purpose, so a copy
+# dropped anywhere in the tree is ignored as well.
+manuscript/
+old_manuscript/
+
+# Derived artifacts that may embed restricted text
+**/annotations.parquet
+**/*.annotations.json
+.robustehr_cache/
+out/
+runs/
+release/text/
+
+# Secrets
+#
+# API keys are read from the environment first and from these files as a
+# fallback. They are matched by name rather than by extension because a `.txt`
+# allowlist elsewhere would otherwise re-admit them — the same default-deny
+# reasoning the data/ block uses.
+.env
+secrets/
+openrouterapi.txt
+*api*key*.txt
+*_api.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv*/
+.tox/
+.nox/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.hypothesis/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Downloaded experiment results: derived from MIMIC-IV under the PhysioNet DUA,
+# and 200 MB+ per run. The bucket is the system of record; a local copy is a
+# working convenience, not something to version.
+results/
+
+# Experiment run directories. `run1/` held a 163 MB SQLite prediction store whose
+# `document_id` column is real MIMIC `hadm_id`s — derived restricted data under the
+# PhysioNet DUA, and it sat here untracked but unignored. `runs/` above covers the
+# corruption engine's own output; this covers the downstream harness's, which names
+# its directories by run id.
+run[0-9]*/
+
+# Prediction stores and any other embedded database. Matched by extension as well as
+# by directory because a run directory can be renamed and the SQLite file inside it is
+# still a SQLite file — the same default-deny reasoning the data/ block uses.
+*.sqlite
+*.sqlite3
+*.db

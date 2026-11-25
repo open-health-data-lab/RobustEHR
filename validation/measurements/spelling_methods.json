@@ -1,0 +1,93 @@
+{
+  "corrector_comparison": {
+    "corrupted_words": 5372,
+    "ground_truth": "exact: the operator knows what each word was before it corrupted it, so an answer is right or wrong with no adjudication.",
+    "methods": [
+      {
+        "abstained": 183,
+        "accuracy": 0.5483,
+        "answered": 5189,
+        "correct": 2845,
+        "coverage": 0.9659,
+        "method": "english + clinical, edit-1",
+        "recovery": 0.5296,
+        "vocabulary": 271532,
+        "wrong": 2344
+      },
+      {
+        "abstained": 79,
+        "accuracy": 0.5375,
+        "answered": 5293,
+        "correct": 2845,
+        "coverage": 0.9853,
+        "method": "english + clinical, edit-2",
+        "recovery": 0.5296,
+        "vocabulary": 271532,
+        "wrong": 2448
+      },
+      {
+        "abstained": 875,
+        "accuracy": 0.5581,
+        "answered": 4497,
+        "correct": 2510,
+        "coverage": 0.8371,
+        "method": "english only, edit-1",
+        "recovery": 0.4672,
+        "vocabulary": 28329,
+        "wrong": 1987
+      },
+      {
+        "abstained": 2255,
+        "accuracy": 0.7437,
+        "answered": 3117,
+        "correct": 2318,
+        "coverage": 0.5802,
+        "method": "english + clinical, edit-1, no ranking",
+        "recovery": 0.4315,
+        "vocabulary": 271532,
+        "wrong": 799
+      }
+    ],
+    "question": "Which correction policy recovers the original word most often?",
+    "why_abstention_counts": "a corrector that always guesses turns every unrecognized clinical term into a wrong word, which is worse than leaving it alone. recovery = correct / all corrupted words is therefore the metric that ranks them, not accuracy among those answered."
+  },
+  "detector_validation": {
+    "baseline_detected_before_injection": 531,
+    "estimator": "unrecognized AND alphabetic AND >= 4 characters AND corpus frequency <= 1",
+    "gate": "slope in [0.90, 1.10], r_squared > 0.90",
+    "method": "input.typo and the estimator are dual \u2014 one injects at measured dose, the other estimates. Injecting a known number and reading the estimate is the injection-recovery design the release gates already specify.",
+    "passes": false,
+    "question": "Does the DQP misspelling estimator recover a known injected dose?",
+    "r_squared": 1.0,
+    "rungs": [
+      {
+        "detected": 531,
+        "injected": 0,
+        "severity": "0"
+      },
+      {
+        "detected": 951,
+        "injected": 557,
+        "severity": "0.01"
+      },
+      {
+        "detected": 1350,
+        "injected": 1091,
+        "severity": "0.02"
+      },
+      {
+        "detected": 2519,
+        "injected": 2697,
+        "severity": "0.05"
+      },
+      {
+        "detected": 4508,
+        "injected": 5372,
+        "severity": "0.10"
+      }
+    ],
+    "slope": 0.7401
+  },
+  "lexicon_source": "umls-2026AA",
+  "notes": 40
+}

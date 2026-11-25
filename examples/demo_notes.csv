@@ -1,0 +1,850 @@
+note_id,text,setting,specialty,format,language,deid_scheme
+addendum,"Addendum: path result back, benign. Pt notified by phone, verbalized understanding.
+No further follow up needed for this issue.
+",outpatient,family_medicine,addendum,en-US,none
+allcaps_legacy,"PATIENT NAME: XXXXX                    MRN: XXXXXXX
+
+ADMISSION DATE: XX/XX/XXXX             DISCHARGE DATE: XX/XX/XXXX
+
+CHIEF COMPLAINT:
+ABDOMINAL PAIN
+
+HISTORY OF PRESENT ILLNESS:
+XX YEAR OLD MALE WITH HISTORY OF ETOH ABUSE PRESENTING WITH EPIGASTRIC
+PAIN RADIATING TO THE BACK. DENIES FEVER OR VOMITING.
+
+PAST MEDICAL HISTORY:
+ALCOHOL ABUSE, HYPERTENSION, GERD
+
+PHYSICAL EXAMINATION:
+VITALS: T 99.1 BP 138/84 HR 96 RR 18 O2 SAT 98% ON RA
+ABDOMEN: TENDER IN THE EPIGASTRIUM WITHOUT REBOUND OR GUARDING
+
+LABORATORY DATA:
+LIPASE 840, AST 112, ALT 74, TOTAL BILIRUBIN 1.2
+
+HOSPITAL COURSE:
+TREATED FOR ACUTE ALCOHOLIC PANCREATITIS WITH BOWEL REST AND IV FLUIDS.
+
+DISCHARGE DIAGNOSIS:
+ACUTE PANCREATITIS SECONDARY TO ALCOHOL USE
+",inpatient,gastroenterology,discharge_summary,en-US,xxx_run
+cardiology_dictated,"CARDIOLOGY CONSULTATION NOTE
+
+Thank you for referring [**Known patient**] who I had the pleasure of seeing
+in clinic today period This is a [**Age**] year old gentleman with a known
+history of ischemic cardiomyopathy comma status post anterior myocardial
+infarction in [**Date**] comma with a most recent ejection fraction of
+thirty to thirty five percent period
+
+He reports New York Heart Association class two symptoms comma with dyspnea
+on climbing one flight of stairs but no orthopnea or paroxysmal nocturnal
+dyspnea period Weight has been stable period He denies syncope or
+palpitations period
+
+On examination blood pressure one hundred eighteen over seventy two heart
+rate sixty four regular period JVP not elevated period Heart sounds normal
+with no gallop period Chest clear period No peripheral edema period
+
+Device interrogation today shows appropriate ICD function comma no
+ventricular arrhythmias since last check comma battery longevity estimated
+at four years period
+
+Impression comma stable ischemic cardiomyopathy on optimal medical therapy
+period Plan comma continue current medications comma repeat echocardiogram
+in twelve months comma follow up in clinic in six months period
+",outpatient,cardiology,consultation,en-US,bracket_star
+complex_discharge,"Name:  ___                         Unit No:   ___
+
+Admission Date:  ___               Discharge Date:   ___
+
+Date of Birth:  ___                Sex:   M
+
+Service: MEDICINE
+
+Attending: ___
+
+Allergies:
+Codeine (nausea) / Ciprofloxacin (rash)
+
+Chief Complaint:
+Confusion and fall at home
+
+Major Surgical or Invasive Procedure:
+None
+
+History of Present Illness:
+___ year old man with a history of atrial fibrillation on apixaban,
+chronic kidney disease stage 3b, type 2 diabetes mellitus, heart failure
+with preserved ejection fraction and mild cognitive impairment, brought in
+by his daughter after an unwitnessed fall at home.
+
+She reports that over the preceding four days he had become increasingly
+confused, sleeping more during the day and up at night. He had been
+complaining of burning on urination for about a week but had not mentioned
+this to anyone until she asked directly. On the morning of admission she
+found him on the bathroom floor, awake and able to speak but unable to
+explain what had happened. There was no head strike that she could
+identify and no loss of consciousness that she witnessed.
+
+He normally mobilises with a four wheeled walker and is independent for
+most activities of daily living, with his daughter managing his
+medications in a blister pack and preparing his meals. He does not drive.
+He has had two other falls in the past year, neither resulting in injury.
+
+In the emergency department he was febrile to 38.4, tachycardic and
+hypotensive to 96/54, which improved after a fluid bolus. Urinalysis
+showed pyuria and nitrites. CT head was negative for acute intracranial
+process.
+
+Past Medical History:
+1. Atrial fibrillation, on apixaban, CHA2DS2-VASc 5
+2. Chronic kidney disease stage 3b, baseline creatinine 1.6
+3. Type 2 diabetes mellitus, on metformin and linagliptin
+4. Heart failure with preserved ejection fraction, last EF 60%
+5. Mild cognitive impairment, MoCA 22 two years ago
+6. Benign prostatic hyperplasia
+7. Osteoarthritis, bilateral knees
+8. Hypertension
+
+Social History:
+Widowed, lives alone in a single storey home. Daughter lives nearby and
+visits daily. Former accountant. Never smoker. Rare alcohol use, perhaps
+one glass of wine at family gatherings. No illicit substance use.
+
+Family History:
+Father with myocardial infarction in his sixties. Mother with dementia in
+her eighties. No known family history of malignancy.
+
+Physical Exam:
+ADMISSION EXAM:
+VITALS: T 38.4 BP 96/54 HR 112 irregular RR 20 SpO2 94% on room air
+GEN: Frail elderly man, appears older than stated age, drowsy but rousable.
+HEENT: Dry mucous membranes. No scalp haematoma or laceration.
+NECK: Supple. JVP not elevated.
+CARDIAC: Irregularly irregular, tachycardic, no murmur appreciated.
+LUNGS: Clear to auscultation bilaterally, no crackles or wheeze.
+ABD: Soft, mild suprapubic tenderness, no guarding or rebound.
+EXT: No peripheral oedema. Bruising over the right hip, no deformity.
+NEURO: Oriented to person only. Follows simple commands. No focal deficit.
+Moves all four limbs. No neck stiffness.
+
+DISCHARGE EXAM:
+VITALS: T 36.7 BP 124/70 HR 78 RR 16 SpO2 96% on room air
+GEN: Alert, sitting up in chair, conversant and appropriate.
+NEURO: Oriented to person, place and approximate date. No focal deficit.
+EXT: Resolving bruise over the right hip. Ambulating with walker.
+
+Pertinent Results:
+ADMISSION LABS:
+___ 08:14AM BLOOD WBC-16.2 RBC-3.98 Hgb-11.4 Hct-34.1 Plt ___
+___ 08:14AM BLOOD Neuts-84.2 Lymphs-9.1 Monos-5.8 Eos-0.6
+___ 08:14AM BLOOD Glucose-198 UreaN-42 Creat-2.4 Na-131 K-4.8 Cl-97
+___ 08:14AM BLOOD ALT-22 AST-26 AlkPhos-84 TotBili-0.6 Albumin-3.1
+___ 08:14AM BLOOD Lactate-2.6
+___ 09:02AM URINE Color-Yellow Appear-Cloudy Sp ___
+___ 09:02AM URINE Blood-SM Nitrite-POS Protein-30 Leuks-LG
+
+MICROBIOLOGY:
+Urine culture: greater than 100,000 CFU/mL Escherichia coli, sensitive to
+ceftriaxone, nitrofurantoin and trimethoprim-sulfamethoxazole, resistant
+to ciprofloxacin.
+Blood cultures x2: no growth to date at time of discharge.
+
+IMAGING:
+CT head without contrast: No acute intracranial haemorrhage, mass effect
+or midline shift. Chronic small vessel ischaemic change. No fracture.
+Chest radiograph: No focal consolidation. Cardiomegaly.
+Right hip radiograph: No acute fracture or dislocation.
+
+DISCHARGE LABS:
+___ 06:30AM BLOOD WBC-8.1 Hgb-10.9 Plt ___
+___ 06:30AM BLOOD Glucose-142 UreaN-24 Creat-1.7 Na-137 K-4.1
+
+Brief Hospital Course:
+# Urinary tract infection with sepsis: He met sepsis criteria on arrival
+with fever, tachycardia, hypotension and a raised lactate in the setting
+of a urinary source. Blood and urine cultures were drawn and he was
+started on empiric ceftriaxone after a two litre crystalloid resuscitation,
+with prompt haemodynamic improvement. Urine culture grew Escherichia coli
+resistant to ciprofloxacin but sensitive to ceftriaxone, and he completed
+a total of seven days of therapy, transitioning to oral
+trimethoprim-sulfamethoxazole for the final three days. He remained
+afebrile from hospital day two onward.
+
+# Delirium: His confusion was felt to be hypoactive delirium precipitated
+by infection, dehydration and an unfamiliar environment, on a background
+of mild cognitive impairment. Non-pharmacological measures were used
+throughout, including maintaining a day and night routine, ensuring his
+glasses and hearing aid were available, early mobilisation and family
+presence. No antipsychotics were required. His orientation improved
+steadily and by discharge he was back to his baseline per his daughter.
+
+# Acute kidney injury on chronic kidney disease: Creatinine rose from a
+baseline of 1.6 to 2.4 on admission, consistent with a prerenal insult.
+Apixaban was held on admission and metformin, lisinopril and
+hydrochlorothiazide were all held. With volume resuscitation his
+creatinine improved to 1.7 by discharge. Metformin and lisinopril were
+restarted prior to discharge; hydrochlorothiazide was discontinued given
+the fall risk and the modest contribution to blood pressure control.
+
+# Atrial fibrillation: He remained in atrial fibrillation throughout,
+initially with a rapid ventricular response in the setting of sepsis,
+which settled with treatment of the infection and did not require rate
+control beyond his home metoprolol. Apixaban was held for four days during
+the acute kidney injury and restarted at a renally adjusted dose of 2.5 mg
+twice daily once creatinine had improved.
+
+# Falls: Physiotherapy and occupational therapy assessed him. Orthostatic
+vitals were negative once euvolaemic. A medication review identified
+hydrochlorothiazide as a contributor and it was stopped. Home safety
+recommendations were made including removal of loose rugs and installation
+of a raised toilet seat and grab rails, and a referral to community
+occupational therapy was sent.
+
+# Type 2 diabetes mellitus: Metformin was held during the acute kidney
+injury and he was covered with a correction insulin scale, with glucose
+readings ranging from 138 to 212. Metformin was restarted at a reduced
+dose of 500 mg twice daily at discharge given his renal function.
+Linagliptin was continued.
+
+# Goals of care: A discussion was held with the patient and his daughter.
+He wishes to remain at home for as long as possible and does not want
+prolonged intensive care or resuscitation if his heart were to stop. A
+do-not-resuscitate order was entered with his agreement and that of his
+daughter, and this was documented in the chart.
+
+Medications on Admission:
+1. Apixaban 5 mg PO BID
+2. Metoprolol succinate 50 mg PO daily
+3. Lisinopril 10 mg PO daily
+4. Hydrochlorothiazide 25 mg PO daily
+5. Metformin 1000 mg PO BID
+6. Linagliptin 5 mg PO daily
+7. Tamsulosin 0.4 mg PO nightly
+8. Acetaminophen 650 mg PO TID PRN
+9. Vitamin D 1000 units PO daily
+
+Discharge Medications:
+1. Apixaban 2.5 mg PO BID
+Disp:*60 Tablet(s)* Refills:*2*
+2. Metoprolol succinate 50 mg PO daily
+Disp:*30 Tablet(s)* Refills:*2*
+3. Lisinopril 10 mg PO daily
+Disp:*30 Tablet(s)* Refills:*2*
+4. Metformin 500 mg PO BID
+Disp:*60 Tablet(s)* Refills:*2*
+5. Linagliptin 5 mg PO daily
+Disp:*30 Tablet(s)* Refills:*2*
+6. Tamsulosin 0.4 mg PO nightly
+Disp:*30 Capsule(s)* Refills:*2*
+7. Trimethoprim-sulfamethoxazole DS 1 tablet PO BID for 3 days
+Disp:*6 Tablet(s)* Refills:*0*
+8. Acetaminophen 650 mg PO TID PRN pain
+9. Vitamin D 1000 units PO daily
+
+STOPPED: Hydrochlorothiazide, discontinued due to fall risk.
+CHANGED: Apixaban reduced from 5 mg to 2.5 mg twice daily for renal
+function. Metformin reduced from 1000 mg to 500 mg twice daily.
+
+Discharge Disposition:
+Home with services
+
+Discharge Diagnosis:
+Primary: Escherichia coli urinary tract infection with sepsis
+Secondary: Hypoactive delirium; acute kidney injury on chronic kidney
+disease stage 3b; atrial fibrillation; type 2 diabetes mellitus;
+mechanical fall
+
+Discharge Condition:
+Mental Status: Returned to baseline per family.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory with four wheeled walker.
+
+Discharge Instructions:
+You were admitted to the hospital because you had a urinary tract
+infection that had spread to your bloodstream, which made you confused and
+caused you to fall. You were treated with antibiotics and fluids and you
+improved.
+
+Please take the antibiotic tablets until they are finished, even if you
+feel completely well before then.
+
+Two of your medicines have changed. Your blood thinner apixaban is now a
+lower dose because of your kidneys, and your water pill
+hydrochlorothiazide has been stopped because it may have contributed to
+your fall. Please do not restart it.
+
+Please have blood work to check your kidney function within one week.
+
+Return to the emergency department if you develop fever, shaking chills,
+burning when you pass urine, new confusion, or if you fall again.
+
+TRANSITIONAL ISSUES:
+- Repeat creatinine and potassium within 7 days; consider further apixaban
+  dose adjustment if renal function changes.
+- Blood cultures were negative at 3 days at the time of discharge; final
+  result to be followed up by the primary care physician.
+- Community occupational therapy referral sent for home safety assessment.
+- Consider formal cognitive reassessment in an outpatient setting once the
+  delirium has fully resolved, no sooner than three months.
+
+Followup Instructions:
+Primary care physician within one week.
+Geriatrics clinic in six weeks.
+",inpatient,geriatrics,discharge_summary,en-US,underscore_run
+copy_forward_bloated,"PROGRESS NOTE - Hospital Day 6
+
+SUBJECTIVE: Patient reports feeling better today. No chest pain overnight.
+
+OBJECTIVE:
+Vitals: T 36.9, BP 128/76, HR 72, RR 16, SpO2 97% RA
+
+ASSESSMENT/PLAN:
+
+# Community acquired pneumonia
+Admitted *** with fevers, productive cough and RLL infiltrate on CXR.
+Started on ceftriaxone and azithromycin in the ED.
+Day 1 of ceftriaxone and azithromycin. Will follow clinically.
+Day 1 of ceftriaxone and azithromycin. Will follow clinically.
+Now afebrile x 48h, transitioned to oral amoxicillin-clavulanate yesterday.
+
+# Type 2 diabetes mellitus
+Home metformin held on admission due to AKI.
+Home metformin held on admission due to AKI.
+Cr now returned to baseline, metformin restarted.
+
+# Acute kidney injury
+Cr 1.8 on admission, baseline 1.0. Likely prerenal in setting of poor PO intake.
+Gentle IV fluids. Avoid nephrotoxins.
+Resolved, Cr 1.0 today.
+
+# Dispo
+Anticipate discharge home tomorrow if remains stable.
+",inpatient,internal_medicine,daily_progress,en-US,asterisk_run
+dermatology_brief,"6mm irregular pigmented macule L upper back, asymmetric borders, variegated brown/black. Dermoscopy: atypical network, blue-white veil.
+Shave bx performed, sent to path. Sutures n/a.
+2 seborrheic keratoses R shoulder, benign appearance, no tx.
+RTC pending path.
+",outpatient,dermatology,clinic_note,en-US,none
+dialysis_run_sheet,"HEMODIALYSIS TREATMENT RECORD
+
+Patient: XXXXX	Access: L AVF	Prescription: 4h, QB 400, QD 500
+
+Pre-weight: 74.8 kg	Target: 72.0 kg	UF goal: 2.8 L
+
+Time	BP	HR	UF removed	Comments
+0800	148/86	78	0.0 L	Initiated without difficulty
+0900	142/84	76	0.7 L	Tolerating well
+1000	136/80	80	1.4 L	
+1100	118/68	92	2.1 L	Cramping L calf, 100 mL NS bolus given
+1200	126/74	82	2.8 L	UF goal achieved, discontinued
+
+Post-weight: 72.1 kg	Total UF: 2.8 L	Kt/V: 1.42
+
+Access assessment pre and post: thrill palpable, bruit audible, no signs of infiltration or infection. Needle sites held 10 minutes, hemostasis achieved.
+",community,nephrology,treatment_record,en-US,xxx_run
+ed_note,"ED NOTE - <SITE>
+
+Triage 21:14 CTAS 2. CC: chest pain.
+
+21:20 Seen by RN. VS: HR 104, BP 156/92, RR 20, SpO2 96% RA, T 36.8.
+21:26 ECG done - NSR, no acute ST changes, poor R wave progression V1-V3.
+21:31 Seen by MD. <AGE>M, sudden onset substernal CP x 2h, radiating to L arm, assoc diaphoresis. No SOB. Hx HTN, DLD, smoker 20 pack-yr. Nil cardiac hx. NKDA.
+21:35 ASA 162 chewed. Nitro spray x1 with partial relief.
+21:52 Trop <0.01. CBC, lytes, Cr sent.
+22:40 Repeat trop <0.01. Pain now 2/10.
+23:15 Repeat ECG unchanged. Labs unremarkable.
+23:30 D/W cardiology on call - low risk, HEART score 3. Agrees with outpatient w/u.
+
+Dispo: discharged home 23:55. Rx nitro spray PRN. F/u with FD in 1 wk, referral to cardiology sent. Return precautions given verbally and in writing - understood.
+",emergency,emergency_medicine,ed_note,en-CA,angle_tag
+endoscopy_report,"COLONOSCOPY REPORT
+
+Indication: Iron deficiency anaemia, screening.
+Sedation: Midazolam 3 mg, fentanyl 50 mcg IV.
+Bowel preparation: Boston Bowel Prep Scale 8/9 (good).
+Extent: Caecum reached, confirmed by appendiceal orifice and ileocaecal valve. Withdrawal time 9 minutes.
+
+Findings: Two sessile polyps identified. A 6 mm polyp at 35 cm from the anal verge, removed by cold snare, retrieved. A 4 mm polyp in the ascending colon, removed by cold biopsy forceps, retrieved. Mild diverticulosis throughout the sigmoid colon. No mass, no ulceration, no active bleeding. Retroflexion in the rectum was normal, no haemorrhoids of significance.
+
+Complications: nil.
+
+Plan: Await histology. If tubular adenomas, repeat colonoscopy in 5 years per guideline. Patient given written discharge advice and warned regarding delayed bleeding.
+",procedural,gastroenterology,endoscopy_report,en-GB,none
+epic_progress,"PROGRESS NOTE
+
+S:
+Patient reports feeling improved this morning. Denies chest pain, shortness of breath, fever, or chills. Tolerating a regular diet without nausea. Ambulated in the hallway twice overnight with physical therapy and reports no dizziness.
+
+O:
+Vitals:	T 37.1	BP 132/78	HR 74	RR 16	SpO2 96% RA
+Physical exam: General - well appearing, no acute distress. Cardiovascular - regular rate and rhythm, no murmurs, rubs or gallops. Respiratory - clear to auscultation bilaterally without wheezes or crackles. Abdomen - soft, nontender, nondistended with normal bowel sounds.
+
+Labs this morning: WBC 7.2, Hgb 11.9, Plt 210, Na 139, K 4.0, Cr 1.1, glucose 142.
+
+A:
+*** year old patient admitted with community acquired pneumonia, clinically improving on day 3 of ceftriaxone and azithromycin.
+
+P:
+#Pneumonia: Continue current antibiotics, transition to oral therapy today. Repeat chest imaging not indicated at this time.
+#Type 2 diabetes: Continue home metformin, sliding scale insulin coverage.
+#Dispo: Anticipate discharge tomorrow pending clinical stability.
+
+Signed by: *** MD
+",inpatient,internal_medicine,progress_note,en-US,asterisk_run
+family_med_freetext,"Pt seen today for f/u of htn and dyslipidemia. BP today 138/84, was 142/90 last visit. Reports good adherence to perindopril 8mg daily, no cough, no dizziness. Has been walking 30 min most days and cut back on salt. Denies chest pain, SOB, palpitations, headaches or visual changes. No LE edema. Recent bloodwork reviewed - LDL 2.4, HbA1c 5.8, creat stable at 78. Weight down 2kg since last visit which is encouraging. Discussed continuing current regimen, recheck BP in 3 months, repeat lipids in 6 months. Also breifly discussed shingles vaccine, pt will think about it. Reminded re: importance of ongoing lifestyle measures. Pt agreeable to plan, no questions at end of visit.
+",outpatient,family_medicine,clinic_note,en-CA,none
+french_consultation,"Note de consultation
+
+Nom : [NOM]                    Date de naissance : [DATE]
+Numéro de dossier : [DOSSIER]  Sexe : F
+
+Motif de consultation :
+Dyspnée à l'effort progressive
+
+Histoire de la maladie actuelle :
+Patiente de [AGE] ans, connue pour une hypertension artérielle et un
+diabète de type 2, se présente avec une dyspnée d'effort évoluant
+depuis trois semaines, accompagnée d'un œdème des membres inférieurs.
+
+Antécédents médicaux :
+1. Hypertension artérielle
+2. Diabète de type 2
+3. Insuffisance rénale chronique
+
+Examen physique :
+Signes vitaux : TA 152/88, FC 88, SpO2 95% à l'air ambiant
+Cardiaque : rythme régulier, souffle systolique
+Membres inférieurs : œdème bilatéral prenant le godet
+
+Impression et plan :
+Insuffisance cardiaque probable. Échographie cardiaque demandée.
+Ajout de furosémide 40 mg par voie orale une fois par jour.
+",inpatient,internal_medicine,consultation,fr-CA,square_tag
+home_care_nursing,"Home visit 1030-1115. Client alert, oriented, sitting up in chair on arrival.
+
+Wound care to R heel pressure ulcer. Stage 2, measures 2.1 x 1.8 x 0.3 cm, wound bed 90% granulation 10% slough, small amount serous exudate, periwound intact. Cleansed with NS, hydrocolloid dressing applied. No s/s infection.
+
+Vitals: BP 128/74 sitting, HR 76, T 36.6, SpO2 96% RA.
+
+Meds reviewed with client and daughter. Blister pack in use, appears compliant. Notes she sometimes forgets the evening dose.
+
+Home environment: scatter rug in hallway removed at last visit, remains removed. Grab bars in bathroom in place. Daughter present, providing meals. Client reports feeling isolated since husband passed.
+
+Next visit Thursday for dressing change. Will refer to OT re: bathing aids and to social work re: community programs.
+",community,nursing,home_visit,en-CA,none
+i2b2_discharge,"Admission Date: [**2178-4-17**]     Discharge Date: [**2178-4-23**]
+
+Date of Birth: [**2110-8-2**]      Sex: M
+
+Service: CARDIOTHORACIC
+
+HISTORY OF PRESENT ILLNESS:
+Mr. [**Known lastname 1234**] is a 67 year old man referred by Dr.
+[**First Name (STitle) 567**] for evaluation of exertional angina.
+
+PAST MEDICAL HISTORY:
+1. Coronary artery disease
+2. Hyperlipidemia
+
+MEDICATIONS ON ADMISSION:
+Aspirin 81 mg daily, atorvastatin 40 mg nightly.
+
+DISCHARGE DIAGNOSIS:
+Coronary artery disease status post coronary artery bypass grafting.
+
+FOLLOWUP INSTRUCTIONS:
+Follow up with Dr. [**Last Name (NamePattern1) 890**] in [**Hospital 12**]
+clinic in two weeks.
+",inpatient,cardiothoracic_surgery,discharge_summary,en-US,bracket_star
+icu_daily,"ICU DAILY PROGRESS - Day 5
+
+*** yo M admitted with septic shock secondary to perforated diverticulitis, s/p Hartmann's procedure POD 4.
+
+NEURO: RASS -1 on propofol 20 mcg/kg/min. CAM-ICU negative. Fentanyl 50 mcg/hr for analgesia. Plan: lighten sedation for SBT.
+
+RESP: Intubated, AC/VC. Vt 420 mL (6 mL/kg PBW), RR 18, PEEP 8, FiO2 0.40. P/F ratio 210. ABG 7.36/42/84/24. CXR: improving bibasilar atelectasis. Plan: SBT this AM, PEEP wean as tolerated.
+
+CV: Norepinephrine weaned to 0.04 mcg/kg/min overnight (was 0.12). MAP 68-74. HR 88 SR. Lactate 1.4 (down from 2.8). Echo: EF 55%, no RV strain. Plan: continue wean, target MAP >65.
+
+GI/NUTRITION: NG tube to LIS. TF held for procedure, restart today at 20 mL/hr. LFTs normal. Ostomy output 400 mL/24h.
+
+RENAL: UOP 0.7 mL/kg/hr. Cr 1.4 (peak 2.1). K 4.2, Mg 1.9 - repleted. Net balance -800 mL/24h, cumulative +6.2 L.
+
+ID: Day 5 pip-tazo. Blood cx NGTD. Intraop cx: E. coli, sensitive. WBC 13.2 (down from 22). Tmax 37.4. Plan: narrow to ceftriaxone + metronidazole.
+
+HEME: Hgb 8.9, stable. Plt 145. On heparin 5000 units SC TID for VTE ppx.
+
+DISPO: remains critically ill but improving. Family updated at bedside.
+",critical_care,critical_care,daily_progress,en-US,asterisk_run
+long_term_care,"Quarterly review completed. Resident is a woman in her late eighties with
+advanced dementia, admitted to this facility two years ago. She is now
+non-ambulatory, requires total assistance for all activities of daily
+living, and communicates through facial expression rather than words.
+
+Weight has declined 3 kg over the quarter despite fortified diet and
+between-meal supplements. Speech-language pathology assessed swallowing and
+recommended minced moist texture, which is in place. Staff report she
+sometimes turns away after a few spoonfuls.
+
+No falls this quarter. Skin remains intact. Bowel routine effective. She
+appears comfortable at rest and settles readily with music.
+
+Met with her son and daughter this afternoon to review goals of care. We
+discussed the natural trajectory of advanced dementia including progressive
+weight loss and recurrent aspiration. The family confirmed they do not wish
+transfer to hospital or artificial feeding, and that comfort is the
+priority. Existing DNR order reaffirmed. Documentation updated accordingly.
+
+Continue current supportive measures. Will reassess in three months or
+sooner if there is a change in condition.
+",community,geriatrics,quarterly_review,en-CA,none
+markdown_clinic,"# Rheumatology Follow-up
+
+## Subjective
+
+[PATIENT] returns for follow-up of seropositive rheumatoid arthritis. Reports improved morning stiffness, now lasting about 20 minutes compared with two hours at last visit. Denies new joint swelling.
+
+## Objective
+
+- Vitals within normal limits
+- Joint exam: no active synovitis of the MCP or PIP joints bilaterally
+- CRP 4 mg/L, ESR 12 mm/hr
+
+## Assessment and Plan
+
+- Rheumatoid arthritis, well controlled on methotrexate 20 mg weekly
+- Continue folic acid supplementation
+- Repeat liver function tests in three months
+",outpatient,rheumatology,clinic_note,en-US,square_tag
+mimic_discharge,"Name:  ___                    Unit No:   ___
+
+Admission Date:  ___              Discharge Date:   ___
+
+Date of Birth:  ___             Sex:   F
+
+Service: MEDICINE
+
+Allergies:
+Penicillins / Sulfa
+
+Chief Complaint:
+Shortness of breath
+
+History of Present Illness:
+___ year old woman with a history of hypertension and type 2
+diabetes presenting with three days of progressive dyspnea on
+exertion and bilateral lower extremity swelling.
+
+Past Medical History:
+1. Hypertension
+2. Type 2 diabetes mellitus
+3. Chronic kidney disease stage 3
+
+Physical Exam:
+VITALS: T 98.4 BP 148/86 HR 92 RR 20 SpO2 94% on RA
+GEN: Elderly woman in mild respiratory distress.
+CARDIAC: Regular rate, ___ systolic murmur.
+
+Pertinent Results:
+___ 09:57PM BLOOD WBC-6.9 RBC-4.46 Hgb-12.8 Hct-38.2 Plt ___
+Na-138     K-4.1      Cl-102     HCO3-26    BUN-14
+
+Brief Hospital Course:
+Diuresed with IV furosemide with good response. Echocardiogram
+showed EF 35-40% consistent with reduced ejection fraction.
+
+Discharge Medications:
+1. Furosemide 40 mg PO daily
+Disp:*30 Tablet(s)* Refills:*2*
+
+Discharge Diagnosis:
+Primary: Acute on chronic systolic heart failure
+Secondary: Essential hypertension
+
+Discharge Condition:
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+",inpatient,internal_medicine,discharge_summary,en-US,underscore_run
+nhs_letter,"Dear Dr <GP_NAME>,
+
+Re: <PATIENT_NAME>, DOB <DATE>, NHS number <NHS_NUMBER>
+
+Thank you for referring this patient, who was admitted on <DATE> and
+discharged on <DATE>.
+
+Diagnosis: Acute exacerbation of chronic obstructive pulmonary disease
+
+She presented with a four day history of worsening breathlessness and
+increased sputum production. On examination she was tachypnoeic with
+widespread wheeze. There was no peripheral oedema. Haemoglobin was
+118 g/L and there was no evidence of anaemia.
+
+She was treated with nebulised salbutamol, oral prednisolone and a
+five day course of amoxicillin, with good clinical response.
+
+Medications on discharge: Salbutamol inhaler as required, tiotropium
+18 micrograms once daily, prednisolone 30 mg once daily for a further
+three days.
+
+Follow up: Respiratory clinic in six weeks. Please review her inhaler
+technique at your earliest convenience.
+
+Yours sincerely,
+<CLINICIAN_NAME>
+Consultant Respiratory Physician
+",inpatient,respiratory_medicine,discharge_letter,en-GB,angle_tag
+obstetrics_prenatal,"PRENATAL VISIT
+
+G3P1A1  EDD: XX/XX/XXXX  GA today: 28w4d
+
+Fundal height: 29 cm     FHR: 148 bpm     Presentation: cephalic
+BP: 112/68     Wt: 71.2 kg (+0.9 kg)     Urine: protein [ ] glucose [ ]
+
+Fetal movement:  [X] normal   [ ] decreased   [ ] absent
+Contractions:    [ ] yes      [X] no
+Bleeding:        [ ] yes      [X] no
+Leaking fluid:   [ ] yes      [X] no
+
+Reviewed 1hr GTT result 7.2 mmol/L - normal. Anti-D not indicated, mother Rh positive.
+Discussed signs of preterm labour and when to present to triage.
+
+Next visit: 2 weeks. Anticipate GBS swab at 36w.
+",outpatient,obstetrics,prenatal_visit,en-US,xxx_run
+oncology_clinic,"Diagnosis: Stage IIIA (T2N2M0) adenocarcinoma of the left lower lobe,
+EGFR wild type, ALK negative, PD-L1 TPS 40%.
+
+Interval History:
+___ presents for cycle 4 day 1 of carboplatin/pemetrexed. Tolerated cycle 3
+reasonably. Reports grade 1 fatigue and grade 1 nausea controlled with
+ondansetron. No neuropathy. No mucositis. No fevers.
+
+Labs today: WBC 4.1, ANC 2.2, Hgb 10.4, Plt 168, Cr 0.9, LFTs within normal
+limits.
+
+Assessment and Plan:
+# NSCLC: proceed with cycle 4 today at full dose. Restaging CT after cycle 4.
+# Anemia: chemotherapy related, Hgb stable, no transfusion indicated.
+# Nausea: continue ondansetron PRN, add prochlorperazine as second line.
+# Supportive: continue dexamethasone premedication per protocol.
+",outpatient,oncology,treatment_visit,en-US,underscore_run
+operative_note,"OPERATIVE REPORT
+
+SURGEON: [**Name**]
+ASSISTANT: [**Name**]
+ANESTHESIA: Spinal with sedation
+
+PREOPERATIVE DIAGNOSIS: End-stage osteoarthritis, right knee
+POSTOPERATIVE DIAGNOSIS: Same
+PROCEDURE PERFORMED: Right total knee arthroplasty
+ESTIMATED BLOOD LOSS: 150 mL
+SPECIMENS: None
+COMPLICATIONS: None
+IMPLANTS: Femoral component size 5 right, tibial baseplate size 4,
+polyethylene insert 10 mm, patellar button 32 mm
+
+INDICATIONS: The patient is a [**Age**] year old with longstanding right
+knee pain refractory to conservative management, with radiographs showing
+tricompartmental degenerative change.
+
+DESCRIPTION OF PROCEDURE: After adequate spinal anesthesia the right lower
+extremity was prepped and draped in the usual sterile fashion. A midline
+incision was made followed by a medial parapatellar arthrotomy. Distal
+femoral and proximal tibial cuts were made using standard instrumentation.
+Trial components were placed and the knee was taken through a full range of
+motion with excellent stability. Final components were cemented in place.
+The wound was irrigated and closed in layers. Sponge and needle counts were
+correct at the conclusion of the case.
+
+DISPOSITION: To PACU in stable condition.
+",procedural,orthopedic_surgery,operative_note,en-US,bracket_star
+palliative_consult,"Asked to see this ___ year old gentleman with metastatic pancreatic
+adenocarcinoma, now with progressive disease after second line
+chemotherapy, for symptom management and goals of care discussion.
+
+I met with him and his wife at the bedside for approximately forty
+minutes. He is alert and able to participate fully in the conversation. He
+told me that he understands his cancer is not curable and said, ""I've made
+my peace with that, I just don't want to be in pain."" His wife was tearful
+but engaged.
+
+His main symptoms are abdominal pain, rated 6 out of 10 at rest and worse
+with movement, and profound fatigue. He denies nausea, denies dyspnea and
+denies constipation on his current regimen. Appetite is poor but he is not
+distressed by this.
+
+We discussed what to expect in the coming weeks. He was clear that he does
+not wish resuscitation, does not wish transfer to intensive care, and does
+not wish artificial nutrition. He would like to be at home if that can be
+arranged safely. His wife expressed concern about managing at home alone
+overnight.
+
+Recommendations: rotate to long acting oral opioid with short acting for
+breakthrough, continue bowel regimen, and refer to community palliative
+care for home support. Code status updated to DNR after discussion. I have
+offered to meet again with the family later this week.
+",inpatient,palliative_care,consultation,en-US,underscore_run
+pathology_report,"SURGICAL PATHOLOGY REPORT
+
+Accession: {{ACCESSION}}	Collected: {{DATE}}	Received: {{DATE}}
+
+SPECIMENS SUBMITTED
+A. Colon, sigmoid, resection
+B. Lymph nodes, pericolic
+
+DIAGNOSIS
+
+A. COLON, SIGMOID, SEGMENTAL RESECTION:
+   - Invasive adenocarcinoma, moderately differentiated
+   - Tumor size: 3.8 cm
+   - Invades through muscularis propria into pericolic soft tissue
+   - Margins negative, closest radial margin 1.2 cm
+   - Lymphovascular invasion: present
+   - Perineural invasion: not identified
+
+B. LYMPH NODES, PERICOLIC:
+   - Metastatic adenocarcinoma in 2 of 14 lymph nodes
+
+SYNOPTIC SUMMARY
+| Element        | Finding          |
+|----------------|------------------|
+| Histologic type| Adenocarcinoma   |
+| Grade          | G2               |
+| pT             | pT3              |
+| pN             | pN1b             |
+| Margins        | Negative         |
+
+Pathologic stage: pT3 pN1b (AJCC 8th edition)
+",procedural,pathology,pathology_report,en-US,curly_tag
+pediatric_admission,"PEDIATRIC ADMISSION NOTE
+
+Patient: [PATIENT]   Age: 14 months   Weight: 9.8 kg (25th percentile)
+Length: 76 cm (30th percentile)   Head circumference: 46.5 cm (40th)
+Informant: mother, appears reliable.
+
+HPI:
+Previously well 14 month old male, fully immunized, brought in by mother
+with 3 days of fever to 39.2 C, decreased oral intake and increased work of
+breathing. Fewer wet diapers than usual, last one about 6 hours ago. No
+vomiting. Attends daycare where several children have been unwell.
+
+Exam:
+T 38.8 HR 158 RR 48 SpO2 92% RA BP 92/54
+General: fussy but consolable in mother's arms.
+Resp: subcostal and intercostal retractions, diffuse wheeze and crackles
+bilaterally, prolonged expiratory phase.
+CVS: tachycardic, regular, cap refill 2 seconds.
+Hydration: tacky mucous membranes, tears present.
+
+Assessment: Bronchiolitis with mild to moderate respiratory distress and
+mild dehydration.
+
+Plan:
+- Admit to pediatric ward
+- Nasal suctioning PRN, humidified oxygen to keep SpO2 above 90%
+- Trial of NG feeds if oral intake remains poor
+- Acetaminophen 15 mg/kg PO q6h PRN (150 mg per dose)
+- No routine chest radiograph or antibiotics indicated
+- Reassess in 4 hours or sooner if deterioration
+",inpatient,pediatrics,admission_note,en-US,square_tag
+physiotherapy,"PHYSIOTHERAPY PROGRESS NOTE
+
+Subjective: [PATIENT] reports R shoulder pain improved from 7/10 to 4/10 since last session. Able to sleep on the affected side for the first time. Still difficulty reaching overhead cupboards.
+
+Objective:
+R shoulder AROM: flexion 145 deg (was 120), abduction 130 deg (was 105), ER 55 deg, IR to L3.
+Strength: supraspinatus 4/5, infraspinatus 4+/5, subscapularis 5/5.
+Special tests: Hawkins-Kennedy positive, empty can negative, Neer equivocal.
+Palpation: mild tenderness over greater tuberosity, no crepitus.
+
+Analysis: Continued improvement in AROM and pain consistent with resolving subacromial impingement. Strength deficits persist in the posterior cuff.
+
+Plan: Progress theraband external rotation from red to green, 3 x 15 BID. Add scapular retraction in prone. Continue postural education. Reassess in 2 weeks. Anticipate discharge in 4-6 weeks if trajectory maintained.
+",community,physiotherapy,therapy_note,en-CA,square_tag
+psychiatry_clinic,"Interval History:
+[PATIENT] returns four weeks after starting sertraline 50 mg daily. She
+states, ""I think it's helping a bit? I'm not crying every day anymore.""
+Sleep has improved from 4 to 6 hours nightly. Appetite remains poor. She
+reports her mother asked her, ""are you sure you need those pills?"", which
+she found upsetting.
+
+Mental Status Exam:
+Appearance: casually dressed, fair grooming. Behaviour: cooperative, good
+eye contact. Speech: normal rate and volume. Mood: ""okay I guess"".
+Affect: constricted, reactive. Thought process: linear. Thought content:
+no delusions. Perception: no hallucinations. Cognition: alert, oriented x3.
+Insight and judgement: fair.
+
+Risk: Denies current suicidal ideation, intent or plan. No self-harm since
+last visit. No access to firearms. Protective factors include her children
+and her sister.
+
+Plan: increase sertraline to 100 mg daily. Continue weekly CBT. Return in
+4 weeks, sooner if worsening. Crisis line number provided and reviewed.
+",outpatient,psychiatry,follow_up,en-US,square_tag
+quebec_mixed_language,"Suivi diabète type 2. Pt revu aujourd'hui, HbA1c à 7,9% (était 8,4% en [DATE]). Prend metformine 1000 mg BID et empagliflozine 10 mg die. Pas d'hypoglycémie rapportée. Glycémies à jeun entre 6,5 et 8,2 mmol/L selon son carnet.
+
+Poids 88,4 kg, stable. TA 134/82. Examen des pieds fait aujourd'hui : monofilament normal bilatéralement, pas de lésion, pouls pédieux présents. Dernier fond d'oeil il y a 14 mois - à refaire.
+
+Plan : on augmente empagliflozine à 25 mg die. Référence en ophtalmo pour rétinopathie screening. Bilan lipidique et créatinine dans 3 mois. Revoir dans 4 mois. Patient understands and agrees with the plan, will call if any issues.
+",outpatient,endocrinology,follow_up,fr-CA-mixed,square_tag
+radiology_report,"EXAMINATION:  CT ANGIOGRAM CHEST
+
+INDICATION:  ___ year old with pleuritic chest pain, evaluate for
+pulmonary embolism.
+
+TECHNIQUE:  Axial images acquired through the chest following
+administration of intravenous contrast.
+
+COMPARISON:  Chest radiograph from ___.
+
+FINDINGS:
+No filling defect within the pulmonary arterial tree to suggest acute
+pulmonary embolism. Small bilateral pleural effusions, right greater
+than left, measuring up to 1.8 cm in depth. No focal consolidation.
+The heart is mildly enlarged.
+
+IMPRESSION:
+1. No evidence of pulmonary embolism.
+2. Small bilateral pleural effusions.
+",procedural,radiology,imaging_report,en-US,underscore_run
+tabular_export,"DISCHARGE SUMMARY | Patient: {{PATIENT}} | MRN: {{MRN}}
+
+## Medications on Discharge
+
+| Medication  | Dose   | Route | Frequency |
+|-------------|--------|-------|-----------|
+| Metoprolol  | 25 mg  | PO    | BID       |
+| Lisinopril  | 10 mg  | PO    | daily     |
+| Metformin   | 500 mg | PO    | BID       |
+
+## Vitals Trend
+
+Date	Temp	BP	HR	SpO2
+{{DATE}}	37.0	142/88	78	97%
+{{DATE}}	36.8	134/80	72	98%
+
+## Assessment
+
+Hypertension, reasonably controlled on discharge regimen. Type 2 diabetes mellitus with hemoglobin A1c of 7.4%.
+",inpatient,internal_medicine,discharge_summary,en-US,curly_tag
+telehealth_visit,"Virtual visit conducted by video. Patient identity confirmed with two identifiers. Patient located at home in <STATE>, provider located at <SITE>. Verbal consent for telehealth obtained and documented. Patient advised of limitations of remote assessment.
+
+Presenting concern: sore throat x 3 days, subjective fever, no cough, no SOB, no difficulty swallowing liquids. No known sick contacts. Immunizations up to date.
+
+On video the patient appears well, speaking in full sentences, no respiratory distress, no drooling, no stridor. Unable to visualize the oropharynx adequately over video. No physical exam performed given the modality.
+
+Centor criteria estimated at 2 based on history. Discussed that in-person assessment with throat swab would be needed to confirm or exclude strep. Patient prefers to trial supportive care first.
+
+Plan: supportive care, fluids, acetaminophen. Return precautions reviewed in detail including difficulty breathing, inability to swallow, drooling, or neck swelling - patient to present to urgent care or ED. Will arrange in-person visit if not improving in 48-72h. Patient verbalized understanding.
+",virtual,family_medicine,virtual_visit,en-US,angle_tag
+ward_nursing,"0700 Pt awake alert oriented x3
+0715 VSS afebrile, IV site clean dry intact
+0800 Ambulated to bathroom with 1 assist, steady gait
+0900 Tolerating clear liquids, no nausea
+1030 Family at bedside, questions answered
+1200 Lunch tray 75% consumed
+1400 Pain 3/10, declined medication
+1600 Report given to oncoming RN
+",inpatient,nursing,nursing_note,en-US,none

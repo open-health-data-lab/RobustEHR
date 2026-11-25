@@ -1,0 +1,150 @@
+{
+  "attributes": {
+    "is_family": {
+      "basis": "one rule but FIFTY-ONE triggers — the rule named `family` carries a kinship list from `aunt` to `wife`, so `Father with myocardial infarction` does fire it. Measured on corpus: 3.7 cues per note in 100% of notes, the commonest being family/father/brother/mother. No gold in or out of domain, so the rate is disclosed, not claimed.",
+      "context_category": "FAMILY",
+      "directions": {
+        "FORWARD": 1
+      },
+      "literals": [
+        "family"
+      ],
+      "reported_as": "family",
+      "rules": 1,
+      "status": "disclosed-unvalidated",
+      "triggers": 51
+    },
+    "is_historical": {
+      "basis": "5 rules, 10 triggers, no gold. `Hx` is covered: the `history` rule's pattern is [history, hx, hist, ho]. `status post` is absent, and it is ordinary clinical usage. Corpus rate 5.0 cues per note.",
+      "context_category": "HISTORICAL",
+      "directions": {
+        "FORWARD": 3,
+        "TERMINATE": 2
+      },
+      "literals": [
+        "comes in with",
+        "h/o",
+        "history",
+        "past history",
+        "presentation"
+      ],
+      "reported_as": "historical",
+      "rules": 5,
+      "status": "disclosed-unvalidated",
+      "triggers": 10
+    },
+    "is_hypothetical": {
+      "basis": "9 rules, 17 triggers, no gold. Corpus rate 6.2 cues per note, dominated by `as needed` (PRN instructions) and `if` — so most of what it fires on is discharge instructions rather than hedged findings.",
+      "context_category": "HYPOTHETICAL",
+      "directions": {
+        "FORWARD": 8,
+        "TERMINATE": 1
+      },
+      "literals": [
+        "as needed",
+        "because",
+        "come back for",
+        "if",
+        "return",
+        "risks of",
+        "should he",
+        "should the patient",
+        "should there"
+      ],
+      "reported_as": "uncertain",
+      "rules": 9,
+      "status": "disclosed-unvalidated",
+      "triggers": 17
+    },
+    "is_negated": {
+      "basis": "assertion_accuracy.json, NegEx gold: 0.9289 negated-class F1 against a 0.0000 majority-class floor.",
+      "context_category": "NEGATED_EXISTENCE",
+      "directions": {
+        "BACKWARD": 15,
+        "FORWARD": 43,
+        "TERMINATE": 11
+      },
+      "literals": null,
+      "reported_as": "negated",
+      "rules": 69,
+      "status": "validated",
+      "triggers": 145
+    },
+    "is_uncertain": {
+      "basis": "scope_accuracy.json, BioScope abstracts: F1 0.2511 at precision 0.855 and recall 0.147 — precise where it fires, blind to six hedges in seven. Read against negation on the same sentences (0.6111, versus 0.9289 on clinical gold), which prices the genre shift at 0.318 F1. BioScope's clinical subcorpus is de-worded and needs the 2007 CMC text to reconstitute, so no in-domain uncertainty gold exists here. Not promoted to validated: these 18 rules are clinical hedges and the corpus is scientific writing.",
+      "context_category": "POSSIBLE_EXISTENCE",
+      "directions": {
+        "BACKWARD": 4,
+        "FORWARD": 14
+      },
+      "literals": null,
+      "reported_as": "uncertain",
+      "rules": 18,
+      "status": "measured-out-of-domain",
+      "triggers": 48
+    }
+  },
+  "count_rules_or_triggers": "**triggers, not rules.** A medspaCy rule may carry a spaCy token pattern, and one whose pattern is {'LOWER': {'IN': [...]}} fires on every member of that list. FAMILY is 1 rule and 51 triggers. Counting rules understates it fifty-fold and would suggest that `Father with myocardial infarction` is undetected, which it is not. By triggers the spread is 145 / 51 / 48 / 17 / 10, so the imbalance is real but roughly 14x rather than the 69x a rule count suggests, and FAMILY is the second best resourced category rather than the worst.",
+  "english_rules_total": 102,
+  "english_triggers_total": 271,
+  "how_to_read": "`validated` means in-domain gold exists in this repository and the number is in validation/measurements. `measured-out-of-domain` means gold exists but in the wrong genre, so the figure bounds the attribute rather than scoring it. `disclosed-unvalidated` means the attribute is emitted and may be wrong in ways nothing here has measured. Do not aggregate across the five, and do not report a non-affirmed rate as though its components were equally reliable.",
+  "medspacy_version": "1.3.1",
+  "missing_categories": {
+    "CONDITIONAL": "absent from the English set, and conditionality is one of the six macro-F1 metrics ShARe/CLEF 2014 asks for. It is not producible by this instrument.",
+    "PSEUDONEGATION": "absent from the English set. `no change` and `not only` are handled implicitly by longest-match pruning (prune_on_modifier_overlap), not by explicit pseudo rules. The Dutch set is the only shipped one that uses PSEUDO."
+  },
+  "other_languages": {
+    "de": {
+      "categories": {},
+      "rules": 0
+    },
+    "en": {
+      "categories": {
+        "FAMILY": 1,
+        "HISTORICAL": 5,
+        "HYPOTHETICAL": 9,
+        "NEGATED_EXISTENCE": 69,
+        "POSSIBLE_EXISTENCE": 18
+      },
+      "rules": 102
+    },
+    "es": {
+      "categories": {},
+      "rules": 0
+    },
+    "fr": {
+      "categories": {
+        "CONDITIONAL": 89,
+        "FAMILY": 535,
+        "HISTORICAL": 636,
+        "NEGATED_EXISTENCE": 7668,
+        "UNCERTAIN": 1233
+      },
+      "rules": 10161
+    },
+    "it": {
+      "categories": {},
+      "rules": 0
+    },
+    "nl": {
+      "categories": {
+        "FAMILY": 6,
+        "HISTORICAL": 31,
+        "HYPOTHETICAL": 16,
+        "NEGATED_EXISTENCE": 85,
+        "POSSIBLE_EXISTENCE": 22
+      },
+      "rules": 160
+    },
+    "pl": {
+      "categories": {},
+      "rules": 0
+    },
+    "pt": {
+      "categories": {},
+      "rules": 0
+    }
+  },
+  "question": "What is each of stage 8's five attributes made of?",
+  "why": "concepts.context.ATTRIBUTES is a flat five-tuple, which reads as five comparable signals. They are not: they differ in how much lexical coverage stands behind them and in whether any gold has been run. Every stage-8 number should be read against this table."
+}

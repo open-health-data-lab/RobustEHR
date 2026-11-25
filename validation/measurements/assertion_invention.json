@@ -1,0 +1,107 @@
+{
+  "answer": "almost never: 35 of 51031 unmodified concepts (0.069%) acquired one. It is not zero, and the mechanism is not in the operator: removing an outer cue can EXPOSE an inner one that it was covering. Deleting `no` from `no concern for sepsis` leaves `concern for sepsis`, which ConText reads as POSSIBLE_EXISTENCE. The operator targeted a negation cue and never touched the concept; the re-read is what changed.",
+  "n_notes": 20,
+  "operators": [
+    {
+      "concept_level": {
+        "concepts_carrying_the_dimension": 115,
+        "concepts_flipped": 94,
+        "flip_rate": 0.8174,
+        "note": "what a robustness claim should quote: one cue can govern several mentions, so these counts differ from the cue-level ones by design"
+      },
+      "concepts_left_unmodified": 110,
+      "cue_level": {
+        "edits_applied": 80,
+        "eligible_cues": 80,
+        "note": "the dose record's denominator \u2014 a cue is what gets edited"
+      },
+      "dimension": "family",
+      "invention": {
+        "gained_a_modifier": 0,
+        "gained_what": {},
+        "invention_rate": 0.0,
+        "unmodified_concepts_carried_through": 12801
+      },
+      "operator": "semantic.experiencer_shift"
+    },
+    {
+      "concept_level": {
+        "concepts_carrying_the_dimension": 1176,
+        "concepts_flipped": 1147,
+        "flip_rate": 0.9753,
+        "note": "what a robustness claim should quote: one cue can govern several mentions, so these counts differ from the cue-level ones by design"
+      },
+      "concepts_left_unmodified": 1096,
+      "cue_level": {
+        "edits_applied": 745,
+        "eligible_cues": 745,
+        "note": "the dose record's denominator \u2014 a cue is what gets edited"
+      },
+      "dimension": "negated",
+      "invention": {
+        "gained_a_modifier": 30,
+        "gained_what": {
+          "family": 3,
+          "historical": 6,
+          "uncertain": 21
+        },
+        "invention_rate": 0.002357,
+        "unmodified_concepts_carried_through": 12727
+      },
+      "operator": "semantic.negation_flip"
+    },
+    {
+      "concept_level": {
+        "concepts_carrying_the_dimension": 300,
+        "concepts_flipped": 300,
+        "flip_rate": 1.0,
+        "note": "what a robustness claim should quote: one cue can govern several mentions, so these counts differ from the cue-level ones by design"
+      },
+      "concepts_left_unmodified": 263,
+      "cue_level": {
+        "edits_applied": 143,
+        "eligible_cues": 143,
+        "note": "the dose record's denominator \u2014 a cue is what gets edited"
+      },
+      "dimension": "historical",
+      "invention": {
+        "gained_a_modifier": 0,
+        "gained_what": {},
+        "invention_rate": 0.0,
+        "unmodified_concepts_carried_through": 12726
+      },
+      "operator": "semantic.temporality_shift"
+    },
+    {
+      "concept_level": {
+        "concepts_carrying_the_dimension": 392,
+        "concepts_flipped": 389,
+        "flip_rate": 0.9923,
+        "note": "what a robustness claim should quote: one cue can govern several mentions, so these counts differ from the cue-level ones by design"
+      },
+      "concepts_left_unmodified": 319,
+      "cue_level": {
+        "edits_applied": 193,
+        "eligible_cues": 193,
+        "note": "the dose record's denominator \u2014 a cue is what gets edited"
+      },
+      "dimension": "uncertain",
+      "invention": {
+        "gained_a_modifier": 5,
+        "gained_what": {
+          "historical": 1,
+          "negated": 4
+        },
+        "invention_rate": 0.000391,
+        "unmodified_concepts_carried_through": 12777
+      },
+      "operator": "semantic.uncertainty_flip"
+    }
+  ],
+  "overall_invention_rate": 0.000686,
+  "question": "Do the SEMANTIC operators ever ADD a modifier to a plainly asserted concept?",
+  "severity": "1.00",
+  "two_denominators": "cue-level counts are what the dose record holds and what severity is a fraction of, because a cue is what gets edited. Concept-level counts are what a robustness claim should quote, because a concept is the unit of clinical meaning. One cue can govern several mentions, so the two differ by design rather than by error.",
+  "why": "the operators are supposed to REVERSE an assertion, not invent one. If that holds, a robustness result can say the perturbation removed modifiers and never manufactured them \u2014 a much stronger statement than a flip rate, and one a clinical reader will ask for.",
+  "why_by_construction_is_not_enough": "eligibility enumerates cues ConText already found, so no unmodified concept is ever a target. But an edit changes the text and the detector re-reads the changed text, so the property has to be measured on the output rather than argued from the input."
+}

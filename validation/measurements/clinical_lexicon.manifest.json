@@ -1,0 +1,40 @@
+{
+  "ambiguity_source": "wordfreq 3.1.1",
+  "ambiguity_zipf": 5.0,
+  "category_counts": {
+    "anatomy": 4096,
+    "device": 1982,
+    "diagnostic_procedure": 2093,
+    "disease": 14796,
+    "disorder": 19060,
+    "finding": 3684,
+    "lab_result": 104,
+    "medication": 54642,
+    "procedure": 6420,
+    "symptom": 1024,
+    "therapeutic_procedure": 3738
+  },
+  "columns": [
+    "token",
+    "semantic_types",
+    "specificity"
+  ],
+  "extraction": "English, non-suppressible, single-word strings of concepts whose semantic type falls in a clinical semantic group",
+  "semantic_groups": [
+    "ANAT",
+    "CHEM",
+    "DEVI",
+    "DISO",
+    "GENE",
+    "LIVB",
+    "PHEN",
+    "PHYS",
+    "PROC"
+  ],
+  "semantic_types": 93,
+  "sha256": "bcebaecb1e2a4165ca665f13984bb85c052460c928c298d4c0dc995380736d05",
+  "tokens": 250613,
+  "tokens_ambiguous": 357,
+  "tokens_specific": 250256,
+  "umls_release": "2026AA"
+}

@@ -1,0 +1,203 @@
+{
+  "architecture": "LLM annotates -> encoder distils -> deterministic detector ships",
+  "arms": {
+    "bvanaken/clinical-assertion-negation-bert": {
+      "best_validation_loss": 0.9523,
+      "by_dimension": {
+        "family": {
+          "cohens_kappa": -0.016,
+          "f1": 0.0,
+          "fn": 4,
+          "fp": 15,
+          "gold_positives": 4,
+          "precision": 0.0,
+          "predicted_positives": 15,
+          "recall": 0.0,
+          "tn": 381,
+          "tp": 0,
+          "training_positives": 5,
+          "untrained": "5 training examples. Reported for completeness; a class this rare cannot be learned and the figure is not evidence about the method."
+        },
+        "historical": {
+          "cohens_kappa": 0.294,
+          "f1": 0.3818,
+          "fn": 17,
+          "fp": 51,
+          "gold_positives": 38,
+          "precision": 0.2917,
+          "predicted_positives": 72,
+          "recall": 0.5526,
+          "tn": 311,
+          "tp": 21,
+          "training_positives": 61
+        },
+        "negated": {
+          "cohens_kappa": 0.7945,
+          "f1": 0.8148,
+          "fn": 1,
+          "fp": 14,
+          "gold_positives": 34,
+          "precision": 0.7021,
+          "predicted_positives": 47,
+          "recall": 0.9706,
+          "tn": 352,
+          "tp": 33,
+          "training_positives": 47
+        },
+        "uncertain": {
+          "cohens_kappa": 0.4408,
+          "f1": 0.5175,
+          "fn": 0,
+          "fp": 69,
+          "gold_positives": 37,
+          "precision": 0.3491,
+          "predicted_positives": 106,
+          "recall": 1.0,
+          "tn": 294,
+          "tp": 37,
+          "training_positives": 82
+        }
+      }
+    },
+    "emilyalsentzer/Bio_ClinicalBERT": {
+      "best_validation_loss": 1.1361,
+      "by_dimension": {
+        "family": {
+          "cohens_kappa": -0.0166,
+          "f1": 0.0,
+          "fn": 4,
+          "fp": 18,
+          "gold_positives": 4,
+          "precision": 0.0,
+          "predicted_positives": 18,
+          "recall": 0.0,
+          "tn": 378,
+          "tp": 0,
+          "training_positives": 5,
+          "untrained": "5 training examples. Reported for completeness; a class this rare cannot be learned and the figure is not evidence about the method."
+        },
+        "historical": {
+          "cohens_kappa": 0.321,
+          "f1": 0.4098,
+          "fn": 13,
+          "fp": 59,
+          "gold_positives": 38,
+          "precision": 0.2976,
+          "predicted_positives": 84,
+          "recall": 0.6579,
+          "tn": 303,
+          "tp": 25,
+          "training_positives": 61
+        },
+        "negated": {
+          "cohens_kappa": 0.4817,
+          "f1": 0.5376,
+          "fn": 9,
+          "fp": 34,
+          "gold_positives": 34,
+          "precision": 0.4237,
+          "predicted_positives": 59,
+          "recall": 0.7353,
+          "tn": 332,
+          "tp": 25,
+          "training_positives": 47
+        },
+        "uncertain": {
+          "cohens_kappa": 0.6173,
+          "f1": 0.6593,
+          "fn": 7,
+          "fp": 24,
+          "gold_positives": 37,
+          "precision": 0.5556,
+          "predicted_positives": 54,
+          "recall": 0.8108,
+          "tn": 339,
+          "tp": 30,
+          "training_positives": 82
+        }
+      }
+    },
+    "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext": {
+      "best_validation_loss": 0.988,
+      "by_dimension": {
+        "family": {
+          "cohens_kappa": 0.2754,
+          "f1": 0.2857,
+          "fn": 2,
+          "fp": 8,
+          "gold_positives": 4,
+          "precision": 0.2,
+          "predicted_positives": 10,
+          "recall": 0.5,
+          "tn": 388,
+          "tp": 2,
+          "training_positives": 5,
+          "untrained": "5 training examples. Reported for completeness; a class this rare cannot be learned and the figure is not evidence about the method."
+        },
+        "historical": {
+          "cohens_kappa": 0.2605,
+          "f1": 0.3623,
+          "fn": 13,
+          "fp": 75,
+          "gold_positives": 38,
+          "precision": 0.25,
+          "predicted_positives": 100,
+          "recall": 0.6579,
+          "tn": 287,
+          "tp": 25,
+          "training_positives": 61
+        },
+        "negated": {
+          "cohens_kappa": 0.545,
+          "f1": 0.5934,
+          "fn": 7,
+          "fp": 30,
+          "gold_positives": 34,
+          "precision": 0.4737,
+          "predicted_positives": 57,
+          "recall": 0.7941,
+          "tn": 336,
+          "tp": 27,
+          "training_positives": 47
+        },
+        "uncertain": {
+          "cohens_kappa": 0.3565,
+          "f1": 0.434,
+          "fn": 14,
+          "fp": 46,
+          "gold_positives": 37,
+          "precision": 0.3333,
+          "predicted_positives": 69,
+          "recall": 0.6216,
+          "tn": 317,
+          "tp": 23,
+          "training_positives": 82
+        }
+      }
+    }
+  },
+  "contamination_control": "Bio_ClinicalBERT is pretrained on MIMIC-III, which overlaps MIMIC-IV in period and patients. BiomedBERT is pretrained on PubMed and has never seen a clinical note. The gap between them bounds how much of the clinical model's margin is exposure rather than domain fit.",
+  "hyperparameters": {
+    "batch": 16,
+    "epochs": 8,
+    "learning_rate": 2e-05,
+    "max_length": 256,
+    "note": "fixed a priori, not searched. With 600 examples a hyperparameter sweep would fit the validation slice.",
+    "seed": 20260804
+  },
+  "model_selection": "12 development NOTES held back for early stopping. The test half is never seen during training or selection.",
+  "n_test": 400,
+  "n_train": 480,
+  "n_validation": 120,
+  "question": "Can 600 LLM-annotated spans distil into a deterministic encoder?",
+  "task_form": "multi-label \u2014 four independent sigmoids with positive-class weighting, not a four-way softmax, because the dimensions co-occur (`no history of X` is both negated and historical).",
+  "training_signal": {
+    "family": 5,
+    "historical": 61,
+    "negated": 47,
+    "uncertain": 82
+  },
+  "training_signal_warning": "600 development spans carrying 82 uncertain, 61 historical, 47 negated and FIVE family. Five examples cannot teach a class. negated at 47 is also unlikely to beat a checkpoint already fine-tuned on i2b2's thousands.",
+  "why": "the gold is frontier-LLM supervision at kappa 0.845-0.913, and an LLM cannot sit in a package that promises replayable edit scripts. An encoder can. This tests whether the supervision transfers.",
+  "why_not_the_i2b2_checkpoint": "it beats the rules on negation by 0.117 F1 and covers nothing else. i2b2 assertion has no temporality class, so `historical` has no published baseline anywhere, and the checkpoint dropped associated_with_someone_else as well."
+}

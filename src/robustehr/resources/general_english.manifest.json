@@ -1,0 +1,258 @@
+{
+  "keyness_note": "Keyness removes only above 1.5, where band inspection shows the words are unambiguously clinical. It is not a general discriminator: foot scores 0.63 against home at 0.59, and hand and back fall below plainly ordinary words. The 1.0-1.5 band is kept and listed here for review.",
+  "keyness_suspects": [
+    {
+      "keyness": 1.499,
+      "word": "tablets"
+    },
+    {
+      "keyness": 1.499,
+      "word": "fungal"
+    },
+    {
+      "keyness": 1.498,
+      "word": "tapered"
+    },
+    {
+      "keyness": 1.498,
+      "word": "moderate"
+    },
+    {
+      "keyness": 1.495,
+      "word": "attending"
+    },
+    {
+      "keyness": 1.492,
+      "word": "bony"
+    },
+    {
+      "keyness": 1.489,
+      "word": "complaint"
+    },
+    {
+      "keyness": 1.479,
+      "word": "cm"
+    },
+    {
+      "keyness": 1.478,
+      "word": "silhouette"
+    },
+    {
+      "keyness": 1.477,
+      "word": "reflexes"
+    },
+    {
+      "keyness": 1.472,
+      "word": "notable"
+    },
+    {
+      "keyness": 1.468,
+      "word": "worsen"
+    },
+    {
+      "keyness": 1.467,
+      "word": "basal"
+    },
+    {
+      "keyness": 1.465,
+      "word": "residual"
+    },
+    {
+      "keyness": 1.463,
+      "word": "blocker"
+    },
+    {
+      "keyness": 1.459,
+      "word": "borderline"
+    },
+    {
+      "keyness": 1.452,
+      "word": "tender"
+    },
+    {
+      "keyness": 1.451,
+      "word": "dx"
+    },
+    {
+      "keyness": 1.45,
+      "word": "operative"
+    },
+    {
+      "keyness": 1.445,
+      "word": "psychiatry"
+    },
+    {
+      "keyness": 1.443,
+      "word": "liters"
+    },
+    {
+      "keyness": 1.441,
+      "word": "enlarged"
+    },
+    {
+      "keyness": 1.44,
+      "word": "abnormal"
+    },
+    {
+      "keyness": 1.439,
+      "word": "sided"
+    },
+    {
+      "keyness": 1.437,
+      "word": "persistently"
+    },
+    {
+      "keyness": 1.433,
+      "word": "sl"
+    },
+    {
+      "keyness": 1.428,
+      "word": "heterogeneous"
+    },
+    {
+      "keyness": 1.419,
+      "word": "bs"
+    },
+    {
+      "keyness": 1.418,
+      "word": "oriented"
+    },
+    {
+      "keyness": 1.412,
+      "word": "impression"
+    },
+    {
+      "keyness": 1.409,
+      "word": "reactive"
+    },
+    {
+      "keyness": 1.408,
+      "word": "leaflet"
+    },
+    {
+      "keyness": 1.407,
+      "word": "compression"
+    },
+    {
+      "keyness": 1.406,
+      "word": "connective"
+    },
+    {
+      "keyness": 1.405,
+      "word": "rel"
+    },
+    {
+      "keyness": 1.397,
+      "word": "orthopedic"
+    },
+    {
+      "keyness": 1.397,
+      "word": "evaluation"
+    },
+    {
+      "keyness": 1.397,
+      "word": "bun"
+    },
+    {
+      "keyness": 1.394,
+      "word": "interval"
+    },
+    {
+      "keyness": 1.392,
+      "word": "draining"
+    }
+  ],
+  "license": "Apache-2.0",
+  "min_zipf": 3.0,
+  "remove_keyness_threshold": 1.5,
+  "removed_by_keyness": 187,
+  "removed_by_keyness_examples": [
+    "acute",
+    "adhesive",
+    "admission",
+    "admitted",
+    "aerosol",
+    "ascending",
+    "ast",
+    "atypical",
+    "baseline",
+    "bedtime",
+    "benign",
+    "bilateral",
+    "biopsy",
+    "bm",
+    "bp",
+    "chemo",
+    "chemotherapy",
+    "chronic",
+    "chronically",
+    "ck",
+    "cl",
+    "clinically",
+    "cn",
+    "coherent",
+    "coli",
+    "consciousness",
+    "consulted",
+    "cr",
+    "ct",
+    "cv",
+    "cx",
+    "cystic",
+    "daily",
+    "decreased",
+    "deficits",
+    "delayed",
+    "denies",
+    "diabetic",
+    "diagnoses",
+    "diagnosis"
+  ],
+  "removed_by_semantic_type": 2686,
+  "removed_by_semantic_type_examples": [
+    "aaa",
+    "aap",
+    "abc",
+    "abd",
+    "abdomen",
+    "abdominal",
+    "abe",
+    "abnormalities",
+    "abs",
+    "absent",
+    "abuse",
+    "aca",
+    "acacia",
+    "acc",
+    "acclaim",
+    "acetate",
+    "ache",
+    "aches",
+    "achilles",
+    "aching",
+    "acidity",
+    "acl",
+    "aclu",
+    "acm",
+    "acne",
+    "acosta",
+    "acs",
+    "active",
+    "adapter",
+    "adc",
+    "add",
+    "addiction",
+    "addictions",
+    "adds",
+    "adhd",
+    "adhesion",
+    "adm",
+    "ado",
+    "adrenaline",
+    "advance"
+  ],
+  "rule": "common English, minus function words, minus words carrying a high-precision clinical category (anatomy, disease, symptom, medication, device, lab_result)",
+  "sha256": "a63f9d7740d0efee6879b922006bfe0615f5c018817c43374fd5c654770379fc",
+  "source": "wordfreq 3.1.1",
+  "words": 25185
+}

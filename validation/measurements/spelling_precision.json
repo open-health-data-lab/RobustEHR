@@ -1,0 +1,20 @@
+{
+  "corpus": "golden_notes.csv",
+  "distinct_surfaces": 1442,
+  "hapax_in_sample": 135,
+  "model": "google/gemini-3.6-flash",
+  "note": "precision of the AUTOMATIC filter, adjudicated by a model rather than a clinician. `by_type` samples distinct surfaces uniformly; `by_occurrence` is the ratio estimator that applies to the `near_miss_edit1` TOTAL, which counts occurrences, and is the lower of the two because frequent near-misses are vocabulary. Both bound what the field may be called: until they are high it is a candidate count, not a misspelling rate. `--review` writes the same deterministic sample as a TSV for human adjudication, which supersedes this.",
+  "notes_scanned": 200,
+  "occurrences_in_sample": 1174,
+  "precision_by_occurrence": 0.0963,
+  "precision_by_type": 0.425,
+  "precision_hapax_only": 0.5259,
+  "question": "what fraction of near_miss_edit1 surfaces are misspellings?",
+  "sampled": 200,
+  "verdicts": {
+    "abbreviation": 40,
+    "misspelling": 85,
+    "real_word": 73,
+    "unclear": 2
+  }
+}

@@ -1,0 +1,117 @@
+# OCR character confusions — shape-based, not keyboard-based.
+#
+# ONE table, read by two sides:
+#
+#   * `input.ocr_confusion` injects these substitutions at a measured dose;
+#   * `metrics.ocr.profile_ocr` estimates how many are ALREADY in the corpus,
+#     by applying them in reverse and asking whether the result is a real word.
+#
+# That is deliberate. A baseline that counted OCR noise with a different
+# confusion set from the one the operator injects would be measuring a different
+# phenomenon, and the injection-recovery check between them would be
+# uninterpretable.
+#
+# This file lives here rather than in `ops/input.py` so that its digest lands in
+# the operator version via `registry.resolved_version`. Editing a table inside a
+# module changes every previously reported OCR result with no version bump and
+# no way for a reader to tell; editing this file does not.
+#
+# Keyed by what is ON THE PAGE, valued by what the engine emits.
+#
+# **The digit-letter rows are the clinically dangerous ones.** `0`/`O`, `1`/`l`,
+# `5`/`S` and `8`/`B` turn a lab value into a word or another value — a
+# potassium of `5.1` read as `S.1`, a creatinine of `1.0` as `l.O`. Those are
+# the substitutions a downstream extractor is least able to recover from, and an
+# OCR operator that only touched letters would model the harmless half.
+#
+# They are also what makes this a separate operator rather than a mode of
+# `input.typo`: no digit-letter pair here is keyboard-adjacent, which
+# `tests/test_ops_ocr.py::TestOcrIsNotATypo` asserts.
+
+schema_version: "1.0"
+
+glyphs:
+  # digit -> letter, and the reverse
+  "0": ["O", "D"]
+  "1": ["l", "I"]
+  "2": ["Z"]
+  "5": ["S"]
+  "6": ["G", "b"]
+  "8": ["B"]
+  "9": ["g", "q"]
+  "O": ["0", "C", "D", "Q"]
+  "l": ["1", "I"]
+  "I": ["1", "l", "T", "L", "J"]
+  "S": ["5"]
+  "B": ["8", "R"]
+  "G": ["6", "C"]
+  "Z": ["2"]
+  # shape-similar letters
+  "c": ["e", "o"]
+  "e": ["c", "o"]
+  "o": ["c", "e", "0"]
+  "a": ["o", "e"]
+  "n": ["h", "u"]
+  "h": ["n", "b"]
+  "u": ["n", "v"]
+  "v": ["u", "y"]
+  "t": ["f", "l"]
+  "f": ["t"]
+  "i": ["l", "j"]
+  "j": ["i"]
+  "g": ["q", "9"]
+  "q": ["g", "9"]
+  "b": ["h", "6"]
+  "y": ["v"]
+  # Shape-similar UPPERCASE letters.
+  #
+  # Declared as their own block because a clinical abbreviation is mostly
+  # uppercase: `HFpEF`, `HTN`, `HFrEF`, `DVT` and `MDD` contain no shape from
+  # the lowercase or digit tables. Without these rows the operator cannot touch
+  # the most common written form of several diagnoses — over 120 notes, 12% of
+  # the diagnosis spans a target declares are unreachable, 23 of them the one
+  # string `HFpEF` — and a phenotype written as an abbreviation looks robust to
+  # scanning noise only because the noise cannot reach it.
+  #
+  # Grouped by stroke family, which is what an engine confuses:
+  #   round      C G O Q D
+  #   stem+bars  E F P R B
+  #   verticals  I J L T
+  #   multi-stem M N H W
+  #   diagonals  U V Y K X
+  "A": ["4"]
+  "C": ["G", "O"]
+  "D": ["O", "0"]
+  "E": ["F"]
+  "F": ["E", "P"]
+  "H": ["N", "M"]
+  "J": ["I"]
+  "K": ["X"]
+  "L": ["I", "1"]
+  "M": ["N", "H"]
+  "N": ["M", "H"]
+  "P": ["F", "R"]
+  "Q": ["O"]
+  "R": ["P", "B"]
+  "T": ["I", "7"]
+  "U": ["V"]
+  "V": ["U", "Y"]
+  "W": ["V"]
+  "X": ["K"]
+  "Y": ["V"]
+  "4": ["A"]
+  "7": ["T"]
+
+# Multi-character confusions: what a run of characters is misread AS, and the
+# reverse. These are the OCR errors a per-character table cannot express, and
+# they are the ones that change token length — which breaks a downstream
+# tokeniser rather than merely a lookup.
+ligatures:
+  - ["rn", "m"]
+  - ["m", "rn"]
+  - ["cl", "d"]
+  - ["d", "cl"]
+  - ["vv", "w"]
+  - ["w", "vv"]
+  - ["ii", "u"]
+  - ["li", "h"]

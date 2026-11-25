@@ -1,0 +1,2435 @@
+{
+ "applicability": {
+  "notes": 500,
+  "units": {
+   "aligned_blocks": {
+    "median": 1,
+    "notes_with_any": 0.566,
+    "p25": 0,
+    "p75": 1,
+    "total": 347
+   },
+   "aligned_lines": {
+    "median": 1,
+    "notes_with_any": 0.566,
+    "p25": 0,
+    "p75": 1,
+    "total": 389
+   },
+   "breaks": {
+    "median": 5,
+    "notes_with_any": 0.93,
+    "p25": 3,
+    "p75": 9,
+    "total": 2852
+   },
+   "chars": {
+    "median": 2707,
+    "notes_with_any": 1.0,
+    "p25": 1634,
+    "p75": 4022,
+    "total": 1515600
+   },
+   "content_tokens": {
+    "median": 424,
+    "notes_with_any": 1.0,
+    "p25": 257,
+    "p75": 627,
+    "total": 241728
+   },
+   "deid_placeholders": {
+    "median": 0,
+    "notes_with_any": 0.032,
+    "p25": 0,
+    "p75": 0,
+    "total": 41
+   },
+   "divider_rules": {
+    "median": 0,
+    "notes_with_any": 0.072,
+    "p25": 0,
+    "p75": 0,
+    "total": 58
+   },
+   "headers": {
+    "median": 6,
+    "notes_with_any": 0.944,
+    "p25": 4,
+    "p75": 9,
+    "total": 3167
+   },
+   "lines": {
+    "median": 6,
+    "notes_with_any": 1.0,
+    "p25": 4,
+    "p75": 10,
+    "total": 3394
+   },
+   "list_blocks": {
+    "median": 0,
+    "notes_with_any": 0.0,
+    "p25": 0,
+    "p75": 0,
+    "total": 0
+   },
+   "list_items": {
+    "median": 0,
+    "notes_with_any": 0.0,
+    "p25": 0,
+    "p75": 0,
+    "total": 0
+   },
+   "prose_sentences": {
+    "median": 22,
+    "notes_with_any": 0.962,
+    "p25": 13,
+    "p75": 38,
+    "total": 13114
+   },
+   "section_headers": {
+    "median": 1,
+    "notes_with_any": 0.582,
+    "p25": 0,
+    "p75": 3,
+    "total": 1178
+   },
+   "sections": {
+    "median": 3,
+    "notes_with_any": 1.0,
+    "p25": 1,
+    "p75": 5,
+    "total": 1894
+   },
+   "sentences": {
+    "median": 23,
+    "notes_with_any": 1.0,
+    "p25": 14,
+    "p75": 38,
+    "total": 13515
+   },
+   "tokens": {
+    "median": 913,
+    "notes_with_any": 1.0,
+    "p25": 556,
+    "p75": 1346,
+    "total": 520569
+   }
+  }
+ },
+ "assertion_cues": {
+  "semantic.experiencer_shift": {
+   "eligible_cues": 600,
+   "median": 0,
+   "p25": 0,
+   "p75": 1
+  },
+  "semantic.negation_flip": {
+   "eligible_cues": 4191,
+   "median": 5,
+   "p25": 2,
+   "p75": 11
+  },
+  "semantic.temporality_shift": {
+   "eligible_cues": 1126,
+   "median": 1,
+   "p25": 0,
+   "p75": 3
+  },
+  "semantic.uncertainty_flip": {
+   "eligible_cues": 751,
+   "median": 1,
+   "p25": 0,
+   "p75": 2
+  }
+ },
+ "corpus": "mtsamples",
+ "grouped": {
+  "specialty": {
+   "Allergy / Immunology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 5,
+      "median": 5,
+      "min": 5,
+      "p25": 5,
+      "p75": 5,
+      "total": 5
+     },
+     "canonical_ids_present_distinct": 3,
+     "excluded_non_structural": 3,
+     "heading_shaped_lines": 6,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 3
+    },
+    "notes": 1,
+    "notes_with_any": {
+     "aligned_blocks": 0.0,
+     "aligned_lines": 0.0,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 1.0,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Bariatrics": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 8,
+      "median": 8,
+      "min": 5,
+      "p25": 5,
+      "p75": 8,
+      "total": 13
+     },
+     "canonical_ids_present_distinct": 9,
+     "excluded_non_structural": 1,
+     "heading_shaped_lines": 12,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 11
+    },
+    "notes": 2,
+    "notes_with_any": {
+     "aligned_blocks": 0.0,
+     "aligned_lines": 0.0,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 1.0,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Cardiovascular / Pulmonary": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 11,
+      "median": 2,
+      "min": 1,
+      "p25": 1,
+      "p75": 3,
+      "total": 123
+     },
+     "canonical_ids_present_distinct": 17,
+     "excluded_non_structural": 145,
+     "heading_shaped_lines": 225,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 80
+    },
+    "notes": 41,
+    "notes_with_any": {
+     "aligned_blocks": 0.6585,
+     "aligned_lines": 0.6585,
+     "breaks": 0.9756,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0244,
+     "divider_rules": 0.0976,
+     "headers": 0.9756,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 0.9756,
+     "section_headers": 0.6098,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Chiropractic": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 9,
+      "median": 9,
+      "min": 3,
+      "p25": 3,
+      "p75": 9,
+      "total": 12
+     },
+     "canonical_ids_present_distinct": 8,
+     "excluded_non_structural": 6,
+     "heading_shaped_lines": 15,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 9
+    },
+    "notes": 2,
+    "notes_with_any": {
+     "aligned_blocks": 1.0,
+     "aligned_lines": 1.0,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 1.0,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Consult - History and Phy.": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 12,
+      "median": 8,
+      "min": 1,
+      "p25": 5,
+      "p75": 9,
+      "total": 317
+     },
+     "canonical_ids_present_distinct": 17,
+     "excluded_non_structural": 152,
+     "heading_shaped_lines": 424,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 272
+    },
+    "notes": 45,
+    "notes_with_any": {
+     "aligned_blocks": 0.5556,
+     "aligned_lines": 0.5556,
+     "breaks": 0.9556,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0222,
+     "divider_rules": 0.0222,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 0.9778,
+     "section_headers": 0.9333,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Cosmetic / Plastic Surgery": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 3,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 1,
+      "total": 8
+     },
+     "canonical_ids_present_distinct": 1,
+     "excluded_non_structural": 36,
+     "heading_shaped_lines": 37,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 1
+    },
+    "notes": 6,
+    "notes_with_any": {
+     "aligned_blocks": 1.0,
+     "aligned_lines": 1.0,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.1667,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Dentistry": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 1,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 1,
+      "total": 2
+     },
+     "canonical_ids_present_distinct": 0,
+     "excluded_non_structural": 19,
+     "heading_shaped_lines": 19,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": null,
+     "resolved_to_canonical_section": 0
+    },
+    "notes": 2,
+    "notes_with_any": {
+     "aligned_blocks": 1.0,
+     "aligned_lines": 1.0,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.5,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.0,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Dermatology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 3,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 3,
+      "total": 5
+     },
+     "canonical_ids_present_distinct": 3,
+     "excluded_non_structural": 16,
+     "heading_shaped_lines": 19,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 3
+    },
+    "notes": 3,
+    "notes_with_any": {
+     "aligned_blocks": 1.0,
+     "aligned_lines": 1.0,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.3333,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Discharge Summary": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 10,
+      "median": 5,
+      "min": 2,
+      "p25": 3,
+      "p75": 7,
+      "total": 52
+     },
+     "canonical_ids_present_distinct": 16,
+     "excluded_non_structural": 28,
+     "heading_shaped_lines": 66,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 38
+    },
+    "notes": 10,
+    "notes_with_any": {
+     "aligned_blocks": 0.2,
+     "aligned_lines": 0.2,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.1,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 1.0,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "ENT - Otolaryngology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 7,
+      "median": 3,
+      "min": 1,
+      "p25": 1,
+      "p75": 4,
+      "total": 18
+     },
+     "canonical_ids_present_distinct": 9,
+     "excluded_non_structural": 32,
+     "heading_shaped_lines": 43,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 11
+    },
+    "notes": 6,
+    "notes_with_any": {
+     "aligned_blocks": 0.3333,
+     "aligned_lines": 0.3333,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.6667,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Emergency Room Reports": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 11,
+      "median": 9,
+      "min": 1,
+      "p25": 8,
+      "p75": 10,
+      "total": 62
+     },
+     "canonical_ids_present_distinct": 13,
+     "excluded_non_structural": 25,
+     "heading_shaped_lines": 79,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 54
+    },
+    "notes": 8,
+    "notes_with_any": {
+     "aligned_blocks": 0.625,
+     "aligned_lines": 0.625,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.875,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Endocrinology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 9,
+      "median": 3,
+      "min": 1,
+      "p25": 1,
+      "p75": 9,
+      "total": 13
+     },
+     "canonical_ids_present_distinct": 9,
+     "excluded_non_structural": 9,
+     "heading_shaped_lines": 19,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 10
+    },
+    "notes": 3,
+    "notes_with_any": {
+     "aligned_blocks": 0.3333,
+     "aligned_lines": 0.3333,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.3333,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.6667,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Gastroenterology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 11,
+      "median": 3,
+      "min": 1,
+      "p25": 1,
+      "p75": 7,
+      "total": 89
+     },
+     "canonical_ids_present_distinct": 20,
+     "excluded_non_structural": 83,
+     "heading_shaped_lines": 145,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 62
+    },
+    "notes": 23,
+    "notes_with_any": {
+     "aligned_blocks": 0.3478,
+     "aligned_lines": 0.3478,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.087,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.6522,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "General Medicine": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 12,
+      "median": 7,
+      "min": 1,
+      "p25": 3,
+      "p75": 9,
+      "total": 147
+     },
+     "canonical_ids_present_distinct": 19,
+     "excluded_non_structural": 76,
+     "heading_shaped_lines": 208,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 132
+    },
+    "notes": 25,
+    "notes_with_any": {
+     "aligned_blocks": 0.44,
+     "aligned_lines": 0.44,
+     "breaks": 0.92,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 0.96,
+     "section_headers": 0.92,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Hematology - Oncology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 11,
+      "median": 3,
+      "min": 1,
+      "p25": 1,
+      "p75": 9,
+      "total": 63
+     },
+     "canonical_ids_present_distinct": 14,
+     "excluded_non_structural": 32,
+     "heading_shaped_lines": 81,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 49
+    },
+    "notes": 13,
+    "notes_with_any": {
+     "aligned_blocks": 0.6923,
+     "aligned_lines": 0.6923,
+     "breaks": 0.7692,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0769,
+     "headers": 0.7692,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 0.8462,
+     "section_headers": 0.6154,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "IME-QME-Work Comp etc.": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 6,
+      "median": 6,
+      "min": 3,
+      "p25": 3,
+      "p75": 6,
+      "total": 9
+     },
+     "canonical_ids_present_distinct": 5,
+     "excluded_non_structural": 18,
+     "heading_shaped_lines": 23,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 5
+    },
+    "notes": 2,
+    "notes_with_any": {
+     "aligned_blocks": 1.0,
+     "aligned_lines": 1.0,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.5,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 1.0,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Letters": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 3,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 3,
+      "total": 10
+     },
+     "canonical_ids_present_distinct": 3,
+     "excluded_non_structural": 5,
+     "heading_shaped_lines": 8,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 3
+    },
+    "notes": 6,
+    "notes_with_any": {
+     "aligned_blocks": 0.5,
+     "aligned_lines": 0.5,
+     "breaks": 0.3333,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 0.5,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 0.8333,
+     "section_headers": 0.3333,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Nephrology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 12,
+      "median": 3,
+      "min": 1,
+      "p25": 1,
+      "p75": 6,
+      "total": 43
+     },
+     "canonical_ids_present_distinct": 11,
+     "excluded_non_structural": 19,
+     "heading_shaped_lines": 50,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 31
+    },
+    "notes": 11,
+    "notes_with_any": {
+     "aligned_blocks": 0.3636,
+     "aligned_lines": 0.3636,
+     "breaks": 0.7273,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0909,
+     "divider_rules": 0.0,
+     "headers": 0.7273,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 0.7273,
+     "section_headers": 0.5455,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Neurology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 10,
+      "median": 4,
+      "min": 1,
+      "p25": 2,
+      "p75": 6,
+      "total": 108
+     },
+     "canonical_ids_present_distinct": 13,
+     "excluded_non_structural": 96,
+     "heading_shaped_lines": 175,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 79
+    },
+    "notes": 26,
+    "notes_with_any": {
+     "aligned_blocks": 0.6923,
+     "aligned_lines": 0.6923,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0385,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.8077,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Neurosurgery": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 3,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 1,
+      "total": 11
+     },
+     "canonical_ids_present_distinct": 1,
+     "excluded_non_structural": 48,
+     "heading_shaped_lines": 49,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 1
+    },
+    "notes": 9,
+    "notes_with_any": {
+     "aligned_blocks": 0.7778,
+     "aligned_lines": 0.7778,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.1111,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.1111,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Obstetrics / Gynecology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 5,
+      "median": 3,
+      "min": 1,
+      "p25": 1,
+      "p75": 3,
+      "total": 16
+     },
+     "canonical_ids_present_distinct": 6,
+     "excluded_non_structural": 19,
+     "heading_shaped_lines": 26,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 7
+    },
+    "notes": 6,
+    "notes_with_any": {
+     "aligned_blocks": 0.5,
+     "aligned_lines": 0.5,
+     "breaks": 0.8333,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 0.8333,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.6667,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Office Notes": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 7,
+      "median": 3,
+      "min": 1,
+      "p25": 1,
+      "p75": 5,
+      "total": 18
+     },
+     "canonical_ids_present_distinct": 9,
+     "excluded_non_structural": 33,
+     "heading_shaped_lines": 46,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 13
+    },
+    "notes": 6,
+    "notes_with_any": {
+     "aligned_blocks": 0.1667,
+     "aligned_lines": 0.1667,
+     "breaks": 0.8333,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.6667,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Ophthalmology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 3,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 1,
+      "total": 14
+     },
+     "canonical_ids_present_distinct": 1,
+     "excluded_non_structural": 41,
+     "heading_shaped_lines": 42,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 1
+    },
+    "notes": 12,
+    "notes_with_any": {
+     "aligned_blocks": 0.6667,
+     "aligned_lines": 0.6667,
+     "breaks": 0.6667,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0833,
+     "divider_rules": 0.0,
+     "headers": 0.6667,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 0.8333,
+     "section_headers": 0.0833,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Orthopedic": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 9,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 4,
+      "total": 80
+     },
+     "canonical_ids_present_distinct": 18,
+     "excluded_non_structural": 191,
+     "heading_shaped_lines": 230,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 39
+    },
+    "notes": 32,
+    "notes_with_any": {
+     "aligned_blocks": 0.75,
+     "aligned_lines": 0.75,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.1875,
+     "headers": 0.9688,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.4375,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Pain Management": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 1,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 1,
+      "total": 4
+     },
+     "canonical_ids_present_distinct": 0,
+     "excluded_non_structural": 14,
+     "heading_shaped_lines": 14,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": null,
+     "resolved_to_canonical_section": 0
+    },
+    "notes": 4,
+    "notes_with_any": {
+     "aligned_blocks": 0.5,
+     "aligned_lines": 0.5,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.25,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.0,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Pediatrics - Neonatal": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 9,
+      "median": 5,
+      "min": 1,
+      "p25": 4,
+      "p75": 9,
+      "total": 40
+     },
+     "canonical_ids_present_distinct": 14,
+     "excluded_non_structural": 26,
+     "heading_shaped_lines": 53,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 27
+    },
+    "notes": 8,
+    "notes_with_any": {
+     "aligned_blocks": 0.25,
+     "aligned_lines": 0.25,
+     "breaks": 0.875,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.25,
+     "divider_rules": 0.125,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.875,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Physical Medicine - Rehab": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 7,
+      "median": 2,
+      "min": 1,
+      "p25": 1,
+      "p75": 4,
+      "total": 15
+     },
+     "canonical_ids_present_distinct": 5,
+     "excluded_non_structural": 29,
+     "heading_shaped_lines": 37,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 8
+    },
+    "notes": 5,
+    "notes_with_any": {
+     "aligned_blocks": 0.8,
+     "aligned_lines": 0.8,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.2,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.6,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Podiatry": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 1,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 1,
+      "total": 1
+     },
+     "canonical_ids_present_distinct": 0,
+     "excluded_non_structural": 5,
+     "heading_shaped_lines": 5,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": null,
+     "resolved_to_canonical_section": 0
+    },
+    "notes": 1,
+    "notes_with_any": {
+     "aligned_blocks": 1.0,
+     "aligned_lines": 1.0,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.0,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Psychiatry / Psychology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 4,
+      "median": 4,
+      "min": 1,
+      "p25": 1,
+      "p75": 4,
+      "total": 10
+     },
+     "canonical_ids_present_distinct": 4,
+     "excluded_non_structural": 23,
+     "heading_shaped_lines": 28,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 5
+    },
+    "notes": 4,
+    "notes_with_any": {
+     "aligned_blocks": 0.5,
+     "aligned_lines": 0.5,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.5,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Radiology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 7,
+      "median": 3,
+      "min": 1,
+      "p25": 2,
+      "p75": 4,
+      "total": 104
+     },
+     "canonical_ids_present_distinct": 9,
+     "excluded_non_structural": 79,
+     "heading_shaped_lines": 150,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 71
+    },
+    "notes": 32,
+    "notes_with_any": {
+     "aligned_blocks": 0.6562,
+     "aligned_lines": 0.6562,
+     "breaks": 0.9062,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 0.9062,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 0.9375,
+     "section_headers": 0.8438,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Rheumatology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 10,
+      "median": 10,
+      "min": 10,
+      "p25": 10,
+      "p75": 10,
+      "total": 10
+     },
+     "canonical_ids_present_distinct": 9,
+     "excluded_non_structural": 3,
+     "heading_shaped_lines": 13,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 10
+    },
+    "notes": 1,
+    "notes_with_any": {
+     "aligned_blocks": 1.0,
+     "aligned_lines": 1.0,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 1.0,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "SOAP / Chart / Progress Notes": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 9,
+      "median": 4,
+      "min": 2,
+      "p25": 3,
+      "p75": 5,
+      "total": 71
+     },
+     "canonical_ids_present_distinct": 14,
+     "excluded_non_structural": 20,
+     "heading_shaped_lines": 87,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 67
+    },
+    "notes": 16,
+    "notes_with_any": {
+     "aligned_blocks": 0.25,
+     "aligned_lines": 0.25,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.0,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 1.0,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Sleep Medicine": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 2,
+      "median": 2,
+      "min": 1,
+      "p25": 1,
+      "p75": 2,
+      "total": 3
+     },
+     "canonical_ids_present_distinct": 1,
+     "excluded_non_structural": 14,
+     "heading_shaped_lines": 15,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 1
+    },
+    "notes": 2,
+    "notes_with_any": {
+     "aligned_blocks": 0.5,
+     "aligned_lines": 0.5,
+     "breaks": 1.0,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0,
+     "divider_rules": 0.5,
+     "headers": 1.0,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 1.0,
+     "section_headers": 0.5,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Surgery": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 6,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 2,
+      "total": 169
+     },
+     "canonical_ids_present_distinct": 8,
+     "excluded_non_structural": 564,
+     "heading_shaped_lines": 607,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 43
+    },
+    "notes": 108,
+    "notes_with_any": {
+     "aligned_blocks": 0.6019,
+     "aligned_lines": 0.6019,
+     "breaks": 0.9259,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.0463,
+     "divider_rules": 0.1296,
+     "headers": 0.9259,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 0.9537,
+     "section_headers": 0.25,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   },
+   "Urology": {
+    "header_resolution": {
+     "canonical_ids_declared": 58,
+     "canonical_ids_present": {
+      "max": 10,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 3,
+      "total": 50
+     },
+     "canonical_ids_present_distinct": 15,
+     "excluded_non_structural": 79,
+     "heading_shaped_lines": 111,
+     "heuristic_unresolved": 0,
+     "resolved_share_of_structural_headings": 1.0,
+     "resolved_to_canonical_section": 32
+    },
+    "notes": 19,
+    "notes_with_any": {
+     "aligned_blocks": 0.3684,
+     "aligned_lines": 0.3684,
+     "breaks": 0.8947,
+     "chars": 1.0,
+     "content_tokens": 1.0,
+     "deid_placeholders": 0.1053,
+     "divider_rules": 0.0526,
+     "headers": 0.9474,
+     "lines": 1.0,
+     "list_blocks": 0.0,
+     "list_items": 0.0,
+     "prose_sentences": 0.9474,
+     "section_headers": 0.4737,
+     "sections": 1.0,
+     "sentences": 1.0,
+     "tokens": 1.0
+    }
+   }
+  }
+ },
+ "hard_wrapped_notes": 0,
+ "header_resolution": {
+  "canonical_ids_declared": 58,
+  "canonical_ids_present": {
+   "max": 12,
+   "median": 3,
+   "min": 1,
+   "p25": 1,
+   "p75": 5,
+   "total": 1715
+  },
+  "canonical_ids_present_distinct": 23,
+  "excluded_non_structural": 1989,
+  "heading_shaped_lines": 3167,
+  "heuristic_unresolved": 0,
+  "resolved_share_of_structural_headings": 1.0,
+  "resolved_to_canonical_section": 1178
+ },
+ "levels": {
+  "aligned_block": {
+   "n": {
+    "median": 1,
+    "p25": 0,
+    "p75": 1,
+    "total": 347
+   },
+   "operators": []
+  },
+  "assertion": {
+   "n": {
+    "median": 8,
+    "p25": 3,
+    "p75": 18,
+    "total": 6668
+   },
+   "operators": [
+    "semantic.negation_flip",
+    "semantic.uncertainty_flip",
+    "semantic.temporality_shift",
+    "semantic.experiencer_shift"
+   ]
+  },
+  "break": {
+   "n": {
+    "median": 5,
+    "p25": 3,
+    "p75": 9,
+    "total": 2852
+   },
+   "operators": [
+    "render.break_removal"
+   ]
+  },
+  "character": {
+   "n": {
+    "median": 2707,
+    "p25": 1634,
+    "p75": 4022,
+    "total": 1515600
+   },
+   "operators": []
+  },
+  "clinical_content": {
+   "n": {
+    "median": 410,
+    "p25": 250,
+    "p75": 605,
+    "total": 232653
+   },
+   "operators": []
+  },
+  "document": {
+   "n": {
+    "median": 1,
+    "p25": 1,
+    "p75": 1,
+    "total": 500
+   },
+   "operators": [
+    "control.identity",
+    "discourse.truncate"
+   ]
+  },
+  "header": {
+   "n": {
+    "median": 1,
+    "p25": 0,
+    "p75": 3,
+    "total": 1178
+   },
+   "operators": [
+    "render.header_style",
+    "render.header_delete",
+    "render.header_rename"
+   ]
+  },
+  "list_block": {
+   "n": {
+    "median": 0,
+    "p25": 0,
+    "p75": 0,
+    "total": 0
+   },
+   "operators": [
+    "render.list_to_prose"
+   ]
+  },
+  "list_item": {
+   "n": {
+    "median": 0,
+    "p25": 0,
+    "p75": 0,
+    "total": 0
+   },
+   "operators": [
+    "render.bullet_to_prose"
+   ]
+  },
+  "medication": {
+   "n": {
+    "median": 0,
+    "p25": 0,
+    "p75": 0,
+    "total": 0
+   },
+   "operators": [
+    "lexical.medication_rename"
+   ]
+  },
+  "numeric_value": {
+   "n": {
+    "median": 8,
+    "p25": 5,
+    "p75": 17,
+    "total": 6667
+   },
+   "operators": [
+    "lexical.numeral_to_word"
+   ]
+  },
+  "placeholder": {
+   "n": {
+    "median": 0,
+    "p25": 0,
+    "p75": 0,
+    "total": 41
+   },
+   "operators": [
+    "render.deid_restyle"
+   ]
+  },
+  "section": {
+   "n": {
+    "median": 3,
+    "p25": 1,
+    "p75": 5,
+    "total": 1894
+   },
+   "operators": [
+    "discourse.section_duplicate"
+   ]
+  },
+  "sentence": {
+   "n": {
+    "median": 23,
+    "p25": 14,
+    "p75": 38,
+    "total": 13515
+   },
+   "operators": [
+    "discourse.sentence_delete"
+   ]
+  },
+  "space_run": {
+   "n": {
+    "median": 23,
+    "p25": 12,
+    "p75": 39,
+    "total": 13292
+   },
+   "operators": [
+    "render.whitespace_collapse",
+    "render.lab_block_collapse"
+   ]
+  },
+  "token": {
+   "n": {
+    "median": 913,
+    "p25": 556,
+    "p75": 1346,
+    "total": 520569
+   },
+   "operators": [
+    "input.typo",
+    "control.char_shuffle",
+    "input.phonetic_confusion"
+   ]
+  },
+  "word_space": {
+   "n": {
+    "median": 187,
+    "p25": 74,
+    "p75": 285,
+    "total": 104701
+   },
+   "operators": [
+    "render.space_delete"
+   ]
+  }
+ },
+ "notes": 500,
+ "run": {
+  "compare": {
+   "cells": 24000,
+   "concepts_measured": false,
+   "rows": 24000
+  },
+  "manifest": {
+   "cells": 24000,
+   "contains_note_text": false,
+   "dose_sha256": "93be6079cc9e18514d506f73c1727805d29f6ca54127d0fb213cd160f0660903",
+   "edits": 524287,
+   "edits_sha256": "e51764f2e81466a7ea344bc0fbef0ddd1e4842a50585c7c2be3748bc2f57cae9",
+   "max_replacement_chars": 120,
+   "notes": 500
+  },
+  "operators": [
+   "control.char_shuffle",
+   "control.identity",
+   "discourse.section_duplicate",
+   "discourse.sentence_delete",
+   "discourse.truncate",
+   "input.ocr_confusion",
+   "input.phonetic_confusion",
+   "input.typo",
+   "lexical.medication_rename",
+   "lexical.numeral_to_word",
+   "render.break_removal",
+   "render.bullet_to_prose",
+   "render.deid_restyle",
+   "render.header_delete",
+   "render.header_rename",
+   "render.header_style",
+   "render.lab_block_collapse",
+   "render.list_to_prose",
+   "render.space_delete",
+   "render.whitespace_collapse",
+   "semantic.experiencer_shift",
+   "semantic.negation_flip",
+   "semantic.temporality_shift",
+   "semantic.uncertainty_flip"
+  ],
+  "per_operator": {
+   "control.char_shuffle": {
+    "rate:0.1": {
+     "achieved_over_requested": 0.8435,
+     "applicability": 1.0,
+     "applied_n_total": 12473,
+     "eligible_per_note_median": 254.0,
+     "eligible_total": 145628,
+     "notes": 500,
+     "requested_k_total": 14788,
+     "status_counts": {
+      "applied": 500
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 0.8433,
+     "applicability": 1.0,
+     "applied_n_total": 37030,
+     "eligible_per_note_median": 254.0,
+     "eligible_total": 145628,
+     "notes": 500,
+     "requested_k_total": 43912,
+     "status_counts": {
+      "applied": 500
+     }
+    }
+   },
+   "control.identity": {
+    "rate:0.1": {
+     "achieved_over_requested": 0.0,
+     "applicability": 1.0,
+     "applied_n_total": 0,
+     "eligible_per_note_median": 1.0,
+     "eligible_total": 500,
+     "notes": 500,
+     "requested_k_total": 500,
+     "status_counts": {
+      "applied": 500
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 0.0,
+     "applicability": 1.0,
+     "applied_n_total": 0,
+     "eligible_per_note_median": 1.0,
+     "eligible_total": 500,
+     "notes": 500,
+     "requested_k_total": 500,
+     "status_counts": {
+      "applied": 500
+     }
+    }
+   },
+   "discourse.section_duplicate": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.63,
+     "applied_n_total": 323,
+     "eligible_per_note_median": 1.0,
+     "eligible_total": 1347,
+     "notes": 500,
+     "requested_k_total": 323,
+     "status_counts": {
+      "applied": 315,
+      "na_all_protected": 185
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.63,
+     "applied_n_total": 556,
+     "eligible_per_note_median": 1.0,
+     "eligible_total": 1347,
+     "notes": 500,
+     "requested_k_total": 556,
+     "status_counts": {
+      "applied": 315,
+      "na_all_protected": 185
+     }
+    }
+   },
+   "discourse.sentence_delete": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.962,
+     "applied_n_total": 1537,
+     "eligible_per_note_median": 22.0,
+     "eligible_total": 13114,
+     "notes": 500,
+     "requested_k_total": 1537,
+     "status_counts": {
+      "applied": 481,
+      "na_no_eligible": 19
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.962,
+     "applied_n_total": 4159,
+     "eligible_per_note_median": 22.0,
+     "eligible_total": 13114,
+     "notes": 500,
+     "requested_k_total": 4159,
+     "status_counts": {
+      "applied": 481,
+      "na_no_eligible": 19
+     }
+    }
+   },
+   "discourse.truncate": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 1.0,
+     "applied_n_total": 500,
+     "eligible_per_note_median": 1.0,
+     "eligible_total": 500,
+     "notes": 500,
+     "requested_k_total": 500,
+     "status_counts": {
+      "applied": 500
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 1.0,
+     "applied_n_total": 500,
+     "eligible_per_note_median": 1.0,
+     "eligible_total": 500,
+     "notes": 500,
+     "requested_k_total": 500,
+     "status_counts": {
+      "applied": 500
+     }
+    }
+   },
+   "input.ocr_confusion": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 1.0,
+     "applied_n_total": 85096,
+     "eligible_per_note_median": 1488.5,
+     "eligible_total": 848642,
+     "notes": 500,
+     "requested_k_total": 85096,
+     "status_counts": {
+      "applied": 500
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 1.0,
+     "applied_n_total": 254824,
+     "eligible_per_note_median": 1488.5,
+     "eligible_total": 848642,
+     "notes": 500,
+     "requested_k_total": 254824,
+     "status_counts": {
+      "applied": 500
+     }
+    }
+   },
+   "input.phonetic_confusion": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.808,
+     "applied_n_total": 435,
+     "eligible_per_note_median": 3.0,
+     "eligible_total": 1918,
+     "notes": 500,
+     "requested_k_total": 435,
+     "status_counts": {
+      "applied": 404,
+      "na_no_eligible": 96
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.808,
+     "applied_n_total": 767,
+     "eligible_per_note_median": 3.0,
+     "eligible_total": 1918,
+     "notes": 500,
+     "requested_k_total": 767,
+     "status_counts": {
+      "applied": 404,
+      "na_no_eligible": 96
+     }
+    }
+   },
+   "input.typo": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 1.0,
+     "applied_n_total": 17091,
+     "eligible_per_note_median": 282.5,
+     "eligible_total": 168517,
+     "notes": 500,
+     "requested_k_total": 17091,
+     "status_counts": {
+      "applied": 500
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 1.0,
+     "applied_n_total": 50787,
+     "eligible_per_note_median": 282.5,
+     "eligible_total": 168517,
+     "notes": 500,
+     "requested_k_total": 50787,
+     "status_counts": {
+      "applied": 500
+     }
+    }
+   },
+   "lexical.medication_rename": {
+    "rate:0.1": {
+     "achieved_over_requested": null,
+     "applicability": 0.0,
+     "applied_n_total": 0,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 0,
+     "notes": 500,
+     "requested_k_total": 0,
+     "status_counts": {
+      "na_no_eligible": 500
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": null,
+     "applicability": 0.0,
+     "applied_n_total": 0,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 0,
+     "notes": 500,
+     "requested_k_total": 0,
+     "status_counts": {
+      "na_no_eligible": 500
+     }
+    }
+   },
+   "lexical.numeral_to_word": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.942,
+     "applied_n_total": 895,
+     "eligible_per_note_median": 8.0,
+     "eligible_total": 6424,
+     "notes": 500,
+     "requested_k_total": 895,
+     "status_counts": {
+      "applied": 471,
+      "na_all_protected": 2,
+      "na_no_eligible": 27
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.942,
+     "applied_n_total": 2149,
+     "eligible_per_note_median": 8.0,
+     "eligible_total": 6424,
+     "notes": 500,
+     "requested_k_total": 2149,
+     "status_counts": {
+      "applied": 471,
+      "na_all_protected": 2,
+      "na_no_eligible": 27
+     }
+    }
+   },
+   "render.break_removal": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.93,
+     "applied_n_total": 510,
+     "eligible_per_note_median": 5.0,
+     "eligible_total": 2852,
+     "notes": 500,
+     "requested_k_total": 510,
+     "status_counts": {
+      "applied": 465,
+      "na_no_eligible": 35
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.93,
+     "applied_n_total": 1088,
+     "eligible_per_note_median": 5.0,
+     "eligible_total": 2852,
+     "notes": 500,
+     "requested_k_total": 1088,
+     "status_counts": {
+      "applied": 465,
+      "na_no_eligible": 35
+     }
+    }
+   },
+   "render.bullet_to_prose": {
+    "rate:0.1": {
+     "achieved_over_requested": null,
+     "applicability": 0.0,
+     "applied_n_total": 0,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 0,
+     "notes": 500,
+     "requested_k_total": 0,
+     "status_counts": {
+      "na_no_eligible": 500
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": null,
+     "applicability": 0.0,
+     "applied_n_total": 0,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 0,
+     "notes": 500,
+     "requested_k_total": 0,
+     "status_counts": {
+      "na_no_eligible": 500
+     }
+    }
+   },
+   "render.deid_restyle": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.032,
+     "applied_n_total": 16,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 41,
+     "notes": 500,
+     "requested_k_total": 16,
+     "status_counts": {
+      "applied": 16,
+      "na_no_eligible": 484
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.032,
+     "applied_n_total": 21,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 41,
+     "notes": 500,
+     "requested_k_total": 21,
+     "status_counts": {
+      "applied": 16,
+      "na_no_eligible": 484
+     }
+    }
+   },
+   "render.header_delete": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.012,
+     "applied_n_total": 6,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 6,
+     "notes": 500,
+     "requested_k_total": 6,
+     "status_counts": {
+      "applied": 6,
+      "na_no_eligible": 494
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.012,
+     "applied_n_total": 6,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 6,
+     "notes": 500,
+     "requested_k_total": 6,
+     "status_counts": {
+      "applied": 6,
+      "na_no_eligible": 494
+     }
+    }
+   },
+   "render.header_rename": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.574,
+     "applied_n_total": 289,
+     "eligible_per_note_median": 1.0,
+     "eligible_total": 1098,
+     "notes": 500,
+     "requested_k_total": 289,
+     "status_counts": {
+      "applied": 287,
+      "na_all_protected": 4,
+      "na_no_eligible": 209
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.574,
+     "applied_n_total": 468,
+     "eligible_per_note_median": 1.0,
+     "eligible_total": 1098,
+     "notes": 500,
+     "requested_k_total": 468,
+     "status_counts": {
+      "applied": 287,
+      "na_all_protected": 4,
+      "na_no_eligible": 209
+     }
+    }
+   },
+   "render.header_style": {
+    "rate:0.1": {
+     "achieved_over_requested": 0.0,
+     "applicability": 0.574,
+     "applied_n_total": 0,
+     "eligible_per_note_median": 1.0,
+     "eligible_total": 1098,
+     "notes": 500,
+     "requested_k_total": 289,
+     "status_counts": {
+      "na_all_protected": 4,
+      "na_no_eligible": 209,
+      "no_change": 287
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 0.0,
+     "applicability": 0.574,
+     "applied_n_total": 0,
+     "eligible_per_note_median": 1.0,
+     "eligible_total": 1098,
+     "notes": 500,
+     "requested_k_total": 468,
+     "status_counts": {
+      "na_all_protected": 4,
+      "na_no_eligible": 209,
+      "no_change": 287
+     }
+    }
+   },
+   "render.lab_block_collapse": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.506,
+     "applied_n_total": 680,
+     "eligible_per_note_median": 3.0,
+     "eligible_total": 5779,
+     "notes": 500,
+     "requested_k_total": 680,
+     "status_counts": {
+      "applied": 253,
+      "na_no_eligible": 247
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.506,
+     "applied_n_total": 1849,
+     "eligible_per_note_median": 3.0,
+     "eligible_total": 5779,
+     "notes": 500,
+     "requested_k_total": 1849,
+     "status_counts": {
+      "applied": 253,
+      "na_no_eligible": 247
+     }
+    }
+   },
+   "render.list_to_prose": {
+    "rate:0.1": {
+     "achieved_over_requested": null,
+     "applicability": 0.0,
+     "applied_n_total": 0,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 0,
+     "notes": 500,
+     "requested_k_total": 0,
+     "status_counts": {
+      "na_no_eligible": 500
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": null,
+     "applicability": 0.0,
+     "applied_n_total": 0,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 0,
+     "notes": 500,
+     "requested_k_total": 0,
+     "status_counts": {
+      "na_no_eligible": 500
+     }
+    }
+   },
+   "render.space_delete": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.958,
+     "applied_n_total": 10386,
+     "eligible_per_note_median": 182.0,
+     "eligible_total": 101670,
+     "notes": 500,
+     "requested_k_total": 10386,
+     "status_counts": {
+      "applied": 479,
+      "na_no_eligible": 21
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.958,
+     "applied_n_total": 30710,
+     "eligible_per_note_median": 182.0,
+     "eligible_total": 101670,
+     "notes": 500,
+     "requested_k_total": 30710,
+     "status_counts": {
+      "applied": 479,
+      "na_no_eligible": 21
+     }
+    }
+   },
+   "render.whitespace_collapse": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.928,
+     "applied_n_total": 1528,
+     "eligible_per_note_median": 23.0,
+     "eligible_total": 13292,
+     "notes": 500,
+     "requested_k_total": 1528,
+     "status_counts": {
+      "applied": 464,
+      "na_no_eligible": 36
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.928,
+     "applied_n_total": 4186,
+     "eligible_per_note_median": 23.0,
+     "eligible_total": 13292,
+     "notes": 500,
+     "requested_k_total": 4186,
+     "status_counts": {
+      "applied": 464,
+      "na_no_eligible": 36
+     }
+    }
+   },
+   "semantic.experiencer_shift": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.306,
+     "applied_n_total": 161,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 510,
+     "notes": 500,
+     "requested_k_total": 161,
+     "status_counts": {
+      "applied": 153,
+      "na_all_protected": 10,
+      "na_no_eligible": 337
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.306,
+     "applied_n_total": 227,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 510,
+     "notes": 500,
+     "requested_k_total": 227,
+     "status_counts": {
+      "applied": 153,
+      "na_all_protected": 10,
+      "na_no_eligible": 337
+     }
+    }
+   },
+   "semantic.negation_flip": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.916,
+     "applied_n_total": 646,
+     "eligible_per_note_median": 4.0,
+     "eligible_total": 3759,
+     "notes": 500,
+     "requested_k_total": 646,
+     "status_counts": {
+      "applied": 458,
+      "na_all_protected": 19,
+      "na_no_eligible": 23
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.916,
+     "applied_n_total": 1348,
+     "eligible_per_note_median": 4.0,
+     "eligible_total": 3759,
+     "notes": 500,
+     "requested_k_total": 1348,
+     "status_counts": {
+      "applied": 458,
+      "na_all_protected": 19,
+      "na_no_eligible": 23
+     }
+    }
+   },
+   "semantic.temporality_shift": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.392,
+     "applied_n_total": 203,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 473,
+     "notes": 500,
+     "requested_k_total": 203,
+     "status_counts": {
+      "applied": 196,
+      "na_all_protected": 112,
+      "na_no_eligible": 192
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.392,
+     "applied_n_total": 254,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 473,
+     "notes": 500,
+     "requested_k_total": 254,
+     "status_counts": {
+      "applied": 196,
+      "na_all_protected": 112,
+      "na_no_eligible": 192
+     }
+    }
+   },
+   "semantic.uncertainty_flip": {
+    "rate:0.1": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.492,
+     "applied_n_total": 252,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 669,
+     "notes": 500,
+     "requested_k_total": 252,
+     "status_counts": {
+      "applied": 246,
+      "na_all_protected": 16,
+      "na_no_eligible": 238
+     }
+    },
+    "rate:0.3": {
+     "achieved_over_requested": 1.0,
+     "applicability": 0.492,
+     "applied_n_total": 331,
+     "eligible_per_note_median": 0.0,
+     "eligible_total": 669,
+     "notes": 500,
+     "requested_k_total": 331,
+     "status_counts": {
+      "applied": 246,
+      "na_all_protected": 16,
+      "na_no_eligible": 238
+     }
+    }
+   }
+  },
+  "replay": {
+   "failed": 0,
+   "verified": 24000
+  },
+  "severities": [
+   "0.10",
+   "0.30"
+  ]
+ },
+ "sentences": {
+  "layout": {
+   "median": 1,
+   "p25": 0,
+   "p75": 1,
+   "total": 401
+  },
+  "prose": {
+   "median": 22,
+   "p25": 13,
+   "p75": 38,
+   "total": 13114
+  }
+ },
+ "unavailable": {
+  "assertion.by_category": "requires the concept layer; the cue counts above do not",
+  "span": "no UMLS index; a span is a concept mention and there are none to count",
+  "span.by_phenotype": "requires the concept layer",
+  "token.abbreviations": "no UMLS index; `short_form` above is the free shape count, which is a different population",
+  "token.concept_covered": "no UMLS index; every structural level above is unaffected"
+ },
+ "what": "cross-corpus characterisation with the core install (no terminology); aggregate counts only"
+}

@@ -1,0 +1,66 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Every step below runs a binary out of `.venv/` rather than through `uv run`.
+# `uv run` re-resolves the project before it runs anything, and resolution walks
+# every extra including `all` -> `clinical` -> `medspacy`, whose 1.1.4 sdist ships
+# a setup.py that reads a `requirements/requirements.txt` it does not contain. The
+# build fails, so `uv run ruff` failed without ruff being reached.
+#
+# An explicit `uv pip install` of the same extras succeeds, because it installs
+# what it is asked for instead of resolving the whole extra graph. Calling
+# `.venv/bin/<tool>` also makes it obvious which interpreter each step uses.
+#
+# The extras are not optional for CI even though they are optional for users.
+# `[dev]` alone leaves 283 tests erroring on a missing `medspacy` rather than
+# skipping -- `tests/unit/test_operators.py` parametrizes over every operator,
+# and the SEMANTIC ones need ConText. Tests that depend on a licensed *corpus*
+# or a built QuickUMLS index do skip, because neither can exist on a runner.
+jobs:
+  test:
+    name: py${{ matrix.python }} / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # Cross-platform and cross-version identity is the reproducibility
+        # claim, so it is a matrix rather than a single job.
+        os: [ubuntu-latest, macos-latest]
+        python: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv venv --python ${{ matrix.python }}
+      - run: uv pip install -e ".[dev,terminology,clinical]"
+      - name: Lint
+        run: |
+          .venv/bin/ruff check src tests validation
+          .venv/bin/ruff format --check src tests validation
+      - name: Type check
+        run: .venv/bin/mypy src/robustehr
+      - name: Test
+        run: .venv/bin/pytest
+
+  hashseed:
+    name: PYTHONHASHSEED invariance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv venv --python 3.12
+      - run: uv pip install -e ".[dev,terminology,clinical]"
+      - name: Same results under different hash seeds
+        run: |
+          PYTHONHASHSEED=0 .venv/bin/pytest
+          PYTHONHASHSEED=1 .venv/bin/pytest
+          PYTHONHASHSEED=random .venv/bin/pytest

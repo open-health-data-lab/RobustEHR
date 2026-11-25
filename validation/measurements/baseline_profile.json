@@ -1,0 +1,56 @@
+{
+  "distributions": [
+    {
+      "max": 0.06467,
+      "median": 0.00378,
+      "metric": "misspelling_rate",
+      "min": 0.0,
+      "n": 200
+    },
+    {
+      "max": 0.27575,
+      "median": 0.16228,
+      "metric": "unrecognized_rate",
+      "min": 0.08449,
+      "n": 200
+    },
+    {
+      "max": 0.31373,
+      "median": 0.03125,
+      "metric": "whitespace_noise_rate",
+      "min": 0.01081,
+      "n": 200
+    },
+    {
+      "max": 0.08973,
+      "median": 0.03447,
+      "metric": "deid_density",
+      "min": 0.01064,
+      "n": 200
+    }
+  ],
+  "hard_wrapped_notes": 200,
+  "lexical_dimension_measured": true,
+  "lexicon_source": "umls-2026AA",
+  "notes": 200,
+  "notes_with_mixed_deid_schemes": 13,
+  "notes_with_mixed_header_styles": 200,
+  "tertile_cuts": {
+    "deid_density": [
+      0.0306,
+      0.0378
+    ],
+    "misspelling_rate": [
+      0.00294,
+      0.00486
+    ],
+    "unrecognized_rate": [
+      0.14902,
+      0.17333
+    ],
+    "whitespace_noise_rate": [
+      0.02529,
+      0.04429
+    ]
+  }
+}

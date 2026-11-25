@@ -1,0 +1,137 @@
+{
+  "caveat": "the emitter resolves a label by matching the label surface in isolation, so a surface absent from UMLS (`creat`, `angap`) still resolves to nothing. That residue is what the stage-3a expansion table is for, and resolution_rate is the headroom.",
+  "delta": {
+    "anatomy": {
+      "precision": -0.0175,
+      "recall": 0.0023
+    },
+    "disease": {
+      "precision": -0.0075,
+      "recall": 0.0
+    },
+    "disorder": {
+      "precision": -0.0033,
+      "recall": 0.0003
+    },
+    "lab_measurement": {
+      "precision": 0.3509,
+      "recall": 0.3849
+    },
+    "lab_result": {
+      "precision": -0.0142,
+      "recall": 0.0
+    },
+    "procedure": {
+      "precision": 0.1004,
+      "recall": 0.1893
+    },
+    "symptom": {
+      "precision": 0.0,
+      "recall": 0.0
+    }
+  },
+  "exam_label_slot": false,
+  "expansion_table": {
+    "entries": 97,
+    "reviewed": false,
+    "sha256": "431482e96ae440868deba2e399e5c1d486df61611b1fd1cdf40ec491b811ee95"
+  },
+  "gold_spans": 23131,
+  "label_candidates": 3247,
+  "labels_resolved": 3053,
+  "matcher_config": "quickumls:jaccard:0.7:3:5:score:semtypes=36:trim=0:prefer=none",
+  "method": "same matcher, same notes, same gold, with and without the structural emitter. Per category, so a gain in one that costs another is visible.",
+  "notes": 68,
+  "question": "What does recovering lab-panel labels by structural position buy?",
+  "resolution_rate": 0.9403,
+  "stage": "3a \u2014 structural expansion",
+  "why_structural": "a token in the label slot of `Creat-1.1` is a lab analyte because of WHERE it sits, not because of what surrounds it. Position comes from stage 2, so no dictionary sense and no surrounding prose are needed \u2014 which is the third answer to 'does expansion need context?' and covers the largest share of the abbreviation miss set.",
+  "with_structural": {
+    "anatomy": {
+      "gold": 2610,
+      "precision": 0.2303,
+      "predicted": 7750,
+      "recall": 0.6345
+    },
+    "disease": {
+      "gold": 4819,
+      "precision": 0.5403,
+      "predicted": 6768,
+      "recall": 0.7398
+    },
+    "disorder": {
+      "gold": 12002,
+      "precision": 0.481,
+      "predicted": 19217,
+      "recall": 0.7307
+    },
+    "lab_measurement": {
+      "gold": 3640,
+      "precision": 0.6549,
+      "predicted": 2738,
+      "recall": 0.4896
+    },
+    "lab_result": {
+      "gold": 137,
+      "precision": 0.0233,
+      "predicted": 386,
+      "recall": 0.0657
+    },
+    "procedure": {
+      "gold": 7851,
+      "precision": 0.4256,
+      "predicted": 9482,
+      "recall": 0.5016
+    },
+    "symptom": {
+      "gold": 2187,
+      "precision": 0.6707,
+      "predicted": 2317,
+      "recall": 0.6996
+    }
+  },
+  "without_structural": {
+    "anatomy": {
+      "gold": 2610,
+      "precision": 0.2478,
+      "predicted": 7179,
+      "recall": 0.6322
+    },
+    "disease": {
+      "gold": 4819,
+      "precision": 0.5478,
+      "predicted": 6676,
+      "recall": 0.7398
+    },
+    "disorder": {
+      "gold": 12002,
+      "precision": 0.4843,
+      "predicted": 19080,
+      "recall": 0.7304
+    },
+    "lab_measurement": {
+      "gold": 3640,
+      "precision": 0.304,
+      "predicted": 1250,
+      "recall": 0.1047
+    },
+    "lab_result": {
+      "gold": 137,
+      "precision": 0.0375,
+      "predicted": 240,
+      "recall": 0.0657
+    },
+    "procedure": {
+      "gold": 7851,
+      "precision": 0.3252,
+      "predicted": 7805,
+      "recall": 0.3123
+    },
+    "symptom": {
+      "gold": 2187,
+      "precision": 0.6707,
+      "predicted": 2317,
+      "recall": 0.6996
+    }
+  }
+}

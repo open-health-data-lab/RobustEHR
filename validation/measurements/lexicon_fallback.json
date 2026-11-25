@@ -1,0 +1,120 @@
+{
+  "f1": 0.1755,
+  "fallback_token_coverage": 0.0337,
+  "false_negative": 4874,
+  "false_negative_examples": [
+    {
+      "corpus_n": 2390,
+      "token": "tablet"
+    },
+    {
+      "corpus_n": 2321,
+      "token": "blood"
+    },
+    {
+      "corpus_n": 2156,
+      "token": "pain"
+    },
+    {
+      "corpus_n": 1923,
+      "token": "discharge"
+    },
+    {
+      "corpus_n": 1773,
+      "token": "patient"
+    },
+    {
+      "corpus_n": 1424,
+      "token": "history"
+    },
+    {
+      "corpus_n": 1309,
+      "token": "sig"
+    },
+    {
+      "corpus_n": 1292,
+      "token": "prn"
+    },
+    {
+      "corpus_n": 1150,
+      "token": "admission"
+    },
+    {
+      "corpus_n": 1107,
+      "token": "one"
+    },
+    {
+      "corpus_n": 1096,
+      "token": "bid"
+    },
+    {
+      "corpus_n": 875,
+      "token": "home"
+    },
+    {
+      "corpus_n": 821,
+      "token": "medications"
+    },
+    {
+      "corpus_n": 798,
+      "token": "normal"
+    },
+    {
+      "corpus_n": 714,
+      "token": "date"
+    },
+    {
+      "corpus_n": 571,
+      "token": "exam"
+    },
+    {
+      "corpus_n": 561,
+      "token": "chest"
+    },
+    {
+      "corpus_n": 557,
+      "token": "well"
+    },
+    {
+      "corpus_n": 545,
+      "token": "abdominal"
+    },
+    {
+      "corpus_n": 519,
+      "token": "chronic"
+    }
+  ],
+  "false_positive": 360,
+  "false_positive_examples": [
+    "appendagitis",
+    "cardiomediastinal",
+    "dermatology",
+    "dysarthric",
+    "endometrial",
+    "etiology",
+    "euvolemic",
+    "extrahepatic",
+    "gastroenterology",
+    "gynecology",
+    "hematologic",
+    "hepatology",
+    "hypercarbic",
+    "hyperkalemic",
+    "hyperosmolar",
+    "hypertensives",
+    "hypodensity",
+    "immunology",
+    "interaction",
+    "interactive"
+  ],
+  "n_types": 11767,
+  "notes": 200,
+  "precision": 0.6074,
+  "recall": 0.1026,
+  "reference": "umls-2026AA",
+  "reference_token_coverage": 0.5433,
+  "resource_digests": {},
+  "tokens_total": 249971,
+  "true_negative": 5976,
+  "true_positive": 557
+}

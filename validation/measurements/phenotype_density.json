@@ -1,0 +1,588 @@
+{
+  "licence": "identifiers and counts only",
+  "question": "how many concepts does each phenotype declare, and what fraction does the corpus write?",
+  "scopes": {
+    "all 1,388 notes (baseline corpus)": {
+      "notes": 1388,
+      "phenotypes": {
+        "alcohol_use_disorder": {
+          "by_category": {
+            "disease": 16,
+            "finding": 4,
+            "medication": 3,
+            "procedure": 3,
+            "symptom": 8
+          },
+          "declared": 184,
+          "declared_associated": 82,
+          "declared_surfaces": 27,
+          "mentions": 1650,
+          "no_mrsty": 0,
+          "notes_share": 0.4387608069164265,
+          "notes_with_any": 609,
+          "observed": 34,
+          "share": 0.18478260869565216,
+          "surface": 0.9402
+        },
+        "clostridioides_difficile": {
+          "by_category": {
+            "disease": 10,
+            "finding": 3,
+            "medication": 18,
+            "procedure": 6,
+            "symptom": 10
+          },
+          "declared": 196,
+          "declared_associated": 78,
+          "declared_surfaces": 64,
+          "mentions": 11491,
+          "no_mrsty": 0,
+          "notes_share": 0.9423631123919308,
+          "notes_with_any": 1308,
+          "observed": 47,
+          "share": 0.23979591836734693,
+          "surface": 0.8418
+        },
+        "deep_vein_thrombosis": {
+          "by_category": {
+            "disease": 20,
+            "finding": 4,
+            "medication": 2,
+            "procedure": 4,
+            "symptom": 5
+          },
+          "declared": 354,
+          "declared_associated": 144,
+          "declared_surfaces": 44,
+          "mentions": 2057,
+          "no_mrsty": 0,
+          "notes_share": 0.521613832853026,
+          "notes_with_any": 724,
+          "observed": 35,
+          "share": 0.09887005649717515,
+          "surface": 1.0
+        },
+        "dementia": {
+          "by_category": {
+            "disease": 39,
+            "finding": 1,
+            "medication": 30,
+            "procedure": 3,
+            "symptom": 6
+          },
+          "declared": 687,
+          "declared_associated": 111,
+          "declared_surfaces": 66,
+          "mentions": 2317,
+          "no_mrsty": 0,
+          "notes_share": 0.5309798270893372,
+          "notes_with_any": 737,
+          "observed": 79,
+          "share": 0.11499272197962154,
+          "surface": 0.9534
+        },
+        "depression": {
+          "by_category": {
+            "disease": 24,
+            "finding": 23,
+            "medication": 133,
+            "procedure": 6,
+            "symptom": 3
+          },
+          "declared": 1533,
+          "declared_associated": 67,
+          "declared_surfaces": 46,
+          "mentions": 8160,
+          "no_mrsty": 0,
+          "notes_share": 0.8659942363112392,
+          "notes_with_any": 1202,
+          "observed": 189,
+          "share": 0.1232876712328767,
+          "surface": 0.8434
+        },
+        "hfpef": {
+          "by_category": {
+            "disease": 27,
+            "finding": 15,
+            "medication": 101,
+            "procedure": 5,
+            "symptom": 8
+          },
+          "declared": 1177,
+          "declared_associated": 86,
+          "declared_surfaces": 31,
+          "mentions": 14564,
+          "no_mrsty": 0,
+          "notes_share": 0.973342939481268,
+          "notes_with_any": 1351,
+          "observed": 156,
+          "share": 0.13254035683942225,
+          "surface": 0.7519
+        },
+        "hfref": {
+          "by_category": {
+            "disease": 23,
+            "finding": 14,
+            "medication": 160,
+            "procedure": 6,
+            "symptom": 5
+          },
+          "declared": 1399,
+          "declared_associated": 75,
+          "declared_surfaces": 28,
+          "mentions": 14089,
+          "no_mrsty": 0,
+          "notes_share": 0.9337175792507204,
+          "notes_with_any": 1296,
+          "observed": 208,
+          "share": 0.14867762687634023,
+          "surface": 0.7698
+        },
+        "hypertension": {
+          "by_category": {
+            "disease": 36,
+            "finding": 7,
+            "medication": 250,
+            "procedure": 2,
+            "symptom": 7
+          },
+          "declared": 3167,
+          "declared_associated": 77,
+          "declared_surfaces": 20,
+          "mentions": 19841,
+          "no_mrsty": 0,
+          "notes_share": 0.9740634005763689,
+          "notes_with_any": 1352,
+          "observed": 302,
+          "share": 0.09535838332807073,
+          "surface": 0.7461
+        },
+        "metastatic_cancer": {
+          "by_category": {
+            "disease": 49,
+            "finding": 4,
+            "medication": 96,
+            "procedure": 21,
+            "symptom": 9
+          },
+          "declared": 2292,
+          "declared_associated": 60,
+          "declared_surfaces": 30,
+          "mentions": 9759,
+          "no_mrsty": 0,
+          "notes_share": 0.9157060518731989,
+          "notes_with_any": 1271,
+          "observed": 179,
+          "share": 0.0780977312390925,
+          "surface": 0.925
+        },
+        "obesity": {
+          "by_category": {
+            "disease": 10,
+            "finding": 3,
+            "lab_result": 1,
+            "medication": 4,
+            "procedure": 4,
+            "symptom": 3
+          },
+          "declared": 860,
+          "declared_associated": 71,
+          "declared_surfaces": 42,
+          "mentions": 3403,
+          "no_mrsty": 0,
+          "notes_share": 0.9063400576368876,
+          "notes_with_any": 1258,
+          "observed": 25,
+          "share": 0.029069767441860465,
+          "surface": 0.4849
+        },
+        "pulmonary_embolism": {
+          "by_category": {
+            "disease": 11,
+            "finding": 11,
+            "medication": 25,
+            "procedure": 7,
+            "symptom": 11
+          },
+          "declared": 518,
+          "declared_associated": 91,
+          "declared_surfaces": 43,
+          "mentions": 14508,
+          "no_mrsty": 0,
+          "notes_share": 0.9632564841498559,
+          "notes_with_any": 1337,
+          "observed": 65,
+          "share": 0.12548262548262548,
+          "surface": 0.6931
+        },
+        "rheumatoid_arthritis": {
+          "by_category": {
+            "disease": 17,
+            "finding": 5,
+            "medication": 177,
+            "procedure": 7,
+            "symptom": 3
+          },
+          "declared": 3044,
+          "declared_associated": 82,
+          "declared_surfaces": 12,
+          "mentions": 7514,
+          "no_mrsty": 0,
+          "notes_share": 0.8940922190201729,
+          "notes_with_any": 1241,
+          "observed": 209,
+          "share": 0.06865965834428384,
+          "surface": 0.6889
+        },
+        "systemic_lupus_erythematosus": {
+          "by_category": {
+            "disease": 23,
+            "finding": 8,
+            "medication": 68,
+            "procedure": 6,
+            "symptom": 7
+          },
+          "declared": 1023,
+          "declared_associated": 56,
+          "declared_surfaces": 15,
+          "mentions": 8998,
+          "no_mrsty": 0,
+          "notes_share": 0.9488472622478387,
+          "notes_with_any": 1317,
+          "observed": 112,
+          "share": 0.10948191593352884,
+          "surface": 0.6461
+        },
+        "type_1_diabetes": {
+          "by_category": {
+            "disease": 13,
+            "finding": 12,
+            "medication": 20,
+            "procedure": 5,
+            "symptom": 8
+          },
+          "declared": 415,
+          "declared_associated": 93,
+          "declared_surfaces": 33,
+          "mentions": 10911,
+          "no_mrsty": 0,
+          "notes_share": 0.8912103746397695,
+          "notes_with_any": 1237,
+          "observed": 58,
+          "share": 0.13975903614457832,
+          "surface": 0.7976
+        },
+        "type_2_diabetes": {
+          "by_category": {
+            "disease": 16,
+            "finding": 8,
+            "medication": 65,
+            "procedure": 6,
+            "symptom": 6
+          },
+          "declared": 890,
+          "declared_associated": 52,
+          "declared_surfaces": 25,
+          "mentions": 7236,
+          "no_mrsty": 0,
+          "notes_share": 0.707492795389049,
+          "notes_with_any": 982,
+          "observed": 101,
+          "share": 0.11348314606741573,
+          "surface": 0.8551
+        }
+      }
+    },
+    "the 500 evaluated notes (sample)": {
+      "notes": 500,
+      "phenotypes": {
+        "alcohol_use_disorder": {
+          "by_category": {
+            "disease": 15,
+            "finding": 4,
+            "medication": 2,
+            "procedure": 2,
+            "symptom": 6
+          },
+          "declared": 184,
+          "declared_associated": 82,
+          "declared_surfaces": 27,
+          "mentions": 622,
+          "no_mrsty": 0,
+          "notes_share": 0.444,
+          "notes_with_any": 222,
+          "observed": 29,
+          "share": 0.15760869565217392,
+          "surface": 0.9402
+        },
+        "clostridioides_difficile": {
+          "by_category": {
+            "disease": 9,
+            "finding": 3,
+            "medication": 15,
+            "procedure": 5,
+            "symptom": 9
+          },
+          "declared": 196,
+          "declared_associated": 78,
+          "declared_surfaces": 64,
+          "mentions": 4411,
+          "no_mrsty": 0,
+          "notes_share": 0.936,
+          "notes_with_any": 468,
+          "observed": 41,
+          "share": 0.20918367346938777,
+          "surface": 0.8418
+        },
+        "deep_vein_thrombosis": {
+          "by_category": {
+            "disease": 16,
+            "finding": 3,
+            "medication": 1,
+            "procedure": 3,
+            "symptom": 5
+          },
+          "declared": 354,
+          "declared_associated": 144,
+          "declared_surfaces": 44,
+          "mentions": 831,
+          "no_mrsty": 0,
+          "notes_share": 0.534,
+          "notes_with_any": 267,
+          "observed": 28,
+          "share": 0.07909604519774012,
+          "surface": 1.0
+        },
+        "dementia": {
+          "by_category": {
+            "disease": 25,
+            "finding": 1,
+            "medication": 23,
+            "procedure": 3,
+            "symptom": 5
+          },
+          "declared": 687,
+          "declared_associated": 111,
+          "declared_surfaces": 66,
+          "mentions": 873,
+          "no_mrsty": 0,
+          "notes_share": 0.506,
+          "notes_with_any": 253,
+          "observed": 57,
+          "share": 0.08296943231441048,
+          "surface": 0.9534
+        },
+        "depression": {
+          "by_category": {
+            "disease": 17,
+            "finding": 20,
+            "medication": 111,
+            "procedure": 6,
+            "symptom": 3
+          },
+          "declared": 1533,
+          "declared_associated": 67,
+          "declared_surfaces": 46,
+          "mentions": 2944,
+          "no_mrsty": 0,
+          "notes_share": 0.866,
+          "notes_with_any": 433,
+          "observed": 157,
+          "share": 0.10241356816699282,
+          "surface": 0.8434
+        },
+        "hfpef": {
+          "by_category": {
+            "disease": 23,
+            "finding": 12,
+            "medication": 75,
+            "procedure": 5,
+            "symptom": 8
+          },
+          "declared": 1177,
+          "declared_associated": 86,
+          "declared_surfaces": 31,
+          "mentions": 5182,
+          "no_mrsty": 0,
+          "notes_share": 0.964,
+          "notes_with_any": 482,
+          "observed": 123,
+          "share": 0.10450297366185217,
+          "surface": 0.7519
+        },
+        "hfref": {
+          "by_category": {
+            "disease": 21,
+            "finding": 12,
+            "medication": 121,
+            "procedure": 6,
+            "symptom": 4
+          },
+          "declared": 1399,
+          "declared_associated": 75,
+          "declared_surfaces": 28,
+          "mentions": 4972,
+          "no_mrsty": 0,
+          "notes_share": 0.916,
+          "notes_with_any": 458,
+          "observed": 164,
+          "share": 0.11722659042172981,
+          "surface": 0.7698
+        },
+        "hypertension": {
+          "by_category": {
+            "disease": 25,
+            "finding": 6,
+            "medication": 188,
+            "procedure": 1,
+            "symptom": 7
+          },
+          "declared": 3167,
+          "declared_associated": 77,
+          "declared_surfaces": 20,
+          "mentions": 7070,
+          "no_mrsty": 0,
+          "notes_share": 0.98,
+          "notes_with_any": 490,
+          "observed": 227,
+          "share": 0.07167666561414587,
+          "surface": 0.7461
+        },
+        "metastatic_cancer": {
+          "by_category": {
+            "disease": 30,
+            "finding": 4,
+            "medication": 71,
+            "procedure": 15,
+            "symptom": 8
+          },
+          "declared": 2292,
+          "declared_associated": 60,
+          "declared_surfaces": 30,
+          "mentions": 3499,
+          "no_mrsty": 0,
+          "notes_share": 0.918,
+          "notes_with_any": 459,
+          "observed": 128,
+          "share": 0.055846422338568937,
+          "surface": 0.925
+        },
+        "obesity": {
+          "by_category": {
+            "disease": 7,
+            "finding": 2,
+            "lab_result": 1,
+            "medication": 3,
+            "procedure": 4,
+            "symptom": 3
+          },
+          "declared": 860,
+          "declared_associated": 71,
+          "declared_surfaces": 42,
+          "mentions": 1234,
+          "no_mrsty": 0,
+          "notes_share": 0.908,
+          "notes_with_any": 454,
+          "observed": 20,
+          "share": 0.023255813953488372,
+          "surface": 0.4849
+        },
+        "pulmonary_embolism": {
+          "by_category": {
+            "disease": 9,
+            "finding": 9,
+            "medication": 23,
+            "procedure": 7,
+            "symptom": 11
+          },
+          "declared": 518,
+          "declared_associated": 91,
+          "declared_surfaces": 43,
+          "mentions": 5290,
+          "no_mrsty": 0,
+          "notes_share": 0.956,
+          "notes_with_any": 478,
+          "observed": 59,
+          "share": 0.1138996138996139,
+          "surface": 0.6931
+        },
+        "rheumatoid_arthritis": {
+          "by_category": {
+            "disease": 11,
+            "medication": 119,
+            "procedure": 5,
+            "symptom": 2
+          },
+          "declared": 3044,
+          "declared_associated": 82,
+          "declared_surfaces": 12,
+          "mentions": 2626,
+          "no_mrsty": 0,
+          "notes_share": 0.878,
+          "notes_with_any": 439,
+          "observed": 137,
+          "share": 0.0450065703022339,
+          "surface": 0.6889
+        },
+        "systemic_lupus_erythematosus": {
+          "by_category": {
+            "disease": 18,
+            "finding": 5,
+            "medication": 45,
+            "procedure": 6,
+            "symptom": 7
+          },
+          "declared": 1023,
+          "declared_associated": 56,
+          "declared_surfaces": 15,
+          "mentions": 3283,
+          "no_mrsty": 0,
+          "notes_share": 0.952,
+          "notes_with_any": 476,
+          "observed": 81,
+          "share": 0.07917888563049853,
+          "surface": 0.6461
+        },
+        "type_1_diabetes": {
+          "by_category": {
+            "disease": 10,
+            "finding": 10,
+            "medication": 17,
+            "procedure": 4,
+            "symptom": 8
+          },
+          "declared": 415,
+          "declared_associated": 93,
+          "declared_surfaces": 33,
+          "mentions": 3987,
+          "no_mrsty": 0,
+          "notes_share": 0.896,
+          "notes_with_any": 448,
+          "observed": 49,
+          "share": 0.1180722891566265,
+          "surface": 0.7976
+        },
+        "type_2_diabetes": {
+          "by_category": {
+            "disease": 11,
+            "finding": 5,
+            "medication": 39,
+            "procedure": 5,
+            "symptom": 6
+          },
+          "declared": 890,
+          "declared_associated": 52,
+          "declared_surfaces": 25,
+          "mentions": 2592,
+          "no_mrsty": 0,
+          "notes_share": 0.714,
+          "notes_with_any": 357,
+          "observed": 66,
+          "share": 0.07415730337078652,
+          "surface": 0.8551
+        }
+      }
+    }
+  },
+  "umls_validation": "no_mrsty counts declared CUIs with no semantic type in the local release \u2014 i.e. not UMLS concepts at all. Zero everywhere."
+}

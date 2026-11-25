@@ -1,0 +1,148 @@
+{
+  "arm": "medspacy_extended",
+  "how_to_read": "development-half figures, which is where the choice is made. The held-out half judges the adopted variant once and is not consulted here.",
+  "n_items": 600,
+  "n_notes": 60,
+  "question": "What unit should a cue's scope stop at?",
+  "split": "development",
+  "variants": {
+    "sentences": {
+      "family": {
+        "f1": 0.7692,
+        "fn": 0,
+        "fp": 3,
+        "precision": 0.625,
+        "recall": 1.0,
+        "tp": 5
+      },
+      "historical": {
+        "f1": 0.4444,
+        "fn": 37,
+        "fp": 23,
+        "precision": 0.5106,
+        "recall": 0.3934,
+        "tp": 24
+      },
+      "negated": {
+        "f1": 0.6139,
+        "fn": 16,
+        "fp": 23,
+        "precision": 0.5741,
+        "recall": 0.6596,
+        "tp": 31
+      },
+      "uncertain": {
+        "f1": 0.6133,
+        "fn": 36,
+        "fp": 22,
+        "precision": 0.6765,
+        "recall": 0.561,
+        "tp": 46
+      }
+    },
+    "sentences+aligned": {
+      "family": {
+        "f1": 0.7692,
+        "fn": 0,
+        "fp": 3,
+        "precision": 0.625,
+        "recall": 1.0,
+        "tp": 5
+      },
+      "historical": {
+        "f1": 0.4444,
+        "fn": 37,
+        "fp": 23,
+        "precision": 0.5106,
+        "recall": 0.3934,
+        "tp": 24
+      },
+      "negated": {
+        "f1": 0.6139,
+        "fn": 16,
+        "fp": 23,
+        "precision": 0.5741,
+        "recall": 0.6596,
+        "tp": 31
+      },
+      "uncertain": {
+        "f1": 0.6133,
+        "fn": 36,
+        "fp": 22,
+        "precision": 0.6765,
+        "recall": 0.561,
+        "tp": 46
+      }
+    },
+    "sentences+all_lines": {
+      "family": {
+        "f1": 0.6667,
+        "fn": 1,
+        "fp": 3,
+        "precision": 0.5714,
+        "recall": 0.8,
+        "tp": 4
+      },
+      "historical": {
+        "f1": 0.3059,
+        "fn": 48,
+        "fp": 11,
+        "precision": 0.5417,
+        "recall": 0.2131,
+        "tp": 13
+      },
+      "negated": {
+        "f1": 0.6429,
+        "fn": 20,
+        "fp": 10,
+        "precision": 0.7297,
+        "recall": 0.5745,
+        "tp": 27
+      },
+      "uncertain": {
+        "f1": 0.4483,
+        "fn": 56,
+        "fp": 8,
+        "precision": 0.7647,
+        "recall": 0.3171,
+        "tp": 26
+      }
+    },
+    "sentences+structural": {
+      "family": {
+        "f1": 0.7692,
+        "fn": 0,
+        "fp": 3,
+        "precision": 0.625,
+        "recall": 1.0,
+        "tp": 5
+      },
+      "historical": {
+        "f1": 0.4444,
+        "fn": 37,
+        "fp": 23,
+        "precision": 0.5106,
+        "recall": 0.3934,
+        "tp": 24
+      },
+      "negated": {
+        "f1": 0.6139,
+        "fn": 16,
+        "fp": 23,
+        "precision": 0.5741,
+        "recall": 0.6596,
+        "tp": 31
+      },
+      "uncertain": {
+        "f1": 0.6133,
+        "fn": 36,
+        "fp": 22,
+        "precision": 0.6765,
+        "recall": 0.561,
+        "tp": 46
+      }
+    }
+  },
+  "why": "ConText scopes a cue to its sentence, so the segmenter IS the scope knob. A sentence in a discharge summary is routinely a whole lab block, and 27 of 50 held-out false positives have the cue and the target in different lines, list items or table rows \u2014 separated by layout the scope algorithm cannot see.",
+  "why_not_every_newline": "a line break inside running prose is a wrap, not a boundary \u2014 this package has a reflow layer built on that fact. Splitting on every newline would trade false positives for false negatives, so the structural variant is the hypothesis and the blunt one is the control that prices it."
+}

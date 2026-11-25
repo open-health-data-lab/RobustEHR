@@ -1,0 +1,2701 @@
+{
+  "columns": "declared = the vetting-gated runtime set build() carries; reachable = concepts the matcher recovers from their own preferred name (faceted link audit); observed = declared concepts with at least one cached mention in the corpus",
+  "coverage_is_not_recall": "measured_set_recall asks how much of the gold evidence the set recovers; this asks how much of the set the corpus instantiates. Neither substitutes for the other.",
+  "enrichment_caveat": "the cohort screen compares note-rates between label-positive and other notes. Labels are per-admission and ICU notes co-report comorbidities, so a flagged concept may still belong in the set — this is a review queue, NOT a precision measurement, and it does not close the union-precision gap in validation/methodology/14 §5. Flag rule: enrichment < 1.5 and present in >= 5% of non-positive notes.",
+  "how_to_read_a_gap": "unobserved_but_reachable concepts are ones ICU discharge summaries simply do not write — a fact about the corpus, expected to be large for a clinically complete set. unobserved_unreachable concepts could not have been found by any spelling — a fact about the pipeline, and the number to watch.",
+  "licence": "identifiers and counts only; no UMLS string appears here",
+  "manifest": {
+    "cache_config_digest": "6e56a7c3a64d53ff",
+    "distinct_cuis_in_corpus": 18610,
+    "link_audit": "validation/measurements/phenotype_link_audit_facets.json",
+    "notes": 1388,
+    "notes_without_cache_entry": 0,
+    "vetting_sha256": "da3a2c09ef1d5411"
+  },
+  "near_miss": "the closure's measured effect. The candidate pool is DELIBERATELY broad (one hop of graph neighborhood, corpus-blind), so pool-mention prevalence saturates and is context, not the claim. The claim is notes_with_recovered_evidence: notes containing at least one mention of an ADJUDICATED closure keep or an RxNorm identity variant — evidence the pre-closure target could not reach. Mentions of dropped candidates are correctly rejected noise, not a residual gap.",
+  "phenotypes": {
+    "alcohol_use_disorder": {
+      "cohort": {
+        "median_enrichment": 6.69,
+        "nonspecific_flag_count": 1,
+        "nonspecific_flags": [
+          "C0917801"
+        ],
+        "observed_in_positive": 27,
+        "positive_notes": 155,
+        "positive_notes_with_any": 133,
+        "positive_notes_with_any_share": 0.8581
+      },
+      "declared": 184,
+      "head_cuis_for_90pct_of_mentions": 10,
+      "mentions": 1650,
+      "near_miss": {
+        "adjudicated_kept": 36,
+        "candidate_pool": 216,
+        "captured_mention_share": 0.0689,
+        "captured_mentions": 27,
+        "identity_mentions": 0,
+        "near_miss_mentions": 392,
+        "notes_with_captured_near_miss": 18,
+        "notes_with_identity_mention": 0,
+        "notes_with_near_miss": 114,
+        "notes_with_near_miss_share": 0.7355,
+        "notes_with_recovered_evidence": 18,
+        "notes_with_recovered_evidence_share": 0.1161,
+        "scope": "label_positive_cohort",
+        "scope_notes": 155
+      },
+      "notes_with_any": 609,
+      "notes_with_any_share": 0.4388,
+      "observed": 34,
+      "observed_despite_unreachable_name": 4,
+      "observed_share": 0.1848,
+      "reachable": 146,
+      "top_cuis": [
+        [
+          "C0917801",
+          571
+        ],
+        [
+          "C0085631",
+          226
+        ],
+        [
+          "C0085762",
+          188
+        ],
+        [
+          "C0232766",
+          169
+        ],
+        [
+          "C0028738",
+          78
+        ],
+        [
+          "C0001973",
+          75
+        ],
+        [
+          "C0700590",
+          65
+        ],
+        [
+          "C0234518",
+          56
+        ],
+        [
+          "C0233763",
+          32
+        ],
+        [
+          "C0019187",
+          29
+        ],
+        [
+          "C0001957",
+          25
+        ],
+        [
+          "C0001969",
+          20
+        ],
+        [
+          "C0231686",
+          16
+        ],
+        [
+          "C0233762",
+          16
+        ],
+        [
+          "C0237123",
+          14
+        ],
+        [
+          "C0027360",
+          12
+        ],
+        [
+          "C0085666",
+          10
+        ],
+        [
+          "C0284941",
+          9
+        ],
+        [
+          "C0586323",
+          9
+        ],
+        [
+          "C0202035",
+          5
+        ]
+      ],
+      "unobserved_but_reachable": 116,
+      "unobserved_unreachable": 34
+    },
+    "atrial_fibrillation": {
+      "declared": 581,
+      "head_cuis_for_90pct_of_mentions": 22,
+      "mentions": 12189,
+      "near_miss": {
+        "adjudicated_kept": 10,
+        "candidate_pool": 488,
+        "captured_mention_share": 0.0081,
+        "captured_mentions": 234,
+        "identity_mentions": 1594,
+        "near_miss_mentions": 28942,
+        "notes_with_captured_near_miss": 105,
+        "notes_with_identity_mention": 566,
+        "notes_with_near_miss": 1388,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 584,
+        "notes_with_recovered_evidence_share": 0.4207,
+        "scope": "whole_corpus",
+        "scope_notes": 1388
+      },
+      "notes_with_any": 1299,
+      "notes_with_any_share": 0.9359,
+      "observed": 93,
+      "observed_despite_unreachable_name": 14,
+      "observed_share": 0.1601,
+      "reachable": 414,
+      "top_cuis": [
+        [
+          "C0013404",
+          1872
+        ],
+        [
+          "C0008031",
+          1587
+        ],
+        [
+          "C0025859",
+          970
+        ],
+        [
+          "C0043031",
+          861
+        ],
+        [
+          "C0699129",
+          839
+        ],
+        [
+          "C0004238",
+          773
+        ],
+        [
+          "C1623258",
+          631
+        ],
+        [
+          "C0015672",
+          483
+        ],
+        [
+          "C0039231",
+          455
+        ],
+        [
+          "C0030252",
+          397
+        ],
+        [
+          "C0430462",
+          343
+        ],
+        [
+          "C0012833",
+          337
+        ],
+        [
+          "C0039070",
+          333
+        ],
+        [
+          "C0220870",
+          299
+        ],
+        [
+          "C0012373",
+          167
+        ],
+        [
+          "C2723290",
+          111
+        ],
+        [
+          "C0231807",
+          104
+        ],
+        [
+          "C2741598",
+          104
+        ],
+        [
+          "C0007787",
+          95
+        ],
+        [
+          "C0206054",
+          85
+        ]
+      ],
+      "unobserved_but_reachable": 335,
+      "unobserved_unreachable": 153
+    },
+    "chest_pain": {
+      "declared": 1187,
+      "head_cuis_for_90pct_of_mentions": 37,
+      "mentions": 20057,
+      "near_miss": {
+        "adjudicated_kept": 27,
+        "candidate_pool": 908,
+        "captured_mention_share": 0.011,
+        "captured_mentions": 430,
+        "identity_mentions": 1644,
+        "near_miss_mentions": 39082,
+        "notes_with_captured_near_miss": 236,
+        "notes_with_identity_mention": 684,
+        "notes_with_near_miss": 1388,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 761,
+        "notes_with_recovered_evidence_share": 0.5483,
+        "scope": "whole_corpus",
+        "scope_notes": 1388
+      },
+      "notes_with_any": 1376,
+      "notes_with_any_share": 0.9914,
+      "observed": 179,
+      "observed_despite_unreachable_name": 24,
+      "observed_share": 0.1508,
+      "reachable": 855,
+      "top_cuis": [
+        [
+          "C0027497",
+          2217
+        ],
+        [
+          "C0013404",
+          1872
+        ],
+        [
+          "C0008031",
+          1587
+        ],
+        [
+          "C0039985",
+          1548
+        ],
+        [
+          "C0042963",
+          1531
+        ],
+        [
+          "C0010200",
+          1257
+        ],
+        [
+          "C0025859",
+          970
+        ],
+        [
+          "C1623258",
+          631
+        ],
+        [
+          "C0232267",
+          583
+        ],
+        [
+          "C0425687",
+          474
+        ],
+        [
+          "C0039231",
+          455
+        ],
+        [
+          "C0030252",
+          397
+        ],
+        [
+          "C0010055",
+          350
+        ],
+        [
+          "C0430462",
+          343
+        ],
+        [
+          "C0012833",
+          337
+        ],
+        [
+          "C0039070",
+          333
+        ],
+        [
+          "C0051696",
+          300
+        ],
+        [
+          "C0220870",
+          299
+        ],
+        [
+          "C1141947",
+          232
+        ],
+        [
+          "C0523952",
+          211
+        ]
+      ],
+      "unobserved_but_reachable": 700,
+      "unobserved_unreachable": 308
+    },
+    "chronic_kidney_disease": {
+      "declared": 1284,
+      "head_cuis_for_90pct_of_mentions": 17,
+      "mentions": 14796,
+      "near_miss": {
+        "adjudicated_kept": 110,
+        "candidate_pool": 725,
+        "captured_mention_share": 0.0871,
+        "captured_mentions": 4092,
+        "identity_mentions": 352,
+        "near_miss_mentions": 47004,
+        "notes_with_captured_near_miss": 1265,
+        "notes_with_identity_mention": 220,
+        "notes_with_near_miss": 1388,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 1280,
+        "notes_with_recovered_evidence_share": 0.9222,
+        "scope": "whole_corpus",
+        "scope_notes": 1388
+      },
+      "notes_with_any": 1373,
+      "notes_with_any_share": 0.9892,
+      "observed": 85,
+      "observed_despite_unreachable_name": 19,
+      "observed_share": 0.0662,
+      "reachable": 563,
+      "top_cuis": [
+        [
+          "C0201975",
+          2954
+        ],
+        [
+          "C0027497",
+          2217
+        ],
+        [
+          "C0013404",
+          1872
+        ],
+        [
+          "C0042963",
+          1531
+        ],
+        [
+          "C0011946",
+          785
+        ],
+        [
+          "C0022661",
+          778
+        ],
+        [
+          "C0232267",
+          583
+        ],
+        [
+          "C0015672",
+          483
+        ],
+        [
+          "C1561643",
+          421
+        ],
+        [
+          "C0546817",
+          291
+        ],
+        [
+          "C0033774",
+          266
+        ],
+        [
+          "C0008318",
+          239
+        ],
+        [
+          "C0020461",
+          225
+        ],
+        [
+          "C0019004",
+          219
+        ],
+        [
+          "C0984386",
+          195
+        ],
+        [
+          "C0239340",
+          178
+        ],
+        [
+          "C0232766",
+          169
+        ],
+        [
+          "C0023380",
+          159
+        ],
+        [
+          "C0241137",
+          116
+        ],
+        [
+          "C0022658",
+          116
+        ]
+      ],
+      "unobserved_but_reachable": 497,
+      "unobserved_unreachable": 702
+    },
+    "clostridioides_difficile": {
+      "cohort": {
+        "median_enrichment": 3.89,
+        "nonspecific_flag_count": 10,
+        "nonspecific_flags": [
+          "C0015967",
+          "C0027497",
+          "C0042963",
+          "C0039231",
+          "C0020649",
+          "C0011175",
+          "C0009378",
+          "C0232462",
+          "C0000731",
+          "C0000737"
+        ],
+        "observed_in_positive": 41,
+        "positive_notes": 124,
+        "positive_notes_with_any": 122,
+        "positive_notes_with_any_share": 0.9839
+      },
+      "declared": 196,
+      "head_cuis_for_90pct_of_mentions": 10,
+      "mentions": 11491,
+      "near_miss": {
+        "adjudicated_kept": 7,
+        "candidate_pool": 390,
+        "captured_mention_share": 0.0036,
+        "captured_mentions": 10,
+        "identity_mentions": 263,
+        "near_miss_mentions": 2742,
+        "notes_with_captured_near_miss": 7,
+        "notes_with_identity_mention": 76,
+        "notes_with_near_miss": 124,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 76,
+        "notes_with_recovered_evidence_share": 0.6129,
+        "scope": "label_positive_cohort",
+        "scope_notes": 124
+      },
+      "notes_with_any": 1308,
+      "notes_with_any_share": 0.9424,
+      "observed": 47,
+      "observed_despite_unreachable_name": 4,
+      "observed_share": 0.2398,
+      "reachable": 152,
+      "top_cuis": [
+        [
+          "C0015967",
+          2609
+        ],
+        [
+          "C0027497",
+          2217
+        ],
+        [
+          "C0042963",
+          1531
+        ],
+        [
+          "C0011991",
+          1525
+        ],
+        [
+          "C0042313",
+          906
+        ],
+        [
+          "C0039231",
+          455
+        ],
+        [
+          "C0020649",
+          440
+        ],
+        [
+          "C0009378",
+          315
+        ],
+        [
+          "C0699678",
+          307
+        ],
+        [
+          "C0011175",
+          241
+        ],
+        [
+          "C0232462",
+          98
+        ],
+        [
+          "C0000731",
+          97
+        ],
+        [
+          "C0025872",
+          84
+        ],
+        [
+          "C0000737",
+          77
+        ],
+        [
+          "C0430414",
+          74
+        ],
+        [
+          "C0360373",
+          70
+        ],
+        [
+          "C1258215",
+          63
+        ],
+        [
+          "C0343386",
+          56
+        ],
+        [
+          "C0992611",
+          50
+        ],
+        [
+          "C0031154",
+          38
+        ]
+      ],
+      "unobserved_but_reachable": 109,
+      "unobserved_unreachable": 40
+    },
+    "deep_vein_thrombosis": {
+      "cohort": {
+        "median_enrichment": 3.08,
+        "nonspecific_flag_count": 3,
+        "nonspecific_flags": [
+          "C0239340",
+          "C0085649",
+          "C0333243"
+        ],
+        "observed_in_positive": 29,
+        "positive_notes": 340,
+        "positive_notes_with_any": 289,
+        "positive_notes_with_any_share": 0.85
+      },
+      "declared": 354,
+      "head_cuis_for_90pct_of_mentions": 10,
+      "mentions": 2057,
+      "near_miss": {
+        "adjudicated_kept": 61,
+        "candidate_pool": 363,
+        "captured_mention_share": 0.0682,
+        "captured_mentions": 101,
+        "identity_mentions": 0,
+        "near_miss_mentions": 1481,
+        "notes_with_captured_near_miss": 65,
+        "notes_with_identity_mention": 0,
+        "notes_with_near_miss": 322,
+        "notes_with_near_miss_share": 0.9471,
+        "notes_with_recovered_evidence": 65,
+        "notes_with_recovered_evidence_share": 0.1912,
+        "scope": "label_positive_cohort",
+        "scope_notes": 340
+      },
+      "notes_with_any": 724,
+      "notes_with_any_share": 0.5216,
+      "observed": 35,
+      "observed_despite_unreachable_name": 4,
+      "observed_share": 0.0989,
+      "reachable": 308,
+      "top_cuis": [
+        [
+          "C0149871",
+          727
+        ],
+        [
+          "C0003281",
+          354
+        ],
+        [
+          "C0239340",
+          178
+        ],
+        [
+          "C0581394",
+          125
+        ],
+        [
+          "C0085649",
+          106
+        ],
+        [
+          "C0333243",
+          102
+        ],
+        [
+          "C0042487",
+          88
+        ],
+        [
+          "C0151950",
+          88
+        ],
+        [
+          "C0030605",
+          79
+        ],
+        [
+          "C0236040",
+          34
+        ],
+        [
+          "C0155773",
+          34
+        ],
+        [
+          "C0238883",
+          32
+        ],
+        [
+          "C0239376",
+          19
+        ],
+        [
+          "C0040046",
+          18
+        ],
+        [
+          "C0031545",
+          13
+        ],
+        [
+          "C0272416",
+          10
+        ],
+        [
+          "C0241374",
+          7
+        ],
+        [
+          "C0589110",
+          6
+        ],
+        [
+          "C2940579",
+          6
+        ],
+        [
+          "C0267412",
+          5
+        ]
+      ],
+      "unobserved_but_reachable": 277,
+      "unobserved_unreachable": 42
+    },
+    "dementia": {
+      "cohort": {
+        "median_enrichment": 4.74,
+        "nonspecific_flag_count": 2,
+        "nonspecific_flags": [
+          "C0701017",
+          "C0040399"
+        ],
+        "observed_in_positive": 59,
+        "positive_notes": 102,
+        "positive_notes_with_any": 102,
+        "positive_notes_with_any_share": 1.0
+      },
+      "declared": 687,
+      "head_cuis_for_90pct_of_mentions": 30,
+      "mentions": 2317,
+      "near_miss": {
+        "adjudicated_kept": 131,
+        "candidate_pool": 826,
+        "captured_mention_share": 0.0241,
+        "captured_mentions": 26,
+        "identity_mentions": 90,
+        "near_miss_mentions": 1080,
+        "notes_with_captured_near_miss": 20,
+        "notes_with_identity_mention": 39,
+        "notes_with_near_miss": 100,
+        "notes_with_near_miss_share": 0.9804,
+        "notes_with_recovered_evidence": 51,
+        "notes_with_recovered_evidence_share": 0.5,
+        "scope": "label_positive_cohort",
+        "scope_notes": 102
+      },
+      "notes_with_any": 737,
+      "notes_with_any_share": 0.531,
+      "observed": 79,
+      "observed_despite_unreachable_name": 6,
+      "observed_share": 0.115,
+      "reachable": 600,
+      "top_cuis": [
+        [
+          "C0011265",
+          338
+        ],
+        [
+          "C0085631",
+          226
+        ],
+        [
+          "C0013819",
+          179
+        ],
+        [
+          "C1124669",
+          173
+        ],
+        [
+          "C0040399",
+          156
+        ],
+        [
+          "C0701017",
+          130
+        ],
+        [
+          "C0989276",
+          104
+        ],
+        [
+          "C0719199",
+          78
+        ],
+        [
+          "C0008845",
+          75
+        ],
+        [
+          "C1124670",
+          62
+        ],
+        [
+          "C0033229",
+          56
+        ],
+        [
+          "C0527316",
+          54
+        ],
+        [
+          "C1456784",
+          53
+        ],
+        [
+          "C0002395",
+          44
+        ],
+        [
+          "C1127563",
+          42
+        ],
+        [
+          "C0233763",
+          32
+        ],
+        [
+          "C0073393",
+          32
+        ],
+        [
+          "C0085632",
+          30
+        ],
+        [
+          "C0037943",
+          29
+        ],
+        [
+          "C0025242",
+          28
+        ]
+      ],
+      "unobserved_but_reachable": 527,
+      "unobserved_unreachable": 81
+    },
+    "depression": {
+      "cohort": {
+        "median_enrichment": 3.13,
+        "nonspecific_flag_count": 6,
+        "nonspecific_flags": [
+          "C0015672",
+          "C0031765",
+          "C0992522",
+          "C0024002",
+          "C0009244",
+          "C0232462"
+        ],
+        "observed_in_positive": 182,
+        "positive_notes": 679,
+        "positive_notes_with_any": 678,
+        "positive_notes_with_any_share": 0.9985
+      },
+      "declared": 1533,
+      "head_cuis_for_90pct_of_mentions": 68,
+      "mentions": 8160,
+      "near_miss": {
+        "adjudicated_kept": 100,
+        "candidate_pool": 711,
+        "captured_mention_share": 0.0765,
+        "captured_mentions": 1379,
+        "identity_mentions": 2005,
+        "near_miss_mentions": 18020,
+        "notes_with_captured_near_miss": 620,
+        "notes_with_identity_mention": 559,
+        "notes_with_near_miss": 679,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 673,
+        "notes_with_recovered_evidence_share": 0.9912,
+        "scope": "label_positive_cohort",
+        "scope_notes": 679
+      },
+      "notes_with_any": 1202,
+      "notes_with_any_share": 0.866,
+      "observed": 189,
+      "observed_despite_unreachable_name": 13,
+      "observed_share": 0.1233,
+      "reachable": 1220,
+      "top_cuis": [
+        [
+          "C0011570",
+          1273
+        ],
+        [
+          "C0917801",
+          571
+        ],
+        [
+          "C0015672",
+          483
+        ],
+        [
+          "C0699194",
+          342
+        ],
+        [
+          "C0031765",
+          267
+        ],
+        [
+          "C0992522",
+          254
+        ],
+        [
+          "C0024002",
+          236
+        ],
+        [
+          "C0040805",
+          228
+        ],
+        [
+          "C0009244",
+          218
+        ],
+        [
+          "C0987272",
+          206
+        ],
+        [
+          "C1124669",
+          173
+        ],
+        [
+          "C0344315",
+          148
+        ],
+        [
+          "C5942421",
+          138
+        ],
+        [
+          "C0123091",
+          133
+        ],
+        [
+          "C0085208",
+          117
+        ],
+        [
+          "C1145809",
+          115
+        ],
+        [
+          "C0245561",
+          114
+        ],
+        [
+          "C0232462",
+          98
+        ],
+        [
+          "C0287163",
+          93
+        ],
+        [
+          "C0719199",
+          78
+        ]
+      ],
+      "unobserved_but_reachable": 1044,
+      "unobserved_unreachable": 300
+    },
+    "diabetes_mellitus": {
+      "declared": 1333,
+      "head_cuis_for_90pct_of_mentions": 19,
+      "mentions": 7191,
+      "near_miss": {
+        "adjudicated_kept": 135,
+        "candidate_pool": 626,
+        "captured_mention_share": 0.0878,
+        "captured_mentions": 3256,
+        "identity_mentions": 1198,
+        "near_miss_mentions": 37071,
+        "notes_with_captured_near_miss": 589,
+        "notes_with_identity_mention": 359,
+        "notes_with_near_miss": 1388,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 626,
+        "notes_with_recovered_evidence_share": 0.451,
+        "scope": "whole_corpus",
+        "scope_notes": 1388
+      },
+      "notes_with_any": 929,
+      "notes_with_any_share": 0.6693,
+      "observed": 117,
+      "observed_despite_unreachable_name": 10,
+      "observed_share": 0.0878,
+      "reachable": 1088,
+      "top_cuis": [
+        [
+          "C0021641",
+          1674
+        ],
+        [
+          "C0011847",
+          931
+        ],
+        [
+          "C0907402",
+          546
+        ],
+        [
+          "C0015672",
+          483
+        ],
+        [
+          "C0528249",
+          415
+        ],
+        [
+          "C0876064",
+          342
+        ],
+        [
+          "C0025598",
+          268
+        ],
+        [
+          "C0011860",
+          265
+        ],
+        [
+          "C0017741",
+          257
+        ],
+        [
+          "C0020456",
+          241
+        ],
+        [
+          "C0011880",
+          238
+        ],
+        [
+          "C0011854",
+          169
+        ],
+        [
+          "C0293359",
+          133
+        ],
+        [
+          "C0591573",
+          124
+        ],
+        [
+          "C5979904",
+          119
+        ],
+        [
+          "C0474680",
+          88
+        ],
+        [
+          "C0939412",
+          79
+        ],
+        [
+          "C0344232",
+          72
+        ],
+        [
+          "C0123677",
+          53
+        ],
+        [
+          "C0085119",
+          42
+        ]
+      ],
+      "unobserved_but_reachable": 981,
+      "unobserved_unreachable": 235
+    },
+    "dyspnea": {
+      "declared": 778,
+      "head_cuis_for_90pct_of_mentions": 21,
+      "mentions": 13354,
+      "near_miss": {
+        "adjudicated_kept": 44,
+        "candidate_pool": 542,
+        "captured_mention_share": 0.0131,
+        "captured_mentions": 418,
+        "identity_mentions": 33,
+        "near_miss_mentions": 31868,
+        "notes_with_captured_near_miss": 251,
+        "notes_with_identity_mention": 23,
+        "notes_with_near_miss": 1387,
+        "notes_with_near_miss_share": 0.9993,
+        "notes_with_recovered_evidence": 269,
+        "notes_with_recovered_evidence_share": 0.1938,
+        "scope": "whole_corpus",
+        "scope_notes": 1388
+      },
+      "notes_with_any": 1296,
+      "notes_with_any_share": 0.9337,
+      "observed": 84,
+      "observed_despite_unreachable_name": 6,
+      "observed_share": 0.108,
+      "reachable": 440,
+      "top_cuis": [
+        [
+          "C0013404",
+          1872
+        ],
+        [
+          "C0039985",
+          1548
+        ],
+        [
+          "C0043144",
+          1467
+        ],
+        [
+          "C0010200",
+          1257
+        ],
+        [
+          "C0034642",
+          1006
+        ],
+        [
+          "C0026549",
+          589
+        ],
+        [
+          "C0035508",
+          546
+        ],
+        [
+          "C0010520",
+          471
+        ],
+        [
+          "C0004144",
+          398
+        ],
+        [
+          "C1283004",
+          382
+        ],
+        [
+          "C0430462",
+          343
+        ],
+        [
+          "C0199451",
+          335
+        ],
+        [
+          "C0202823",
+          317
+        ],
+        [
+          "C0520679",
+          314
+        ],
+        [
+          "C1141947",
+          232
+        ],
+        [
+          "C1821466",
+          202
+        ],
+        [
+          "C0054015",
+          195
+        ],
+        [
+          "C0037315",
+          189
+        ],
+        [
+          "C1956423",
+          174
+        ],
+        [
+          "C1956415",
+          154
+        ]
+      ],
+      "unobserved_but_reachable": 362,
+      "unobserved_unreachable": 332
+    },
+    "fever": {
+      "declared": 2712,
+      "head_cuis_for_90pct_of_mentions": 28,
+      "mentions": 11940,
+      "near_miss": {
+        "adjudicated_kept": 21,
+        "candidate_pool": 592,
+        "captured_mention_share": 0.0003,
+        "captured_mentions": 8,
+        "identity_mentions": 3360,
+        "near_miss_mentions": 31318,
+        "notes_with_captured_near_miss": 6,
+        "notes_with_identity_mention": 1106,
+        "notes_with_near_miss": 1388,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 1107,
+        "notes_with_recovered_evidence_share": 0.7976,
+        "scope": "whole_corpus",
+        "scope_notes": 1388
+      },
+      "notes_with_any": 1366,
+      "notes_with_any_share": 0.9841,
+      "observed": 120,
+      "observed_despite_unreachable_name": 9,
+      "observed_share": 0.0442,
+      "reachable": 1415,
+      "top_cuis": [
+        [
+          "C0015967",
+          2609
+        ],
+        [
+          "C0085593",
+          1017
+        ],
+        [
+          "C0004057",
+          960
+        ],
+        [
+          "C0983882",
+          844
+        ],
+        [
+          "C0000970",
+          489
+        ],
+        [
+          "C0699142",
+          466
+        ],
+        [
+          "C0039231",
+          455
+        ],
+        [
+          "C0200949",
+          305
+        ],
+        [
+          "C0982960",
+          304
+        ],
+        [
+          "C0055003",
+          300
+        ],
+        [
+          "C0231528",
+          236
+        ],
+        [
+          "C0028081",
+          229
+        ],
+        [
+          "C1128885",
+          223
+        ],
+        [
+          "C0016382",
+          222
+        ],
+        [
+          "C0701042",
+          220
+        ],
+        [
+          "C0231218",
+          214
+        ],
+        [
+          "C0008809",
+          211
+        ],
+        [
+          "C0086787",
+          187
+        ],
+        [
+          "C0992015",
+          179
+        ],
+        [
+          "C0982952",
+          165
+        ]
+      ],
+      "unobserved_but_reachable": 1304,
+      "unobserved_unreachable": 1288
+    },
+    "heart_failure": {
+      "declared": 2218,
+      "head_cuis_for_90pct_of_mentions": 79,
+      "mentions": 15933,
+      "near_miss": {
+        "adjudicated_kept": 90,
+        "candidate_pool": 806,
+        "captured_mention_share": 0.0212,
+        "captured_mentions": 1023,
+        "identity_mentions": 4128,
+        "near_miss_mentions": 48246,
+        "notes_with_captured_near_miss": 488,
+        "notes_with_identity_mention": 910,
+        "notes_with_near_miss": 1388,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 1014,
+        "notes_with_recovered_evidence_share": 0.7305,
+        "scope": "whole_corpus",
+        "scope_notes": 1388
+      },
+      "notes_with_any": 1318,
+      "notes_with_any_share": 0.9496,
+      "observed": 270,
+      "observed_despite_unreachable_name": 33,
+      "observed_share": 0.1217,
+      "reachable": 1596,
+      "top_cuis": [
+        [
+          "C0013404",
+          1872
+        ],
+        [
+          "C0034642",
+          1006
+        ],
+        [
+          "C0025859",
+          970
+        ],
+        [
+          "C0699992",
+          788
+        ],
+        [
+          "C0065374",
+          527
+        ],
+        [
+          "C0015672",
+          483
+        ],
+        [
+          "C0425687",
+          474
+        ],
+        [
+          "C0003962",
+          469
+        ],
+        [
+          "C0076840",
+          420
+        ],
+        [
+          "C0430462",
+          343
+        ],
+        [
+          "C0018801",
+          315
+        ],
+        [
+          "C0034063",
+          313
+        ],
+        [
+          "C0546817",
+          291
+        ],
+        [
+          "C0022860",
+          240
+        ],
+        [
+          "C0018800",
+          208
+        ],
+        [
+          "C0016860",
+          195
+        ],
+        [
+          "C0054836",
+          180
+        ],
+        [
+          "C0239340",
+          178
+        ],
+        [
+          "C0126174",
+          175
+        ],
+        [
+          "C0986198",
+          172
+        ]
+      ],
+      "unobserved_but_reachable": 1359,
+      "unobserved_unreachable": 589
+    },
+    "hfpef": {
+      "cohort": {
+        "median_enrichment": 1.79,
+        "nonspecific_flag_count": 7,
+        "nonspecific_flags": [
+          "C0013604",
+          "C0425687",
+          "C0015672",
+          "C0003962",
+          "C0020261",
+          "C0987217",
+          "C0987219"
+        ],
+        "observed_in_positive": 117,
+        "positive_notes": 217,
+        "positive_notes_with_any": 217,
+        "positive_notes_with_any_share": 1.0
+      },
+      "declared": 1177,
+      "head_cuis_for_90pct_of_mentions": 40,
+      "mentions": 14564,
+      "near_miss": {
+        "adjudicated_kept": 81,
+        "candidate_pool": 428,
+        "captured_mention_share": 0.1786,
+        "captured_mentions": 1178,
+        "identity_mentions": 985,
+        "near_miss_mentions": 6596,
+        "notes_with_captured_near_miss": 206,
+        "notes_with_identity_mention": 184,
+        "notes_with_near_miss": 217,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 212,
+        "notes_with_recovered_evidence_share": 0.977,
+        "scope": "label_positive_cohort",
+        "scope_notes": 217
+      },
+      "notes_with_any": 1351,
+      "notes_with_any_share": 0.9733,
+      "observed": 156,
+      "observed_despite_unreachable_name": 15,
+      "observed_share": 0.1325,
+      "reachable": 829,
+      "top_cuis": [
+        [
+          "C0013604",
+          2580
+        ],
+        [
+          "C0013404",
+          1872
+        ],
+        [
+          "C0034642",
+          1006
+        ],
+        [
+          "C0699992",
+          788
+        ],
+        [
+          "C0065374",
+          527
+        ],
+        [
+          "C0015672",
+          483
+        ],
+        [
+          "C0425687",
+          474
+        ],
+        [
+          "C0003962",
+          469
+        ],
+        [
+          "C0076840",
+          420
+        ],
+        [
+          "C0430462",
+          343
+        ],
+        [
+          "C0018801",
+          315
+        ],
+        [
+          "C0546817",
+          291
+        ],
+        [
+          "C0012798",
+          269
+        ],
+        [
+          "C0016860",
+          195
+        ],
+        [
+          "C0239340",
+          178
+        ],
+        [
+          "C0126174",
+          175
+        ],
+        [
+          "C0986198",
+          172
+        ],
+        [
+          "C0986199",
+          168
+        ],
+        [
+          "C1956415",
+          154
+        ],
+        [
+          "C0085619",
+          149
+        ]
+      ],
+      "unobserved_but_reachable": 688,
+      "unobserved_unreachable": 333
+    },
+    "hfref": {
+      "cohort": {
+        "median_enrichment": 3.43,
+        "nonspecific_flag_count": 8,
+        "nonspecific_flags": [
+          "C0013404",
+          "C0034642",
+          "C0425687",
+          "C0015672",
+          "C0003962",
+          "C0020261",
+          "C2723290",
+          "C0987219"
+        ],
+        "observed_in_positive": 140,
+        "positive_notes": 122,
+        "positive_notes_with_any": 121,
+        "positive_notes_with_any_share": 0.9918
+      },
+      "declared": 1399,
+      "head_cuis_for_90pct_of_mentions": 61,
+      "mentions": 14089,
+      "near_miss": {
+        "adjudicated_kept": 49,
+        "candidate_pool": 531,
+        "captured_mention_share": 0.0529,
+        "captured_mentions": 187,
+        "identity_mentions": 744,
+        "near_miss_mentions": 3538,
+        "notes_with_captured_near_miss": 85,
+        "notes_with_identity_mention": 116,
+        "notes_with_near_miss": 122,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 118,
+        "notes_with_recovered_evidence_share": 0.9672,
+        "scope": "label_positive_cohort",
+        "scope_notes": 122
+      },
+      "notes_with_any": 1296,
+      "notes_with_any_share": 0.9337,
+      "observed": 208,
+      "observed_despite_unreachable_name": 20,
+      "observed_share": 0.1487,
+      "reachable": 1013,
+      "top_cuis": [
+        [
+          "C0013404",
+          1872
+        ],
+        [
+          "C0034642",
+          1006
+        ],
+        [
+          "C0025859",
+          970
+        ],
+        [
+          "C0699992",
+          788
+        ],
+        [
+          "C0065374",
+          527
+        ],
+        [
+          "C0015672",
+          483
+        ],
+        [
+          "C0425687",
+          474
+        ],
+        [
+          "C0003962",
+          469
+        ],
+        [
+          "C0076840",
+          420
+        ],
+        [
+          "C0430462",
+          343
+        ],
+        [
+          "C0018801",
+          315
+        ],
+        [
+          "C0546817",
+          291
+        ],
+        [
+          "C0018800",
+          208
+        ],
+        [
+          "C0016860",
+          195
+        ],
+        [
+          "C0054836",
+          180
+        ],
+        [
+          "C0239340",
+          178
+        ],
+        [
+          "C0126174",
+          175
+        ],
+        [
+          "C0986198",
+          172
+        ],
+        [
+          "C0017887",
+          171
+        ],
+        [
+          "C0986199",
+          168
+        ]
+      ],
+      "unobserved_but_reachable": 825,
+      "unobserved_unreachable": 366
+    },
+    "hypertension": {
+      "cohort": {
+        "median_enrichment": 2.0,
+        "nonspecific_flag_count": 9,
+        "nonspecific_flags": [
+          "C0008031",
+          "C0013404",
+          "C0018681",
+          "C0030252",
+          "C0012833",
+          "C0220870",
+          "C0012798",
+          "C0016382",
+          "C2741598"
+        ],
+        "observed_in_positive": 288,
+        "positive_notes": 940,
+        "positive_notes_with_any": 940,
+        "positive_notes_with_any_share": 1.0
+      },
+      "declared": 3167,
+      "head_cuis_for_90pct_of_mentions": 75,
+      "mentions": 19841,
+      "near_miss": {
+        "adjudicated_kept": 55,
+        "candidate_pool": 854,
+        "captured_mention_share": 0.0207,
+        "captured_mentions": 429,
+        "identity_mentions": 4081,
+        "near_miss_mentions": 20700,
+        "notes_with_captured_near_miss": 235,
+        "notes_with_identity_mention": 805,
+        "notes_with_near_miss": 940,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 825,
+        "notes_with_recovered_evidence_share": 0.8777,
+        "scope": "label_positive_cohort",
+        "scope_notes": 940
+      },
+      "notes_with_any": 1352,
+      "notes_with_any_share": 0.9741,
+      "observed": 302,
+      "observed_despite_unreachable_name": 40,
+      "observed_share": 0.0954,
+      "reachable": 2202,
+      "top_cuis": [
+        [
+          "C0020538",
+          2977
+        ],
+        [
+          "C0013404",
+          1872
+        ],
+        [
+          "C0008031",
+          1587
+        ],
+        [
+          "C0025859",
+          970
+        ],
+        [
+          "C0699992",
+          788
+        ],
+        [
+          "C0018681",
+          758
+        ],
+        [
+          "C0005824",
+          563
+        ],
+        [
+          "C0065374",
+          527
+        ],
+        [
+          "C0076840",
+          420
+        ],
+        [
+          "C0030252",
+          397
+        ],
+        [
+          "C0012833",
+          337
+        ],
+        [
+          "C0051696",
+          300
+        ],
+        [
+          "C0220870",
+          299
+        ],
+        [
+          "C0012798",
+          269
+        ],
+        [
+          "C0022860",
+          240
+        ],
+        [
+          "C0016382",
+          222
+        ],
+        [
+          "C0009014",
+          210
+        ],
+        [
+          "C1124796",
+          207
+        ],
+        [
+          "C0016860",
+          195
+        ],
+        [
+          "C1124794",
+          182
+        ]
+      ],
+      "unobserved_but_reachable": 1940,
+      "unobserved_unreachable": 925
+    },
+    "metastatic_cancer": {
+      "cohort": {
+        "median_enrichment": 19.61,
+        "nonspecific_flag_count": 8,
+        "nonspecific_flags": [
+          "C0027627",
+          "C0013404",
+          "C0032952",
+          "C0028081",
+          "C0025677",
+          "C1533720",
+          "C0000731",
+          "C0993472"
+        ],
+        "observed_in_positive": 137,
+        "positive_notes": 168,
+        "positive_notes_with_any": 166,
+        "positive_notes_with_any_share": 0.9881
+      },
+      "declared": 2292,
+      "head_cuis_for_90pct_of_mentions": 39,
+      "mentions": 9759,
+      "near_miss": {
+        "adjudicated_kept": 36,
+        "candidate_pool": 1417,
+        "captured_mention_share": 0.136,
+        "captured_mentions": 940,
+        "identity_mentions": 198,
+        "near_miss_mentions": 6914,
+        "notes_with_captured_near_miss": 160,
+        "notes_with_identity_mention": 57,
+        "notes_with_near_miss": 168,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 162,
+        "notes_with_recovered_evidence_share": 0.9643,
+        "scope": "label_positive_cohort",
+        "scope_notes": 168
+      },
+      "notes_with_any": 1271,
+      "notes_with_any_share": 0.9157,
+      "observed": 179,
+      "observed_despite_unreachable_name": 19,
+      "observed_share": 0.0781,
+      "reachable": 1931,
+      "top_cuis": [
+        [
+          "C0013404",
+          1872
+        ],
+        [
+          "C0027627",
+          1847
+        ],
+        [
+          "C0032952",
+          932
+        ],
+        [
+          "C0006826",
+          726
+        ],
+        [
+          "C0003962",
+          469
+        ],
+        [
+          "C1522449",
+          362
+        ],
+        [
+          "C0025677",
+          360
+        ],
+        [
+          "C0028081",
+          229
+        ],
+        [
+          "C1533720",
+          201
+        ],
+        [
+          "C0019079",
+          140
+        ],
+        [
+          "C0012203",
+          132
+        ],
+        [
+          "C0993472",
+          131
+        ],
+        [
+          "C0032743",
+          109
+        ],
+        [
+          "C0000731",
+          97
+        ],
+        [
+          "C0010583",
+          83
+        ],
+        [
+          "C0079083",
+          82
+        ],
+        [
+          "C0016663",
+          82
+        ],
+        [
+          "C0005954",
+          80
+        ],
+        [
+          "C0008838",
+          76
+        ],
+        [
+          "C0989247",
+          69
+        ]
+      ],
+      "unobserved_but_reachable": 1771,
+      "unobserved_unreachable": 342
+    },
+    "obesity": {
+      "cohort": {
+        "median_enrichment": 3.84,
+        "nonspecific_flag_count": 3,
+        "nonspecific_flags": [
+          "C0723443",
+          "C0025611",
+          "C0231807"
+        ],
+        "observed_in_positive": 22,
+        "positive_notes": 286,
+        "positive_notes_with_any": 285,
+        "positive_notes_with_any_share": 0.9965
+      },
+      "declared": 860,
+      "head_cuis_for_90pct_of_mentions": 6,
+      "mentions": 3403,
+      "near_miss": {
+        "adjudicated_kept": 21,
+        "candidate_pool": 269,
+        "captured_mention_share": 0.0071,
+        "captured_mentions": 42,
+        "identity_mentions": 431,
+        "near_miss_mentions": 5888,
+        "notes_with_captured_near_miss": 18,
+        "notes_with_identity_mention": 254,
+        "notes_with_near_miss": 286,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 255,
+        "notes_with_recovered_evidence_share": 0.8916,
+        "scope": "label_positive_cohort",
+        "scope_notes": 286
+      },
+      "notes_with_any": 1258,
+      "notes_with_any_share": 0.9063,
+      "observed": 25,
+      "observed_despite_unreachable_name": 7,
+      "observed_share": 0.0291,
+      "reachable": 362,
+      "top_cuis": [
+        [
+          "C0723443",
+          1826
+        ],
+        [
+          "C0028754",
+          607
+        ],
+        [
+          "C0520679",
+          314
+        ],
+        [
+          "C0025611",
+          150
+        ],
+        [
+          "C0028756",
+          110
+        ],
+        [
+          "C0231807",
+          104
+        ],
+        [
+          "C0024031",
+          55
+        ],
+        [
+          "C3241937",
+          49
+        ],
+        [
+          "C0231749",
+          46
+        ],
+        [
+          "C0017125",
+          37
+        ],
+        [
+          "C0043094",
+          22
+        ],
+        [
+          "C0033845",
+          14
+        ],
+        [
+          "C1588638",
+          14
+        ],
+        [
+          "C1456587",
+          14
+        ],
+        [
+          "C0031880",
+          7
+        ],
+        [
+          "C0400966",
+          6
+        ],
+        [
+          "C0021807",
+          6
+        ],
+        [
+          "C1960816",
+          5
+        ],
+        [
+          "C5575066",
+          5
+        ],
+        [
+          "C0020505",
+          3
+        ]
+      ],
+      "unobserved_but_reachable": 344,
+      "unobserved_unreachable": 491
+    },
+    "pulmonary_embolism": {
+      "cohort": {
+        "median_enrichment": 1.65,
+        "nonspecific_flag_count": 14,
+        "nonspecific_flags": [
+          "C0043144",
+          "C0008031",
+          "C0013404",
+          "C0034642",
+          "C0010200",
+          "C0425687",
+          "C0010520",
+          "C0039231",
+          "C0039070",
+          "C0430462",
+          "C0020649",
+          "C0019079",
+          "C0042373",
+          "C0238844"
+        ],
+        "observed_in_positive": 58,
+        "positive_notes": 340,
+        "positive_notes_with_any": 339,
+        "positive_notes_with_any_share": 0.9971
+      },
+      "declared": 518,
+      "head_cuis_for_90pct_of_mentions": 19,
+      "mentions": 14508,
+      "near_miss": {
+        "adjudicated_kept": 36,
+        "candidate_pool": 684,
+        "captured_mention_share": 0.02,
+        "captured_mentions": 207,
+        "identity_mentions": 885,
+        "near_miss_mentions": 10349,
+        "notes_with_captured_near_miss": 113,
+        "notes_with_identity_mention": 237,
+        "notes_with_near_miss": 340,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 260,
+        "notes_with_recovered_evidence_share": 0.7647,
+        "scope": "label_positive_cohort",
+        "scope_notes": 340
+      },
+      "notes_with_any": 1337,
+      "notes_with_any_share": 0.9633,
+      "observed": 65,
+      "observed_despite_unreachable_name": 6,
+      "observed_share": 0.1255,
+      "reachable": 324,
+      "top_cuis": [
+        [
+          "C0013404",
+          1872
+        ],
+        [
+          "C0008031",
+          1587
+        ],
+        [
+          "C0043144",
+          1467
+        ],
+        [
+          "C0010200",
+          1257
+        ],
+        [
+          "C0034642",
+          1006
+        ],
+        [
+          "C0043031",
+          861
+        ],
+        [
+          "C0699129",
+          839
+        ],
+        [
+          "C0019134",
+          501
+        ],
+        [
+          "C0425687",
+          474
+        ],
+        [
+          "C0010520",
+          471
+        ],
+        [
+          "C0039231",
+          455
+        ],
+        [
+          "C0020649",
+          440
+        ],
+        [
+          "C0728963",
+          372
+        ],
+        [
+          "C0430462",
+          343
+        ],
+        [
+          "C0039070",
+          333
+        ],
+        [
+          "C0242184",
+          256
+        ],
+        [
+          "C0013922",
+          231
+        ],
+        [
+          "C0206460",
+          211
+        ],
+        [
+          "C0019079",
+          140
+        ],
+        [
+          "C1831808",
+          108
+        ]
+      ],
+      "unobserved_but_reachable": 265,
+      "unobserved_unreachable": 188
+    },
+    "rheumatoid_arthritis": {
+      "cohort": {
+        "median_enrichment": 2.47,
+        "nonspecific_flag_count": 5,
+        "nonspecific_flags": [
+          "C0004057",
+          "C0983882",
+          "C0015672",
+          "C0003862",
+          "C0020740"
+        ],
+        "observed_in_positive": 127,
+        "positive_notes": 164,
+        "positive_notes_with_any": 163,
+        "positive_notes_with_any_share": 0.9939
+      },
+      "declared": 3044,
+      "head_cuis_for_90pct_of_mentions": 50,
+      "mentions": 7514,
+      "near_miss": {
+        "adjudicated_kept": 92,
+        "candidate_pool": 1010,
+        "captured_mention_share": 0.0048,
+        "captured_mentions": 9,
+        "identity_mentions": 559,
+        "near_miss_mentions": 1885,
+        "notes_with_captured_near_miss": 7,
+        "notes_with_identity_mention": 146,
+        "notes_with_near_miss": 162,
+        "notes_with_near_miss_share": 0.9878,
+        "notes_with_recovered_evidence": 146,
+        "notes_with_recovered_evidence_share": 0.8902,
+        "scope": "label_positive_cohort",
+        "scope_notes": 164
+      },
+      "notes_with_any": 1241,
+      "notes_with_any_share": 0.8941,
+      "observed": 209,
+      "observed_despite_unreachable_name": 17,
+      "observed_share": 0.0687,
+      "reachable": 1912,
+      "top_cuis": [
+        [
+          "C0004057",
+          960
+        ],
+        [
+          "C0032952",
+          932
+        ],
+        [
+          "C0983882",
+          844
+        ],
+        [
+          "C0015672",
+          483
+        ],
+        [
+          "C0025677",
+          360
+        ],
+        [
+          "C0003873",
+          261
+        ],
+        [
+          "C0003862",
+          246
+        ],
+        [
+          "C1533720",
+          201
+        ],
+        [
+          "C0992015",
+          179
+        ],
+        [
+          "C0010592",
+          157
+        ],
+        [
+          "C0020740",
+          144
+        ],
+        [
+          "C1101725",
+          134
+        ],
+        [
+          "C0993472",
+          131
+        ],
+        [
+          "C0020336",
+          128
+        ],
+        [
+          "C0011777",
+          119
+        ],
+        [
+          "C0393022",
+          89
+        ],
+        [
+          "C0086511",
+          85
+        ],
+        [
+          "C2912166",
+          84
+        ],
+        [
+          "C0699203",
+          72
+        ],
+        [
+          "C0989247",
+          69
+        ]
+      ],
+      "unobserved_but_reachable": 1720,
+      "unobserved_unreachable": 1115
+    },
+    "systemic_lupus_erythematosus": {
+      "cohort": {
+        "median_enrichment": 3.73,
+        "nonspecific_flag_count": 4,
+        "nonspecific_flags": [
+          "C0015967",
+          "C0232267",
+          "C0015672",
+          "C0023530"
+        ],
+        "observed_in_positive": 76,
+        "positive_notes": 113,
+        "positive_notes_with_any": 113,
+        "positive_notes_with_any_share": 1.0
+      },
+      "declared": 1023,
+      "head_cuis_for_90pct_of_mentions": 26,
+      "mentions": 8998,
+      "near_miss": {
+        "adjudicated_kept": 45,
+        "candidate_pool": 547,
+        "captured_mention_share": 0.035,
+        "captured_mentions": 100,
+        "identity_mentions": 275,
+        "near_miss_mentions": 2861,
+        "notes_with_captured_near_miss": 49,
+        "notes_with_identity_mention": 93,
+        "notes_with_near_miss": 113,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 104,
+        "notes_with_recovered_evidence_share": 0.9204,
+        "scope": "label_positive_cohort",
+        "scope_notes": 113
+      },
+      "notes_with_any": 1317,
+      "notes_with_any_share": 0.9488,
+      "observed": 112,
+      "observed_despite_unreachable_name": 12,
+      "observed_share": 0.1095,
+      "reachable": 588,
+      "top_cuis": [
+        [
+          "C0015967",
+          2609
+        ],
+        [
+          "C0032952",
+          932
+        ],
+        [
+          "C0036572",
+          860
+        ],
+        [
+          "C0232267",
+          583
+        ],
+        [
+          "C0015672",
+          483
+        ],
+        [
+          "C0031039",
+          293
+        ],
+        [
+          "C0040034",
+          252
+        ],
+        [
+          "C0003862",
+          246
+        ],
+        [
+          "C0231528",
+          236
+        ],
+        [
+          "C1533720",
+          201
+        ],
+        [
+          "C0023530",
+          159
+        ],
+        [
+          "C0010592",
+          157
+        ],
+        [
+          "C0993472",
+          131
+        ],
+        [
+          "C0020336",
+          128
+        ],
+        [
+          "C0011777",
+          119
+        ],
+        [
+          "C2912166",
+          84
+        ],
+        [
+          "C0024143",
+          83
+        ],
+        [
+          "C0010583",
+          83
+        ],
+        [
+          "C0031046",
+          72
+        ],
+        [
+          "C0989247",
+          69
+        ]
+      ],
+      "unobserved_but_reachable": 488,
+      "unobserved_unreachable": 423
+    },
+    "type_1_diabetes": {
+      "cohort": {
+        "median_enrichment": 3.07,
+        "nonspecific_flag_count": 7,
+        "nonspecific_flags": [
+          "C0027497",
+          "C0042963",
+          "C0004093",
+          "C0015672",
+          "C0009676",
+          "C0011175",
+          "C0023380"
+        ],
+        "observed_in_positive": 46,
+        "positive_notes": 135,
+        "positive_notes_with_any": 134,
+        "positive_notes_with_any_share": 0.9926
+      },
+      "declared": 415,
+      "head_cuis_for_90pct_of_mentions": 16,
+      "mentions": 10911,
+      "near_miss": {
+        "adjudicated_kept": 43,
+        "candidate_pool": 548,
+        "captured_mention_share": 0.3064,
+        "captured_mentions": 1114,
+        "identity_mentions": 381,
+        "near_miss_mentions": 3636,
+        "notes_with_captured_near_miss": 118,
+        "notes_with_identity_mention": 100,
+        "notes_with_near_miss": 135,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 125,
+        "notes_with_recovered_evidence_share": 0.9259,
+        "scope": "label_positive_cohort",
+        "scope_notes": 135
+      },
+      "notes_with_any": 1237,
+      "notes_with_any_share": 0.8912,
+      "observed": 58,
+      "observed_despite_unreachable_name": 8,
+      "observed_share": 0.1398,
+      "reachable": 279,
+      "top_cuis": [
+        [
+          "C0027497",
+          2217
+        ],
+        [
+          "C0021641",
+          1674
+        ],
+        [
+          "C0042963",
+          1531
+        ],
+        [
+          "C0004093",
+          633
+        ],
+        [
+          "C0009676",
+          582
+        ],
+        [
+          "C0907402",
+          546
+        ],
+        [
+          "C0015672",
+          483
+        ],
+        [
+          "C0528249",
+          415
+        ],
+        [
+          "C0876064",
+          342
+        ],
+        [
+          "C0020456",
+          241
+        ],
+        [
+          "C0011175",
+          241
+        ],
+        [
+          "C0011880",
+          238
+        ],
+        [
+          "C0020615",
+          210
+        ],
+        [
+          "C0011854",
+          169
+        ],
+        [
+          "C0023380",
+          159
+        ],
+        [
+          "C0392201",
+          150
+        ],
+        [
+          "C0293359",
+          133
+        ],
+        [
+          "C5979904",
+          119
+        ],
+        [
+          "C0020651",
+          110
+        ],
+        [
+          "C0474680",
+          88
+        ]
+      ],
+      "unobserved_but_reachable": 229,
+      "unobserved_unreachable": 128
+    },
+    "type_2_diabetes": {
+      "cohort": {
+        "median_enrichment": 7.58,
+        "nonspecific_flag_count": 3,
+        "nonspecific_flags": [
+          "C0015672",
+          "C0033774",
+          "C0030554"
+        ],
+        "observed_in_positive": 89,
+        "positive_notes": 393,
+        "positive_notes_with_any": 387,
+        "positive_notes_with_any_share": 0.9847
+      },
+      "declared": 890,
+      "head_cuis_for_90pct_of_mentions": 19,
+      "mentions": 7236,
+      "near_miss": {
+        "adjudicated_kept": 79,
+        "candidate_pool": 365,
+        "captured_mention_share": 0.1578,
+        "captured_mentions": 1718,
+        "identity_mentions": 795,
+        "near_miss_mentions": 10890,
+        "notes_with_captured_near_miss": 330,
+        "notes_with_identity_mention": 245,
+        "notes_with_near_miss": 393,
+        "notes_with_near_miss_share": 1.0,
+        "notes_with_recovered_evidence": 361,
+        "notes_with_recovered_evidence_share": 0.9186,
+        "scope": "label_positive_cohort",
+        "scope_notes": 393
+      },
+      "notes_with_any": 982,
+      "notes_with_any_share": 0.7075,
+      "observed": 101,
+      "observed_despite_unreachable_name": 8,
+      "observed_share": 0.1135,
+      "reachable": 702,
+      "top_cuis": [
+        [
+          "C0021641",
+          1674
+        ],
+        [
+          "C0011847",
+          931
+        ],
+        [
+          "C0907402",
+          546
+        ],
+        [
+          "C0015672",
+          483
+        ],
+        [
+          "C0528249",
+          415
+        ],
+        [
+          "C0876064",
+          342
+        ],
+        [
+          "C0025598",
+          268
+        ],
+        [
+          "C0033774",
+          266
+        ],
+        [
+          "C0011860",
+          265
+        ],
+        [
+          "C0020456",
+          241
+        ],
+        [
+          "C0011880",
+          238
+        ],
+        [
+          "C0030554",
+          154
+        ],
+        [
+          "C0293359",
+          133
+        ],
+        [
+          "C0591573",
+          124
+        ],
+        [
+          "C5979904",
+          119
+        ],
+        [
+          "C0262655",
+          93
+        ],
+        [
+          "C0474680",
+          88
+        ],
+        [
+          "C0939412",
+          79
+        ],
+        [
+          "C0344232",
+          72
+        ],
+        [
+          "C4553159",
+          59
+        ]
+      ],
+      "unobserved_but_reachable": 609,
+      "unobserved_unreachable": 180
+    }
+  },
+  "question": "how many of each phenotype's declared concepts occur anywhere in the MIPA corpus, and how concentrated is the evidence?"
+}

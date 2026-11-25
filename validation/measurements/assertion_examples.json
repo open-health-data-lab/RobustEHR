@@ -1,0 +1,188 @@
+{
+  "arms": {
+    "extended": "the same engine plus resources/assertion_extensions.yaml",
+    "stock": "medspaCy ConText, 102 English rules as distributed"
+  },
+  "corpus": "tests/fixtures/clinical \u2014 synthetic, describes no real patient. The MIMIC gold is the larger instrument but its text is held under the PhysioNet DUA and cannot be quoted, so worked examples come from the fixtures by necessity, not by preference.",
+  "dimensions": [
+    "negated",
+    "historical",
+    "family",
+    "uncertain"
+  ],
+  "n_rows": 8,
+  "question": "What does one span of the assertion task actually look like?",
+  "rows": [
+    {
+      "extended": [
+        "negated"
+      ],
+      "extended_correct": true,
+      "extended_cues": [
+        "DENIES"
+      ],
+      "fixture": "allcaps_legacy",
+      "gold": [
+        "negated"
+      ],
+      "sentence": "DENIES FEVER OR VOMITING",
+      "span": "FEVER",
+      "stock": [
+        "negated"
+      ],
+      "stock_correct": true,
+      "stock_cues": [
+        "DENIES"
+      ],
+      "why_selected": "negation in an all-caps legacy note"
+    },
+    {
+      "extended": [
+        "affirmed"
+      ],
+      "extended_correct": false,
+      "extended_cues": [],
+      "fixture": "allcaps_legacy",
+      "gold": [
+        "historical"
+      ],
+      "sentence": "ALCOHOL ABUSE, HYPERTENSION, GERD",
+      "span": "HYPERTENSION",
+      "stock": [
+        "affirmed"
+      ],
+      "stock_correct": false,
+      "stock_cues": [],
+      "why_selected": "historical by section membership, not by cue"
+    },
+    {
+      "extended": [
+        "historical"
+      ],
+      "extended_correct": true,
+      "extended_cues": [
+        "history"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [
+        "historical"
+      ],
+      "sentence": "history of ischemic cardiomyopathy comma status post anterior myocardial",
+      "span": "ischemic cardiomyopathy",
+      "stock": [
+        "historical"
+      ],
+      "stock_correct": true,
+      "stock_cues": [
+        "history"
+      ],
+      "why_selected": "historical framing of a still-active condition"
+    },
+    {
+      "extended": [
+        "negated"
+      ],
+      "extended_correct": true,
+      "extended_cues": [
+        "but",
+        "no"
+      ],
+      "fixture": "cardiology_dictated",
+      "gold": [
+        "negated"
+      ],
+      "sentence": "on climbing one flight of stairs but no orthopnea or paroxysmal nocturnal",
+      "span": "orthopnea",
+      "stock": [
+        "negated"
+      ],
+      "stock_correct": true,
+      "stock_cues": [
+        "but",
+        "no"
+      ],
+      "why_selected": "textbook negation, both arms correct"
+    },
+    {
+      "extended": [
+        "affirmed"
+      ],
+      "extended_correct": false,
+      "extended_cues": [],
+      "fixture": "cardiology_dictated",
+      "gold": [
+        "uncertain"
+      ],
+      "sentence": "period Plan comma continue current medications comma repeat echocardiogram",
+      "span": "echocardiogram",
+      "stock": [
+        "affirmed"
+      ],
+      "stock_correct": false,
+      "stock_cues": [],
+      "why_selected": "conditional future plan \u2014 folded into uncertain"
+    },
+    {
+      "extended": [
+        "affirmed"
+      ],
+      "extended_correct": false,
+      "extended_cues": [],
+      "fixture": "epic_progress",
+      "gold": [
+        "uncertain"
+      ],
+      "sentence": "#Dispo: Anticipate discharge tomorrow pending clinical stability",
+      "span": "discharge",
+      "stock": [
+        "affirmed"
+      ],
+      "stock_correct": false,
+      "stock_cues": [],
+      "why_selected": "hedged discharge planning"
+    },
+    {
+      "extended": [
+        "affirmed"
+      ],
+      "extended_correct": false,
+      "extended_cues": [],
+      "fixture": "family_med_freetext",
+      "gold": [
+        "uncertain"
+      ],
+      "sentence": "Also breifly discussed shingles vaccine, pt will think about it",
+      "span": "shingles vaccine",
+      "stock": [
+        "affirmed"
+      ],
+      "stock_correct": false,
+      "stock_cues": [],
+      "why_selected": "as-needed / contingent order"
+    },
+    {
+      "extended": [
+        "family"
+      ],
+      "extended_correct": true,
+      "extended_cues": [
+        "children"
+      ],
+      "fixture": "pediatric_admission",
+      "gold": [
+        "family"
+      ],
+      "sentence": "Attends daycare where several children have been unwell",
+      "span": "unwell",
+      "stock": [
+        "family"
+      ],
+      "stock_correct": true,
+      "stock_cues": [
+        "children"
+      ],
+      "why_selected": "finding belonging to someone who is not the patient"
+    }
+  ],
+  "why": "A per-dimension F1 says how often the detector is right; it does not say what being right consists of. These rows show the unit of annotation \u2014 a span, its sentence, the label, and the cue each arm fired on \u2014 so a reader can judge the task before judging the score."
+}

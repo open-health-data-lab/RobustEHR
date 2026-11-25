@@ -1,0 +1,76 @@
+{
+  "attributes": {
+    "negated": {
+      "ctx_a_pyrush": {
+        "accuracy": 0.9596,
+        "f1": 0.6091,
+        "fn": 277,
+        "fp": 361,
+        "majority_class_accuracy": 0.951,
+        "precision": 0.5793,
+        "prevalence": 0.049,
+        "recall": 0.6421,
+        "tn": 14666,
+        "tokens": 15801,
+        "tp": 497
+      },
+      "ctx_b_our_boundaries": {
+        "accuracy": 0.9598,
+        "f1": 0.6111,
+        "fn": 275,
+        "fp": 360,
+        "majority_class_accuracy": 0.951,
+        "precision": 0.5809,
+        "prevalence": 0.049,
+        "recall": 0.6447,
+        "tn": 14667,
+        "tokens": 15801,
+        "tp": 499
+      }
+    },
+    "uncertain": {
+      "ctx_a_pyrush": {
+        "accuracy": 0.8951,
+        "f1": 0.2511,
+        "fn": 1611,
+        "fp": 47,
+        "majority_class_accuracy": 0.8805,
+        "precision": 0.8554,
+        "prevalence": 0.1195,
+        "recall": 0.1472,
+        "tn": 13865,
+        "tokens": 15801,
+        "tp": 278
+      },
+      "ctx_b_our_boundaries": {
+        "accuracy": 0.8951,
+        "f1": 0.2511,
+        "fn": 1611,
+        "fp": 47,
+        "majority_class_accuracy": 0.8805,
+        "precision": 0.8554,
+        "prevalence": 0.1195,
+        "recall": 0.1472,
+        "tn": 13865,
+        "tokens": 15801,
+        "tp": 278
+      }
+    }
+  },
+  "domain_caveat": "**OUT OF DOMAIN.** These are biomedical abstracts, not clinical notes, and ConText's rules are clinical rules. BioScope's clinical subcorpus is de-worded (every token is '*', 0 letters against 42,514 asterisks) and needs the 2007 CMC text to reconstitute, which this project does not have. Negation is scored on the same sentences so the genre shift is held constant: compare negation here against 0.9289 on the NegEx clinical gold to price the domain shift, then compare uncertainty against negation here to isolate the dimension.",
+  "domain_shift_on_negation": {
+    "bioscope_abstracts_f1": 0.6111,
+    "delta": -0.3178,
+    "how_to_read": "this is the same engine and the same attribute on a different genre, so the drop is the price of the domain shift and not a property of the rules. It is the yardstick the uncertainty number must be read against.",
+    "negex_clinical_f1": 0.9289
+  },
+  "gold": {
+    "corpus": "BioScope (Vincze et al.), abstracts subcorpus",
+    "licence": "none upstream; handled like MIMIC, see data/bioscope/manifest.json",
+    "sentences": 900,
+    "unit": "token-in-scope \u2014 every content token is a span, its gold label is whether it falls inside an annotated scope"
+  },
+  "how_to_read": "read uncertainty beside negation *in this table*, never beside the NegEx figure. If uncertainty is far below negation here, the 18 speculation rules are thin on their own terms. If the two are close, the limiting factor is the genre and the honest conclusion is that no in-domain uncertainty gold exists to settle it.",
+  "question": "Is stage 8 right about uncertainty, not only negation?",
+  "why": "assertion_accuracy.json validates one of five attributes because the NegEx gold labels only Affirmed/Negated. The other four ship disclosed and unvalidated; this closes one of them."
+}

@@ -1,0 +1,112 @@
+# Cue rewrites for the SEMANTIC operator channel.
+#
+# Each SEMANTIC operator flips one assertion dimension by rewriting the **cue**
+# that carries it, never the clinical mention. `denies chest pain` becomes
+# `reports chest pain`: the finding is untouched and the note's claim about it
+# is reversed, which is the perturbation the channel exists to apply.
+#
+# Keyed by the cue's surface form, lowercased, because that is what appears in
+# the note. `_default` applies when a cue has no entry, and deleting the cue is
+# the safe default: removing `denies` still flips the assertion, it just reads
+# less naturally than substituting a counterpart.
+#
+# Two rules govern what may go in here:
+#
+#   * **Never fabricate a fact.** Replacements are grammatical function words and
+#     generic referents. `mother` becomes `patient`, never a name — an operator
+#     that invented PHI-shaped text inside a clinical note would be a
+#     redistribution channel wearing an edit script's clothes.
+#   * **Never touch the mention.** Every replacement is confined to the cue span
+#     ConText reported, so each offset in the edited note still maps to the note
+#     as written.
+#
+# The file's SHA-256 folds into each operator's effective version, so changing a
+# replacement changes the operator version and every run that used it stays
+# attributable.
+
+schema_version: '1.0'
+
+# NEGATED_EXISTENCE -> affirmed
+negated:
+  deny: report
+  denies: reports
+  denied: reported
+  denying: reporting
+  no: ''
+  not: ''
+  none: ''
+  without: with
+  absent: present
+  negative: positive
+  "negative for": positive for
+  "no evidence of": evidence of
+  "no evidence": evidence
+  "free of": positive for
+  "ruled out": confirmed
+  "rule out": confirm
+  "resolved": ongoing
+  "lack of": presence of
+  "absence of": presence of
+  "unremarkable for": remarkable for
+  _default: ''
+
+# POSSIBLE_EXISTENCE -> definite
+uncertain:
+  possible: definite
+  possibly: definitely
+  probable: definite
+  probably: definitely
+  likely: definite
+  "may be": is
+  "might be": is
+  "could be": is
+  "suspicious for": diagnostic of
+  "concerning for": diagnostic of
+  "concerned about": certain of
+  "questionable": definite
+  "versus": 'and'
+  "cannot be excluded": is present
+  "cannot exclude": confirm
+  # folded in from HYPOTHETICAL: a condition and a hedge are one
+  # dimension here, so their rewrites share a table.
+  if: 'since'
+  "as needed": scheduled
+  prn: scheduled
+  "should he": 'he'
+  "should she": 'she'
+  "should the patient": 'the patient'
+  "should there": 'there'
+  "risks of": 'complications of'
+  "come back for": 'admitted for'
+  return: 'presented'
+  _default: ''
+
+# HISTORICAL -> current
+#
+# `history` becomes `new onset` rather than being deleted, because the cue span
+# ConText reports is the bare word: deleting it from `History of hypertension`
+# leaves `of hypertension`. Substituting keeps the sentence grammatical while
+# still moving the mention from past to present, which is the flip.
+historical:
+  history: new onset
+  "h/o": new
+  hx: new
+  hist: new
+  ho: new
+  "past history": current
+  "past medical history": current problem
+  "history of": new onset of
+  "status post": acute
+  _default: current
+
+# FAMILY -> patient
+#
+# The replacement is `patient` for every kinship term, which is the flip: a
+# finding attributed to a relative becomes the patient's own. No name is ever
+# introduced.
+family:
+  # `Family history of X` -> `Patient's history of X`: possessive, because the
+  # bare substitution gives `The patient history of X`.
+  family: patient's
+  fam: patient's
+  _default: the patient

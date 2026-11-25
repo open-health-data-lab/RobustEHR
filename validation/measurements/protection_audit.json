@@ -1,0 +1,65 @@
+{
+  "deid_and_dividers": {
+    "by_length_and_class": {
+      "short (placeholder-shaped) -> deid_placeholder": 974,
+      "short (placeholder-shaped) -> deid_placeholder+lab_block": 208,
+      "short (placeholder-shaped) -> deid_placeholder+section_header": 21
+    },
+    "completely_unprotected": 0,
+    "coverage": 1.0,
+    "ground_truth": "every run of 2+ underscores in the raw text, enumerated independently of the registry",
+    "runs_found": 1203,
+    "scheme_specific": "MIMIC-IV writes de-identification as underscore runs. A corpus using [**Name**] or <REDACTED> needs its own DeidScheme and this number does not transfer to it."
+  },
+  "hard_protection_safety": {
+    "detail": [],
+    "edits_applied": 47827,
+    "edits_touching_a_hard_span": 3091,
+    "note": "edits_touching_a_hard_span is expected to be large and is not an error. It counts legitimate whole replacements \u2014 sentence deletion and de-id restyling \u2014 which the class permits to operators that declare it.",
+    "operators_exercised": 20,
+    "property": "an applied edit may contain a HARD span whole if the operator declares its class; it may never cut one, and may never touch one it has not declared",
+    "violations": 0,
+    "violations_partial": 0,
+    "violations_undeclared": 0
+  },
+  "n_notes": 15,
+  "numeric_value": {
+    "ground_truth": "a token either contains a digit or does not",
+    "marked_without_a_digit": 0,
+    "precision": 1.0,
+    "pure_number_tokens": 3773,
+    "pure_number_tokens_unmarked": 0,
+    "recall_on_pure_numbers": 1.0,
+    "spans_marked": 3773
+  },
+  "prevalence": {
+    "deid_placeholder (HARD)": 1203,
+    "dosage (SOFT)": 1009,
+    "lab_block (SOFT)": 162,
+    "list_marker (SOFT)": 1135,
+    "numeric_value (SOFT)": 3773,
+    "section_header (SOFT)": 770
+  },
+  "question": "Does the protection registry identify its classes correctly?",
+  "section_header": {
+    "by_confidence": {
+      "lexicon": 670,
+      "strong_heuristic": 77,
+      "weak_heuristic": 23
+    },
+    "canonical_share": 0.8701,
+    "ground_truth": "NONE. There is no external header gold, so this is a disclosure rather than a score: how many headers matched the shipped lexicon and how many were guessed.",
+    "headers": 770,
+    "with_a_canonical_id": 670
+  },
+  "unvalidated_classes": {
+    "classes": [
+      "lab_block",
+      "dosage",
+      "list_marker"
+    ],
+    "why": "layout judgements with no external reference corpus. Their counts are reported above; their accuracy is not established, and a robustness result that leaned on them would be resting on an unmeasured component."
+  },
+  "what_can_and_cannot_be_validated": "deid/divider and numeric have a ground truth derivable WITHOUT the registry, so those are measurements. section_header has no external gold and is disclosed by confidence mix. lab_block, dosage and list_marker are layout judgements with no reference and are reported as counts only. Scoring them against themselves would be the failure this file exists to avoid.",
+  "why": "the registry sets the gap between total_n and eligible_n, so it silently defines every dose denominator; and DEID_PLACEHOLDER is HARD, so under-firing lets an operator corrupt a de-identification marker. Seven producers existed with nothing scoring any of them."
+}

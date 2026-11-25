@@ -1,0 +1,179 @@
+{
+  "coverage": 0.6569,
+  "covered_by_prior": 3146,
+  "forms_fitted": 126,
+  "headroom_reachable": 0.0629,
+  "headroom_split_note": "a form the gold assigns several concepts to while UMLS offers at most one is not a disambiguation problem \u2014 no policy over candidates can select a candidate that does not exist. Only headroom_reachable is available to stage 3c; headroom_unreachable belongs in the limitations section with the rest of the vocabulary gap.",
+  "headroom_total": 0.1008,
+  "headroom_unreachable": 0.0378,
+  "mfs_accuracy_on_covered": 0.8992,
+  "oracle_accuracy": 1.0,
+  "protocol": "majority sense fitted on the train split over forms with >= 20 occurrences, reported on the held-out test split. Ties break on concept id so the fit is reproducible.",
+  "question": "How much is left for contextual disambiguation once most-frequent sense has run?",
+  "scope": "free-prose abbreviation-shaped gold spans only. Structural slots are excluded (position already resolved them, stage 3a) as are general-English words (not abbreviations).",
+  "test_occurrences": 4789,
+  "unseen_in_train": 1643,
+  "why": "the budget for the whole rung. Anchor voting, cue authoring and abstention policy all compete for the gap between the free baseline and a perfect disambiguator. If the gap is small the correct decision is to ship the baseline and spend the effort elsewhere.",
+  "worst_forms": [
+    {
+      "headroom": 0.2774,
+      "mfs_accuracy": 0.7226,
+      "surface": "pain",
+      "test_n": 137,
+      "test_senses": 11,
+      "umls_candidates": 2
+    },
+    {
+      "headroom": 0.775,
+      "mfs_accuracy": 0.225,
+      "surface": "urine",
+      "test_n": 40,
+      "test_senses": 5,
+      "umls_candidates": 4
+    },
+    {
+      "headroom": 0.7812,
+      "mfs_accuracy": 0.2188,
+      "surface": "intact",
+      "test_n": 32,
+      "test_senses": 3,
+      "umls_candidates": 1
+    },
+    {
+      "headroom": 0.4667,
+      "mfs_accuracy": 0.5333,
+      "surface": "lad",
+      "test_n": 45,
+      "test_senses": 4,
+      "umls_candidates": 3
+    },
+    {
+      "headroom": 0.4595,
+      "mfs_accuracy": 0.5405,
+      "surface": "iv",
+      "test_n": 37,
+      "test_senses": 3,
+      "umls_candidates": 0
+    },
+    {
+      "headroom": 0.9412,
+      "mfs_accuracy": 0.0588,
+      "surface": "fluid",
+      "test_n": 17,
+      "test_senses": 5,
+      "umls_candidates": 1
+    },
+    {
+      "headroom": 0.619,
+      "mfs_accuracy": 0.381,
+      "surface": "neck",
+      "test_n": 21,
+      "test_senses": 4,
+      "umls_candidates": 4
+    },
+    {
+      "headroom": 0.75,
+      "mfs_accuracy": 0.25,
+      "surface": "skin",
+      "test_n": 16,
+      "test_senses": 2,
+      "umls_candidates": 4
+    },
+    {
+      "headroom": 0.6471,
+      "mfs_accuracy": 0.3529,
+      "surface": "liver",
+      "test_n": 17,
+      "test_senses": 6,
+      "umls_candidates": 9
+    },
+    {
+      "headroom": 0.4583,
+      "mfs_accuracy": 0.5417,
+      "surface": "mri",
+      "test_n": 24,
+      "test_senses": 6,
+      "umls_candidates": 2
+    },
+    {
+      "headroom": 0.1525,
+      "mfs_accuracy": 0.8475,
+      "surface": "stable",
+      "test_n": 59,
+      "test_senses": 3,
+      "umls_candidates": 1
+    },
+    {
+      "headroom": 0.2667,
+      "mfs_accuracy": 0.7333,
+      "surface": "wound",
+      "test_n": 30,
+      "test_senses": 6,
+      "umls_candidates": 5
+    },
+    {
+      "headroom": 0.6667,
+      "mfs_accuracy": 0.3333,
+      "surface": "esrd",
+      "test_n": 12,
+      "test_senses": 2,
+      "umls_candidates": 3
+    },
+    {
+      "headroom": 0.4,
+      "mfs_accuracy": 0.6,
+      "surface": "cta",
+      "test_n": 20,
+      "test_senses": 4,
+      "umls_candidates": 1
+    },
+    {
+      "headroom": 0.3333,
+      "mfs_accuracy": 0.6667,
+      "surface": "lungs",
+      "test_n": 24,
+      "test_senses": 2,
+      "umls_candidates": 1
+    },
+    {
+      "headroom": 0.1556,
+      "mfs_accuracy": 0.8444,
+      "surface": "mild",
+      "test_n": 45,
+      "test_senses": 3,
+      "umls_candidates": 1
+    },
+    {
+      "headroom": 0.2609,
+      "mfs_accuracy": 0.7391,
+      "surface": "chest",
+      "test_n": 23,
+      "test_senses": 4,
+      "umls_candidates": 3
+    },
+    {
+      "headroom": 0.2632,
+      "mfs_accuracy": 0.7368,
+      "surface": "exam",
+      "test_n": 19,
+      "test_senses": 5,
+      "umls_candidates": 1
+    },
+    {
+      "headroom": 0.2941,
+      "mfs_accuracy": 0.7059,
+      "surface": "obese",
+      "test_n": 17,
+      "test_senses": 2,
+      "umls_candidates": 1
+    },
+    {
+      "headroom": 0.3333,
+      "mfs_accuracy": 0.6667,
+      "surface": "nodule",
+      "test_n": 15,
+      "test_senses": 2,
+      "umls_candidates": 1
+    }
+  ]
+}

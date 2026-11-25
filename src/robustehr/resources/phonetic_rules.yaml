@@ -1,0 +1,121 @@
+# Generative rules for phonetically confusable clinical vocabulary.
+#
+# NOT a list of confusable word pairs. An enumeration covers only the words
+# somebody thought to write down — a few dozen — and cannot scale to the
+# clinical lexicon, to a new specialty, or to another language.
+#
+# The architecture is:
+#
+#     productive morphemes  x  a vocabulary  ->  confusion pairs
+#          (these rules)        (a lexicon)       (generated, thousands)
+#
+# One rule, `hyper <-> hypo`, generates hypertension/hypotension,
+# hyperkalemia/hypokalemia, hypernatremia/hyponatremia, hyperthyroidism/
+# hypothyroidism and every other member of the family, present and future. Swap
+# in a French clinical lexicon and French affix rules and the same machinery
+# generates French confusions.
+#
+# The generativity is clinically motivated, not merely convenient: clinical
+# vocabulary is morphologically compositional, and the morphemes carrying the
+# entire clinical meaning are precisely the ones that are acoustically
+# near-identical. That is *why* dictation confuses them.
+#
+# ---------------------------------------------------------------------------
+# `tier` decides when a rule may fire, and exists because a rule matching the
+# leading letters of a word does not mean the word contains that morpheme.
+# Measured over 100 development notes, an unguarded rule set produced
+# `discharge -> dyscharge`, `prednisone -> postdnisone` and
+# `diagnosis -> diagnitis` — none of which any speech recogniser would emit.
+#
+#   tier: intrinsic   The affix is unambiguously a clinical morpheme wherever
+#                     it appears. Safe with no vocabulary at all.
+#   tier: attested     The affix collides with ordinary English (`dis-`, `pre-`,
+#                     `ab-`). Fires only when a lexicon can confirm that both
+#                     the original and the substitute are real words. Without a
+#                     lexicon these are skipped, and the operator reports how
+#                     many were skipped rather than silently narrowing.
+#
+# The lexicon comes from the concept layer's UMLS build, or from the user. Its
+# absence reduces coverage; it never affects correctness.
+# ---------------------------------------------------------------------------
+#
+# `min_stem` guards against a rule firing on a word that merely starts with the
+# same letters: without it, `ab <-> ad` rewrites "about" to "adout".
+schema_version: "1.0"
+
+prefixes:
+  # Direction and magnitude. `hyper-`/`hypo-` on a clinical stem is never
+  # anything but the clinical morpheme, so no vocabulary is needed.
+  - {a: hyper, b: hypo, min_stem: 4, tier: intrinsic}
+  - {a: macro, b: micro, min_stem: 4, tier: intrinsic}
+  - {a: poly, b: oligo, min_stem: 4, tier: intrinsic}
+
+  # Spatial relations. Reversing one inverts the anatomical claim.
+  - {a: inter, b: intra, min_stem: 4, tier: attested}
+  - {a: sub, b: supra, min_stem: 5, tier: attested}
+  - {a: peri, b: para, min_stem: 5, tier: attested}
+  - {a: ab, b: ad, min_stem: 7, tier: attested}
+
+  # Time and sequence. `pre-` is ubiquitous in ordinary English.
+  - {a: pre, b: post, min_stem: 5, tier: attested}
+  - {a: ante, b: anti, min_stem: 5, tier: attested}
+
+  # Laterality.
+  - {a: hemi, b: semi, min_stem: 4, tier: attested}
+
+  # Anatomical stems differing by one vowel and naming different structures.
+  # `ile <-> ili` generates ileum/ilium, ileac/iliac, ileitis/iliitis.
+  - {a: ile, b: ili, min_stem: 2, tier: intrinsic}
+  - {a: myo, b: myelo, min_stem: 4, tier: intrinsic}
+
+  # Negation. `dis-` is one of the commonest English prefixes, so this is
+  # lexical: without a vocabulary it turns "discharge" into "dyscharge".
+  - {a: dys, b: dis, min_stem: 4, tier: attested}
+
+  # Deliberately absent, and worth recording why. `uret <-> ureth` is a single
+  # lexical confusion (ureter/urethra) rather than a productive morpheme, and
+  # encoding it as a rule generates non-words across the whole -uret- family.
+  # `an <-> en` is not a morpheme boundary at two letters. A rule earns its
+  # place by being productive; a word pair dressed up as one does not.
+
+suffixes:
+  # Site of a finding: blood versus urine is a different diagnosis.
+  - {a: emia, b: uria, min_stem: 4, tier: intrinsic}
+  - {a: aemia, b: uria, min_stem: 4, tier: intrinsic}
+
+  # Surgical procedure type: removal versus opening versus incision.
+  - {a: ectomy, b: ostomy, min_stem: 4, tier: intrinsic}
+  - {a: ostomy, b: otomy, min_stem: 4, tier: intrinsic}
+
+  # Growth abnormality versus surgical repair.
+  - {a: plasia, b: plasty, min_stem: 3, tier: intrinsic}
+
+  # Difficulty versus absence of speech or swallowing.
+  - {a: phagia, b: phasia, min_stem: 3, tier: intrinsic}
+
+  # Inflammatory versus degenerative. Lexical because `-osis` also ends
+  # ordinary words: unguarded it rewrites "diagnosis" to "diagnitis".
+  - {a: itis, b: osis, min_stem: 4, tier: attested}
+
+  # `plegia <-> paresis` is deliberately absent: the words are semantically
+  # related but not acoustically confusable, and the phonetic guard rejects it
+  # anyway. Listing it would imply a confusion that does not occur.
+
+# Spoken numbers. "-teen" and "-ty" differ by one unstressed syllable, the
+# commonest numeric dictation error and the one that moves an ejection fraction
+# or a BMI across a diagnostic threshold. A rule, not seven pairs; English
+# supplies one irregular stem.
+number_words:
+  teen_suffix: teen
+  ty_suffix: ty
+  irregular_stems:
+    four: for      # fourteen -> forty, not "fourty"
+  # The suffix alone is not enough: English is full of -ty words, and an
+  # unguarded rule turns "angioplasty" into "angioplasteen". This set is small
+  # and closed, so bounding it costs no generality.
+  stems: [thir, four, fif, six, seven, eigh, nine]
+
+# The written residue of the same mishearing: 15 recorded for 50. Generated
+# from the tens range rather than enumerated.
+digit_pairs:
+  teen_range: [13, 19]

@@ -1,0 +1,1133 @@
+{
+  "entries": [
+    {
+      "category_precision": {
+        "anatomy": 0.0835,
+        "disease": 0.1803,
+        "disorder": 0.1262,
+        "finding": 0.0648,
+        "procedure": 0.1118,
+        "symptom": 0.107
+      },
+      "category_recall": {
+        "anatomy": 0.4622,
+        "disease": 0.7844,
+        "disorder": 0.703,
+        "finding": 0.4138,
+        "procedure": 0.3053,
+        "symptom": 0.6855
+      },
+      "challenge_iou": 0.0546,
+      "config": {
+        "canon": "quickumls:jaccard:0.7:3:5:score",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "none",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": true,
+      "label": "baseline (defaults)",
+      "mean_category_recall": 0.559,
+      "note": "QuickUMLS defaults, all of UMLS",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1389
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0835,
+        "disease": 0.1803,
+        "disorder": 0.1262,
+        "finding": 0.0648,
+        "procedure": 0.1118,
+        "symptom": 0.107
+      },
+      "category_recall": {
+        "anatomy": 0.4622,
+        "disease": 0.7844,
+        "disorder": 0.703,
+        "finding": 0.4138,
+        "procedure": 0.3053,
+        "symptom": 0.6855
+      },
+      "challenge_iou": 0.0671,
+      "config": {
+        "canon": "quickumls:jaccard:0.7:3:5:score",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "categories",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": true,
+      "label": "scoped: categories",
+      "mean_category_recall": 0.559,
+      "note": "restricted to RobustEHR's curated categories \u2014 the package's own view",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1513
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0835,
+        "disease": 0.1803,
+        "disorder": 0.1262,
+        "finding": 0.0648,
+        "procedure": 0.1118,
+        "symptom": 0.107
+      },
+      "category_recall": {
+        "anatomy": 0.4622,
+        "disease": 0.7844,
+        "disorder": 0.703,
+        "finding": 0.4138,
+        "procedure": 0.3053,
+        "symptom": 0.6855
+      },
+      "challenge_iou": 0.0675,
+      "config": {
+        "canon": "quickumls:jaccard:0.7:3:5:score",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "gold_tuis",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": true,
+      "label": "scoped: gold semantic types",
+      "mean_category_recall": 0.559,
+      "note": "restricted to the semantic types the annotators actually used",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1556
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0835,
+        "disease": 0.1803,
+        "disorder": 0.1262,
+        "finding": 0.0648,
+        "procedure": 0.1118,
+        "symptom": 0.107
+      },
+      "category_recall": {
+        "anatomy": 0.4622,
+        "disease": 0.7844,
+        "disorder": 0.703,
+        "finding": 0.4138,
+        "procedure": 0.3053,
+        "symptom": 0.6855
+      },
+      "challenge_iou": 0.0546,
+      "config": {
+        "canon": "quickumls:jaccard:0.7:3:5:score",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": true,
+      "label": "scoped: SNOMED only",
+      "mean_category_recall": 0.559,
+      "note": "any concept with a SNOMED code \u2014 the apples-to-apples scope",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1389
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0904,
+        "disease": 0.1866,
+        "disorder": 0.1296,
+        "finding": 0.065,
+        "procedure": 0.1162,
+        "symptom": 0.1082
+      },
+      "category_recall": {
+        "anatomy": 0.4706,
+        "disease": 0.7974,
+        "disorder": 0.6908,
+        "finding": 0.3867,
+        "procedure": 0.295,
+        "symptom": 0.6855
+      },
+      "challenge_iou": 0.0601,
+      "config": {
+        "canon": "quickumls:jaccard:0.8:3:5:score",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.8,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "threshold 0.8",
+      "mean_category_recall": 0.5543,
+      "note": "stricter similarity \u2014 fewer, better matches?",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1407
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0937,
+        "disease": 0.1891,
+        "disorder": 0.1347,
+        "finding": 0.0702,
+        "procedure": 0.1205,
+        "symptom": 0.1179
+      },
+      "category_recall": {
+        "anatomy": 0.4622,
+        "disease": 0.7974,
+        "disorder": 0.6919,
+        "finding": 0.3867,
+        "procedure": 0.2906,
+        "symptom": 0.7016
+      },
+      "challenge_iou": 0.0635,
+      "config": {
+        "canon": "quickumls:jaccard:0.9:3:5:score",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.9,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "threshold 0.9",
+      "mean_category_recall": 0.5551,
+      "note": "near-exact matching only",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.142
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0946,
+        "disease": 0.19,
+        "disorder": 0.1348,
+        "finding": 0.0692,
+        "procedure": 0.1211,
+        "symptom": 0.1181
+      },
+      "category_recall": {
+        "anatomy": 0.4622,
+        "disease": 0.7974,
+        "disorder": 0.6897,
+        "finding": 0.3818,
+        "procedure": 0.2906,
+        "symptom": 0.7016
+      },
+      "challenge_iou": 0.064,
+      "config": {
+        "canon": "quickumls:jaccard:1.0:3:5:score",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 1.0,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "threshold 1.0 (exact)",
+      "mean_category_recall": 0.5539,
+      "note": "exact dictionary matching, the plan's original design",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1425
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0971,
+        "disease": 0.1635,
+        "disorder": 0.1137,
+        "finding": 0.0574,
+        "procedure": 0.1094,
+        "symptom": 0.1028
+      },
+      "category_recall": {
+        "anatomy": 0.4412,
+        "disease": 0.7844,
+        "disorder": 0.7208,
+        "finding": 0.431,
+        "procedure": 0.3392,
+        "symptom": 0.6935
+      },
+      "challenge_iou": 0.0528,
+      "config": {
+        "canon": "quickumls:jaccard:0.7:3:5:length",
+        "min_match_length": 3,
+        "overlapping_criteria": "length",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "overlap by length",
+      "mean_category_recall": 0.5684,
+      "note": "prefer longer spans \u2014 helps multi-word procedures?",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1329
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0701,
+        "disease": 0.1317,
+        "disorder": 0.1059,
+        "finding": 0.0513,
+        "procedure": 0.0953,
+        "symptom": 0.1003
+      },
+      "category_recall": {
+        "anatomy": 0.5168,
+        "disease": 0.7922,
+        "disorder": 0.7753,
+        "finding": 0.4631,
+        "procedure": 0.3186,
+        "symptom": 0.7097
+      },
+      "challenge_iou": 0.0366,
+      "config": {
+        "canon": "quickumls:cosine:0.7:3:5:score",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "snomed",
+        "similarity_name": "cosine",
+        "threshold": 0.7,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "cosine similarity",
+      "mean_category_recall": 0.5959,
+      "note": "different similarity measure",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1327
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0896,
+        "disease": 0.2209,
+        "disorder": 0.1324,
+        "finding": 0.0629,
+        "procedure": 0.1003,
+        "symptom": 0.1011
+      },
+      "category_recall": {
+        "anatomy": 0.4118,
+        "disease": 0.7299,
+        "disorder": 0.6073,
+        "finding": 0.3498,
+        "procedure": 0.2183,
+        "symptom": 0.5081
+      },
+      "challenge_iou": 0.055,
+      "config": {
+        "canon": "quickumls:jaccard:0.7:5:5:score",
+        "min_match_length": 5,
+        "overlapping_criteria": "score",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "min_match_length 5",
+      "mean_category_recall": 0.4709,
+      "note": "drop very short matches, which are the noisiest",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1389
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0946,
+        "disease": 0.19,
+        "disorder": 0.1348,
+        "finding": 0.0692,
+        "procedure": 0.1211,
+        "symptom": 0.1181
+      },
+      "category_recall": {
+        "anatomy": 0.4622,
+        "disease": 0.7974,
+        "disorder": 0.6897,
+        "finding": 0.3818,
+        "procedure": 0.2906,
+        "symptom": 0.7016
+      },
+      "challenge_iou": 0.0788,
+      "config": {
+        "canon": "quickumls:jaccard:1.0:3:5:score",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "gold_tuis",
+        "similarity_name": "jaccard",
+        "threshold": 1.0,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "exact + gold semantic types",
+      "mean_category_recall": 0.5539,
+      "note": "best scope with exact matching \u2014 the plan's original design",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1591
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0937,
+        "disease": 0.1891,
+        "disorder": 0.1347,
+        "finding": 0.0702,
+        "procedure": 0.1205,
+        "symptom": 0.1179
+      },
+      "category_recall": {
+        "anatomy": 0.4622,
+        "disease": 0.7974,
+        "disorder": 0.6919,
+        "finding": 0.3867,
+        "procedure": 0.2906,
+        "symptom": 0.7016
+      },
+      "challenge_iou": 0.0783,
+      "config": {
+        "canon": "quickumls:jaccard:0.9:3:5:score",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "gold_tuis",
+        "similarity_name": "jaccard",
+        "threshold": 0.9,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "0.9 + gold semantic types",
+      "mean_category_recall": 0.5551,
+      "note": "best scope, near-exact matching",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1585
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.092,
+        "disease": 0.1694,
+        "disorder": 0.1228,
+        "finding": 0.0621,
+        "procedure": 0.1108,
+        "symptom": 0.118
+      },
+      "category_recall": {
+        "anatomy": 0.521,
+        "disease": 0.7974,
+        "disorder": 0.6941,
+        "finding": 0.3842,
+        "procedure": 0.3156,
+        "symptom": 0.7016
+      },
+      "challenge_iou": 0.0761,
+      "config": {
+        "canon": "quickumls:jaccard:1.0:2:5:score",
+        "min_match_length": 2,
+        "overlapping_criteria": "score",
+        "scope": "gold_tuis",
+        "similarity_name": "jaccard",
+        "threshold": 1.0,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "exact + min_match_length 2",
+      "mean_category_recall": 0.569,
+      "note": "admit two-character abbreviations: na, cl, hr, mg",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.156
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.089,
+        "disease": 0.1694,
+        "disorder": 0.1228,
+        "finding": 0.0621,
+        "procedure": 0.1088,
+        "symptom": 0.118
+      },
+      "category_recall": {
+        "anatomy": 0.5378,
+        "disease": 0.7974,
+        "disorder": 0.6941,
+        "finding": 0.3842,
+        "procedure": 0.3156,
+        "symptom": 0.7016
+      },
+      "challenge_iou": 0.0757,
+      "config": {
+        "canon": "quickumls:jaccard:1.0:1:5:score",
+        "min_match_length": 1,
+        "overlapping_criteria": "score",
+        "scope": "gold_tuis",
+        "similarity_name": "jaccard",
+        "threshold": 1.0,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "exact + min_match_length 1",
+      "mean_category_recall": 0.5718,
+      "note": "admit every length \u2014 how much noise does that buy?",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1559
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0822,
+        "disease": 0.1607,
+        "disorder": 0.1155,
+        "finding": 0.0587,
+        "procedure": 0.1038,
+        "symptom": 0.107
+      },
+      "category_recall": {
+        "anatomy": 0.521,
+        "disease": 0.7844,
+        "disorder": 0.7075,
+        "finding": 0.4163,
+        "procedure": 0.3304,
+        "symptom": 0.6855
+      },
+      "challenge_iou": 0.065,
+      "config": {
+        "canon": "quickumls:jaccard:0.7:2:5:score",
+        "min_match_length": 2,
+        "overlapping_criteria": "score",
+        "scope": "gold_tuis",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "default threshold + min_match_length 2",
+      "mean_category_recall": 0.5742,
+      "note": "shorter matches without exactness, to separate the two effects",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1529
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0955,
+        "disease": 0.2704,
+        "disorder": 0.17,
+        "finding": 0.0752,
+        "procedure": 0.13,
+        "symptom": 0.1206
+      },
+      "category_recall": {
+        "anatomy": 0.4286,
+        "disease": 0.7584,
+        "disorder": 0.5862,
+        "finding": 0.2266,
+        "procedure": 0.1755,
+        "symptom": 0.6855
+      },
+      "challenge_iou": 0.0809,
+      "config": {
+        "canon": "quickumls:jaccard:0.7:3:5:score",
+        "index": "quickumls_snomed",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "gold_tuis",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": true,
+      "label": "SNOMED-only index",
+      "mean_category_recall": 0.4768,
+      "note": "index built from SNOMEDCT_US terms only \u2014 vocabulary aligned with gold",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1648
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.1035,
+        "disease": 0.2651,
+        "disorder": 0.1796,
+        "finding": 0.0889,
+        "procedure": 0.1436,
+        "symptom": 0.1354
+      },
+      "category_recall": {
+        "anatomy": 0.3908,
+        "disease": 0.6831,
+        "disorder": 0.535,
+        "finding": 0.2167,
+        "procedure": 0.1593,
+        "symptom": 0.6774
+      },
+      "challenge_iou": 0.0915,
+      "config": {
+        "canon": "quickumls:jaccard:1.0:3:5:score",
+        "index": "quickumls_snomed",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "gold_tuis",
+        "similarity_name": "jaccard",
+        "threshold": 1.0,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "SNOMED-only index + exact",
+      "mean_category_recall": 0.4437,
+      "note": "aligned vocabulary with exact matching",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1679
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.1035,
+        "disease": 0.2645,
+        "disorder": 0.1625,
+        "finding": 0.0726,
+        "procedure": 0.1388,
+        "symptom": 0.1354
+      },
+      "category_recall": {
+        "anatomy": 0.3908,
+        "disease": 0.6831,
+        "disorder": 0.5417,
+        "finding": 0.234,
+        "procedure": 0.1593,
+        "symptom": 0.6774
+      },
+      "challenge_iou": 0.0901,
+      "config": {
+        "canon": "quickumls:jaccard:1.0:2:5:score",
+        "index": "quickumls_snomed",
+        "min_match_length": 2,
+        "overlapping_criteria": "score",
+        "scope": "gold_tuis",
+        "similarity_name": "jaccard",
+        "threshold": 1.0,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "SNOMED-only + exact + mml 2",
+      "mean_category_recall": 0.4477,
+      "note": "aligned vocabulary, exact, admitting short abbreviations",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.166
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0764,
+        "disease": 0.1715,
+        "disorder": 0.1181,
+        "finding": 0.0593,
+        "procedure": 0.1023,
+        "symptom": 0.1042
+      },
+      "category_recall": {
+        "anatomy": 0.4916,
+        "disease": 0.7844,
+        "disorder": 0.7164,
+        "finding": 0.4236,
+        "procedure": 0.3319,
+        "symptom": 0.6694
+      },
+      "challenge_iou": 0.0662,
+      "config": {
+        "accepted_semtypes": "robustehr:36",
+        "canon": "quickumls:jaccard:0.7:3:5:score:semtypes=36",
+        "index": "quickumls_index",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "gold_tuis",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "aligned semtypes",
+      "mean_category_recall": 0.5696,
+      "note": "QuickUMLS filter aligned with RobustEHR's categories",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1514
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0751,
+        "disease": 0.1533,
+        "disorder": 0.1087,
+        "finding": 0.0547,
+        "procedure": 0.0972,
+        "symptom": 0.1041
+      },
+      "category_recall": {
+        "anatomy": 0.5504,
+        "disease": 0.7844,
+        "disorder": 0.7241,
+        "finding": 0.436,
+        "procedure": 0.3628,
+        "symptom": 0.6694
+      },
+      "challenge_iou": 0.0643,
+      "config": {
+        "accepted_semtypes": "robustehr:36",
+        "canon": "quickumls:jaccard:0.7:2:5:score:semtypes=36",
+        "index": "quickumls_index",
+        "min_match_length": 2,
+        "overlapping_criteria": "score",
+        "scope": "gold_tuis",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "aligned semtypes + mml 2",
+      "mean_category_recall": 0.5878,
+      "note": "aligned filter, admitting two-character abbreviations",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1492
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.0848,
+        "disease": 0.1634,
+        "disorder": 0.1185,
+        "finding": 0.0597,
+        "procedure": 0.1037,
+        "symptom": 0.1181
+      },
+      "category_recall": {
+        "anatomy": 0.5462,
+        "disease": 0.7948,
+        "disorder": 0.7086,
+        "finding": 0.399,
+        "procedure": 0.3422,
+        "symptom": 0.7097
+      },
+      "challenge_iou": 0.0761,
+      "config": {
+        "accepted_semtypes": "robustehr:36",
+        "canon": "quickumls:jaccard:1.0:2:5:score:semtypes=36",
+        "index": "quickumls_index",
+        "min_match_length": 2,
+        "overlapping_criteria": "score",
+        "scope": "gold_tuis",
+        "similarity_name": "jaccard",
+        "threshold": 1.0,
+        "window": 5
+      },
+      "gold_spans": 1872,
+      "inherits_quickumls_validation": false,
+      "label": "aligned + exact + mml 2",
+      "mean_category_recall": 0.5834,
+      "note": "aligned filter, exact matching, short abbreviations",
+      "notes_scored": 25,
+      "recorded": "2026-08-03",
+      "span_iou": 0.1546
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.254,
+        "disease": 0.5651,
+        "disorder": 0.4702,
+        "finding": 0.2349,
+        "procedure": 0.3379,
+        "symptom": 0.6526
+      },
+      "category_recall": {
+        "anatomy": 0.5781,
+        "disease": 0.7688,
+        "disorder": 0.7173,
+        "finding": 0.4191,
+        "procedure": 0.3096,
+        "symptom": 0.6977
+      },
+      "challenge_iou": 0.1576,
+      "config": {
+        "accepted_semtypes": "quickumls_default",
+        "canon": "quickumls:jaccard:0.7:3:5:score:semtypes=default:trim=0",
+        "index": "quickumls_index",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "trim_affixes": false,
+        "window": 5
+      },
+      "gold_spans": 3777,
+      "inherits_quickumls_validation": true,
+      "label": "scoped: SNOMED only",
+      "mean_category_recall": 0.5818,
+      "note": "any concept with a SNOMED code \u2014 the apples-to-apples scope",
+      "notes_scored": 12,
+      "recorded": "2026-08-03",
+      "span_iou": 0.4094
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.2706,
+        "disease": 0.5313,
+        "disorder": 0.4436,
+        "finding": 0.2279,
+        "procedure": 0.3272,
+        "symptom": 0.6191
+      },
+      "category_recall": {
+        "anatomy": 0.5312,
+        "disease": 0.7782,
+        "disorder": 0.7358,
+        "finding": 0.4371,
+        "procedure": 0.3321,
+        "symptom": 0.7203
+      },
+      "challenge_iou": 0.1574,
+      "config": {
+        "accepted_semtypes": "quickumls_default",
+        "canon": "quickumls:jaccard:0.7:3:5:length:semtypes=default:trim=0",
+        "index": "quickumls_index",
+        "min_match_length": 3,
+        "overlapping_criteria": "length",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "trim_affixes": false,
+        "window": 5
+      },
+      "gold_spans": 3777,
+      "inherits_quickumls_validation": false,
+      "label": "overlap by length",
+      "mean_category_recall": 0.5891,
+      "note": "prefer longer spans \u2014 helps multi-word procedures?",
+      "notes_scored": 12,
+      "recorded": "2026-08-03",
+      "span_iou": 0.3959
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.2736,
+        "disease": 0.58,
+        "disorder": 0.4743,
+        "finding": 0.242,
+        "procedure": 0.3356,
+        "symptom": 0.6443
+      },
+      "category_recall": {
+        "anatomy": 0.5312,
+        "disease": 0.7782,
+        "disorder": 0.7358,
+        "finding": 0.4371,
+        "procedure": 0.3313,
+        "symptom": 0.7203
+      },
+      "challenge_iou": 0.1611,
+      "config": {
+        "accepted_semtypes": "quickumls_default",
+        "canon": "quickumls:jaccard:0.7:3:5:length:semtypes=default:trim=1",
+        "index": "quickumls_index",
+        "min_match_length": 3,
+        "overlapping_criteria": "length",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "trim_affixes": true,
+        "window": 5
+      },
+      "gold_spans": 3777,
+      "inherits_quickumls_validation": false,
+      "label": "overlap by length + affix trim",
+      "mean_category_recall": 0.589,
+      "note": "longest match, then drop leading/trailing function words. Targets the 52% fragmentation class directly: 'shortness of breath' stops collapsing to 'breath', without the 'and vitamin D deficiency' over-extension that preferring length alone introduces",
+      "notes_scored": 12,
+      "recorded": "2026-08-03",
+      "span_iou": 0.4025
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.2974,
+        "disease": 0.5807,
+        "disorder": 0.4831,
+        "finding": 0.2414,
+        "procedure": 0.3411,
+        "symptom": 0.6703
+      },
+      "category_recall": {
+        "anatomy": 0.6322,
+        "disease": 0.7398,
+        "disorder": 0.7304,
+        "finding": 0.454,
+        "procedure": 0.3123,
+        "symptom": 0.6996
+      },
+      "challenge_iou": 0.1561,
+      "config": {
+        "accepted_semtypes": "quickumls_default",
+        "canon": "quickumls:jaccard:0.7:3:5:score:semtypes=default:trim=0",
+        "index": "quickumls_index",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "trim_affixes": false,
+        "window": 5
+      },
+      "gold_spans": 23131,
+      "inherits_quickumls_validation": true,
+      "label": "scoped: SNOMED only",
+      "mean_category_recall": 0.5947,
+      "note": "any concept with a SNOMED code \u2014 the apples-to-apples scope",
+      "notes_scored": 68,
+      "recorded": "2026-08-03",
+      "span_iou": 0.4316
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.3372,
+        "disease": 0.6128,
+        "disorder": 0.4972,
+        "finding": 0.2568,
+        "procedure": 0.3478,
+        "symptom": 0.668
+      },
+      "category_recall": {
+        "anatomy": 0.5812,
+        "disease": 0.7574,
+        "disorder": 0.7536,
+        "finding": 0.4768,
+        "procedure": 0.3347,
+        "symptom": 0.7247
+      },
+      "challenge_iou": 0.1747,
+      "config": {
+        "accepted_semtypes": "quickumls_default",
+        "canon": "quickumls:jaccard:0.7:3:5:length:semtypes=default:trim=1",
+        "index": "quickumls_index",
+        "min_match_length": 3,
+        "overlapping_criteria": "length",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "trim_affixes": true,
+        "window": 5
+      },
+      "gold_spans": 23131,
+      "inherits_quickumls_validation": false,
+      "label": "overlap by length + affix trim",
+      "mean_category_recall": 0.6047,
+      "note": "longest match, then drop leading/trailing function words. Targets the 52% fragmentation class directly: 'shortness of breath' stops collapsing to 'breath', without the 'and vitamin D deficiency' over-extension that preferring length alone introduces",
+      "notes_scored": 68,
+      "recorded": "2026-08-03",
+      "span_iou": 0.4274
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.2974,
+        "disease": 0.5807,
+        "disorder": 0.4831,
+        "finding": 0.2414,
+        "procedure": 0.3411,
+        "symptom": 0.6703
+      },
+      "category_recall": {
+        "anatomy": 0.6322,
+        "disease": 0.7398,
+        "disorder": 0.7304,
+        "finding": 0.454,
+        "procedure": 0.3123,
+        "symptom": 0.6996
+      },
+      "challenge_iou": 0.1561,
+      "config": {
+        "accepted_semtypes": "quickumls_default",
+        "canon": "quickumls:jaccard:0.7:3:5:score:semtypes=default:trim=0:prefer=none",
+        "index": "quickumls_index",
+        "min_match_length": 3,
+        "overlapping_criteria": "score",
+        "preferred_cuis": null,
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "trim_affixes": false,
+        "window": 5
+      },
+      "gold_spans": 23131,
+      "inherits_quickumls_validation": true,
+      "label": "scoped: SNOMED only",
+      "mean_category_recall": 0.5947,
+      "note": "any concept with a SNOMED code \u2014 the apples-to-apples scope",
+      "notes_scored": 68,
+      "recorded": "2026-08-03",
+      "span_iou": 0.4316
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.3372,
+        "disease": 0.6128,
+        "disorder": 0.4972,
+        "finding": 0.2568,
+        "procedure": 0.3478,
+        "symptom": 0.668
+      },
+      "category_recall": {
+        "anatomy": 0.5812,
+        "disease": 0.7574,
+        "disorder": 0.7536,
+        "finding": 0.4768,
+        "procedure": 0.3347,
+        "symptom": 0.7247
+      },
+      "challenge_iou": 0.1747,
+      "config": {
+        "accepted_semtypes": "quickumls_default",
+        "canon": "quickumls:jaccard:0.7:3:5:length:semtypes=default:trim=1:prefer=none",
+        "index": "quickumls_index",
+        "min_match_length": 3,
+        "overlapping_criteria": "length",
+        "preferred_cuis": null,
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "trim_affixes": true,
+        "window": 5
+      },
+      "gold_spans": 23131,
+      "inherits_quickumls_validation": false,
+      "label": "overlap by length + affix trim",
+      "mean_category_recall": 0.6047,
+      "note": "longest match, then drop leading/trailing function words. Targets the 52% fragmentation class directly: 'shortness of breath' stops collapsing to 'breath', without the 'and vitamin D deficiency' over-extension that preferring length alone introduces",
+      "notes_scored": 68,
+      "recorded": "2026-08-03",
+      "span_iou": 0.4274
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.3374,
+        "disease": 0.6119,
+        "disorder": 0.4962,
+        "finding": 0.2554,
+        "procedure": 0.3512,
+        "symptom": 0.6733
+      },
+      "category_recall": {
+        "anatomy": 0.5782,
+        "disease": 0.7688,
+        "disorder": 0.755,
+        "finding": 0.4742,
+        "procedure": 0.337,
+        "symptom": 0.7247
+      },
+      "challenge_iou": 0.175,
+      "config": {
+        "accepted_semtypes": "quickumls_default",
+        "canon": "quickumls:jaccard:0.7:3:5:length:semtypes=default:trim=1:prefer=457758",
+        "index": "quickumls_index",
+        "min_match_length": 3,
+        "overlapping_criteria": "length",
+        "preferred_cuis": "snomed:457758",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "trim_affixes": true,
+        "window": 5
+      },
+      "gold_spans": 23131,
+      "inherits_quickumls_validation": false,
+      "label": "length + trim + prefer SNOMED",
+      "mean_category_recall": 0.6063,
+      "note": "as above, plus a similarity tie-break toward SNOMED-linked concepts. Targets the remaining granularity errors: 'diabetes' returned C0011847 (Diabetes), which carries no SNOMED code at all and so can never be a member of a SNOMED-seeded phenotype set, over C0011849 (Diabetes Mellitus), which the annotators chose",
+      "notes_scored": 68,
+      "recorded": "2026-08-03",
+      "span_iou": 0.4312
+    },
+    {
+      "category_precision": {
+        "anatomy": 0.3127,
+        "disease": 0.606,
+        "disorder": 0.4943,
+        "finding": 0.2555,
+        "procedure": 0.4259,
+        "symptom": 0.6734
+      },
+      "category_recall": {
+        "anatomy": 0.5805,
+        "disease": 0.7688,
+        "disorder": 0.7554,
+        "finding": 0.475,
+        "procedure": 0.5245,
+        "symptom": 0.7247
+      },
+      "challenge_iou": 0.1762,
+      "config": {
+        "accepted_semtypes": "quickumls_default",
+        "canon": "quickumls:jaccard:0.7:3:5:length:semtypes=default:trim=1:prefer=457758",
+        "index": "quickumls_index",
+        "min_match_length": 3,
+        "overlapping_criteria": "length",
+        "preferred_cuis": "snomed:457758",
+        "scope": "snomed",
+        "similarity_name": "jaccard",
+        "threshold": 0.7,
+        "trim_affixes": true,
+        "window": 5
+      },
+      "gold_spans": 23131,
+      "inherits_quickumls_validation": false,
+      "label": "length + trim + prefer SNOMED",
+      "mean_category_recall": 0.6381,
+      "note": "as above, plus a similarity tie-break toward SNOMED-linked concepts. Targets the remaining granularity errors: 'diabetes' returned C0011847 (Diabetes), which carries no SNOMED code at all and so can never be a member of a SNOMED-seeded phenotype set, over C0011849 (Diabetes Mellitus), which the annotators chose",
+      "notes_scored": 68,
+      "recorded": "2026-08-03",
+      "span_iou": 0.4543
+    }
+  ],
+  "leaderboard": {
+    "KIRI (dictionary-based, winner)": 0.4202,
+    "MITEL-UNIUD (decoder-based)": 0.3777,
+    "SNOBERT (encoder-based)": 0.4194,
+    "median of all final submissions": 0.2572
+  },
+  "metric_category": "per-category recall and targeting precision against the same gold spans; recall is the interpretable direction because the reference covers only ~26% of content tokens",
+  "metric_challenge": "character IoU macro-averaged by concept \u2014 the SNOMED CT Entity Linking Challenge's own metric",
+  "validation_note": "QuickUMLS's published validation is inherited only while threshold, similarity_name, min_match_length, overlapping_criteria are at their defaults. An entry with inherits_quickumls_validation=false owes its own evaluation."
+}

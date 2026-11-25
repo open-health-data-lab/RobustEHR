@@ -1,0 +1,33 @@
+{
+  "grounded": 4279,
+  "min_length": 6,
+  "per_phenotype": {
+    "alcohol_use_disorder": 74,
+    "atrial_fibrillation": 84,
+    "chest_pain": 68,
+    "chronic_kidney_disease": 50,
+    "clostridioides_difficile": 86,
+    "deep_vein_thrombosis": 150,
+    "dementia": 116,
+    "depression": 68,
+    "diabetes_mellitus": 80,
+    "dyspnea": 56,
+    "fever": 59,
+    "heart_failure": 48,
+    "hfpef": 89,
+    "hfref": 65,
+    "hypertension": 77,
+    "metastatic_cancer": 60,
+    "obesity": 76,
+    "pulmonary_embolism": 101,
+    "rheumatoid_arthritis": 83,
+    "systemic_lupus_erythematosus": 59,
+    "type_1_diabetes": 90,
+    "type_2_diabetes": 52
+  },
+  "promoted": 1691,
+  "skipped_shorter_than_min": 0,
+  "unmatched": 1857,
+  "what": "model-proposed clinical terms that no UMLS string matched, promoted to the surface warrant at tier `associated` rather than discarded",
+  "why": "the propose-then-ground pipeline ends in a CUI and has nowhere to put a true clinical term that has none. These are findings, signs and investigations a clinician named; failing to ground is a property of the vocabulary, not a verdict on the term."
+}

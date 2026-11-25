@@ -1,0 +1,490 @@
+# RobustEHR operator taxonomy — GENERATED, DO NOT EDIT BY HAND.
+#
+# Regenerate with:  robustehr taxonomy --yaml > src/robustehr/resources/taxonomy.yaml
+#
+# The Python operator declarations are the source of truth; this file is
+# committed like a lockfile so the taxonomy stays reviewable and diffable
+# without opening the source, and a test asserts the two agree.
+#
+# Column meanings:
+#   level        the operator's eligible unit — which *is* its dose denominator
+#   channel      the failure mode it simulates
+#   contract     the reference promise, and how that promise is discharged
+#   canonicalizer  the projection proving an INVARIANT contract, checked in CI
+#   targets      protection classes the operator is permitted to edit
+#   resources    hashed lexicons folded into the operator's version
+#   external_resources  locally-built, unshippable inputs. Named, not hashed:
+#                their digest is a property of the machine that built them, so
+#                the committed version carries `external` in their place
+
+schema_version: '1.1'
+operators:
+- id: control.char_shuffle
+  version: 1.0.0
+  level: word
+  channel: control
+  contract: control_destructive
+  dose_kind: rate
+  denominator: alphabetic tokens of at least four characters
+  sub_unit_policy: ceil
+  targets:
+  - ambiguous_mention
+  - assertion_cue
+  - clinical_mention
+  - decimal_point
+  - deid_placeholder
+  - divider_rule
+  - dosage
+  - lab_block
+  - list_marker
+  - numeric_value
+  - phenotype_evidence
+  - section_header
+  resources: []
+  simulates: nothing; it is the positive control
+- id: control.identity
+  version: 1.0.0
+  level: document
+  channel: control
+  contract: control_null
+  dose_kind: rate
+  denominator: the document
+  sub_unit_policy: ceil
+  targets: []
+  resources: []
+  simulates: nothing; it is the null control
+  canonicalizer: identity
+- id: discourse.section_duplicate
+  version: 1.0.0
+  level: section
+  channel: discourse
+  contract: conditionally_preserving
+  dose_kind: count_per_doc
+  denominator: complete identified sections, header and body
+  sub_unit_policy: ceil
+  targets:
+  - lab_block
+  - list_marker
+  - numeric_value
+  - section_header
+  resources: []
+  simulates: copy-paste note bloat that repeats a section verbatim
+- id: discourse.sentence_delete
+  version: 1.0.0
+  level: sentence
+  channel: discourse
+  contract: reference_altering_by_design
+  dose_kind: rate
+  denominator: prose sentences, excluding lab blocks, list items and headers
+  sub_unit_policy: ceil
+  targets:
+  - ambiguous_mention
+  - assertion_cue
+  - clinical_mention
+  - decimal_point
+  - deid_placeholder
+  - divider_rule
+  - dosage
+  - lab_block
+  - list_marker
+  - numeric_value
+  - phenotype_evidence
+  - section_header
+  resources: []
+  simulates: summarization loss and terse documentation
+- id: discourse.truncate
+  version: 1.0.0
+  level: document
+  channel: discourse
+  contract: reference_altering_by_design
+  dose_kind: rate
+  denominator: document characters; severity is the fraction removed
+  sub_unit_policy: ceil
+  targets:
+  - ambiguous_mention
+  - assertion_cue
+  - clinical_mention
+  - decimal_point
+  - deid_placeholder
+  - divider_rule
+  - dosage
+  - lab_block
+  - list_marker
+  - numeric_value
+  - phenotype_evidence
+  - section_header
+  resources: []
+  simulates: context-window limits and EHR free-text field caps
+  modes:
+  - tail
+  - head
+  - middle
+- id: input.ocr_confusion
+  version: 2.1.0+r4964b8cf
+  level: char
+  channel: input
+  contract: conditionally_preserving
+  dose_kind: rate
+  denominator: confusable character positions inside tokens of at least two characters; in
+    ligature mode, occurrences of a confusable character run; at most `max_edits_per_token`
+    positions per token when that parameter is set
+  sub_unit_policy: ceil
+  targets:
+  - dosage
+  - lab_block
+  - numeric_value
+  resources:
+  - ocr_confusions.yaml
+  simulates: optical character recognition on a scanned or faxed chart
+  modes:
+  - glyph
+  - ligature
+- id: input.phonetic_confusion
+  version: 1.0.0+r5ddf5df3
+  level: token
+  channel: input
+  contract: reference_altering_by_design
+  dose_kind: rate
+  denominator: tokens for which a morpheme rule generates a phonetically confusable substitute
+  sub_unit_policy: ceil
+  targets:
+  - dosage
+  - lab_block
+  - numeric_value
+  - section_header
+  resources:
+  - phonetic_rules.yaml
+  simulates: speech-recognition and dictation substitution errors
+- id: input.typo
+  version: 1.0.0
+  level: word
+  channel: input
+  contract: conditionally_preserving
+  dose_kind: rate
+  denominator: alphabetic tokens of at least three characters; alphanumeric tokens of the
+    same length too when `include_mixed` is set
+  sub_unit_policy: ceil
+  targets: []
+  resources: []
+  simulates: keyboard typing errors
+  modes:
+  - substitute
+  - transpose
+  - delete
+  - double
+- id: lexical.medication_rename
+  version: 1.0.0+rexternal
+  level: mention
+  channel: lexical
+  contract: conditionally_preserving
+  dose_kind: rate
+  denominator: medication name tokens resolving to a confident generic-brand equivalence
+  sub_unit_policy: ceil
+  targets:
+  - clinical_mention
+  resources:
+  - drug_synonyms.json
+  simulates: a clinician or institution that names drugs the other way round
+  external_resources:
+  - drug_synonyms.json
+  modes:
+  - flip
+  - to_brand
+  - to_generic
+- id: lexical.numeral_to_word
+  version: 1.0.0
+  level: number
+  channel: lexical
+  contract: conditionally_preserving
+  dose_kind: rate
+  denominator: integer tokens with an exact written form — no decimal point, no leading zero,
+    at most six digits — carrying no unit in `bare` mode, any in `all` mode
+  sub_unit_policy: ceil
+  targets:
+  - dosage
+  - numeric_value
+  resources: []
+  simulates: a dictated or template-written note that spells numbers out
+  modes:
+  - bare
+  - all
+- id: render.break_removal
+  version: 1.0.0
+  level: paragraph
+  channel: render
+  contract: conditionally_preserving
+  dose_kind: rate
+  denominator: structural breaks between blocks, excluding hard-wrap continuations and boundaries
+    interior to a list or lab block
+  sub_unit_policy: ceil
+  targets: []
+  resources: []
+  simulates: an export that did not carry line structure
+- id: render.bullet_to_prose
+  version: 1.0.0
+  level: list_item
+  channel: render
+  contract: invariant_by_construction
+  dose_kind: rate
+  denominator: items in a detected list block
+  sub_unit_policy: ceil
+  targets:
+  - list_marker
+  - numeric_value
+  resources: []
+  simulates: a note pasted out of a structured editor into plain prose
+  canonicalizer: content_tokens_without_list_markers
+- id: render.deid_restyle
+  version: 1.0.0
+  level: placeholder
+  channel: render
+  contract: invariant_by_construction
+  dose_kind: rate
+  denominator: de-identification masks, whatever the source convention
+  sub_unit_policy: ceil
+  targets:
+  - deid_placeholder
+  - lab_block
+  - section_header
+  resources: []
+  simulates: a corpus de-identified under a different convention
+  canonicalizer: content_tokens_masked_deid
+  modes:
+  - angle_tag
+  - asterisk
+  - bracket_star
+  - curly_tag
+  - delete
+  - redacted
+  - square_tag
+  - underscore
+  - xxx
+- id: render.header_delete
+  version: 1.0.0
+  level: header
+  channel: render
+  contract: conditionally_preserving
+  dose_kind: rate
+  denominator: standalone section headers
+  sub_unit_policy: ceil
+  targets:
+  - section_header
+  resources: []
+  simulates: an export or template that dropped section headings
+- id: render.header_rename
+  version: 1.0.0+ra1da8482
+  level: header
+  channel: render
+  contract: conditionally_preserving
+  dose_kind: rate
+  denominator: section headers resolving to a canonical id that has at least one other known
+    clinical name
+  sub_unit_policy: ceil
+  targets:
+  - section_header
+  resources:
+  - headers.yaml
+  simulates: a template or institution that names the same section differently
+- id: render.header_style
+  version: 1.0.0+ra1da8482
+  level: header
+  channel: render
+  contract: invariant_by_construction
+  dose_kind: rate
+  denominator: detected section headers, excluding boilerplate and report fields
+  sub_unit_policy: ceil
+  targets:
+  - section_header
+  resources:
+  - headers.yaml
+  simulates: header capitalisation conventions differing between institutions
+  canonicalizer: content_tokens_casefolded
+  modes:
+  - upper
+  - lower
+  - title
+- id: render.lab_block_collapse
+  version: 1.0.0
+  level: space_run
+  channel: render
+  contract: invariant_by_construction
+  dose_kind: rate
+  denominator: runs of two or more horizontal whitespace characters inside a detected column-aligned
+    block
+  sub_unit_policy: ceil
+  targets:
+  - lab_block
+  resources: []
+  simulates: an export or viewer that does not preserve column alignment
+  canonicalizer: content_tokens
+- id: render.list_to_prose
+  version: 2.0.0
+  level: list_block
+  channel: render
+  contract: invariant_by_construction
+  dose_kind: rate
+  denominator: detected list blocks holding at least two items
+  sub_unit_policy: ceil
+  targets:
+  - list_marker
+  - numeric_value
+  resources: []
+  simulates: a structured problem list pasted into a free-text field
+  canonicalizer: content_tokens_without_list_markers
+- id: render.space_delete
+  version: 1.0.0
+  level: char
+  channel: render
+  contract: conditionally_preserving
+  dose_kind: rate
+  denominator: single spaces separating two content tokens in prose sentences
+  sub_unit_policy: ceil
+  targets: []
+  resources: []
+  simulates: word boundaries lost to copy-paste or PDF text extraction
+- id: render.whitespace_collapse
+  version: 1.0.0
+  level: space_run
+  channel: render
+  contract: invariant_by_construction
+  dose_kind: rate
+  denominator: runs of two or more horizontal whitespace characters
+  sub_unit_policy: ceil
+  targets:
+  - lab_block
+  resources: []
+  simulates: a renderer or clipboard that does not preserve column alignment
+  canonicalizer: content_tokens
+- id: semantic.experiencer_shift
+  version: 1.0.0+r70ac9237
+  level: assertion
+  channel: semantic
+  contract: reference_altering_by_design
+  dose_kind: rate
+  denominator: experiencer cues, on this package's sentence boundaries, excluding scope terminators
+  sub_unit_policy: ceil
+  targets:
+  - assertion_cue
+  resources:
+  - assertion_flips.yaml
+  simulates: a relative's condition read as the patient's. Detector has no published gold
+    and kappa 0.22 against an independent reading — it marked 8 spans family where 1 was warranted,
+    so this operator was cut from v1 and reinstated by explicit decision. Read its dose beside
+    that number
+- id: semantic.experiencer_shift_llm
+  version: 1.0.0+r1c1dbf9c70ac9237
+  level: assertion
+  channel: semantic
+  contract: reference_altering_by_design
+  dose_kind: rate
+  denominator: experiencer cues, on this package's sentence boundaries
+  sub_unit_policy: ceil
+  targets:
+  - assertion_cue
+  resources:
+  - assertion_flips.yaml
+  - assertion_flip_prompt.yaml
+  simulates: a relative's finding read as the patient's, flipped by rewriting the clause.
+    Sentence rewritten by a configured LLM rather than by cue substitution, with a minimal-diff
+    edit, a protection check and a deterministic fallback. Reproducible by replay always,
+    and by regeneration given the response cache; the model id must be reported beside the
+    operator version.
+- id: semantic.negation_flip
+  version: 1.0.0+r70ac9237
+  level: assertion
+  channel: semantic
+  contract: reference_altering_by_design
+  dose_kind: rate
+  denominator: negation cues, on this package's sentence boundaries, excluding scope terminators
+  sub_unit_policy: ceil
+  targets:
+  - assertion_cue
+  resources:
+  - assertion_flips.yaml
+  simulates: a negated finding read as present — the commonest and most consequential assertion
+    error. Detector validated at 0.9289 negated-class F1 on the NegEx gold, kappa 0.74 against
+    an independent reading
+- id: semantic.negation_flip_llm
+  version: 1.0.0+r1c1dbf9c70ac9237
+  level: assertion
+  channel: semantic
+  contract: reference_altering_by_design
+  dose_kind: rate
+  denominator: negation cues, on this package's sentence boundaries
+  sub_unit_policy: ceil
+  targets:
+  - assertion_cue
+  resources:
+  - assertion_flips.yaml
+  - assertion_flip_prompt.yaml
+  simulates: a negated finding read as present, flipped by rewriting the clause. Sentence
+    rewritten by a configured LLM rather than by cue substitution, with a minimal-diff edit,
+    a protection check and a deterministic fallback. Reproducible by replay always, and by
+    regeneration given the response cache; the model id must be reported beside the operator
+    version.
+- id: semantic.temporality_shift
+  version: 1.0.0+r70ac9237
+  level: assertion
+  channel: semantic
+  contract: reference_altering_by_design
+  dose_kind: rate
+  denominator: historical cues, on this package's sentence boundaries, excluding scope terminators
+  sub_unit_policy: ceil
+  targets:
+  - assertion_cue
+  resources:
+  - assertion_flips.yaml
+  simulates: a past condition read as current. Detector has no published gold; F1 0.29 on
+    this project's held-out MIMIC gold (0.53 with the section-header rule), kappa 0.41 against
+    an independent reading of synthetic notes
+- id: semantic.temporality_shift_llm
+  version: 1.0.0+r1c1dbf9c70ac9237
+  level: assertion
+  channel: semantic
+  contract: reference_altering_by_design
+  dose_kind: rate
+  denominator: temporality cues, on this package's sentence boundaries
+  sub_unit_policy: ceil
+  targets:
+  - assertion_cue
+  resources:
+  - assertion_flips.yaml
+  - assertion_flip_prompt.yaml
+  simulates: a past finding read as current, flipped by rewriting the clause. Sentence rewritten
+    by a configured LLM rather than by cue substitution, with a minimal-diff edit, a protection
+    check and a deterministic fallback. Reproducible by replay always, and by regeneration
+    given the response cache; the model id must be reported beside the operator version.
+- id: semantic.uncertainty_flip
+  version: 1.0.0+r70ac9237
+  level: assertion
+  channel: semantic
+  contract: reference_altering_by_design
+  dose_kind: rate
+  denominator: diagnostic hedging cues (POSSIBLE_EXISTENCE), on this package's sentence boundaries,
+    excluding scope terminators
+  sub_unit_policy: ceil
+  targets:
+  - assertion_cue
+  resources:
+  - assertion_flips.yaml
+  simulates: 'a hedged finding read as definite. Detector measured only out of domain (BioScope
+    abstracts, F1 0.2511 at precision 0.855 and recall 0.147): precise where it fires, and
+    it fires on a minority of hedges'
+- id: semantic.uncertainty_flip_llm
+  version: 1.0.0+r1c1dbf9c70ac9237
+  level: assertion
+  channel: semantic
+  contract: reference_altering_by_design
+  dose_kind: rate
+  denominator: hedging cues, on this package's sentence boundaries
+  sub_unit_policy: ceil
+  targets:
+  - assertion_cue
+  resources:
+  - assertion_flips.yaml
+  - assertion_flip_prompt.yaml
+  simulates: a hedged or conditional finding read as definite, flipped by rewriting the clause.
+    Sentence rewritten by a configured LLM rather than by cue substitution, with a minimal-diff
+    edit, a protection check and a deterministic fallback. Reproducible by replay always,
+    and by regeneration given the response cache; the model id must be reported beside the
+    operator version.

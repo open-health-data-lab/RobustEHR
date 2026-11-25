@@ -1,0 +1,174 @@
+{
+  "categories": {
+    "anatomy": "Anatomy",
+    "disease": "Diseases and syndromes",
+    "disorder": "Disorders",
+    "lab_measurement": "Laboratory measurements, either convention",
+    "procedure": "Procedures",
+    "symptom": "Signs and symptoms"
+  },
+  "gold_spans": 3777,
+  "metric": "per-category recall and precision against expert annotations. Recall leads: the reference annotates selected concepts rather than every clinical word, so an unmatched prediction cannot be adjudicated.",
+  "notes": 12,
+  "question": "Is RobustEHR's concept tagger at least as good as the tool a user would otherwise reach for?",
+  "results": {
+    "RobustEHR (full pipeline)": {
+      "anatomy": {
+        "gold": 384,
+        "precision": 0.1835,
+        "predicted": 1297,
+        "recall": 0.5833
+      },
+      "disease": {
+        "gold": 744,
+        "precision": 0.5178,
+        "predicted": 1126,
+        "recall": 0.7688
+      },
+      "disorder": {
+        "gold": 1942,
+        "precision": 0.4611,
+        "predicted": 3164,
+        "recall": 0.7178
+      },
+      "lab_measurement": {
+        "gold": 642,
+        "precision": 0.6291,
+        "predicted": 488,
+        "recall": 0.4688
+      },
+      "procedure": {
+        "gold": 1334,
+        "precision": 0.4375,
+        "predicted": 1584,
+        "recall": 0.4978
+      },
+      "symptom": {
+        "gold": 354,
+        "precision": 0.6537,
+        "predicted": 387,
+        "recall": 0.6977
+      }
+    },
+    "RobustEHR (matcher only)": {
+      "anatomy": {
+        "gold": 384,
+        "precision": 0.1973,
+        "predicted": 1196,
+        "recall": 0.5781
+      },
+      "disease": {
+        "gold": 744,
+        "precision": 0.5262,
+        "predicted": 1108,
+        "recall": 0.7688
+      },
+      "disorder": {
+        "gold": 1942,
+        "precision": 0.4651,
+        "predicted": 3135,
+        "recall": 0.7173
+      },
+      "lab_measurement": {
+        "gold": 642,
+        "precision": 0.2857,
+        "predicted": 238,
+        "recall": 0.1059
+      },
+      "procedure": {
+        "gold": 1334,
+        "precision": 0.3359,
+        "predicted": 1298,
+        "recall": 0.3096
+      },
+      "symptom": {
+        "gold": 354,
+        "precision": 0.6537,
+        "predicted": 387,
+        "recall": 0.6977
+      }
+    },
+    "medspaCy (stock)": {
+      "anatomy": {
+        "gold": 384,
+        "precision": 0.2554,
+        "predicted": 697,
+        "recall": 0.4427
+      },
+      "disease": {
+        "gold": 744,
+        "precision": 0.472,
+        "predicted": 1091,
+        "recall": 0.672
+      },
+      "disorder": {
+        "gold": 1942,
+        "precision": 0.4589,
+        "predicted": 2837,
+        "recall": 0.6401
+      },
+      "lab_measurement": {
+        "gold": 642,
+        "precision": 0.2102,
+        "predicted": 314,
+        "recall": 0.1028
+      },
+      "procedure": {
+        "gold": 1334,
+        "precision": 0.3314,
+        "predicted": 1032,
+        "recall": 0.2481
+      },
+      "symptom": {
+        "gold": 354,
+        "precision": 0.6397,
+        "predicted": 247,
+        "recall": 0.4492
+      }
+    },
+    "scispaCy (UMLS linker)": {
+      "anatomy": {
+        "gold": 384,
+        "precision": 0.3058,
+        "predicted": 484,
+        "recall": 0.3802
+      },
+      "disease": {
+        "gold": 744,
+        "precision": 0.6873,
+        "predicted": 550,
+        "recall": 0.5108
+      },
+      "disorder": {
+        "gold": 1942,
+        "precision": 0.6836,
+        "predicted": 1198,
+        "recall": 0.4192
+      },
+      "lab_measurement": {
+        "gold": 642,
+        "precision": 0.3214,
+        "predicted": 84,
+        "recall": 0.0421
+      },
+      "procedure": {
+        "gold": 1334,
+        "precision": 0.4343,
+        "predicted": 525,
+        "recall": 0.1702
+      },
+      "symptom": {
+        "gold": 354,
+        "precision": 0.739,
+        "predicted": 249,
+        "recall": 0.5056
+      }
+    }
+  },
+  "shared": "same notes, same gold spans, same metric. RobustEHR and medspaCy additionally share the same QuickUMLS index; scispaCy brings its own knowledge base, as its authors ship it",
+  "systems": {
+    "RobustEHR (matcher only)": "ConceptMatcher \u2014 QuickUMLS with the semantic-type filter aligned to RobustEHR's 36 category types",
+    "medspaCy (stock)": "medspacy.load with QuickUMLS, default configuration \u2014 what a user gets out of the box",
+    "scispaCy (UMLS linker)": "en_core_sci_sm with scispacy_linker (umls, abbreviations resolved), candidates above 0.85. A linker rather than a dictionary matcher, so a genuinely different approach to the same problem"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "artifact": "data/lexicon/abbrev_snomed.tsv",
+  "candidate_atoms": 9994,
+  "kept": 1629,
+  "rejected_ambiguous_among_abbrev_atoms": 927,
+  "rejected_reachable_as_written": 2386,
+  "selection": "lat=ENG, suppress=N, sab=SNOMEDCT_US, str contains ' - ', short half 2-10 chars with >= 50% of its letters uppercase, mapping to exactly one CUI carrying a semantic type",
+  "sha256": "cc90c669c2533c01507a4a41023db0a13c9afc628fa469471529db20bdc927d3",
+  "umls_release": "2026AA",
+  "what": "abbreviation -> concept, derived from SNOMED's own 'ABBREV - full term' synonym convention",
+  "why_not_committed": "the short forms are UMLS strings. Only this manifest ships; rebuild the artifact locally from your own licensed release.",
+  "why_the_second_filter": "a terminology's monosemy is a property of its synonym set, not of how clinicians write. 'PT - Platinum' is the only ABBREV-form atom for PT, so monosemy alone admits it, while in prose pt means patient. Requiring zero standalone concepts excludes every ambiguous form by construction, excludes forms that need no entry, and leaves the population the table exists for."
+}

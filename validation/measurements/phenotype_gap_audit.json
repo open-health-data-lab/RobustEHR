@@ -1,0 +1,372 @@
+{
+  "carrier": "The patient has a documented history of {term} noted on admission.",
+  "gaps": 172,
+  "per_phenotype": {
+    "alcohol_use_disorder": {
+      "by_warrant": {
+        "anchor": 5,
+        "concept": 9,
+        "gap": 23
+      },
+      "gaps": [
+        "chronic heavy alcohol use",
+        "daily alcohol consumption",
+        "drinks one pint of vodka daily",
+        "history of alcohol withdrawal",
+        "alcohol withdrawal syndrome",
+        "acute alcohol withdrawal",
+        "ciwa scores elevated",
+        "tremulous and diaphoretic",
+        "tongue fasciculations",
+        "history of withdrawal seizures",
+        "delirium tremens",
+        "required phenobarbital load for alcohol withdrawal",
+        "treated with symptom-triggered lorazepam per ciwa protocol",
+        "addiction medicine consulted for alcohol cessation",
+        "thiamine, folate, and multivitamin supplementation",
+        "serum ethanol elevated on admission",
+        "ast greater than alt",
+        "macrocytosis without anemia",
+        "alcoholic hepatitis",
+        "hepatic steatosis consistent with alcohol use",
+        "alcohol-related cirrhosis",
+        "alcoholic ketoacidosis",
+        "recurrent falls in the setting of intoxication"
+      ],
+      "reach": 0.3784,
+      "reachable": 14,
+      "terms": 37
+    },
+    "clostridioides_difficile": {
+      "by_warrant": {
+        "anchor": 21,
+        "associated": 3,
+        "concept": 11,
+        "gap": 2
+      },
+      "gaps": [
+        "diffuse abdominal tenderness",
+        "ct findings consistent with pancolitis"
+      ],
+      "reach": 0.9459,
+      "reachable": 35,
+      "terms": 37
+    },
+    "deep_vein_thrombosis": {
+      "by_warrant": {
+        "anchor": 1,
+        "associated": 3,
+        "concept": 25,
+        "gap": 9
+      },
+      "gaps": [
+        "acute occlusive venous thrombus",
+        "acute nonocclusive venous thrombus",
+        "increased warmth and erythema of the affected leg",
+        "palpable venous cord",
+        "duplex demonstrates acute thrombus in the femoral vein",
+        "intraluminal filling defect on ct venography",
+        "elevated d-dimer",
+        "therapeutic enoxaparin initiated",
+        "post-thrombotic syndrome"
+      ],
+      "reach": 0.7632,
+      "reachable": 29,
+      "terms": 38
+    },
+    "dementia": {
+      "by_warrant": {
+        "anchor": 2,
+        "associated": 1,
+        "concept": 25,
+        "gap": 10
+      },
+      "gaps": [
+        "oriented to self only",
+        "unable to recall three objects",
+        "moca 12/30",
+        "requires assistance with all adls",
+        "dependent for medication management",
+        "lacks capacity for medical decision-making",
+        "wandering behavior",
+        "ct head with diffuse cerebral volume loss",
+        "mri brain with generalized cortical atrophy",
+        "bilateral hippocampal atrophy"
+      ],
+      "reach": 0.7368,
+      "reachable": 28,
+      "terms": 38
+    },
+    "depression": {
+      "by_warrant": {
+        "anchor": 6,
+        "concept": 21,
+        "gap": 9
+      },
+      "gaps": [
+        "hopelessness and helplessness",
+        "sleep disturbance",
+        "phq-9 score 18",
+        "suicide attempt",
+        "self-injurious behavior",
+        "denies manic or hypomanic symptoms",
+        "tsh within normal limits",
+        "vitamin b12 and folate within normal limits",
+        "urine toxicology negative"
+      ],
+      "reach": 0.75,
+      "reachable": 27,
+      "terms": 36
+    },
+    "hfpef": {
+      "by_warrant": {
+        "anchor": 10,
+        "associated": 2,
+        "concept": 13,
+        "gap": 14
+      },
+      "gaps": [
+        "elevated bnp",
+        "elevated nt-probnp",
+        "chest x-ray showing interstitial pulmonary edema",
+        "small bilateral pleural effusions",
+        "lvef 60-65%",
+        "grade ii diastolic dysfunction",
+        "elevated left ventricular filling pressures",
+        "elevated e/e\u2032 ratio",
+        "left atrial enlargement",
+        "concentric left ventricular hypertrophy",
+        "normal left ventricular systolic function",
+        "right heart catheterization with elevated pcwp",
+        "elevated left ventricular end-diastolic pressure",
+        "acute hypoxic respiratory failure due to cardiogenic pulmonary edema"
+      ],
+      "reach": 0.641,
+      "reachable": 25,
+      "terms": 39
+    },
+    "hfref": {
+      "by_warrant": {
+        "associated": 3,
+        "concept": 18,
+        "gap": 20
+      },
+      "gaps": [
+        "hfrref",
+        "ischemic cardiomyopathy with reduced ef",
+        "nonischemic cardiomyopathy with reduced ef",
+        "lvef 25%",
+        "severely reduced left ventricular systolic function",
+        "dilated left ventricle with severe systolic dysfunction",
+        "biventricular systolic dysfunction",
+        "elevated bnp",
+        "elevated nt-probnp",
+        "bilateral pulmonary edema on chest x-ray",
+        "s3 gallop",
+        "displaced point of maximal impulse",
+        "low cardiac output state",
+        "acute hypoxic respiratory failure due to pulmonary edema",
+        "diuresed to dry weight",
+        "started on guideline-directed medical therapy for hfrref",
+        "sacubitril/valsartan initiated for reduced ef",
+        "wearable defibrillator for ef less than 35%",
+        "icd placed for primary prevention in cardiomyopathy",
+        "crt-d for reduced ef with left bundle branch block"
+      ],
+      "reach": 0.5122,
+      "reachable": 21,
+      "terms": 41
+    },
+    "hypertension": {
+      "by_warrant": {
+        "anchor": 5,
+        "concept": 22,
+        "gap": 9
+      },
+      "gaps": [
+        "persistent bp elevation",
+        "bp above goal",
+        "sbp persistently > 160",
+        "home bp monitoring advised",
+        "left ventricular hypertrophy",
+        "concentric lv hypertrophy",
+        "hypertensive retinopathy",
+        "hypertensive encephalopathy",
+        "microalbuminuria consistent with hypertensive renal disease"
+      ],
+      "reach": 0.75,
+      "reachable": 27,
+      "terms": 36
+    },
+    "metastatic_cancer": {
+      "by_warrant": {
+        "anchor": 5,
+        "concept": 32,
+        "gap": 2
+      },
+      "gaps": [
+        "multifocal lytic osseous lesions",
+        "palpable hard supraclavicular adenopathy"
+      ],
+      "reach": 0.9487,
+      "reachable": 37,
+      "terms": 39
+    },
+    "obesity": {
+      "by_warrant": {
+        "anchor": 7,
+        "concept": 20,
+        "gap": 13
+      },
+      "gaps": [
+        "increased body habitus",
+        "protuberant abdomen",
+        "bmi 30 kg/m2",
+        "bmi 35 kg/m2",
+        "bmi 40 kg/m2",
+        "bmi 30-34.9",
+        "bmi 35-39.9",
+        "bmi \u226540",
+        "weight 120 kg",
+        "weight above ideal body weight",
+        "status post sleeve gastrectomy",
+        "gastric band in place",
+        "enrolled in medical weight management"
+      ],
+      "reach": 0.675,
+      "reachable": 27,
+      "terms": 40
+    },
+    "pulmonary_embolism": {
+      "by_warrant": {
+        "anchor": 5,
+        "associated": 3,
+        "concept": 17,
+        "gap": 17
+      },
+      "gaps": [
+        "acute pe",
+        "intermediate-risk pe",
+        "acute hypoxic respiratory failure due to pe",
+        "oxygen saturation 86% on room air",
+        "ctpa demonstrates acute filling defects in the pulmonary arteries",
+        "filling defect in the right main pulmonary artery",
+        "bilateral segmental and subsegmental emboli",
+        "saddle embolus extending into both main pulmonary arteries",
+        "right ventricular dilation on ct",
+        "rv/left ventricular ratio greater than 1",
+        "mckinnell sign present",
+        "elevated pulmonary artery pressures",
+        "elevated d-dimer",
+        "elevated bnp in the setting of pe",
+        "lower extremity duplex positive for acute dvt",
+        "catheter-directed thrombolysis performed",
+        "mechanical pulmonary thrombectomy performed"
+      ],
+      "reach": 0.5952,
+      "reachable": 25,
+      "terms": 42
+    },
+    "rheumatoid_arthritis": {
+      "by_warrant": {
+        "anchor": 1,
+        "associated": 3,
+        "concept": 28,
+        "gap": 7
+      },
+      "gaps": [
+        "rf positive",
+        "anti-ccp positive",
+        "elevated esr and crp",
+        "boggy swelling of the mcp joints",
+        "swan-neck deformities",
+        "symmetric joint space narrowing of the mcp joints",
+        "marginal erosions involving the mcp joints"
+      ],
+      "reach": 0.8205,
+      "reachable": 32,
+      "terms": 39
+    },
+    "systemic_lupus_erythematosus": {
+      "by_warrant": {
+        "anchor": 16,
+        "associated": 3,
+        "concept": 10,
+        "gap": 10
+      },
+      "gaps": [
+        "malar rash",
+        "photosensitive facial rash",
+        "nonscarring alopecia",
+        "symmetric inflammatory polyarthritis",
+        "raynaud phenomenon",
+        "proteinuria with active urinary sediment",
+        "high-titer ana",
+        "elevated anti-dsdna titer",
+        "low c3 and c4",
+        "direct coombs positive"
+      ],
+      "reach": 0.7436,
+      "reachable": 29,
+      "terms": 39
+    },
+    "type_1_diabetes": {
+      "by_warrant": {
+        "anchor": 11,
+        "associated": 2,
+        "concept": 11,
+        "gap": 13
+      },
+      "gaps": [
+        "requires basal-bolus insulin therapy",
+        "insulin pump in place",
+        "uses continuous glucose monitor",
+        "positive gad65 antibodies",
+        "positive islet cell antibodies",
+        "positive ia-2 antibodies",
+        "positive zinc transporter 8 antibodies",
+        "fasting glucose elevated",
+        "hemoglobin a1c elevated",
+        "anion gap metabolic acidosis",
+        "beta-hydroxybutyrate elevated",
+        "hypoglycemia unawareness",
+        "history of severe hypoglycemia requiring glucagon"
+      ],
+      "reach": 0.6486,
+      "reachable": 24,
+      "terms": 37
+    },
+    "type_2_diabetes": {
+      "by_warrant": {
+        "anchor": 2,
+        "concept": 18,
+        "gap": 14
+      },
+      "gaps": [
+        "fasting glucose 168 mg/dl",
+        "random glucose 245 mg/dl",
+        "home blood sugars consistently elevated",
+        "on oral hypoglycemic therapy",
+        "diabetic diet and glucose monitoring",
+        "diabetic peripheral neuropathy",
+        "decreased monofilament sensation bilaterally",
+        "stocking-glove sensory loss",
+        "diabetic foot ulcer",
+        "diabetic nephropathy",
+        "diabetic chronic kidney disease",
+        "diabetic retinopathy",
+        "nonproliferative diabetic retinopathy",
+        "diabetic gastroparesis"
+      ],
+      "reach": 0.5882,
+      "reachable": 20,
+      "terms": 34
+    }
+  },
+  "reach": 0.6993,
+  "terms": 572,
+  "terms_file": "held-out term list supplied by the caller (--terms); not redistributed here",
+  "terms_file_sha256": "ad6a835fd3378577",
+  "terms_provenance": "A list of clinical terms assembled outside this repository and passed in with --terms. The audit reports reach against it; the list itself is the caller's and is neither vendored nor named here.",
+  "what": "whether the target produces evidence from a note containing each term of an independently written clinical lexicon, and by which warrant"
+}

@@ -1,0 +1,93 @@
+# Morphological signals for classifying a token as clinical.
+#
+# These are *affixes*, not a word list. A word list is a vocabulary and belongs
+# in the concept layer; this is the algorithmic tier that works without one.
+#
+# Clinical vocabulary is Greek- and Latin-derived and heavily suffixed, and the
+# suffixes are productive: no ordinary English word ends in `-ectomy`, and every
+# word that does is a surgical procedure — including ones invented next year.
+# Recognising the morphology rather than the word is what lets the classifier
+# follow the vocabulary into a new specialty without being rebuilt.
+#
+# Coverage is partial by design. Many clinical terms carry no diagnostic
+# morphology at all (`aspirin`, `warfarin`, `fever`), and no affix set will ever
+# catch them. Those need a vocabulary, and their absence is reported as
+# `unknown` rather than silently counted as non-clinical.
+schema_version: "1.0"
+
+# A suffix is strong evidence: it is the head of the compound and determines
+# what kind of thing the word names.
+clinical_suffixes:
+  disease_process:
+    [itis, osis, oses, opathy, opathies, pathy, pathies, sclerosis, stenosis,
+     thrombosis, embolism, cytosis, philia, penia, megaly, ptosis]
+  body_fluid_or_site:
+    [emia, aemia, emias, aemias, emic, aemic, uria, cardia, pnea, pnoea,
+     renal, hepatic, gastric, ventric]
+  procedure:
+    [ectomy, ectomies, ostomy, ostomies, otomy, oscopy, plasty, gram, graphy,
+     graphic, metry]
+  symptom_or_deficit:
+    [algia, algic, dynia, algesia, esthesia, aesthesia, phagia, phasia,
+     plegia, paresis, plasia, trophy, tropic, phobia]
+  discipline:
+    [logy, logist]
+
+# A prefix is weaker evidence — it modifies rather than heads — so it requires a
+# substantial stem behind it before it counts.
+clinical_prefixes:
+  [hyper, hypo, hemat, haemat, cardi, nephr, hepat, gastr, neuro, neur,
+   pulmon, bronch, derm, osteo, arthr, myel, angio, vascul, lymph, thromb,
+   leuk, leuc, erythro, endo, peri, para, intra, inter, sub, supra, trans,
+   tachy, brady, poly, oligo, dys]
+
+min_word_length: 6
+min_stem_after_prefix: 5
+
+# English function words: a small closed set that is never clinical. Closed-class
+# membership is the one place a list is the right tool, because the class is
+# genuinely finite and does not grow.
+closed_class:
+  # English function words: the one place a list is the right tool, because the
+  # class is genuinely finite and does not grow. Expanded from 118 to a fuller
+  # inventory so that grammar is never mistaken for content.
+  #
+  # Verified disjoint from the UMLS-derived clinical vocabulary: the builder
+  # subtracts every word here, and a test asserts zero leak.
+  determiners: [a, an, the, this, that, these, those, each, every, any, all, both, either,
+                neither, few, several, some, such, other, another, own, same, no, none,
+                enough, much, many, more, most, less, least, half, whole]
+  quantifiers_numerals: [one, two, three, four, five, six, seven, eight, nine, ten,
+                first, second, third, fourth, fifth, last, next, previous, former, latter]
+  conjunctions: [and, or, but, if, then, else, when, whenever, while, whilst, because, so,
+                than, as, once, again, though, although, unless, until, till, whereas,
+                whether, nor, yet, plus, versus, vs]
+  prepositions: [of, in, on, at, by, for, with, without, from, to, into, onto, out, over,
+                under, above, below, beneath, beside, between, among, amongst, across,
+                through, throughout, toward, towards, against, about, after, before,
+                behind, beyond, during, despite, within, along, around, upon, per, via,
+                near, off, up, down, away, apart, aside]
+  # `back` deliberately absent: it is anatomy in a clinical note (back pain),
+  # and the whole point of this list is that grammar is never mistaken for
+  # content. `down` stays — UMLS types it via Down syndrome, but a bare `down`
+  # in a note is the direction.
+  auxiliary_verbs: [is, are, was, were, be, been, being, am, do, does, did, done, doing,
+                has, have, had, having, will, would, shall, should, can, could, may,
+                might, must, ought, need, dare, get, got, gets, getting, let, lets]
+  pronouns: [he, she, it, they, them, him, his, her, hers, its, their, theirs, we, us,
+                our, ours, you, your, yours, i, me, my, mine, myself, himself, herself,
+                itself, themselves, ourselves, yourself, one, ones, someone, somebody,
+                something, anyone, anybody, anything, everyone, everybody, everything,
+                nobody, nothing, there, here, what, which, who, whom, whose, that]
+  adverbs_particles: [not, never, always, often, sometimes, rarely, seldom, usually,
+                also, too, very, quite, rather, fairly, just, only, even, still, already,
+                yet, soon, later, earlier, now, then, today, tomorrow, yesterday, again,
+                further, furthermore, moreover, however, therefore, thus, hence, otherwise,
+                instead, meanwhile, likewise, similarly, accordingly, consequently,
+                perhaps, maybe, probably, possibly, certainly, indeed, actually, really,
+                approximately, about, nearly, almost, roughly, exactly, precisely,
+                how, why, where, whereby, wherein, hereby, herein, thereof, therein]
+  # No `discourse` group. `please`, `note`, `see` and `thanks` are content words
+  # with low semantic weight, not closed-class grammar, and `note`/`noted`/`see`
+  # are used clinically ("noted to have"). They belong in general English, which
+  # is where they land.

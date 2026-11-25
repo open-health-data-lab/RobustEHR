@@ -1,0 +1,268 @@
+# Canonical section headers and their observed surface variants.
+#
+# Derived from the header inventory of 1,388 MIMIC-IV discharge summaries, where
+# 2,689 distinct header-like strings occur but 61.3% are singletons and the top
+# 25 cover only 53.9% of instances. That long tail is why "delete 10% of
+# headers" is not reproducible until "header" is pinned to a published set —
+# this file is that set, and its content hash goes into every dose record.
+#
+# Alias matching is case-insensitive and punctuation-insensitive, so the
+# rampant case variation in real notes (Transitional Issues / TRANSITIONAL
+# ISSUES / Transitional issues) collapses to one canonical id without needing
+# an entry per casing.
+schema_version: "1.0"
+
+# Header-like lines that are actually prose. Measured: 1,374 occurrences across
+# 994 distinct forms of a prose line ending in a colon, e.g.
+#   "In the ED, initial vitals were:"
+#   "Emergency Department for any of the following:"
+#   "The following changes were made to your medications:"
+# A naive `^[A-Z].*:$` rule collects all of these and inflates the denominator
+# by roughly a factor of two.
+# Note these are only consulted for labels that did NOT match an alias, so a
+# canonical header containing one of them (e.g. "History of the Present
+# Illness") is never rejected by it.
+prose_markers:
+  - " were"
+  - " was"
+  - " are"
+  - " is "
+  - " the "        # "In the ED, initial vitals:" — 44 notes
+  - " in "
+  - " for "        # "Exam notable for:" — 30 notes
+  - " of the"
+  - " the following"
+  - " you "
+  - " your "
+  - " if "
+  - " for any"
+  - " should"
+  - " will"
+  - " have"
+  - " has "
+  - " with the"
+  - " to the"
+  - " made to"
+  - " such as"
+  - " including"
+  - " please"
+  - " notable"
+
+# A label longer than this many words is prose unless it is in the lexicon.
+max_label_words: 6
+
+canonical:
+  # --- document metadata, almost always inline ---------------------------
+  name: {aliases: [Name], kind: metadata}
+  unit_number: {aliases: [Unit No, Unit Number], kind: metadata}
+  admission_date: {aliases: [Admission Date], kind: metadata}
+  discharge_date: {aliases: [Discharge Date], kind: metadata}
+  date_of_birth: {aliases: [Date of Birth, DOB], kind: metadata}
+  sex: {aliases: [Sex, Gender], kind: metadata}
+  service: {aliases: [Service], kind: metadata}
+  attending: {aliases: [Attending], kind: metadata}
+
+  # --- clinical narrative -------------------------------------------------
+  allergies:
+    aliases: [Allergies, Adverse Reactions, Allergies and Adverse Reactions]
+  chief_complaint:
+    aliases: [Chief Complaint, CC, Reason for Admission, Presenting Complaint]
+  surgical_procedures:
+    aliases:
+      - Major Surgical or Invasive Procedure
+      - Major Surgical or Invasive Procedures
+      - Procedures
+      - Surgical Procedures
+  history_present_illness:
+    aliases: [History of Present Illness, HPI, History of the Present Illness]
+  past_medical_history:
+    aliases: [Past Medical History, PMH, PMHx, Medical History, Medical Hx]
+  past_surgical_history:
+    aliases: [Past Surgical History, PSH, PSHx, Surgical History]
+  past_oncologic_history:
+    aliases: [Past Oncologic History, Oncologic History, Oncologic Hx]
+  social_history:
+    aliases: [Social History, SH, SHx, Social Hx]
+  family_history:
+    aliases: [Family History, FH, FHx, Family Hx]
+  review_of_systems:
+    # "Review of sytems" is a real misspelling in the corpus (26 notes). It is
+    # listed because header detection must match documents as written.
+    aliases: [Review of Systems, ROS, Review of sytems, Review of Sytems]
+  physical_examination:
+    aliases:
+      - Physical Exam
+      - Physical Examination
+      - Exam
+      - Admission Exam
+      - Discharge Exam
+      - Admission Physical Exam
+      - Discharge Physical Exam
+      - Admission Physical Examination
+      - Physical Exam on Admission
+      - Physical Exam on Discharge
+  vital_signs:
+    # A field of the physical exam, not a top-level section.
+    aliases: [Vitals, Vital Signs, VS]
+    depth: 1
+  pertinent_results:
+    aliases: [Pertinent Results, Results, Relevant Results]
+  laboratory_results:
+    aliases:
+      - Labs
+      - Laboratory Data
+      - Laboratory Results
+      - Admission Labs
+      - Discharge Labs
+      - Pertinent Labs
+      - Labs on Admission
+      - Labs on Discharge
+      - On Admission
+      - On Discharge
+  microbiology:
+    aliases: [Micro, Microbiology, Microbiologic Data]
+  imaging:
+    aliases: [Imaging, Studies, Imaging/Studies, Radiology, Findings, CXR, EKG]
+  # SOAP structure. Progress notes are frequently written with single-letter
+  # labels (S:/O:/A:/P:), which are real section headers despite being one
+  # character long.
+  subjective:
+    aliases: [Subjective, S]
+  objective:
+    aliases: [Objective, O]
+  assessment_plan:
+    aliases:
+      - Assessment and Plan
+      - Assessment & Plan
+      - A/P
+      - Assessment
+      - Plan
+      - A
+      - P
+      - Impression
+      - Clinical Impression
+      - Impression and Plan
+  hospital_course:
+    aliases:
+      - Brief Hospital Course
+      - Hospital Course
+      - Active Issues
+      - Acute Issues
+      - Chronic Issues
+  transitional_issues:
+    aliases: [Transitional Issues, Transition of Care, Pending Results]
+
+  # --- discharge block ----------------------------------------------------
+  admission_medications:
+    aliases: [Medications on Admission, Admission Medications, Home Medications]
+  discharge_medications:
+    aliases:
+      - Discharge Medications
+      - Medications
+      - Medications on Discharge
+      - Medication Changes
+  discharge_diagnoses:
+    aliases:
+      - Discharge Diagnosis
+      - Discharge Diagnoses
+      - Final Diagnosis
+      - Primary Diagnosis
+      - Primary Diagnoses
+      - Secondary Diagnosis
+      - Secondary Diagnoses
+      - Primary
+      - Secondary
+  discharge_condition:
+    aliases: [Discharge Condition, Condition on Discharge]
+  discharge_disposition:
+    aliases: [Discharge Disposition, Disposition]
+  discharge_instructions:
+    aliases: [Discharge Instructions, Instructions, Patient Instructions]
+  followup_instructions:
+    aliases: [Followup Instructions, Follow-up Instructions, Follow up Instructions]
+  facility:
+    aliases: [Facility, Discharge Facility]
+
+  # --- physical-exam subsections, normally inline and depth 1 -------------
+  exam_general:
+    aliases: [General, Gen, GEN, General Appearance]
+    depth: 1
+  exam_heent:
+    aliases: [HEENT, Head, Eyes, ENT, Neck]
+    depth: 1
+  exam_cardiac:
+    aliases: [Cardiac, CV, Cardiovascular, Heart]
+    depth: 1
+  exam_pulmonary:
+    aliases: [Lungs, Lung, Pulm, Pulmonary, Resp, Respiratory, Chest]
+    depth: 1
+  exam_abdomen:
+    aliases: [Abdomen, Abd, ABD, Abdominal]
+    depth: 1
+  exam_extremities:
+    aliases: [Extremities, Ext, Limbs, Pulses]
+    depth: 1
+  exam_skin:
+    aliases: [Skin, Derm, Integument]
+    depth: 1
+  exam_neuro:
+    aliases: [Neuro, Neurologic, Neurological, Neurologic Exam]
+    depth: 1
+  exam_psych:
+    aliases: [Psych, Psychiatric, Mental Status]
+    depth: 1
+  exam_msk:
+    aliases: [MSK, Musculoskeletal, Back]
+    depth: 1
+  exam_gi:
+    aliases: [GI, Gastrointestinal]
+    depth: 1
+  exam_gu:
+    aliases: [GU, Genitourinary]
+    depth: 1
+  exam_access:
+    aliases: [Access, Lines, Lines/Tubes/Drains]
+    depth: 1
+  vitals_detail:
+    aliases: [Temp, Temperature, Weight, Wt, Height, BP, HR, RR, I/O, Ins/Outs]
+    depth: 1
+  family_member:
+    aliases: [Mother, Father, Siblings, Sister, Brother, Maternal, Paternal]
+    depth: 1
+  discharge_status:
+    # Sub-fields of Discharge Condition; present in ~78% of notes.
+    aliases: [Level of Consciousness, Activity Status, Ambulatory Status, Mental Status]
+    depth: 1
+
+  # --- fields internal to an embedded radiology or microbiology report -----
+  # Header grammar, but they structure a nested report rather than the note.
+  report_field:
+    aliases:
+      - Comparison
+      - Indication
+      - Technique
+      - Sensitivities
+      - Wet Prep
+      - History
+      - Motor
+      - Sensory
+    kind: report_field
+
+  # --- pharmacy and administrative field labels ---------------------------
+  # These have header *grammar* (`Disp:*30 Tablet(s)*`, `Refills:*2*`) and are
+  # numerous — "Disp" alone appears in 24.9% of notes — but they are line-level
+  # boilerplate inside a medication list, not section structure. Recognising
+  # them explicitly keeps them out of the section-header denominator instead of
+  # roughly doubling it.
+  rx_dispense:
+    aliases: [Disp, Dispense, Tablet Refills, Capsule Refills]
+    kind: boilerplate
+  rx_refills:
+    aliases: [Refills]
+    kind: boilerplate
+  rx_sig:
+    aliases: [Sig, Nebulization Sig, Directions]
+    kind: boilerplate
+  admin_contact:
+    aliases: [Phone number, Telephone, Fax, Address, Source, Start, Frequency]
+    kind: boilerplate

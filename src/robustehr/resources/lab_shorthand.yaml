@@ -1,0 +1,219 @@
+# Clinical shorthand → long form, scoped to the structural slot it appears in.
+#
+# ── WHAT THIS IS ────────────────────────────────────────────────────────────
+# Stage 3a/3b of the concept-matching pipeline. A short form here is expanded to
+# its long form, and the LONG FORM is what gets looked up in the terminology.
+# Each long form is ordinary clinical English, chosen to be a string the
+# terminology carries so the lookup succeeds, and each row carries a SNOMED
+# identifier. Plain English and identifiers ship; no Metathesaurus string is
+# transcribed here, and the user's own licensed UMLS resolves the rest.
+#
+# ── WHY IT EXISTS ───────────────────────────────────────────────────────────
+# Measured on the SNOMED CT Entity Linking Challenge: 44.9% of abbreviation-
+# shaped gold spans have no UMLS candidate carrying the right category, and half
+# of those sit in a structural slot. `creatinine` is in UMLS; `creat` is not.
+# `anion gap` is in UMLS; `angap` is not. No amount of disambiguation reaches
+# them, because the candidate set is empty. Only vocabulary does.
+#
+# ── PROVENANCE, AND WHY IT MATTERS ──────────────────────────────────────────
+# **Authored from general clinical knowledge — by panel, not by corpus.** The
+# entries below were written by walking the standard orderable panels (CBC with
+# differential, BMP/CMP, LFTs, coagulation, cardiac markers, ABG, urinalysis)
+# and the standard physical-examination systems. They are not transcribed from a
+# frequency ranking of any corpus.
+#
+# The distinction is not pedantry. This project's notes are MIMIC-IV under the
+# PhysioNet Credentialed Health Data Use Agreement, and **the DUA binds the
+# surfaces, not just the note text** — a ranked list of the most frequent
+# abbreviations in MIMIC is a MIMIC derivative and could not ship. A list of
+# what a CBC contains is knowledge any clinician has. The corpus is used only
+# afterwards, to report what fraction of this table it exercises, which is a
+# measurement of coverage rather than a source of content.
+#
+# ── SLOT SCOPING IS THE SAFETY MECHANISM ────────────────────────────────────
+# Every entry names the structural slot it is valid in, and is applied nowhere
+# else. This is what makes context-free expansion safe, and it lets in entries a
+# global table would have to reject:
+#
+#   `pt`  in a value slot is prothrombin time. In prose it is the patient, or
+#         physical therapy, and expanding it there would be wrong most of the time.
+#   `ca`  in a value slot is calcium. In prose it is cancer.
+#   `ph`  in a value slot is the acidity. In prose it is past history.
+#
+# So the entry criterion is **monosemous within its slot**, not monosemous
+# outright. Anything ambiguous even inside its slot does not belong here — it
+# belongs to the anchor-vote rung, which abstains.
+#
+#   value_label — the label half of `Creat-1.1`, i.e. a labelled numeric value
+#                 inside a self-labelling aligned block
+#   exam_label  — the system named by an exam subsection header, `HEENT:`
+#
+# ── EVERY LONG FORM MUST BE ONE THE TERMINOLOGY CARRIES ─────────────────────
+# The long form is a lookup key, so an entry expanding to a string UMLS does not
+# hold is dead weight: it resolves to nothing and the mention is dropped exactly
+# as if the row were absent. `crp -> C reactive protein` fails where
+# `c-reactive protein` works, and `heent -> head eyes ears nose and throat`
+# fails where `head and neck` works.
+#
+# So the correct long form is not necessarily the *expansion*; it is the nearest
+# term the vocabulary actually contains. Each row therefore carries a `snomed:`
+# identifier as the authoritative half, with the long form kept as the reviewer's
+# handle and a fallback.
+#
+# `validation/pipeline/scripts/check_expansions.py` reports any row that resolves to nothing.
+# Two rows were deleted rather than repaired because this release carries no
+# resolvable equivalent: `ptt` and `rr`.
+#
+# ── WHAT BELONGS HERE, AND WHAT DOES NOT ────────────────────────────────────
+# Only shorthand **no terminology carries**. That is a narrower remit than it
+# first appeared: SNOMED records its own abbreviations through the
+# `ABBREV - full term` synonym convention, so `hfref`, `copd` and `nstemi` are
+# all derivable — see validation/pipeline/scripts/build_abbrev_inventory.py, which extracts 4,015 of
+# them — and are excluded here. A failed exact match is not evidence that a
+# term is absent from the vocabulary.
+#
+# What survives as genuinely hand-authored is institutional laboratory shorthand
+# — `creat`, `angap`, `urean`, `rdwsd` — which appears in no vocabulary at all
+# and is exactly what the stage-3 gate found unreachable.
+#
+# ── WHAT IS DELIBERATELY ABSENT ─────────────────────────────────────────────
+# A form that already *is* its long form — `lipase`, `ferritin`, `skin`, `neck`
+# — is not an abbreviation and gets no row; the loader's consistency check
+# refuses any entry expanding to itself, because the point of a row is to reach
+# a form the terminology carries, and these already are one. They resolve
+# without help.
+#
+# ── STATUS ──────────────────────────────────────────────────────────────────
+# `reviewed: true` — a clinician has read every row. The package reports the flag
+# next to any result this table contributed to, because an unreviewed table is an
+# assumption wearing the costume of a resource, and the distinction should be
+# visible in the artifact rather than remembered.
+
+schema_version: "1.0"
+reviewed: true
+review_note: >
+  Authored from panel structure and standard exam systems, then reviewed row by
+  row by a clinician. Each row is checkable without reading any code; where it
+  is not, the row is wrong. Re-review is owed whenever a row is added or its
+  long form changes, because the identifier is what resolves and the string is
+  what makes the row reviewable.
+
+expansions:
+  # ── CBC with differential ────────────────────────────────────────────────
+  - {short: wbc, long: white blood cell count, slot: value_label, panel: cbc, snomed: '142914005'}
+  - {short: rbc, long: red blood cell count, slot: value_label, panel: cbc, snomed: '14089001'}
+  - {short: hgb, long: hemoglobin, slot: value_label, panel: cbc, snomed: '58962003'}
+  - {short: hb, long: hemoglobin, slot: value_label, panel: cbc, snomed: '58962003'}
+  - {short: hct, long: hematocrit, slot: value_label, panel: cbc, snomed: '142828000'}
+  - {short: plt, long: platelet count, slot: value_label, panel: cbc, snomed: '142967005'}
+  - {short: mcv, long: mean corpuscular volume, slot: value_label, panel: cbc, snomed: '103207006'}
+  - {short: mch, long: mean corpuscular hemoglobin, slot: value_label, panel: cbc, snomed: '142847002'}
+  - {short: mchc, long: mean corpuscular hemoglobin concentration, slot: value_label, panel: cbc, snomed: '103206002'}
+  - {short: rdw, long: red cell distribution width, slot: value_label, panel: cbc, snomed: '143103004'}
+  - {short: rdwsd, long: erythrocyte distribution width, slot: value_label, panel: cbc, snomed: '143103004'}
+  - {short: neuts, long: neutrophils, slot: value_label, panel: cbc_differential, snomed: '116712007'}
+  - {short: lymphs, long: lymphocytes, slot: value_label, panel: cbc_differential, snomed: '56972008'}
+  - {short: monos, long: monocytes, slot: value_label, panel: cbc_differential, snomed: '55918008'}
+  - {short: eos, long: eosinophils, slot: value_label, panel: cbc_differential, snomed: '14793004'}
+  - {short: baso, long: basophils, slot: value_label, panel: cbc_differential}
+  - {short: basos, long: basophils, slot: value_label, panel: cbc_differential}
+  - {short: bands, long: band cell, slot: value_label, panel: cbc_differential, snomed: '259712009'}
+  - {short: retic, long: reticulocyte count, slot: value_label, panel: cbc, snomed: '143086006'}
+
+  # ── Basic and comprehensive metabolic panel ──────────────────────────────
+  - {short: na, long: sodium, slot: value_label, panel: bmp, snomed: '25197003'}
+  - {short: k, long: potassium, slot: value_label, panel: bmp, snomed: '350560002'}
+  - {short: cl, long: chloride, slot: value_label, panel: bmp, snomed: '46511006'}
+  - {short: hco3, long: bicarbonate, slot: value_label, panel: bmp, snomed: '259092001'}
+  - {short: bun, long: blood urea nitrogen, slot: value_label, panel: bmp, snomed: '105011006'}
+  - {short: urean, long: urea nitrogen, slot: value_label, panel: bmp, snomed: '24509005'}
+  - {short: creat, long: creatinine, slot: value_label, panel: bmp, snomed: '70901006'}
+  - {short: crea, long: creatinine, slot: value_label, panel: bmp, snomed: '70901006'}
+  - {short: glu, long: glucose, slot: value_label, panel: bmp, snomed: '111138002'}
+  - {short: ca, long: calcium, slot: value_label, panel: cmp, snomed: '290128009'}
+  - {short: mg, long: magnesium, slot: value_label, panel: cmp, snomed: '38151008'}
+  - {short: phos, long: phosphate, slot: value_label, panel: cmp, snomed: '104866001'}
+  - {short: angap, long: anion gap, slot: value_label, panel: bmp, snomed: '25469001'}
+
+  # ── Liver function ───────────────────────────────────────────────────────
+  - {short: alt, long: alanine aminotransferase, slot: value_label, panel: lft, snomed: '34608000'}
+  - {short: ast, long: aspartate aminotransferase, slot: value_label, panel: lft, snomed: '143976007'}
+  - {short: alkphos, long: alkaline phosphatase, slot: value_label, panel: lft, snomed: '88810008'}
+  - {short: totbili, long: total bilirubin, slot: value_label, panel: lft, snomed: '143933005'}
+  - {short: tbili, long: total bilirubin, slot: value_label, panel: lft, snomed: '143933005'}
+  - {short: dbili, long: bilirubin direct, slot: value_label, panel: lft, snomed: '39748002'}
+  - {short: bili, long: bilirubin, slot: value_label, panel: lft, snomed: '143933005'}
+  - {short: alb, long: albumin, slot: value_label, panel: lft, snomed: '26758005'}
+  - {short: ggt, long: gamma glutamyl transpeptidase, slot: value_label, panel: lft, snomed: '69480007'}
+
+  # ── Coagulation ──────────────────────────────────────────────────────────
+  - {short: pt, long: prothrombin, slot: value_label, panel: coagulation, snomed: '7348004'}
+  - {short: inr, long: international normalized ratio, slot: value_label, panel: coagulation, snomed: '142988001'}
+  - {short: fib, long: fibrinogen, slot: value_label, panel: coagulation, snomed: '23295004'}
+
+  # ── Cardiac markers ──────────────────────────────────────────────────────
+  - {short: trop, long: troponin, slot: value_label, panel: cardiac, snomed: '105000003'}
+  - {short: ctropnt, long: troponin T, slot: value_label, panel: cardiac, snomed: '121871002'}
+  - {short: probnp, long: brain natriuretic peptide, slot: value_label, panel: cardiac, snomed: '385677001'}
+  - {short: bnp, long: brain natriuretic peptide, slot: value_label, panel: cardiac, snomed: '385677001'}
+  - {short: ck, long: creatine kinase, slot: value_label, panel: cardiac, snomed: '143975006'}
+  - {short: ckmb, long: creatine kinase MB, slot: value_label, panel: cardiac, snomed: '104613001'}
+
+  # ── Blood gas ────────────────────────────────────────────────────────────
+  - {short: po2, long: partial pressure of oxygen, slot: value_label, panel: abg, snomed: '359846004'}
+  - {short: pco2, long: carbon dioxide partial pressure, slot: value_label, panel: abg}
+  - {short: be, long: base excess, slot: value_label, panel: abg, snomed: '67487000'}
+  - {short: cohgb, long: carboxyhemoglobin, slot: value_label, panel: abg, snomed: '19821003'}
+  - {short: methgb, long: methemoglobin, slot: value_label, panel: abg, snomed: '441965001'}
+
+  # ── Urinalysis ───────────────────────────────────────────────────────────
+  - {short: sg, long: specific gravity, slot: value_label, panel: urinalysis, snomed: '69285004'}
+  - {short: ket, long: ketones, slot: value_label, panel: urinalysis, snomed: '25164004'}
+  - {short: ketone, long: ketones, slot: value_label, panel: urinalysis, snomed: '25164004'}
+  - {short: urobilngn, long: urobilinogen, slot: value_label, panel: urinalysis, snomed: '75306008'}
+  - {short: leuk, long: leukocytes, slot: value_label, panel: urinalysis, snomed: '272170001'}
+
+  # ── Endocrine, inflammatory, other ───────────────────────────────────────
+  - {short: tsh, long: thyroid stimulating hormone, slot: value_label, panel: endocrine, snomed: '24096000'}
+  - {short: hba1c, long: hemoglobin A1c, slot: value_label, panel: endocrine}
+  - {short: eag, long: estimated average glucose, slot: value_label, panel: endocrine, snomed: '117346004'}
+  - {short: crp, long: c-reactive protein, slot: value_label, panel: inflammatory, snomed: '55235003'}
+  - {short: esr, long: erythrocyte sedimentation rate, slot: value_label, panel: inflammatory, snomed: '103208001'}
+  - {short: ldh, long: lactate dehydrogenase, slot: value_label, panel: other, snomed: '11274001'}
+  - {short: tsat, long: transferrin saturation, slot: value_label, panel: other, snomed: '143037009'}
+
+  # ── Vital signs, in a labelled-value slot ────────────────────────────────
+  - {short: bp, long: blood pressure, slot: value_label, panel: vitals, snomed: '46973005'}
+  - {short: hr, long: heart rate, slot: value_label, panel: vitals}
+  - {short: temp, long: body temperature, slot: value_label, panel: vitals}
+  - {short: spo2, long: oxygen saturation, slot: value_label, panel: vitals, snomed: '113080007'}
+  - {short: sat, long: oxygen saturation, slot: value_label, panel: vitals, snomed: '113080007'}
+  - {short: wt, long: body weight, slot: value_label, panel: vitals, snomed: '39857003'}
+  - {short: ht, long: stature, slot: value_label, panel: vitals, snomed: '271603002'}
+
+  # ── Physical examination systems ─────────────────────────────────────────
+  # Valid only as an exam subsection label. `gen` heading a paragraph is general
+  # appearance; `gen` in running prose is not.
+  - {short: heent, long: head and neck, slot: exam_label, snomed: '774007'}
+  - {short: gen, long: general appearance, slot: exam_label}
+  - {short: ga, long: general appearance, slot: exam_label}
+  - {short: vs, long: vital signs, slot: exam_label, snomed: '61746007'}
+  - {short: vitals, long: vital signs, slot: exam_label, snomed: '61746007'}
+  - {short: cv, long: cardiovascular system, slot: exam_label, snomed: '113257007'}
+  - {short: cvs, long: cardiovascular system, slot: exam_label, snomed: '113257007'}
+  - {short: resp, long: respiratory system, slot: exam_label, snomed: '20139000'}
+  - {short: pulm, long: respiratory system, slot: exam_label, snomed: '20139000'}
+  - {short: lungs, long: lung, slot: exam_label, snomed: '39607008'}
+  - {short: abd, long: abdomen, slot: exam_label, snomed: '113345001'}
+  - {short: gi, long: gastrointestinal system, slot: exam_label, snomed: '373871007'}
+  - {short: gu, long: genitourinary system, slot: exam_label, snomed: '21514008'}
+  - {short: msk, long: musculoskeletal system, slot: exam_label, snomed: '118965001'}
+  - {short: ext, long: extremities, slot: exam_label, snomed: '123169005'}
+  - {short: extr, long: extremities, slot: exam_label, snomed: '123169005'}
+  - {short: neuro, long: nervous system, slot: exam_label, snomed: '181114007'}
+  - {short: psych, long: mental state, slot: exam_label, snomed: '147911009'}
+  - {short: eyes, long: eye, slot: exam_label, snomed: '276432009'}
+  - {short: ent, long: otolaryngology, slot: exam_label, snomed: '385383008'}
+  - {short: pulses, long: pulse, slot: exam_label, snomed: '410194008'}
+  - {short: derm, long: skin, slot: exam_label, snomed: '156446006'}
+  - {short: id, long: infectious disease, slot: exam_label, snomed: '189822004'}

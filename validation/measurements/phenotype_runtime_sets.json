@@ -1,0 +1,186 @@
+{
+ "by_facet": {
+  "alcohol_use_disorder": {
+   "closure": 36,
+   "disorder": 47,
+   "finding": 0,
+   "medication": 55,
+   "proposed": 55
+  },
+  "atrial_fibrillation": {
+   "closure": 10,
+   "disorder": 23,
+   "finding": 0,
+   "medication": 499,
+   "proposed": 59
+  },
+  "chest_pain": {
+   "closure": 27,
+   "disorder": 175,
+   "finding": 0,
+   "medication": 926,
+   "proposed": 84
+  },
+  "chronic_kidney_disease": {
+   "closure": 110,
+   "disorder": 129,
+   "finding": 1,
+   "medication": 977,
+   "proposed": 81
+  },
+  "clostridioides_difficile": {
+   "closure": 7,
+   "disorder": 10,
+   "finding": 2,
+   "medication": 141,
+   "proposed": 42
+  },
+  "deep_vein_thrombosis": {
+   "closure": 61,
+   "disorder": 241,
+   "finding": 1,
+   "medication": 15,
+   "proposed": 50
+  },
+  "dementia": {
+   "closure": 131,
+   "disorder": 280,
+   "finding": 3,
+   "medication": 222,
+   "proposed": 71
+  },
+  "depression": {
+   "closure": 100,
+   "disorder": 221,
+   "finding": 3,
+   "medication": 1149,
+   "proposed": 90
+  },
+  "diabetes_mellitus": {
+   "closure": 135,
+   "disorder": 382,
+   "finding": 0,
+   "medication": 746,
+   "proposed": 100
+  },
+  "dyspnea": {
+   "closure": 44,
+   "disorder": 142,
+   "finding": 0,
+   "medication": 526,
+   "proposed": 82
+  },
+  "fever": {
+   "closure": 21,
+   "disorder": 246,
+   "finding": 0,
+   "medication": 2401,
+   "proposed": 61
+  },
+  "heart_failure": {
+   "closure": 90,
+   "disorder": 161,
+   "finding": 4,
+   "medication": 1908,
+   "proposed": 89
+  },
+  "hfpef": {
+   "closure": 81,
+   "disorder": 8,
+   "finding": 4,
+   "medication": 1044,
+   "proposed": 46
+  },
+  "hfref": {
+   "closure": 49,
+   "disorder": 8,
+   "finding": 4,
+   "medication": 1282,
+   "proposed": 64
+  },
+  "hypertension": {
+   "closure": 55,
+   "disorder": 361,
+   "finding": 0,
+   "medication": 2705,
+   "proposed": 74
+  },
+  "metastatic_cancer": {
+   "closure": 36,
+   "disorder": 1080,
+   "finding": 0,
+   "medication": 1107,
+   "proposed": 98
+  },
+  "obesity": {
+   "closure": 21,
+   "disorder": 99,
+   "finding": 1,
+   "medication": 701,
+   "proposed": 52
+  },
+  "pulmonary_embolism": {
+   "closure": 36,
+   "disorder": 30,
+   "finding": 3,
+   "medication": 397,
+   "proposed": 62
+  },
+  "rheumatoid_arthritis": {
+   "closure": 92,
+   "disorder": 257,
+   "finding": 1,
+   "medication": 2657,
+   "proposed": 45
+  },
+  "systemic_lupus_erythematosus": {
+   "closure": 45,
+   "disorder": 38,
+   "finding": 0,
+   "medication": 891,
+   "proposed": 55
+  },
+  "type_1_diabetes": {
+   "closure": 43,
+   "disorder": 36,
+   "finding": 2,
+   "medication": 269,
+   "proposed": 73
+  },
+  "type_2_diabetes": {
+   "closure": 79,
+   "disorder": 41,
+   "finding": 2,
+   "medication": 707,
+   "proposed": 69
+  }
+ },
+ "facets_loaded": true,
+ "generated_by": "validation/phenotype/scripts/phenotype_runtime_sets.py",
+ "method": "concepts.phenotype.build with its defaults: seed codes expanded through the SNOMED isa union MTH RN hierarchy, plus the medication facet with its RxNorm identity variants, the finding, vetting-gated proposed and strict-gated closure facets (facets=True is the default since the Table 2 audit found them built and never loaded). This is the set --target pheno= selects and the set index_document tests against.",
+ "question": "how many concepts does the RUNTIME annotator actually carry per phenotype?",
+ "runtime_set_size": {
+  "alcohol_use_disorder": 184,
+  "atrial_fibrillation": 581,
+  "chest_pain": 1187,
+  "chronic_kidney_disease": 1284,
+  "clostridioides_difficile": 196,
+  "deep_vein_thrombosis": 354,
+  "dementia": 687,
+  "depression": 1533,
+  "diabetes_mellitus": 1333,
+  "dyspnea": 778,
+  "fever": 2712,
+  "heart_failure": 2218,
+  "hfpef": 1177,
+  "hfref": 1399,
+  "hypertension": 3167,
+  "metastatic_cancer": 2292,
+  "obesity": 860,
+  "pulmonary_embolism": 518,
+  "rheumatoid_arthritis": 3044,
+  "systemic_lupus_erythematosus": 1023,
+  "type_1_diabetes": 415,
+  "type_2_diabetes": 890
+ }
+}

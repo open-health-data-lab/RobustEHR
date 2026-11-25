@@ -1,0 +1,9 @@
+{
+  "sha256": "08cb4ddb7bd19dd6e3534f53701c04903826b99e113c07c2411117e06e928ed0",
+  "corpus": "SNOMED CT Entity Linking Challenge \u2014 MIMIC-IV discharge summaries",
+  "notes": 272,
+  "types": 8668,
+  "gold_token_rate": 0.2847,
+  "generated_by": "validation/pipeline/scripts/gen_clinical_salience.py",
+  "validated_in": "validation/measurements/clinical_targeting.json"
+}

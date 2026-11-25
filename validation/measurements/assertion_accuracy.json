@@ -1,0 +1,375 @@
+{
+  "arms": {
+    "ctx_a_pyrush": {
+      "accuracy": 0.9696,
+      "fn": 21,
+      "fp": 51,
+      "n": 2365,
+      "negated_f1": 0.9289,
+      "negated_precision": 0.9021,
+      "negated_recall": 0.9572,
+      "tn": 1823,
+      "tp": 470,
+      "unqualified_spans": 4
+    },
+    "ctx_b_our_boundaries": {
+      "accuracy": 0.9696,
+      "fn": 21,
+      "fp": 51,
+      "n": 2365,
+      "negated_f1": 0.9289,
+      "negated_precision": 0.9021,
+      "negated_recall": 0.9572,
+      "tn": 1823,
+      "tp": 470,
+      "unqualified_spans": 4
+    },
+    "dependency_parse": {
+      "accuracy": 0.9277,
+      "fn": 141,
+      "fp": 30,
+      "n": 2365,
+      "negated_f1": 0.8037,
+      "negated_precision": 0.9211,
+      "negated_recall": 0.7128,
+      "tn": 1844,
+      "tp": 350,
+      "unqualified_spans": 0
+    },
+    "majority_always_affirmed": {
+      "accuracy": 0.7924,
+      "fn": 491,
+      "fp": 0,
+      "n": 2365,
+      "negated_f1": 0.0,
+      "negated_precision": 0.0,
+      "negated_recall": 0.0,
+      "tn": 1874,
+      "tp": 0,
+      "unqualified_spans": 0
+    },
+    "negspacy": {
+      "accuracy": 0.9742,
+      "fn": 25,
+      "fp": 36,
+      "n": 2365,
+      "negated_f1": 0.9386,
+      "negated_precision": 0.9283,
+      "negated_recall": 0.9491,
+      "tn": 1838,
+      "tp": 466,
+      "unqualified_spans": 0
+    },
+    "window_cue": {
+      "accuracy": 0.7252,
+      "fn": 27,
+      "fp": 623,
+      "n": 2365,
+      "negated_f1": 0.5881,
+      "negated_precision": 0.4269,
+      "negated_recall": 0.945,
+      "tn": 1251,
+      "tp": 464,
+      "unqualified_spans": 0
+    }
+  },
+  "best_arm": "negspacy",
+  "ctx_a_errors_sample": [
+    {
+      "concept": "nauseated",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "3"
+    },
+    {
+      "concept": "lungs show no airspace opacities",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "11"
+    },
+    {
+      "concept": "ALLOGRAFT LUNG, RIGHT LOWER LOBE, TRANSB\u2026",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "12"
+    },
+    {
+      "concept": "hemodynamically stable",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "13"
+    },
+    {
+      "concept": "ALLERGIES",
+      "ctx_a": "affirmed",
+      "ctx_b": "affirmed",
+      "gold": "negated",
+      "report": "15"
+    },
+    {
+      "concept": "extremities are without edema or tendern\u2026",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "15"
+    },
+    {
+      "concept": "minimal subchondral cystic change of  th\u2026",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "17"
+    },
+    {
+      "concept": "MINIMAL SUBCHONDRAL CYSTIC CHANGE WITHOU\u2026",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "17"
+    },
+    {
+      "concept": "hairy cell leukemia",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "18"
+    },
+    {
+      "concept": "left-sided weakness",
+      "ctx_a": "affirmed",
+      "ctx_b": "affirmed",
+      "gold": "negated",
+      "report": "21"
+    },
+    {
+      "concept": "difficult to keep focused",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "21"
+    },
+    {
+      "concept": "Tobacco",
+      "ctx_a": "affirmed",
+      "ctx_b": "affirmed",
+      "gold": "negated",
+      "report": "27"
+    },
+    {
+      "concept": "Chest X-Ray: No acute disease",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "27"
+    },
+    {
+      "concept": "hyponatremia",
+      "ctx_a": "affirmed",
+      "ctx_b": "affirmed",
+      "gold": "negated",
+      "report": "27"
+    },
+    {
+      "concept": "rectal exam was performed and showed no \u2026",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "28"
+    },
+    {
+      "concept": "intracranial hemorrhage",
+      "ctx_a": "affirmed",
+      "ctx_b": "affirmed",
+      "gold": "negated",
+      "report": "29"
+    },
+    {
+      "concept": "rectal exam was performed and showed no \u2026",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "34"
+    },
+    {
+      "concept": "subchondral cysts of the  scaphoid and r\u2026",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "35"
+    },
+    {
+      "concept": "DVT",
+      "ctx_a": "affirmed",
+      "ctx_b": "affirmed",
+      "gold": "negated",
+      "report": "37"
+    },
+    {
+      "concept": "Syncope",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "38"
+    },
+    {
+      "concept": "Collapse",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "38"
+    },
+    {
+      "concept": "left hip, the right  hemipelvis, the sac\u2026",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "41"
+    },
+    {
+      "concept": "cholecystolithiasis",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "43"
+    },
+    {
+      "concept": "sigmoid diverticulosis without diverticu\u2026",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "43"
+    },
+    {
+      "concept": "DVT",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "43"
+    },
+    {
+      "concept": "CT of her   head was done immediately wh\u2026",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "49"
+    },
+    {
+      "concept": "nausea",
+      "ctx_a": "affirmed",
+      "ctx_b": "affirmed",
+      "gold": "negated",
+      "report": "55"
+    },
+    {
+      "concept": "vomiting",
+      "ctx_a": "affirmed",
+      "ctx_b": "affirmed",
+      "gold": "negated",
+      "report": "55"
+    },
+    {
+      "concept": "BACK EXAMINATION:  Reveals no stepoff or\u2026",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "57"
+    },
+    {
+      "concept": "change in bowel habit",
+      "ctx_a": "affirmed",
+      "ctx_b": "affirmed",
+      "gold": "negated",
+      "report": "58"
+    },
+    {
+      "concept": "bleeding",
+      "ctx_a": "affirmed",
+      "ctx_b": "affirmed",
+      "gold": "negated",
+      "report": "58"
+    },
+    {
+      "concept": "change in  weight",
+      "ctx_a": "affirmed",
+      "ctx_b": "affirmed",
+      "gold": "negated",
+      "report": "58"
+    },
+    {
+      "concept": "anemia",
+      "ctx_a": "affirmed",
+      "ctx_b": "affirmed",
+      "gold": "negated",
+      "report": "58"
+    },
+    {
+      "concept": "healed fractures",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "59"
+    },
+    {
+      "concept": "Post-menopausal",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "60"
+    },
+    {
+      "concept": "Neck - Supple, no lymphadenopathy",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "63"
+    },
+    {
+      "concept": "Skin is warm and moist without lesion",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "63"
+    },
+    {
+      "concept": "stomach wall was normally distensable an\u2026",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "64"
+    },
+    {
+      "concept": "voiding without difficulty",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "67"
+    },
+    {
+      "concept": "ambulating   independently",
+      "ctx_a": "negated",
+      "ctx_b": "negated",
+      "gold": "affirmed",
+      "report": "67"
+    }
+  ],
+  "ctx_b_is_not_testable_here": "**This gold cannot separate the two CTX arms, and the tie is structural rather than a result.** Every row is a single sentence with the concept inside it, so there is no second sentence for a cue to leak into and both segmenters return the same one boundary. The segmentation question needs multi-sentence text, which is what `assertion_deid_invariance.json` measures on the synthetic fixtures this package owns. Reporting the delta as 0.0000 evidence that our boundaries do not help would be a misreading: the instrument has no power here.",
+  "ctx_b_minus_ctx_a_f1": 0.0,
+  "gold": {
+    "corpus": "NegEx test set (Chapman et al.), Annotations-1-120.txt",
+    "licence": "none upstream; handled like MIMIC, see data/negex/manifest.json",
+    "negated_prevalence": 0.2076,
+    "rows_scored": 2365
+  },
+  "headline_metric": "negated_f1",
+  "how_to_read": "read the arms as a ladder, and read precision against recall rather than F1 alone. (1) The window arm reaches high recall at poor precision: *spotting* a cue is easy, *scoping* it is the hard part, and that gap is what ConText's scope resolution buys. (2) The dependency arm inverts it \u2014 high precision, low recall \u2014 because English marks `no X` as a determiner and carries `denies X` in the verb, which no parse relation exposes. That is why this field built cue-based systems rather than using parsers, and it is measured here rather than asserted. (3) negspacy landing beside medspaCy separates *the published algorithm works* from *this implementation of it works*; no configuration of our own component could distinguish those. (4) The window arm's accuracy falls below the always-affirmed baseline while its F1 is far above it, which is the clearest demonstration available that accuracy is the wrong headline on this gold.",
+  "independent_implementation_check": "negspacy is a separate codebase implementing the same published algorithm. Agreement between it and medspaCy is evidence about Chapman's method; disagreement would have been evidence about one implementation. This is the arm that makes the reuse argument in concepts/context.py checkable rather than merely stated.",
+  "question": "Is the assertion stage right, not merely stable?",
+  "why": "assertion_stability.json gates stage 8 on invariance under meaning-preserving perturbation. A contextualizer that marked everything affirmed would score a perfect 0.0000 flip rate on that gate while being wrong on every negation. This is the correctness measurement that gate cannot give.",
+  "why_not_accuracy": "negation is rare, so always-affirmed already scores about 0.79 accuracy while getting every negation wrong. Accuracy cannot separate a working contextualizer from a broken one on this gold; negated-class F1 can.",
+  "why_ship_context_when_negspacy_scores_higher": "negspacy wins this benchmark on negation, by roughly one F1 point, and matches the shipped arm on the invariance test. It is nonetheless not the component to ship, for a reason this benchmark is structurally unable to show: **negspacy detects negation and nothing else**. medspaCy ConText returns five dimensions, and the package needs temporality and experiencer for phenotype reporting (30.1% of gold evidence is non-affirmed, of which negation is only 17.8 points) and needs cue spans and scope spans to give the SEMANTIC operator channel a dose denominator. Choosing the single-dimension winner would trade four dimensions and the whole operator channel for one F1 point on one of them. The number is reported rather than buried because it is the honest cost of that choice, and because a future version that needs only negation should know which component to reach for.",
+  "window_tokens": 8
+}

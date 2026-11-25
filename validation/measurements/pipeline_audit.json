@@ -1,0 +1,77 @@
+{
+  "all_ok": true,
+  "corpus": "golden_notes.csv",
+  "notes": 3,
+  "operators": [
+    "input.typo",
+    "discourse.sentence_delete"
+  ],
+  "phenotypes": [
+    "hypertension"
+  ],
+  "question": "does the pipeline parse, baseline, corrupt and re-measure, end to end?",
+  "stages": {
+    "applicability": {
+      "exit": 0,
+      "ok": true
+    },
+    "baseline_without_index": {
+      "exit": 0,
+      "ok": true
+    },
+    "compare": {
+      "cells": 3,
+      "cells_losing_concepts": 3,
+      "exit": 0,
+      "ok": true,
+      "worst_delta": -779
+    },
+    "concept_profile": {
+      "deterministic": true,
+      "digest": "527d62844df76bb0",
+      "exit": 0,
+      "ok": true
+    },
+    "describe_without_index": {
+      "deterministic": true,
+      "exit": 0,
+      "levels": 11,
+      "ok": true,
+      "per_note_rows": 3,
+      "unmeasured_levels_with_operators": []
+    },
+    "hard_protection": {
+      "edits_touching_a_hard_span": 122,
+      "note": "whole replacement by a declaring operator is permitted; a PARTIAL cut would leave a mangled de-identification marker and is the violation",
+      "ok": true,
+      "partial_cuts": 0
+    },
+    "replay_composite": {
+      "exit": 0,
+      "mismatched": 0,
+      "ok": true,
+      "verified": 3
+    },
+    "replay_single": {
+      "exit": 0,
+      "mismatched": 0,
+      "ok": true,
+      "verified": 12
+    },
+    "run_composite": {
+      "cells": 3,
+      "conflicts_counted": true,
+      "conflicts_dropped": 2976,
+      "deterministic": true,
+      "exit": 0,
+      "ok": true,
+      "violations": []
+    },
+    "run_single": {
+      "cells": 12,
+      "exit": 0,
+      "ok": true,
+      "violations": []
+    }
+  }
+}

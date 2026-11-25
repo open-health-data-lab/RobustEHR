@@ -1,0 +1,55 @@
+# Correspondence between an external label set's columns and this package's
+# declared phenotypes.
+#
+# **Why this is a resource and not a dictionary in a script.** The numbers in
+# a per-group Table 1 depend entirely on which annotator was pointed at which
+# group of notes, and getting that correspondence wrong produces a table that
+# looks right and measures the wrong thing. It belongs somewhere a reviewer can
+# read it.
+#
+# A column maps to a LIST of phenotypes, because the correspondence is not
+# one-to-one. `vte_past` is venous thromboembolism, which this package declares
+# as two phenotypes; the group's evidence is the union, exactly what
+# `--target 'any(pheno=deep_vein_thrombosis;pheno=pulmonary_embolism)'` selects.
+#
+# An empty list means the column names no phenotype. `none` is the MIPA
+# negative control — notes positive for nothing — and it is a group worth
+# reporting precisely because no annotator applies to it.
+
+mipa:
+  source: >-
+    MIPA phenotype annotations over MIMIC-IV discharge summaries. Column names
+    are the annotation project's; the phenotype names are this package's.
+  columns:
+    # Same name in both, listed anyway so the file is the whole correspondence
+    # rather than the exceptions to a rule the reader has to infer.
+    dementia: [dementia]
+    depression: [depression]
+    hfpef: [hfpef]
+    hfref: [hfref]
+    hypertension: [hypertension]
+    metastatic_cancer: [metastatic_cancer]
+    obesity: [obesity]
+    rheumatoid_arthritis: [rheumatoid_arthritis]
+
+    # Different name, same concept.
+    alcohol_abuse: [alcohol_use_disorder]
+    diabetes_type_1: [type_1_diabetes]
+    diabetes_type_2: [type_2_diabetes]
+    sle: [systemic_lupus_erythematosus]
+
+    # One label, one phenotype, two clinical questions. MIPA separates a
+    # C. difficile infection acquired during the admission from one in the
+    # history; the concept set that finds either is the same, so both columns
+    # map to it and the DISTINCTION lives in the group, not the annotator.
+    c_diff_complication: [clostridioides_difficile]
+    c_diff_past: [clostridioides_difficile]
+
+    # Venous thromboembolism is declared here as its two presentations.
+    vte_complication: [deep_vein_thrombosis, pulmonary_embolism]
+    vte_past: [deep_vein_thrombosis, pulmonary_embolism]
+
+    # The negative control: positive for no phenotype. No annotator applies,
+    # and that is the point — it is the comparison every other group is read
+    # against.
+    none: []

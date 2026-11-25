@@ -1,0 +1,220 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "robustehr"
+version = "0.2.0"
+description = "Deterministic, dose-calibrated perturbation of clinical free text"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Open Health Data Lab" }]
+keywords = ["clinical-nlp", "robustness", "perturbation", "ehr", "umls"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+
+# Core stays deliberately small. `phenotype_scope: agnostic` runs — the whole
+# RENDER/INPUT/LEXICAL/DISCOURSE suite — need nothing beyond this.
+dependencies = [
+    "pyyaml>=6.0",
+    "pyarrow>=15.0",
+    # `lexical.numeral_to_word`. Reused rather than hand-rolled, per the
+    # governing rule in validation/methodology/README.md — with one documented departure:
+    # num2words emits British connectives (`one hundred and twenty`, and a comma
+    # in `one thousand, two hundred and fifty`), which are normalised away in
+    # `robustehr.numerals`. The comma matters more than the style: it would add a
+    # punctuation token, so "30% of numerals" would silently also be perturbing
+    # punctuation.
+    "num2words>=0.5.13",
+]
+
+[project.optional-dependencies]
+# The concept matcher. QuickUMLS as packaged by the medspaCy project, which is
+# the distribution that installs on current Pythons. This gives the matcher,
+# not a vocabulary: the index it loads is built locally from the reader's own
+# licensed UMLS release (data/quickumls_index/README.md). It also arrives with
+# `clinical`, as a dependency of medspaCy; it is named here so that concept
+# matching does not depend on installing assertion detection.
+umls = ["medspacy-quickumls>=3.0"]
+# UMLS RRF -> local database, build time only.
+terminology = ["duckdb>=1.0"]
+# Assertion detection. Only needed for phenotype_scope protect/target and for
+# the SEMANTIC/FACTUAL channels.
+clinical = ["spacy>=3.7,<3.9", "medspacy>=1.1"]
+# Comparison arms for validation/measurements. Imported by validation/ only, never by the
+# package: `assertion_accuracy.py` benchmarks the shipped contextualizer against
+# an independent implementation of the same algorithm and against a dependency
+# parser, and a claim that we beat the alternatives has to be runnable by the
+# reader. spacy is pinned below 3.8 because the scispaCy models the head-to-head
+# arm needs are.
+benchmark = ["negspacy>=1.0", "scispacy>=0.5", "spacy>=3.7,<3.8"]
+# The neural assertion arms. Separate from `benchmark` because torch is ~2GB and
+# most readers reproducing the rule-based comparison do not need it. Nothing in
+# `src/` imports either package: an encoder is a candidate *detector*, and until
+# one is measured to beat the shipped rules on held-out data it stays in
+# `validation/` with the other comparison arms.
+neural = ["torch>=2.2", "transformers>=4.40"]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.5",
+    "mypy>=1.10",
+    "types-PyYAML",
+]
+all = ["robustehr[umls,terminology,clinical,dev]"]
+
+[project.scripts]
+robustehr = "robustehr.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/open-health-data-lab/RobustEHR"
+Issues = "https://github.com/open-health-data-lab/RobustEHR/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/robustehr"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "validation/tests"]
+addopts = "-q --strict-markers"
+markers = [
+    "corpus: requires the local restricted development corpus (data/*.csv)",
+    "slow: full-corpus determinism sweeps",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests", "validation"]
+
+[tool.ruff.lint]
+select = [
+    "E", "F", "W",   # pycodestyle / pyflakes
+    "I",             # isort
+    "UP",            # pyupgrade
+    "B",             # bugbear
+    "SIM",           # simplify
+    "RUF",
+    "PL",            # pylint
+]
+ignore = [
+    "PLR0913",  # many arguments: dataclass-heavy code
+    "PLR2004",  # magic values: unavoidable in segmentation heuristics
+]
+
+[tool.ruff.lint.per-file-ignores]
+# PLC0415: `tests/test_context.py` imports inside tests on purpose — the module
+# is behind the `clinical` extra and reached through `pytest.importorskip`, so a
+# module-scope import would collect-error instead of skipping.
+"tests/*" = ["PLR2004", "E501", "PLC0415"]
+# Deferred imports are the point in these two. Hoisting `duckdb` or `pyarrow`
+# to module scope would make `robustehr --help` require the optional extras,
+# and would put a multi-second import on the path of every command that does
+# not need it.
+"src/robustehr/cli.py" = ["PLC0415"]
+"src/robustehr/corpus.py" = ["PLC0415"]
+# The recipe layer resolves against the operator registry, which imports every
+# operator module, which imports the terminology-adjacent resources. Hoisting
+# that would make loading a YAML file cost the whole package.
+"src/robustehr/config.py" = ["PLC0415"]
+# `num2words` is only reached when the numeral operator is actually eligible, so
+# `robustehr --help` does not pay for it.
+"src/robustehr/numerals.py" = ["PLC0415"]
+# Both defer into the concept layer, which is behind the terminology extra: the
+# medication baseline degrades to a dictionary-only reading without it, and the
+# OCR baseline needs the 265k-term vocabulary only when asked for a measurement.
+"src/robustehr/metrics/medications.py" = ["PLC0415"]
+"src/robustehr/metrics/ocr.py" = ["PLC0415"]
+# `facets` reads a licensed-release artifact and is optional; deferring keeps an
+# agnostic run free of it.
+"src/robustehr/concepts/phenotype.py" = ["PLC0415"]
+# Probes document optional packages; importing them at module scope would make
+# the script unrunnable on a machine that has not installed the extra, which is
+# the machine most likely to be running it.
+"validation/*" = ["PLC0415"]
+# `reach()` in `phenotype_closure.py` closes over the per-phenotype accumulators
+# (`members`, `support`, `via`, `as_parent`) that the loop rebuilds each iteration.
+# B023 warns because such a closure would see the last iteration's values if it
+# outlived the iteration -- this one does not: it is called only from the two loops
+# directly beneath its definition, and is never stored, returned or deferred.
+# Suppressed per file rather than with five noqa comments inside one short function.
+"validation/phenotype/scripts/phenotype_closure.py" = ["PLC0415", "B023"]
+"src/robustehr/concepts/umls.py" = ["PLC0415"]
+# Deferred to break a cycle: lexicon imports categories, which the lexical axis
+# must not depend on at module scope.
+"src/robustehr/lexical.py" = ["PLC0415"]
+# QuickUMLS import is deferred so the core runs without the terminology extra.
+"src/robustehr/concepts/matcher.py" = ["PLC0415"]
+# DuckDB is a build-time-only dependency of the crosswalk builder.
+"src/robustehr/eval/snomed_el.py" = ["PLC0415"]
+# Deferred to avoid a cycle: matcher imports categories, structural extends matcher.
+"src/robustehr/concepts/structural.py" = ["PLC0415"]
+"src/robustehr/concepts/hierarchy.py" = ["PLC0415"]
+# Same as hierarchy: `build` reads MRREL through DuckDB and is a build-time
+# path, while `load` must work with only the core installed.
+"src/robustehr/concepts/facets.py" = ["PLC0415"]
+# Table 1 must assemble with or without the concept layer, so the lexical and
+# quality imports are deferred and their absence handled rather than raised.
+"src/robustehr/metrics/describe.py" = ["PLC0415"]
+# The vocabularies are large artifacts and the near-miss index is built from
+# them lazily, so a command that never asks for a spelling measure never pays
+# for loading 265,823 terms.
+"src/robustehr/metrics/spelling.py" = ["PLC0415"]
+# The category file is read only when a concept block is actually rendered, so
+# a structure-only table never loads it.
+"src/robustehr/report.py" = ["PLC0415"]
+# `ClinicalSalience` reaches the salience lexicon, the drug vocabulary and the
+# structural layer only when it is actually the active target. Hoisting those
+# would make every agnostic run — which is most of them — load a 183 KB
+# lexicon and the terminology-adjacent structural module it never consults.
+"src/robustehr/target.py" = ["PLC0415"]
+# Corpus-level tagging reaches the matcher and the cache, both behind the
+# terminology extra. Deferred for the same reason every other concept module
+# defers: `robustehr --help` must not require the extra.
+"src/robustehr/concepts/annotate.py" = ["PLC0415"]
+# The pipeline import is deferred to break a cycle: pipeline imports matcher,
+# and the cache is a wrapper around pipeline that matcher-side code may hold.
+"src/robustehr/concepts/cache.py" = ["PLC0415"]
+"src/robustehr/concepts/context.py" = ["PLC0415"]
+# Stage 8 is behind the `clinical` extra, so `qualify_document` imports it
+# inside the call and returns an empty index when it is absent — the same
+# degradation `mention_index` gives when there is no UMLS index.
+"src/robustehr/concepts/pipeline.py" = ["PLC0415"]
+# The SEMANTIC operators degrade to zero eligible units without the `clinical`
+# extra, so the ConText import is deferred and guarded rather than top-level.
+"src/robustehr/ops/semantic.py" = ["PLC0415"]
+
+[tool.mypy]
+# 3.12 is what the project runs on; numpy ships stubs that need it.
+python_version = "3.12"
+packages = ["robustehr"]
+strict_equality = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+
+[[tool.mypy.overrides]]
+# Optional, build-time-only dependencies that ship no type information.
+module = [
+    "pyarrow.*",
+    "duckdb.*",
+    "quickumls.*",
+    "medspacy.*",
+    "spacy.*",
+    "num2words.*",
+    # Neither is declared in any extra, and neither should be: both are reached
+    # through a guarded `try/except ImportError` with a documented degradation --
+    # without `wordfreq` every token is tagged `specific` and the manifest says
+    # so, and without `loguru` PyRuSH just keeps logging. They arrive as
+    # transitive dependencies of `clinical`, which is why a full development
+    # environment resolved them and a `[dev]`-only CI run did not.
+    "wordfreq.*",
+    "loguru.*",
+]
+ignore_missing_imports = true

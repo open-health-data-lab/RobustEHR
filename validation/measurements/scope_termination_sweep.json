@@ -1,0 +1,1418 @@
+{
+  "all_subsets": [
+    {
+      "macro_f1": 0.5669,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.6133,
+          "fn": 36,
+          "fp": 22,
+          "precision": 0.6765,
+          "recall": 0.561,
+          "tp": 46
+        }
+      },
+      "terminated_by_line_break": [
+        "NEGATED_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5669,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.6133,
+          "fn": 36,
+          "fp": 22,
+          "precision": 0.6765,
+          "recall": 0.561,
+          "tp": 46
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "NEGATED_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5572,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.6133,
+          "fn": 36,
+          "fp": 22,
+          "precision": 0.6765,
+          "recall": 0.561,
+          "tp": 46
+        }
+      },
+      "terminated_by_line_break": []
+    },
+    {
+      "macro_f1": 0.5572,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.6133,
+          "fn": 36,
+          "fp": 22,
+          "precision": 0.6765,
+          "recall": 0.561,
+          "tp": 46
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY"
+      ]
+    },
+    {
+      "macro_f1": 0.5536,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.5734,
+          "fn": 41,
+          "fp": 20,
+          "precision": 0.6721,
+          "recall": 0.5,
+          "tp": 41
+        }
+      },
+      "terminated_by_line_break": [
+        "NEGATED_EXISTENCE",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5536,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.5734,
+          "fn": 41,
+          "fp": 20,
+          "precision": 0.6721,
+          "recall": 0.5,
+          "tp": 41
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "NEGATED_EXISTENCE",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5439,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.5734,
+          "fn": 41,
+          "fp": 20,
+          "precision": 0.6721,
+          "recall": 0.5,
+          "tp": 41
+        }
+      },
+      "terminated_by_line_break": [
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5439,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.5734,
+          "fn": 41,
+          "fp": 20,
+          "precision": 0.6721,
+          "recall": 0.5,
+          "tp": 41
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5384,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.528,
+          "fn": 49,
+          "fp": 10,
+          "precision": 0.7674,
+          "recall": 0.4024,
+          "tp": 33
+        }
+      },
+      "terminated_by_line_break": [
+        "HYPOTHETICAL",
+        "NEGATED_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5384,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.528,
+          "fn": 49,
+          "fp": 10,
+          "precision": 0.7674,
+          "recall": 0.4024,
+          "tp": 33
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "HYPOTHETICAL",
+        "NEGATED_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5288,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.528,
+          "fn": 49,
+          "fp": 10,
+          "precision": 0.7674,
+          "recall": 0.4024,
+          "tp": 33
+        }
+      },
+      "terminated_by_line_break": [
+        "HYPOTHETICAL"
+      ]
+    },
+    {
+      "macro_f1": 0.5288,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.528,
+          "fn": 49,
+          "fp": 10,
+          "precision": 0.7674,
+          "recall": 0.4024,
+          "tp": 33
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "HYPOTHETICAL"
+      ]
+    },
+    {
+      "macro_f1": 0.5207,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.6133,
+          "fn": 36,
+          "fp": 22,
+          "precision": 0.6765,
+          "recall": 0.561,
+          "tp": 46
+        }
+      },
+      "terminated_by_line_break": [
+        "HISTORICAL",
+        "NEGATED_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5207,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.6133,
+          "fn": 36,
+          "fp": 22,
+          "precision": 0.6765,
+          "recall": 0.561,
+          "tp": 46
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "HISTORICAL",
+        "NEGATED_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5119,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.4483,
+          "fn": 56,
+          "fp": 8,
+          "precision": 0.7647,
+          "recall": 0.3171,
+          "tp": 26
+        }
+      },
+      "terminated_by_line_break": [
+        "HYPOTHETICAL",
+        "NEGATED_EXISTENCE",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5119,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.4483,
+          "fn": 56,
+          "fp": 8,
+          "precision": 0.7647,
+          "recall": 0.3171,
+          "tp": 26
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "HYPOTHETICAL",
+        "NEGATED_EXISTENCE",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.511,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.6133,
+          "fn": 36,
+          "fp": 22,
+          "precision": 0.6765,
+          "recall": 0.561,
+          "tp": 46
+        }
+      },
+      "terminated_by_line_break": [
+        "HISTORICAL"
+      ]
+    },
+    {
+      "macro_f1": 0.511,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.6133,
+          "fn": 36,
+          "fp": 22,
+          "precision": 0.6765,
+          "recall": 0.561,
+          "tp": 46
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "HISTORICAL"
+      ]
+    },
+    {
+      "macro_f1": 0.5074,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.5734,
+          "fn": 41,
+          "fp": 20,
+          "precision": 0.6721,
+          "recall": 0.5,
+          "tp": 41
+        }
+      },
+      "terminated_by_line_break": [
+        "HISTORICAL",
+        "NEGATED_EXISTENCE",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5074,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.5734,
+          "fn": 41,
+          "fp": 20,
+          "precision": 0.6721,
+          "recall": 0.5,
+          "tp": 41
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "HISTORICAL",
+        "NEGATED_EXISTENCE",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5022,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.4483,
+          "fn": 56,
+          "fp": 8,
+          "precision": 0.7647,
+          "recall": 0.3171,
+          "tp": 26
+        }
+      },
+      "terminated_by_line_break": [
+        "HYPOTHETICAL",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.5022,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.4444,
+          "fn": 37,
+          "fp": 23,
+          "precision": 0.5106,
+          "recall": 0.3934,
+          "tp": 24
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.4483,
+          "fn": 56,
+          "fp": 8,
+          "precision": 0.7647,
+          "recall": 0.3171,
+          "tp": 26
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "HYPOTHETICAL",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.4977,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.5734,
+          "fn": 41,
+          "fp": 20,
+          "precision": 0.6721,
+          "recall": 0.5,
+          "tp": 41
+        }
+      },
+      "terminated_by_line_break": [
+        "HISTORICAL",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.4977,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.5734,
+          "fn": 41,
+          "fp": 20,
+          "precision": 0.6721,
+          "recall": 0.5,
+          "tp": 41
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "HISTORICAL",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.4923,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.528,
+          "fn": 49,
+          "fp": 10,
+          "precision": 0.7674,
+          "recall": 0.4024,
+          "tp": 33
+        }
+      },
+      "terminated_by_line_break": [
+        "HISTORICAL",
+        "HYPOTHETICAL",
+        "NEGATED_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.4923,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.528,
+          "fn": 49,
+          "fp": 10,
+          "precision": 0.7674,
+          "recall": 0.4024,
+          "tp": 33
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "HISTORICAL",
+        "HYPOTHETICAL",
+        "NEGATED_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.4826,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.528,
+          "fn": 49,
+          "fp": 10,
+          "precision": 0.7674,
+          "recall": 0.4024,
+          "tp": 33
+        }
+      },
+      "terminated_by_line_break": [
+        "HISTORICAL",
+        "HYPOTHETICAL"
+      ]
+    },
+    {
+      "macro_f1": 0.4826,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.528,
+          "fn": 49,
+          "fp": 10,
+          "precision": 0.7674,
+          "recall": 0.4024,
+          "tp": 33
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "HISTORICAL",
+        "HYPOTHETICAL"
+      ]
+    },
+    {
+      "macro_f1": 0.4657,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.4483,
+          "fn": 56,
+          "fp": 8,
+          "precision": 0.7647,
+          "recall": 0.3171,
+          "tp": 26
+        }
+      },
+      "terminated_by_line_break": [
+        "HISTORICAL",
+        "HYPOTHETICAL",
+        "NEGATED_EXISTENCE",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.4657,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6429,
+          "fn": 20,
+          "fp": 10,
+          "precision": 0.7297,
+          "recall": 0.5745,
+          "tp": 27
+        },
+        "uncertain": {
+          "f1": 0.4483,
+          "fn": 56,
+          "fp": 8,
+          "precision": 0.7647,
+          "recall": 0.3171,
+          "tp": 26
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "HISTORICAL",
+        "HYPOTHETICAL",
+        "NEGATED_EXISTENCE",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.456,
+      "per_dimension": {
+        "family": {
+          "f1": 0.7692,
+          "fn": 0,
+          "fp": 3,
+          "precision": 0.625,
+          "recall": 1.0,
+          "tp": 5
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.4483,
+          "fn": 56,
+          "fp": 8,
+          "precision": 0.7647,
+          "recall": 0.3171,
+          "tp": 26
+        }
+      },
+      "terminated_by_line_break": [
+        "HISTORICAL",
+        "HYPOTHETICAL",
+        "POSSIBLE_EXISTENCE"
+      ]
+    },
+    {
+      "macro_f1": 0.456,
+      "per_dimension": {
+        "family": {
+          "f1": 0.6667,
+          "fn": 1,
+          "fp": 3,
+          "precision": 0.5714,
+          "recall": 0.8,
+          "tp": 4
+        },
+        "historical": {
+          "f1": 0.3059,
+          "fn": 48,
+          "fp": 11,
+          "precision": 0.5417,
+          "recall": 0.2131,
+          "tp": 13
+        },
+        "negated": {
+          "f1": 0.6139,
+          "fn": 16,
+          "fp": 23,
+          "precision": 0.5741,
+          "recall": 0.6596,
+          "tp": 31
+        },
+        "uncertain": {
+          "f1": 0.4483,
+          "fn": 56,
+          "fp": 8,
+          "precision": 0.7647,
+          "recall": 0.3171,
+          "tp": 26
+        }
+      },
+      "terminated_by_line_break": [
+        "FAMILY",
+        "HISTORICAL",
+        "HYPOTHETICAL",
+        "POSSIBLE_EXISTENCE"
+      ]
+    }
+  ],
+  "baseline": {
+    "macro_f1": 0.5572,
+    "per_dimension": {
+      "family": {
+        "f1": 0.7692,
+        "fn": 0,
+        "fp": 3,
+        "precision": 0.625,
+        "recall": 1.0,
+        "tp": 5
+      },
+      "historical": {
+        "f1": 0.4444,
+        "fn": 37,
+        "fp": 23,
+        "precision": 0.5106,
+        "recall": 0.3934,
+        "tp": 24
+      },
+      "negated": {
+        "f1": 0.6139,
+        "fn": 16,
+        "fp": 23,
+        "precision": 0.5741,
+        "recall": 0.6596,
+        "tp": 31
+      },
+      "uncertain": {
+        "f1": 0.6133,
+        "fn": 36,
+        "fp": 22,
+        "precision": 0.6765,
+        "recall": 0.561,
+        "tp": 46
+      }
+    },
+    "terminated_by_line_break": []
+  },
+  "best": {
+    "macro_f1": 0.5669,
+    "per_dimension": {
+      "family": {
+        "f1": 0.7692,
+        "fn": 0,
+        "fp": 3,
+        "precision": 0.625,
+        "recall": 1.0,
+        "tp": 5
+      },
+      "historical": {
+        "f1": 0.4444,
+        "fn": 37,
+        "fp": 23,
+        "precision": 0.5106,
+        "recall": 0.3934,
+        "tp": 24
+      },
+      "negated": {
+        "f1": 0.6429,
+        "fn": 20,
+        "fp": 10,
+        "precision": 0.7297,
+        "recall": 0.5745,
+        "tp": 27
+      },
+      "uncertain": {
+        "f1": 0.6133,
+        "fn": 36,
+        "fp": 22,
+        "precision": 0.6765,
+        "recall": 0.561,
+        "tp": 46
+      }
+    },
+    "terminated_by_line_break": [
+      "NEGATED_EXISTENCE"
+    ]
+  },
+  "how_to_read": "development-half figures, where the choice is made. The held-out half judges the adopted subset once and is not consulted here.",
+  "method": "all 2^5 subsets of the ConText categories, scored on the development half. Exhaustive rather than greedy because categories interact through medspaCy's shared update_scopes pass.",
+  "n_items": 600,
+  "n_notes": 60,
+  "objective": "mean F1 over negated, uncertain and historical. `family` is excluded: 5 development positives would let one span dominate.",
+  "question": "Which ConText categories should stop at a line break?",
+  "split": "development",
+  "terminator": "LINE_BREAK",
+  "why": "a boundary at every line start lifts negated F1 by 0.029 and costs historical 0.139 and uncertain 0.165 \u2014 both real, because a negation is local to its clause while a hedge reaches across a wrapped line. `boundaries=` is global and must pick one; `terminated_by` is per category and does not."
+}

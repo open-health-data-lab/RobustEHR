@@ -1,0 +1,86 @@
+{
+  "anchor_vote": {
+    "accuracy_on_answered": 0.9767,
+    "answered": 43,
+    "correct": 42,
+    "coverage": 0.2287
+  },
+  "caveat": "the accuracy comparison rests on a small answered set, so the robust finding is the coverage gap rather than the accuracy difference. Read the outcome counts, not the third decimal.",
+  "cues_sha256": "db5c60d2afd873002f47f3ef7cf4950ff484e0aec6d44c0475bb1ebd85e539ac",
+  "forms": [
+    "bs",
+    "cva",
+    "dm",
+    "ms",
+    "pe",
+    "ra",
+    "sob"
+  ],
+  "matcher_alone": {
+    "accuracy_on_answered": 0.7381,
+    "answered": 42,
+    "correct": 31,
+    "coverage": 0.2234,
+    "what_it_is": "leave the abbreviation intact and let candidate generation and ranking pick a concept \u2014 no cues, no prior. The most natural objection to building this rung at all."
+  },
+  "matcher_alone_min_match_length_2": {
+    "accuracy_on_answered": 0.3176,
+    "answered": 170,
+    "correct": 54,
+    "coverage": 0.9043,
+    "finding": "coverage rises to ~0.90 and accuracy falls to ~0.32. `RA` resolves to C0002893, refractory anemia, in every occurrence \u2014 the alphabetical CUI tiebreak \u2014 in a corpus where it is room air about 97% of the time. Deterministic, and wrong.",
+    "what_it_is": "the same baseline with the length floor lowered so it can see two-character tokens at all. At the shipped floor of 3 the matcher never sees `RA`, which flatters the idea."
+  },
+  "most_frequent_sense": {
+    "accuracy": 0.9681,
+    "correct": 182,
+    "coverage": 1.0
+  },
+  "outcomes": {
+    "conflict": 5,
+    "no_cues": 140,
+    "resolved": 43
+  },
+  "per_form": {
+    "bs": {
+      "answered": 5,
+      "correct": 5,
+      "mfs_correct": 11,
+      "n": 11
+    },
+    "cva": {
+      "answered": 0,
+      "correct": 0,
+      "mfs_correct": 11,
+      "n": 11
+    },
+    "dm": {
+      "answered": 7,
+      "correct": 7,
+      "mfs_correct": 28,
+      "n": 28
+    },
+    "pe": {
+      "answered": 3,
+      "correct": 3,
+      "mfs_correct": 23,
+      "n": 23
+    },
+    "ra": {
+      "answered": 24,
+      "correct": 24,
+      "mfs_correct": 78,
+      "n": 83
+    },
+    "sob": {
+      "answered": 3,
+      "correct": 3,
+      "mfs_correct": 31,
+      "n": 31
+    }
+  },
+  "protocol": "cues authored from clinical knowledge, never from the evaluation set; only the sense-name to concept-id binding is fitted, on train, by majority with ties broken on concept id. Reported on test.",
+  "question": "Do authored anchor cues beat most-frequent sense on held-out data?",
+  "test_occurrences": 188,
+  "window_tokens": 8
+}

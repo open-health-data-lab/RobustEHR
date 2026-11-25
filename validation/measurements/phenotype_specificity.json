@@ -1,0 +1,116 @@
+{
+  "families": {
+    "alcohol_use_disorder": [
+      "alcohol_use_disorder"
+    ],
+    "atrial_fibrillation": [
+      "atrial_fibrillation"
+    ],
+    "chest_pain": [
+      "chest_pain"
+    ],
+    "chronic_kidney_disease": [
+      "chronic_kidney_disease"
+    ],
+    "clostridioides_difficile": [
+      "clostridioides_difficile"
+    ],
+    "deep_vein_thrombosis": [
+      "deep_vein_thrombosis",
+      "pulmonary_embolism"
+    ],
+    "dementia": [
+      "dementia"
+    ],
+    "depression": [
+      "depression"
+    ],
+    "diabetes_mellitus": [
+      "diabetes_mellitus",
+      "type_1_diabetes",
+      "type_2_diabetes"
+    ],
+    "dyspnea": [
+      "dyspnea"
+    ],
+    "fever": [
+      "fever"
+    ],
+    "heart_failure": [
+      "heart_failure",
+      "hfpef",
+      "hfref"
+    ],
+    "hypertension": [
+      "hypertension"
+    ],
+    "metastatic_cancer": [
+      "metastatic_cancer"
+    ],
+    "obesity": [
+      "obesity"
+    ],
+    "rheumatoid_arthritis": [
+      "rheumatoid_arthritis"
+    ],
+    "systemic_lupus_erythematosus": [
+      "systemic_lupus_erythematosus"
+    ]
+  },
+  "families_spanned_distribution": {
+    "1": 1728,
+    "2": 202,
+    "3": 57,
+    "4": 19,
+    "5": 5,
+    "6": 2,
+    "7": 1,
+    "8": 2
+  },
+  "family_count": 17,
+  "family_hops": 0,
+  "flagged": 578,
+  "flagged_unit_share": 0.005,
+  "flagged_units": 10,
+  "removed_per_phenotype": {
+    "alcohol_use_disorder": 1,
+    "atrial_fibrillation": 65,
+    "chest_pain": 74,
+    "chronic_kidney_disease": 6,
+    "clostridioides_difficile": 1,
+    "deep_vein_thrombosis": 0,
+    "dementia": 0,
+    "depression": 4,
+    "diabetes_mellitus": 1,
+    "dyspnea": 6,
+    "fever": 492,
+    "heart_failure": 23,
+    "hfpef": 6,
+    "hfref": 23,
+    "hypertension": 70,
+    "metastatic_cancer": 0,
+    "obesity": 25,
+    "pulmonary_embolism": 6,
+    "rheumatoid_arthritis": 464,
+    "systemic_lupus_erythematosus": 6,
+    "type_1_diabetes": 2,
+    "type_2_diabetes": 1
+  },
+  "scored_at": "ingredient, with formulations inheriting; see needs_review()",
+  "screened_facets": [
+    "medication",
+    "finding",
+    "proposed",
+    "closure"
+  ],
+  "threshold": 5,
+  "threshold_ladder": {
+    "2": 288,
+    "3": 86,
+    "4": 29,
+    "5": 10,
+    "6": 5
+  },
+  "units_scored": 2016,
+  "what": "concepts spanning too many unrelated phenotype families to discriminate. Corpus-blind: a property of the declared sets, not of any note collection."
+}

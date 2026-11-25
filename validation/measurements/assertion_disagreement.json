@@ -1,0 +1,366 @@
+{
+  "adjudication": {
+    "decided_share": 0.3299,
+    "ours_share_of_decided": 0.8153,
+    "structure_favours_ours": 181,
+    "structure_favours_pyrush": 41,
+    "undecided": 451
+  },
+  "attributes_involved": {
+    "family": 32,
+    "historical": 204,
+    "hypothetical": 40,
+    "negated": 361,
+    "uncertain": 82
+  },
+  "disagreement_rate": 0.0481,
+  "examples": [
+    {
+      "cue_literal": "no",
+      "cui": "C0184666",
+      "favours": "ours",
+      "note": "note-1",
+      "ours": "affirmed",
+      "pyrush": "negated",
+      "span": [
+        49,
+        58
+      ],
+      "structure_says": "different sections"
+    },
+    {
+      "cue_literal": "no",
+      "cui": "C2740799",
+      "favours": "ours",
+      "note": "note-1",
+      "ours": "affirmed",
+      "pyrush": "negated",
+      "span": [
+        59,
+        63
+      ],
+      "structure_says": "different sections"
+    },
+    {
+      "cue_literal": "history",
+      "cui": "C1263846",
+      "favours": "ours",
+      "note": "note-1",
+      "ours": "affirmed",
+      "pyrush": "historical+negated",
+      "span": [
+        3417,
+        3421
+      ],
+      "structure_says": "different list items"
+    },
+    {
+      "cue_literal": "history",
+      "cui": "C0011570",
+      "favours": "ours",
+      "note": "note-1",
+      "ours": "affirmed",
+      "pyrush": "historical+negated",
+      "span": [
+        3422,
+        3432
+      ],
+      "structure_says": "different list items"
+    },
+    {
+      "cue_literal": "history",
+      "cui": "C0003467",
+      "favours": "ours",
+      "note": "note-1",
+      "ours": "affirmed",
+      "pyrush": "historical+negated",
+      "span": [
+        3433,
+        3440
+      ],
+      "structure_says": "different list items"
+    },
+    {
+      "cue_literal": "possible",
+      "cui": "C1263846",
+      "favours": "ours",
+      "note": "note-1",
+      "ours": "affirmed",
+      "pyrush": "negated+uncertain",
+      "span": [
+        9841,
+        9845
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "possible",
+      "cui": "C0011570",
+      "favours": "ours",
+      "note": "note-1",
+      "ours": "affirmed",
+      "pyrush": "negated+uncertain",
+      "span": [
+        9846,
+        9856
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "possible",
+      "cui": "C0003467",
+      "favours": "ours",
+      "note": "note-1",
+      "ours": "affirmed",
+      "pyrush": "negated+uncertain",
+      "span": [
+        9857,
+        9864
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "no",
+      "cui": "C0184666",
+      "favours": "ours",
+      "note": "note-2",
+      "ours": "affirmed",
+      "pyrush": "negated",
+      "span": [
+        46,
+        55
+      ],
+      "structure_says": "different sections"
+    },
+    {
+      "cue_literal": "no",
+      "cui": "C2740799",
+      "favours": "ours",
+      "note": "note-2",
+      "ours": "affirmed",
+      "pyrush": "negated",
+      "span": [
+        56,
+        60
+      ],
+      "structure_says": "different sections"
+    },
+    {
+      "cue_literal": "history",
+      "cui": "C0699700",
+      "favours": "ours",
+      "note": "note-2",
+      "ours": "affirmed",
+      "pyrush": "historical",
+      "span": [
+        3509,
+        3520
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "history",
+      "cui": "C0021485",
+      "favours": "ours",
+      "note": "note-2",
+      "ours": "affirmed",
+      "pyrush": "historical",
+      "span": [
+        3521,
+        3530
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "history",
+      "cui": "C0005841",
+      "favours": "ours",
+      "note": "note-2",
+      "ours": "affirmed",
+      "pyrush": "historical",
+      "span": [
+        3541,
+        3552
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "history",
+      "cui": "C0009450",
+      "favours": "ours",
+      "note": "note-2",
+      "ours": "affirmed",
+      "pyrush": "historical",
+      "span": [
+        3614,
+        3623
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "history",
+      "cui": "C0087086",
+      "favours": "ours",
+      "note": "note-2",
+      "ours": "affirmed",
+      "pyrush": "historical",
+      "span": [
+        3639,
+        3649
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "history",
+      "cui": "C0155765",
+      "favours": "ours",
+      "note": "note-2",
+      "ours": "affirmed",
+      "pyrush": "historical",
+      "span": [
+        3650,
+        3665
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "possible",
+      "cui": "C3696898",
+      "favours": "pyrush",
+      "note": "note-2",
+      "ours": "uncertain",
+      "pyrush": "affirmed",
+      "span": [
+        6679,
+        6682
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "no cause of",
+      "cui": "C0018935",
+      "favours": "ours",
+      "note": "note-2",
+      "ours": "affirmed",
+      "pyrush": "negated",
+      "span": [
+        8710,
+        8720
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "no cause of",
+      "cui": "C0442739",
+      "favours": "ours",
+      "note": "note-2",
+      "ours": "affirmed",
+      "pyrush": "negated",
+      "span": [
+        8725,
+        8734
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "no cause of",
+      "cui": "C4331837",
+      "favours": "ours",
+      "note": "note-2",
+      "ours": "affirmed",
+      "pyrush": "negated",
+      "span": [
+        8740,
+        8745
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "h/o",
+      "cui": "C0700287",
+      "favours": "pyrush",
+      "note": "note-2",
+      "ours": "historical+negated",
+      "pyrush": "negated",
+      "span": [
+        8833,
+        8839
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "h/o",
+      "cui": "C0036572",
+      "favours": "pyrush",
+      "note": "note-2",
+      "ours": "historical+negated",
+      "pyrush": "negated",
+      "span": [
+        8843,
+        8851
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "not",
+      "cui": "C0014822",
+      "favours": "pyrush",
+      "note": "note-2",
+      "ours": "negated",
+      "pyrush": "affirmed",
+      "span": [
+        9069,
+        9072
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "not",
+      "cui": "C0020538",
+      "favours": "pyrush",
+      "note": "note-2",
+      "ours": "negated",
+      "pyrush": "affirmed",
+      "span": [
+        9101,
+        9113
+      ],
+      "structure_says": "one inside a list item, one outside"
+    },
+    {
+      "cue_literal": "not",
+      "cui": "C1551393",
+      "favours": "pyrush",
+      "note": "note-2",
+      "ours": "negated",
+      "pyrush": "affirmed",
+      "span": [
+        9120,
+        9127
+      ],
+      "structure_says": "one inside a list item, one outside"
+    }
+  ],
+  "how_to_read": "the undecided count matters more than the win rate: it is the share of the disagreement document structure has no authority over, and no claim should be made about it here. A high ours_share_of_decided means that where structure can rule, it rules for the boundaries we ship \u2014 which is the specific claim four documents made and none had measured.",
+  "notes": 20,
+  "question": "Where our boundaries change a UMLS concept's assertion, which arm does the note's own structure support?",
+  "referee": "the note's own structure, not an annotator. A cue separated from its target by a list-item or section boundary did not govern it \u2014 a fact about the document. The structural layer deciding this is hand-written, versioned and validated against PyRuSH at stage 2.",
+  "separation_reasons": {
+    "different list items": 60,
+    "different sections": 54,
+    "one inside a list item, one outside": 108
+  },
+  "spans_where_arms_disagree": 673,
+  "top_transitions": {
+    "affirmed -> historical": 28,
+    "affirmed -> negated": 33,
+    "affirmed -> negated+uncertain": 23,
+    "family -> affirmed": 30,
+    "historical -> affirmed": 151,
+    "hypothetical -> affirmed": 33,
+    "negated -> affirmed": 282,
+    "uncertain -> affirmed": 21
+  },
+  "umls_spans_compared": 13981,
+  "why": "stage 8 reuses medspaCy's ConText engine but feeds it our sentence boundaries instead of PyRuSH's. A departure from a reused tool owes a number against that tool. assertion_accuracy.json cannot supply it (its gold is single sentences, so the arms tie) and phenotype_assertion.json shows only that the rate moved, not that the moves were right."
+}

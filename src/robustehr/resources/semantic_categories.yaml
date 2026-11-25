@@ -1,0 +1,281 @@
+# What RobustEHR can tag, and how each category gets validated.
+#
+# A category earns its place three ways: it is defined as a set of UMLS semantic
+# types, so membership is a lookup against a published terminology rather than a
+# judgement; it says how it is validated; and it is something that actually
+# occurs in a clinical note. A category failing the third test is vocabulary
+# bloat with a false-positive surface, however defensible its definition.
+#
+# ---------------------------------------------------------------------------
+# THREE TIERS OF EVIDENCE
+#
+# The gold standards are all coarser than the distinctions a phenotyping
+# robustness study needs, so categories are nested and each declares its tier.
+# Pretending a fine category is validated because its parent is would be exactly
+# the overclaim this file exists to prevent.
+#
+#   tier: anchored   A gold standard adjudicates this category directly, via the
+#                    declared `crosswalk`. Report P/R/F1 against it.
+#   tier: derived    A semantic-type partition of an anchored parent. The parent's
+#                    boundary is validated; the split within it is deterministic
+#                    and inspectable but no gold standard adjudicates it.
+#   tier: unanchored No gold standard covers it. Usable, honestly marked, and
+#                    never the basis of a headline claim.
+#
+# GOLD STANDARDS
+#
+#   snomed_el   SNOMED CT Entity Linking Challenge. 272 MIMIC-IV discharge notes,
+#               75,491 annotations of 6,595 concepts as counted from the released
+#               files (the challenge paper reports 74,808 / 6,624; the difference is
+#               unexplained and we cite what we load). 6 clinical annotators,
+#               ~70% double-annotated.
+#               Hierarchies: clinical finding, procedure, body structure. Same
+#               corpus family as the development notes. Carries NO medications.
+#   n2c2_2018   n2c2 2018 Track 2, MIMIC-III discharge summaries. Drug plus
+#               strength, dosage, route, frequency, duration, reason, ADE.
+#   i2b2_2010   Partners / BIDMC / UPMC notes. problem, test, treatment.
+#   share_clef  ShARe/CLEF 2013-14. Disorders plus 10 contextual attributes.
+#
+# ---------------------------------------------------------------------------
+# CATEGORIES DELIBERATELY REMOVED
+#
+# Measured on 200 MIMIC-IV discharge summaries, then cut for irrelevance rather
+# than for being indefensible:
+#
+#   chemical    11.1% of content tokens, but the matches were abbreviation
+#               collisions — `sig`, `bid`, `date` — not clinical substance.
+#               Drugs are covered by `medication`; the remainder is research
+#               chemistry that does not appear in notes.
+#   organism    1.7% of tokens, and only 149 of 99,788 vocabulary terms ever
+#               occurred. Top matches were `patient`, `major`, `areas`. Pathogen
+#               mentions do matter for infectious-disease phenotyping, but they
+#               need concept-level matching, not a 100,000-term word list.
+#   physiology  6.1% of tokens, but overlapping `disorder` and `finding`, with
+#               `pain`, `status` and `instructions` at the top. Vital signs, the
+#               legitimate part, are handled by the numeric extractors instead.
+#
+# ON T033 "Finding"
+#
+# T033 is included but quarantined in its own `finding` category and excluded
+# from `clinical_any`. The exclusion was adopted because bare `stairs`, `one` and
+# `normal` matched at word level, which is a symptom of word-level lookup rather
+# than a defect in the semantic type. QuickUMLS keeps T033 among its 27 defaults
+# and MedMentions among its 21, and the SNOMED challenge's `clinical finding`
+# hierarchy is largely T033.
+#
+# MEASURED (validation-protocol §5, SNOMED EL gold): scoring with and without
+# T033 gives identical precision, recall, F1 and coverage to three decimals. The
+# flag changes nothing, because 100% of the mentions the matcher returns already
+# carry a `clinical_any` category — the TUI whitelist is applied when the matcher
+# is configured, upstream of any category filter, so no `finding`-only mention
+# exists for the exclusion to act on. The setting stands; its rationale does not.
+# Whatever suppresses `stairs` and `one` at word level, it is not this flag.
+# What does discriminate is measured token salience — validation-protocol §9.
+# ---------------------------------------------------------------------------
+schema_version: "3.2"
+
+categories:
+  # -- anchored ------------------------------------------------------------
+  disorder:
+    label: Disorders
+    definition: >
+      Anything wrong with the patient: diagnoses, syndromes, injuries, and the
+      signs and symptoms that evidence them. The parent every gold standard
+      actually adjudicates, which is why validation happens here and its three
+      children are treated as refinements of a validated boundary.
+    tier: anchored
+    crosswalk:
+      snomed_el: clinical finding
+      i2b2_2010: problem
+      share_clef: disorder
+    children: [disease, symptom, finding]
+    tuis: [T047, T191, T019, T020, T046, T048, T049, T050, T037, T184, T033]
+
+  procedure:
+    label: Procedures
+    definition: >
+      Things done to or for the patient — operations, therapies, imaging, lab
+      work and other health-care activities. Split into therapeutic and
+      diagnostic because "the treatment was corrupted" and "the test was
+      corrupted" are different experiments.
+    tier: anchored
+    crosswalk:
+      snomed_el: procedure
+      i2b2_2010: test + treatment (partial — i2b2 treatment also covers drugs)
+    children: [therapeutic_procedure, diagnostic_procedure]
+    tuis: [T061, T060, T059, T058, T062, T063, T065]
+
+  anatomy:
+    label: Anatomy
+    definition: >
+      Body parts, regions, spaces, tissues and substances. Carries the site and
+      laterality information that a diagnosis is anchored to, so corrupting it
+      changes where a finding is located without changing what it is.
+    tier: anchored
+    crosswalk:
+      snomed_el: body structure
+    tuis: [T023, T029, T030, T031, T022, T024, T025, T026, T017, T018, T021]
+
+  medication:
+    label: Medications
+    definition: >
+      Drugs and pharmacologic substances the patient is given. Deliberately
+      tight — T121 Pharmacologic Substance, T200 Clinical Drug and T195
+      Antibiotic only. Widening it to the broader chemical types admitted every
+      amino acid in the terminology and clinical abbreviations that collide with
+      element symbols.
+    tier: anchored
+    crosswalk:
+      n2c2_2018: drug
+      i2b2_2010: treatment (partial)
+    tuis: [T121, T200, T195]
+
+  # -- derived: partitions of an anchored parent ---------------------------
+  disease:
+    label: Diseases and syndromes
+    definition: >
+      Named pathology — diagnoses, syndromes, neoplasms, injuries and pathologic
+      processes. What a phenotype definition is usually written in terms of.
+      Separated from `symptom` because "the model missed the diagnosis" and "the
+      model missed the symptom" are different failures.
+    tier: derived
+    parent: disorder
+    tuis: [T047, T191, T019, T020, T046, T048, T049, T050, T037]
+
+  symptom:
+    label: Signs and symptoms
+    definition: >
+      What the patient reports or the clinician observes, as distinct from the
+      diagnosis it supports — dyspnea, fever, nausea. T184 only; adding T033
+      Finding would triple the category and fill it with `one` and `normal`.
+    tier: derived
+    parent: disorder
+    tuis: [T184]
+
+  finding:
+    label: Findings
+    definition: >
+      The broad residual of the disorder hierarchy: clinical observations that
+      are neither a named disease nor a specific symptom. Legitimate at span
+      level ("difficulty climbing stairs") but the noisiest type at word level,
+      which is why it is excluded from `clinical_any` pending measurement.
+    tier: derived
+    parent: disorder
+    default: false
+    tuis: [T033]
+
+  therapeutic_procedure:
+    label: Therapeutic procedures
+    definition: >
+      Interventions intended to treat or prevent — surgery, dialysis,
+      transfusion, physiotherapy. Evidence of treatment, which many phenotype
+      definitions use as a proxy for the condition treated.
+    tier: derived
+    parent: procedure
+    tuis: [T061]
+
+  diagnostic_procedure:
+    label: Diagnostic procedures
+    definition: >
+      Tests and investigations performed to establish a diagnosis — imaging,
+      laboratory procedures, biopsies. The procedure, not its result.
+    tier: derived
+    parent: procedure
+    tuis: [T060, T059]
+
+  # -- unanchored: note-relevant, but no gold standard ---------------------
+  device:
+    label: Medical devices
+    definition: >
+      Instruments, implants and delivery apparatus — catheters, tubes, valves,
+      lines, pumps. Frequently the evidence for a procedure or an ongoing
+      therapy, and often the only mention of either.
+    tier: unanchored
+    tuis: [T074, T075, T203]
+
+  lab_result:
+    label: Laboratory and test results
+    definition: >
+      The outcome of a test rather than the test itself — the value or its
+      qualitative reading. Numeric values are handled by the numeric extractors;
+      this covers the named result concepts.
+    tier: unanchored
+    tuis: [T034]
+
+  lab_measurement:
+    label: Laboratory measurements, either convention
+    definition: >
+      A laboratory analyte named in a note, whichever way the naming is read.
+      Deliberately spans both readings of `Hgb-9.9`, because UMLS and the SNOMED
+      challenge annotators disagree about which one it is and both are
+      defensible: UMLS types `hgb` as T034, a test *result*, while the
+      annotators chose a T059 concept, the *procedure* that produces it. The
+      divergence accounts for roughly 640 abbreviation-shaped gold spans and
+      the largest single bucket of monosemous-but-wrong matches.
+
+      Neither reading is corrected, because neither is wrong. This category is
+      how a user says "the analyte, however it is typed" without having to know
+      which convention their corpus was annotated under.
+    tier: anchored
+    crosswalk:
+      snomed_el: >
+        gold spans whose concept carries T034 or T059 — both are annotated, and
+        the disagreement is about which, not whether
+    tuis: [T034, T059]
+
+# Categories counted as clinical content when a target names none.
+clinical_any_excludes: [finding]
+
+# ---------------------------------------------------------------------------
+# ONE CATEGORY PER WORD
+#
+# The categories above overlap on purpose: `finding` and `symptom` sit inside
+# `disorder`, `lab_measurement` shares T034 with `lab_result` and T059 with
+# `procedure`, and a concept may carry several semantic types. That is right for
+# a target ("corrupt the medications") and wrong for a table whose rows must sum
+# to a total. `exclusive_order` is the partition a table uses: the FIRST category
+# in this list that admits a concept is its primary category.
+#
+# A parent is never listed ahead of its own child, so it cannot shadow it;
+# `disorder` is absent because its three children cover it between them.
+# `disease` leads because a concept typed as both a disease and a finding is
+# reported as the diagnosis it names. `finding` (T033) precedes `symptom`
+# (T184): this is the order the published tables were computed under, and
+# changing it changes them. The two are merged in every display group below, so
+# the order between them is invisible unless the categories are read separately.
+#
+# Two outcomes are not categories and are kept apart, because they are
+# different facts:
+#   uncategorized   a concept matched, and none of its types is in the partition
+#   no_concept      no concept covers the word at all
+exclusive_order:
+  - disease
+  - finding
+  - symptom
+  - medication
+  - anatomy
+  - procedure
+  - lab_result
+  - device
+
+# How the partition is grouped for reading. Every primary category, plus the two
+# outcomes above, belongs to exactly one group.
+display_groups:
+  diseases_and_diagnoses:
+    label: Diseases and diagnoses
+    members: [disease]
+  signs_symptoms_and_findings:
+    label: Signs, symptoms and findings
+    members: [finding, symptom]
+  procedures_and_tests:
+    label: Procedures and tests
+    members: [procedure, lab_result]
+  medications:
+    label: Medications
+    members: [medication]
+  anatomy:
+    label: Anatomy
+    members: [anatomy]
+  other:
+    label: Other
+    members: [device, uncategorized, no_concept]

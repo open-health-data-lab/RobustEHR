@@ -1,0 +1,78 @@
+# Prompts for the LLM-backed SEMANTIC flip operators.
+#
+# A resource rather than a string literal so its SHA-256 folds into each
+# operator's effective version: editing a prompt is a version bump, not a silent
+# change to previously reported results. That is the same rule the cue tables and
+# the lexicons follow.
+#
+# WHAT THE MODEL IS ASKED TO DO, and what it is asked not to. The task is to
+# rewrite ONE sentence so that a single assertion modifier is reversed, changing
+# nothing else. The constraints below are not politeness — each closes a failure
+# the deterministic table cannot have:
+#
+#   * the clinical concept must survive verbatim, because an operator that
+#     rewrote the mention would be perturbing the finding rather than the claim
+#     about it, and the whole channel rests on that distinction;
+#   * de-identification placeholders and numbers must survive verbatim, because
+#     altering them is a different corruption riding along inside this one;
+#   * the reply is the sentence and nothing else, because any prose around it
+#     would land in the note.
+#
+# The rewrite is reinjected as a MINIMAL edit: the applier trims the common
+# prefix and suffix, so a model that returns the sentence unchanged except for
+# the cue produces an edit the size of the cue. A model that rewrites more than
+# it was asked to produces a wider edit, which the operator then checks against
+# the protection registry and rejects if it reaches protected text.
+
+schema_version: '1.0'
+
+# Shared framing. `{dimension_instruction}` and `{sentence}` are substituted.
+template: |-
+  You are editing one sentence from a clinical note.
+
+  {dimension_instruction}
+
+  RULES, all of which are checked automatically after you answer:
+  - Change as few words as possible. Ideally change only the words that carry
+    the modifier.
+  - Keep the clinical concept exactly as written, character for character.
+  - Keep every number, date, unit, abbreviation and underscore placeholder
+    (like ___) exactly as written.
+  - Do not add, remove or reorder any other clinical content.
+  - Keep the same line breaks. If the sentence spans several lines, so must
+    your answer.
+  - Reply with the rewritten sentence and nothing else. No quotes, no
+    explanation, no preamble.
+
+  Sentence:
+  {sentence}
+
+# Per-dimension instructions. Each names the modifier to reverse and the
+# direction, so the model is not left to infer which way to flip.
+instructions:
+  negated: |-
+    The sentence currently states that a finding is ABSENT or denied. Rewrite it
+    so the same finding is stated as PRESENT, by changing the words that carry
+    the negation. For example "denies chest pain" becomes "reports chest pain",
+    and "no evidence of pneumonia" becomes "evidence of pneumonia".
+
+  uncertain: |-
+    The sentence currently states a finding as UNCERTAIN — hedged, possible,
+    suspected, or conditional on something that has not happened. Rewrite it so
+    the same finding is stated as DEFINITE and current, by changing the words
+    that carry the hedge or the condition. For example "possible pneumonia"
+    becomes "definite pneumonia", and "Tylenol as needed for pain" becomes
+    "Tylenol scheduled for pain".
+
+  historical: |-
+    The sentence currently frames a finding as PAST — a history, a prior
+    episode, something status-post. Rewrite it so the same finding is framed as
+    CURRENT and new, by changing the words that carry the past framing. For
+    example "history of hypertension" becomes "new onset hypertension".
+
+  family: |-
+    The sentence currently attributes a finding to someone OTHER than the
+    patient — a relative or another person. Rewrite it so the same finding is
+    attributed to THE PATIENT, by changing the words naming the other person.
+    Never invent a name; use "the patient". For example "father with myocardial
+    infarction" becomes "the patient with myocardial infarction".

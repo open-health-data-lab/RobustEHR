@@ -1,0 +1,690 @@
+{
+  "arms": {
+    "gemini-2.5-flash-lite/v1": {
+      "by_dimension": {
+        "family": {
+          "cohens_kappa": 0.5652,
+          "f1": 0.5714,
+          "fn": 0,
+          "fp": 6,
+          "gold_positives": 4,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.494,
+            "f1": 0.5,
+            "fn": 0,
+            "fp": 6,
+            "gold_positives": 3,
+            "precision": 0.3333,
+            "predicted_positives": 9,
+            "recall": 1.0,
+            "tn": 372,
+            "tp": 3
+          },
+          "precision": 0.4,
+          "predicted_positives": 10,
+          "recall": 1.0,
+          "tn": 390,
+          "tp": 4
+        },
+        "historical": {
+          "cohens_kappa": 0.3881,
+          "f1": 0.4583,
+          "fn": 16,
+          "fp": 36,
+          "gold_positives": 38,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.3743,
+            "f1": 0.4419,
+            "fn": 15,
+            "fp": 33,
+            "gold_positives": 34,
+            "precision": 0.3654,
+            "predicted_positives": 52,
+            "recall": 0.5588,
+            "tn": 314,
+            "tp": 19
+          },
+          "precision": 0.3793,
+          "predicted_positives": 58,
+          "recall": 0.5789,
+          "tn": 326,
+          "tp": 22
+        },
+        "negated": {
+          "cohens_kappa": 0.3132,
+          "f1": 0.3797,
+          "fn": 19,
+          "fp": 30,
+          "gold_positives": 34,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.283,
+            "f1": 0.3514,
+            "fn": 19,
+            "fp": 29,
+            "gold_positives": 32,
+            "precision": 0.3095,
+            "predicted_positives": 42,
+            "recall": 0.4062,
+            "tn": 320,
+            "tp": 13
+          },
+          "precision": 0.3333,
+          "predicted_positives": 45,
+          "recall": 0.4412,
+          "tn": 336,
+          "tp": 15
+        },
+        "uncertain": {
+          "cohens_kappa": 0.2313,
+          "f1": 0.3415,
+          "fn": 9,
+          "fp": 99,
+          "gold_positives": 37,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.2401,
+            "f1": 0.3462,
+            "fn": 7,
+            "fp": 95,
+            "gold_positives": 34,
+            "precision": 0.2213,
+            "predicted_positives": 122,
+            "recall": 0.7941,
+            "tn": 252,
+            "tp": 27
+          },
+          "precision": 0.2205,
+          "predicted_positives": 127,
+          "recall": 0.7568,
+          "tn": 264,
+          "tp": 28
+        },
+        "unmodified": {
+          "cohens_kappa": 0.1927,
+          "f1": 0.6089,
+          "fn": 153,
+          "fp": 23,
+          "gold_positives": 290,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.1873,
+            "f1": 0.6147,
+            "fn": 146,
+            "fp": 22,
+            "gold_positives": 280,
+            "precision": 0.859,
+            "predicted_positives": 156,
+            "recall": 0.4786,
+            "tn": 79,
+            "tp": 134
+          },
+          "precision": 0.8562,
+          "predicted_positives": 160,
+          "recall": 0.4724,
+          "tn": 87,
+          "tp": 137
+        }
+      },
+      "exact_label_set_agreement": 0.51,
+      "predicted_positives": {
+        "family": 10,
+        "historical": 58,
+        "negated": 45,
+        "uncertain": 127,
+        "unmodified": 160
+      },
+      "spans_missing_a_prediction": 1,
+      "spans_scored": 400
+    },
+    "gemini-2.5-flash-lite/v2": {
+      "by_dimension": {
+        "family": {
+          "cohens_kappa": 0.4924,
+          "f1": 0.5,
+          "fn": 0,
+          "fp": 8,
+          "gold_positives": 4,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.4214,
+            "f1": 0.4286,
+            "fn": 0,
+            "fp": 8,
+            "gold_positives": 3,
+            "precision": 0.2727,
+            "predicted_positives": 11,
+            "recall": 1.0,
+            "tn": 370,
+            "tp": 3
+          },
+          "precision": 0.3333,
+          "predicted_positives": 12,
+          "recall": 1.0,
+          "tn": 388,
+          "tp": 4
+        },
+        "historical": {
+          "cohens_kappa": 0.3335,
+          "f1": 0.4,
+          "fn": 22,
+          "fp": 26,
+          "gold_positives": 38,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.3323,
+            "f1": 0.3944,
+            "fn": 20,
+            "fp": 23,
+            "gold_positives": 34,
+            "precision": 0.3784,
+            "predicted_positives": 37,
+            "recall": 0.4118,
+            "tn": 324,
+            "tp": 14
+          },
+          "precision": 0.381,
+          "predicted_positives": 42,
+          "recall": 0.4211,
+          "tn": 336,
+          "tp": 16
+        },
+        "negated": {
+          "cohens_kappa": 0.2483,
+          "f1": 0.3256,
+          "fn": 20,
+          "fp": 38,
+          "gold_positives": 34,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.2611,
+            "f1": 0.3373,
+            "fn": 18,
+            "fp": 37,
+            "gold_positives": 32,
+            "precision": 0.2745,
+            "predicted_positives": 51,
+            "recall": 0.4375,
+            "tn": 312,
+            "tp": 14
+          },
+          "precision": 0.2692,
+          "predicted_positives": 52,
+          "recall": 0.4118,
+          "tn": 328,
+          "tp": 14
+        },
+        "uncertain": {
+          "cohens_kappa": 0.3069,
+          "f1": 0.4,
+          "fn": 10,
+          "fp": 71,
+          "gold_positives": 37,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.3288,
+            "f1": 0.416,
+            "fn": 8,
+            "fp": 65,
+            "gold_positives": 34,
+            "precision": 0.2857,
+            "predicted_positives": 91,
+            "recall": 0.7647,
+            "tn": 282,
+            "tp": 26
+          },
+          "precision": 0.2755,
+          "predicted_positives": 98,
+          "recall": 0.7297,
+          "tn": 292,
+          "tp": 27
+        },
+        "unmodified": {
+          "cohens_kappa": 0.227,
+          "f1": 0.679,
+          "fn": 125,
+          "fp": 31,
+          "gold_positives": 290,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.2379,
+            "f1": 0.6921,
+            "fn": 117,
+            "fp": 28,
+            "gold_positives": 280,
+            "precision": 0.8534,
+            "predicted_positives": 191,
+            "recall": 0.5821,
+            "tn": 73,
+            "tp": 163
+          },
+          "precision": 0.8418,
+          "predicted_positives": 196,
+          "recall": 0.569,
+          "tn": 79,
+          "tp": 165
+        }
+      },
+      "exact_label_set_agreement": 0.56,
+      "predicted_positives": {
+        "family": 12,
+        "historical": 42,
+        "negated": 52,
+        "uncertain": 98,
+        "unmodified": 196
+      },
+      "spans_missing_a_prediction": 4,
+      "spans_scored": 400
+    },
+    "gemini-2.5-flash/v1": {
+      "by_dimension": {
+        "family": {
+          "cohens_kappa": 0.61,
+          "f1": 0.6154,
+          "fn": 0,
+          "fp": 5,
+          "gold_positives": 4,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.5402,
+            "f1": 0.5455,
+            "fn": 0,
+            "fp": 5,
+            "gold_positives": 3,
+            "precision": 0.375,
+            "predicted_positives": 8,
+            "recall": 1.0,
+            "tn": 373,
+            "tp": 3
+          },
+          "precision": 0.4444,
+          "predicted_positives": 9,
+          "recall": 1.0,
+          "tn": 391,
+          "tp": 4
+        },
+        "historical": {
+          "cohens_kappa": 0.6207,
+          "f1": 0.6667,
+          "fn": 3,
+          "fp": 32,
+          "gold_positives": 38,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.6484,
+            "f1": 0.6882,
+            "fn": 2,
+            "fp": 27,
+            "gold_positives": 34,
+            "precision": 0.5424,
+            "predicted_positives": 59,
+            "recall": 0.9412,
+            "tn": 320,
+            "tp": 32
+          },
+          "precision": 0.5224,
+          "predicted_positives": 67,
+          "recall": 0.9211,
+          "tn": 330,
+          "tp": 35
+        },
+        "negated": {
+          "cohens_kappa": 0.6165,
+          "f1": 0.6602,
+          "fn": 0,
+          "fp": 35,
+          "gold_positives": 34,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.6166,
+            "f1": 0.6598,
+            "fn": 0,
+            "fp": 33,
+            "gold_positives": 32,
+            "precision": 0.4923,
+            "predicted_positives": 65,
+            "recall": 1.0,
+            "tn": 316,
+            "tp": 32
+          },
+          "precision": 0.4928,
+          "predicted_positives": 69,
+          "recall": 1.0,
+          "tn": 331,
+          "tp": 34
+        },
+        "uncertain": {
+          "cohens_kappa": 0.6978,
+          "f1": 0.7294,
+          "fn": 6,
+          "fp": 17,
+          "gold_positives": 37,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.7372,
+            "f1": 0.7632,
+            "fn": 5,
+            "fp": 13,
+            "gold_positives": 34,
+            "precision": 0.6905,
+            "predicted_positives": 42,
+            "recall": 0.8529,
+            "tn": 334,
+            "tp": 29
+          },
+          "precision": 0.6458,
+          "predicted_positives": 48,
+          "recall": 0.8378,
+          "tn": 346,
+          "tp": 31
+        },
+        "unmodified": {
+          "cohens_kappa": 0.556,
+          "f1": 0.8294,
+          "fn": 81,
+          "fp": 5,
+          "gold_positives": 290,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.5832,
+            "f1": 0.8479,
+            "fn": 71,
+            "fp": 4,
+            "gold_positives": 280,
+            "precision": 0.9812,
+            "predicted_positives": 213,
+            "recall": 0.7464,
+            "tn": 97,
+            "tp": 209
+          },
+          "precision": 0.9766,
+          "predicted_positives": 214,
+          "recall": 0.7207,
+          "tn": 105,
+          "tp": 209
+        }
+      },
+      "exact_label_set_agreement": 0.765,
+      "predicted_positives": {
+        "family": 9,
+        "historical": 67,
+        "negated": 69,
+        "uncertain": 48,
+        "unmodified": 214
+      },
+      "spans_missing_a_prediction": 0,
+      "spans_scored": 400
+    },
+    "gemini-2.5-flash/v2": {
+      "by_dimension": {
+        "family": {
+          "cohens_kappa": 0.7238,
+          "f1": 0.7273,
+          "fn": 0,
+          "fp": 3,
+          "gold_positives": 4,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.6631,
+            "f1": 0.6667,
+            "fn": 0,
+            "fp": 3,
+            "gold_positives": 3,
+            "precision": 0.5,
+            "predicted_positives": 6,
+            "recall": 1.0,
+            "tn": 375,
+            "tp": 3
+          },
+          "precision": 0.5714,
+          "predicted_positives": 7,
+          "recall": 1.0,
+          "tn": 393,
+          "tp": 4
+        },
+        "historical": {
+          "cohens_kappa": 0.5703,
+          "f1": 0.6226,
+          "fn": 5,
+          "fp": 35,
+          "gold_positives": 38,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.6158,
+            "f1": 0.6596,
+            "fn": 3,
+            "fp": 29,
+            "gold_positives": 34,
+            "precision": 0.5167,
+            "predicted_positives": 60,
+            "recall": 0.9118,
+            "tn": 318,
+            "tp": 31
+          },
+          "precision": 0.4853,
+          "predicted_positives": 68,
+          "recall": 0.8684,
+          "tn": 327,
+          "tp": 33
+        },
+        "negated": {
+          "cohens_kappa": 0.8214,
+          "f1": 0.8378,
+          "fn": 3,
+          "fp": 9,
+          "gold_positives": 34,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.8114,
+            "f1": 0.8286,
+            "fn": 3,
+            "fp": 9,
+            "gold_positives": 32,
+            "precision": 0.7632,
+            "predicted_positives": 38,
+            "recall": 0.9062,
+            "tn": 340,
+            "tp": 29
+          },
+          "precision": 0.775,
+          "predicted_positives": 40,
+          "recall": 0.9118,
+          "tn": 357,
+          "tp": 31
+        },
+        "uncertain": {
+          "cohens_kappa": 0.6559,
+          "f1": 0.6947,
+          "fn": 4,
+          "fp": 25,
+          "gold_positives": 37,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.6776,
+            "f1": 0.7126,
+            "fn": 3,
+            "fp": 22,
+            "gold_positives": 34,
+            "precision": 0.5849,
+            "predicted_positives": 53,
+            "recall": 0.9118,
+            "tn": 325,
+            "tp": 31
+          },
+          "precision": 0.569,
+          "predicted_positives": 58,
+          "recall": 0.8919,
+          "tn": 338,
+          "tp": 33
+        },
+        "unmodified": {
+          "cohens_kappa": 0.5969,
+          "f1": 0.856,
+          "fn": 67,
+          "fp": 8,
+          "gold_positives": 290,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.6298,
+            "f1": 0.874,
+            "fn": 58,
+            "fp": 6,
+            "gold_positives": 280,
+            "precision": 0.9737,
+            "predicted_positives": 228,
+            "recall": 0.7929,
+            "tn": 95,
+            "tp": 222
+          },
+          "precision": 0.9654,
+          "predicted_positives": 231,
+          "recall": 0.769,
+          "tn": 102,
+          "tp": 223
+        }
+      },
+      "exact_label_set_agreement": 0.7975,
+      "predicted_positives": {
+        "family": 7,
+        "historical": 68,
+        "negated": 40,
+        "uncertain": 58,
+        "unmodified": 231
+      },
+      "spans_missing_a_prediction": 0,
+      "spans_scored": 400
+    },
+    "gemini-3.6-flash/v2": {
+      "by_dimension": {
+        "family": {
+          "cohens_kappa": 1.0,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "gold_positives": 4,
+          "on_annotator_consensus": {
+            "cohens_kappa": 1.0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "gold_positives": 3,
+            "precision": 1.0,
+            "predicted_positives": 3,
+            "recall": 1.0,
+            "tn": 378,
+            "tp": 3
+          },
+          "precision": 1.0,
+          "predicted_positives": 4,
+          "recall": 1.0,
+          "tn": 396,
+          "tp": 4
+        },
+        "historical": {
+          "cohens_kappa": 0.8511,
+          "f1": 0.8649,
+          "fn": 6,
+          "fp": 4,
+          "gold_positives": 38,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.8885,
+            "f1": 0.8986,
+            "fn": 3,
+            "fp": 4,
+            "gold_positives": 34,
+            "precision": 0.8857,
+            "predicted_positives": 35,
+            "recall": 0.9118,
+            "tn": 343,
+            "tp": 31
+          },
+          "precision": 0.8889,
+          "predicted_positives": 36,
+          "recall": 0.8421,
+          "tn": 358,
+          "tp": 32
+        },
+        "negated": {
+          "cohens_kappa": 0.967,
+          "f1": 0.9697,
+          "fn": 2,
+          "fp": 0,
+          "gold_positives": 34,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.9827,
+            "f1": 0.9841,
+            "fn": 1,
+            "fp": 0,
+            "gold_positives": 32,
+            "precision": 1.0,
+            "predicted_positives": 31,
+            "recall": 0.9688,
+            "tn": 349,
+            "tp": 31
+          },
+          "precision": 1.0,
+          "predicted_positives": 32,
+          "recall": 0.9412,
+          "tn": 366,
+          "tp": 32
+        },
+        "uncertain": {
+          "cohens_kappa": 0.8736,
+          "f1": 0.8861,
+          "fn": 2,
+          "fp": 7,
+          "gold_positives": 37,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.9371,
+            "f1": 0.9429,
+            "fn": 1,
+            "fp": 3,
+            "gold_positives": 34,
+            "precision": 0.9167,
+            "predicted_positives": 36,
+            "recall": 0.9706,
+            "tn": 344,
+            "tp": 33
+          },
+          "precision": 0.8333,
+          "predicted_positives": 42,
+          "recall": 0.9459,
+          "tn": 356,
+          "tp": 35
+        },
+        "unmodified": {
+          "cohens_kappa": 0.8878,
+          "f1": 0.9689,
+          "fn": 10,
+          "fp": 8,
+          "gold_positives": 290,
+          "on_annotator_consensus": {
+            "cohens_kappa": 0.9331,
+            "f1": 0.9821,
+            "fn": 6,
+            "fp": 4,
+            "gold_positives": 280,
+            "precision": 0.9856,
+            "predicted_positives": 278,
+            "recall": 0.9786,
+            "tn": 97,
+            "tp": 274
+          },
+          "precision": 0.9722,
+          "predicted_positives": 288,
+          "recall": 0.9655,
+          "tn": 102,
+          "tp": 280
+        }
+      },
+      "exact_label_set_agreement": 0.95,
+      "predicted_positives": {
+        "family": 4,
+        "historical": 36,
+        "negated": 32,
+        "uncertain": 42,
+        "unmodified": 288
+      },
+      "spans_missing_a_prediction": 0,
+      "spans_scored": 400
+    }
+  },
+  "circularity": "scoring an LLM against a gold two other LLMs wrote is not an independent test. It is bounded rather than denied: the annotators are from a different model family, and every arm is also scored on the subset where BOTH annotators agreed \u2014 where they disagreed there is no fact for a third model to get right.",
+  "counts_note": "gold_positives is the denominator of recall and predicted_positives the denominator of precision; the ratio between them is the over-calling this comparison is largely about. They do not sum to n_items because dimensions co-occur and most spans carry none.",
+  "gold_positives": {
+    "family": 4,
+    "historical": 38,
+    "negated": 34,
+    "uncertain": 37,
+    "unmodified": 290
+  },
+  "n_annotator_consensus": 381,
+  "n_items": 400,
+  "n_unmodified": 290,
+  "not_a_candidate_detector": "an API call is not replayable, not offline and not hashable into an operator version, and this package promises deterministic edit scripts. These arms price the gap between the shipped detector and the ceiling. A cheap model that scores well is an argument for DISTILLING it into an encoder, not for calling it at runtime.",
+  "question": "Do cheap LLMs reach the same assertion judgements as frontier ones?",
+  "split": "held_out",
+  "why": "the gold is two frontier models agreeing at kappa 0.845-0.913, so that tier is already measured. What is unknown is where the price/agreement curve bends."
+}

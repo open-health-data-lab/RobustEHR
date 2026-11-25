@@ -1,0 +1,425 @@
+{
+  "arms": {
+    "ctx_a_pyrush": {
+      "accuracy": 0.7755,
+      "cells": 49,
+      "correct": 38,
+      "instability": 0.1429,
+      "per_template": {
+        "bulleted_problem_list": {
+          "angle_redacted": true,
+          "control_generic_noun": true,
+          "control_real_name": true,
+          "curly_tag": true,
+          "mimic_iii_bracket": true,
+          "mimic_iv_underscore": true,
+          "xxx": true
+        },
+        "header_boundary": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "lexical_negation": {
+          "angle_redacted": true,
+          "control_generic_noun": true,
+          "control_real_name": true,
+          "curly_tag": true,
+          "mimic_iii_bracket": true,
+          "mimic_iv_underscore": true,
+          "xxx": true
+        },
+        "negation_two_sentences_back": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "numbered_list_leak": {
+          "angle_redacted": true,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": true,
+          "mimic_iii_bracket": true,
+          "mimic_iv_underscore": true,
+          "xxx": false
+        },
+        "placeholder_ends_sentence": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "true_negation_survives": {
+          "angle_redacted": true,
+          "control_generic_noun": true,
+          "control_real_name": true,
+          "curly_tag": true,
+          "mimic_iii_bracket": true,
+          "mimic_iv_underscore": true,
+          "xxx": true
+        }
+      },
+      "templates_unstable_across_conventions": [
+        "numbered_list_leak"
+      ]
+    },
+    "ctx_b_our_boundaries": {
+      "accuracy": 1.0,
+      "cells": 49,
+      "correct": 49,
+      "instability": 0.0,
+      "per_template": {
+        "bulleted_problem_list": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "header_boundary": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "lexical_negation": {
+          "angle_redacted": true,
+          "control_generic_noun": true,
+          "control_real_name": true,
+          "curly_tag": true,
+          "mimic_iii_bracket": true,
+          "mimic_iv_underscore": true,
+          "xxx": true
+        },
+        "negation_two_sentences_back": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "numbered_list_leak": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "placeholder_ends_sentence": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "true_negation_survives": {
+          "angle_redacted": true,
+          "control_generic_noun": true,
+          "control_real_name": true,
+          "curly_tag": true,
+          "mimic_iii_bracket": true,
+          "mimic_iv_underscore": true,
+          "xxx": true
+        }
+      },
+      "templates_unstable_across_conventions": []
+    },
+    "dependency_parse": {
+      "accuracy": 0.8571,
+      "cells": 49,
+      "correct": 42,
+      "instability": 0.0,
+      "per_template": {
+        "bulleted_problem_list": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "header_boundary": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "lexical_negation": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "negation_two_sentences_back": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "numbered_list_leak": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "placeholder_ends_sentence": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "true_negation_survives": {
+          "angle_redacted": true,
+          "control_generic_noun": true,
+          "control_real_name": true,
+          "curly_tag": true,
+          "mimic_iii_bracket": true,
+          "mimic_iv_underscore": true,
+          "xxx": true
+        }
+      },
+      "templates_unstable_across_conventions": []
+    },
+    "negspacy": {
+      "accuracy": 1.0,
+      "cells": 49,
+      "correct": 49,
+      "instability": 0.0,
+      "per_template": {
+        "bulleted_problem_list": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "header_boundary": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "lexical_negation": {
+          "angle_redacted": true,
+          "control_generic_noun": true,
+          "control_real_name": true,
+          "curly_tag": true,
+          "mimic_iii_bracket": true,
+          "mimic_iv_underscore": true,
+          "xxx": true
+        },
+        "negation_two_sentences_back": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "numbered_list_leak": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "placeholder_ends_sentence": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "true_negation_survives": {
+          "angle_redacted": true,
+          "control_generic_noun": true,
+          "control_real_name": true,
+          "curly_tag": true,
+          "mimic_iii_bracket": true,
+          "mimic_iv_underscore": true,
+          "xxx": true
+        }
+      },
+      "templates_unstable_across_conventions": []
+    },
+    "window_cue": {
+      "accuracy": 0.6122,
+      "cells": 49,
+      "correct": 30,
+      "instability": 0.1429,
+      "per_template": {
+        "bulleted_problem_list": {
+          "angle_redacted": true,
+          "control_generic_noun": true,
+          "control_real_name": true,
+          "curly_tag": true,
+          "mimic_iii_bracket": true,
+          "mimic_iv_underscore": true,
+          "xxx": true
+        },
+        "header_boundary": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "lexical_negation": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "negation_two_sentences_back": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "numbered_list_leak": {
+          "angle_redacted": true,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": true,
+          "mimic_iii_bracket": true,
+          "mimic_iv_underscore": true,
+          "xxx": true
+        },
+        "placeholder_ends_sentence": {
+          "angle_redacted": false,
+          "control_generic_noun": false,
+          "control_real_name": false,
+          "curly_tag": false,
+          "mimic_iii_bracket": false,
+          "mimic_iv_underscore": false,
+          "xxx": false
+        },
+        "true_negation_survives": {
+          "angle_redacted": true,
+          "control_generic_noun": true,
+          "control_real_name": true,
+          "curly_tag": true,
+          "mimic_iii_bracket": true,
+          "mimic_iv_underscore": true,
+          "xxx": true
+        }
+      },
+      "templates_unstable_across_conventions": [
+        "numbered_list_leak"
+      ]
+    }
+  },
+  "conventions": {
+    "angle_redacted": "<REDACTED>",
+    "control_generic_noun": "The patient",
+    "control_real_name": "Mr. Smith",
+    "curly_tag": "{{NAME}}",
+    "mimic_iii_bracket": "[** Name **]",
+    "mimic_iv_underscore": "___",
+    "xxx": "XXX"
+  },
+  "how_to_read": "instability 0.0 is the only good answer for the second metric, and it is a property of the instrument rather than a score. An arm can be perfectly stable and wrong \u2014 the always-affirmed baseline is \u2014 so read instability beside the accuracy column and beside assertion_accuracy.json, never alone.",
+  "question": "Does an assertion verdict change when only the de-identification convention changes?",
+  "templates": [
+    {
+      "expected_negated": false,
+      "name": "numbered_list_leak",
+      "target": "hypertension",
+      "why": "a negation cue in item 1 must not reach item 2"
+    },
+    {
+      "expected_negated": false,
+      "name": "bulleted_problem_list",
+      "target": "diabetes",
+      "why": "a bulleted denial must not scope into the next bullet"
+    },
+    {
+      "expected_negated": false,
+      "name": "header_boundary",
+      "target": "Atrial fibrillation",
+      "why": "a cue before a section header must not cross it"
+    },
+    {
+      "expected_negated": true,
+      "name": "true_negation_survives",
+      "target": "pulmonary embolism",
+      "why": "a genuine negation must survive every convention too"
+    },
+    {
+      "expected_negated": true,
+      "name": "lexical_negation",
+      "target": "orthopnea",
+      "why": "`denies` carries the negation in the verb; no parse relation marks it"
+    },
+    {
+      "expected_negated": false,
+      "name": "placeholder_ends_sentence",
+      "target": "infiltrate",
+      "why": "a placeholder abutting a period is where sentence splitters disagree"
+    },
+    {
+      "expected_negated": false,
+      "name": "negation_two_sentences_back",
+      "target": "cerebral atrophy",
+      "why": "a cue must not reach two sentences forward, whatever the mask"
+    }
+  ],
+  "why": "a placeholder carries no clinical meaning, so swapping one convention for another cannot change what a note says about a patient. An arm whose verdict moves with the convention is reading formatting, not medicine. Unlike accuracy, this needs no gold: whatever the right answer is, it cannot depend on the mask.",
+  "why_not_measurable_on_negex": "every NegEx gold row is a single sentence containing its concept, so no cue can leak across a boundary and both segmenters return one sentence. assertion_accuracy.json therefore reports CTX-A and CTX-B as identical; that tie is the instrument having no power, not a finding about segmentation."
+}

@@ -1,0 +1,135 @@
+# Anchor cues for ambiguous clinical abbreviations — stage 3c.
+#
+# ── WHAT THIS IS ────────────────────────────────────────────────────────────
+# For a short form with several plausible senses, each sense lists literal words
+# that, appearing nearby, indicate it. Exactly one sense's cues firing resolves
+# the mention. Zero or two or more ABSTAINS. There is no fallback guess.
+#
+# ── CUES ARE LITERAL SURFACE STRINGS, AND MUST BE ───────────────────────────
+# Not concepts. Disambiguating `RA` from the *concepts* around it would need the
+# candidate-generation stage's output, which needs this stage — a cycle. Surface
+# strings come from the segmentation layer, which runs before both, so no cycle
+# forms. This is a hard architectural constraint, not a simplification.
+#
+# ── SCOPE: WHAT THIS RUNG IS ACTUALLY FOR ───────────────────────────────────
+# Measured on the challenge gold, held out (validation/measurements/disambiguation_
+# ceiling.json): a most-frequent-sense prior already reaches **0.8992** on
+# free-prose short forms, and of the 10.08% it misses, only **6.29%** is
+# reachable at all — the rest names senses UMLS does not carry, where no policy
+# over candidates can help. So this rung competes for roughly 0.86% of the gold.
+#
+# That is small, and the file is sized accordingly. It is not an attempt to
+# cover clinical abbreviation ambiguity in general; it covers the forms where a
+# wrong answer would be actively misleading, and abstains everywhere else.
+#
+# ── WHY NOT JUST SHIP THE MOST-FREQUENT-SENSE PRIOR ─────────────────────────
+# Because it is fitted to one corpus, and corpus priors do not transport. The
+# three published `RA` priors disagree outright — CASI puts right atrium at
+# 0.788, Stetson puts room air at 0.859, Vanderbilt at 0.900 — so a prior fitted
+# on MIMIC would encode MIMIC. Worse, its confidence is not a usable abstention
+# signal: raising the Vanderbilt threshold past 0.80 *reduces* accuracy, and
+# cross-corpus disagreement concentrates where the source corpus is most
+# confident. MFS is the yardstick these cues must beat, not a shippable rung.
+#
+# Cues, by contrast, are clinical knowledge: oxygen saturation near `RA` means
+# room air wherever the note was written.
+#
+# ── AUTHORING DISCIPLINE ────────────────────────────────────────────────────
+# Cues are written from clinical knowledge, never by reading the evaluation set.
+# An in-sample cue list scores whatever you want it to. Any form whose cues were
+# authored after inspecting its gold instances is marked `held_out: false` and
+# excluded from reported accuracy.
+#
+# Determinism: cue lists load as sorted tuples, never sets, and must contain no
+# regex metacharacters — they are compared as literal lowercased tokens.
+
+schema_version: "1.0"
+
+#: Tokens either side of the mention that count as "nearby".
+#:
+#: A token window rather than the sentence deliberately. Sentence boundaries are
+#: measurably sensitive to de-identification convention — probe_deid_assertion
+#: shows a placeholder ending a sentence spuriously — so scoping cues to a
+#: sentence would make this rung's output depend on which de-id scheme a corpus
+#: used. A fixed token window is invariant to that.
+window_tokens: 8
+
+cues:
+  ra:
+    held_out: true
+    note: >
+      Overwhelmingly room air in discharge summaries (97.2% of gold occurrences
+      in this corpus), but the wrong answer is clinically serious in both
+      directions, so it abstains rather than defaulting.
+    senses:
+      - sense: room air
+        cues: [o2, oxygen, sat, sats, saturation, saturating, breathing, spo2, air, nasal, cannula, liters, lpm]
+      - sense: rheumatoid arthritis
+        cues: [arthritis, rheumatoid, joint, joints, methotrexate, synovitis, rheumatology, dmard, swelling]
+      - sense: right atrium
+        cues: [atrium, atrial, echo, echocardiogram, ventricle, catheter, tricuspid, chamber]
+
+  pe:
+    held_out: true
+    note: >
+      Pulmonary embolism only. The competing sense, physical examination, was
+      authored and then removed: both of its held-out errors were the same
+      mistake, `exam` and `examination` firing on a radiology order header
+      ("REASON FOR THIS EXAMINATION: Eval AD/PE") and on prose that mentions the
+      exam while discussing an embolism. Those words co-occur with everything in
+      a clinical note, so they are *associated* with the sense rather than
+      *discriminative* of it — a cue must be a word that would be surprising
+      under the competing reading.
+
+      `PE` meaning physical examination is also a header usage (`PE:`), which the
+      structural layer resolves by position. In running prose it is the embolism.
+    senses:
+      - sense: pulmonary embolism
+        cues: [pulmonary, embolism, embolus, dvt, anticoagulation, heparin, ctpa, angiogram, clot, thrombus]
+
+  ms:
+    held_out: true
+    note: Mental status, multiple sclerosis, mitral stenosis, morphine sulfate.
+    senses:
+      - sense: mental status
+        cues: [mental, status, alert, oriented, confusion, confused, altered, delirium, alertness]
+      - sense: multiple sclerosis
+        cues: [sclerosis, multiple, demyelinating, relapsing, neurology, plaques]
+      - sense: mitral stenosis
+        cues: [mitral, stenosis, valve, murmur, echocardiogram, regurgitation]
+
+  cva:
+    held_out: true
+    note: Cerebrovascular accident versus costovertebral angle.
+    senses:
+      - sense: cerebrovascular accident
+        cues: [stroke, cerebrovascular, neuro, neurology, hemiparesis, aphasia, tpa, infarct, deficits]
+      - sense: costovertebral angle
+        cues: [tenderness, flank, angle, costovertebral, percussion, pyelonephritis]
+
+  sob:
+    held_out: true
+    note: Shortness of breath — included because expansion alone leaves it ambiguous with abbreviation-shaped noise.
+    senses:
+      - sense: shortness of breath
+        cues: [breath, dyspnea, exertion, respiratory, wheezing, orthopnea, oxygen]
+
+  dm:
+    held_out: true
+    note: Diabetes mellitus versus diastolic murmur.
+    senses:
+      - sense: diabetes mellitus
+        cues: [diabetes, diabetic, insulin, glucose, hba1c, metformin, glycemic, hyperglycemia]
+      - sense: diastolic murmur
+        cues: [murmur, diastolic, systolic, auscultation, valve]
+
+  bs:
+    held_out: true
+    note: Bowel sounds, breath sounds, blood sugar.
+    senses:
+      - sense: bowel sounds
+        cues: [bowel, abdomen, abdominal, soft, nontender, distended, hypoactive, hyperactive]
+      - sense: breath sounds
+        cues: [breath, lungs, chest, auscultation, crackles, wheezes, rales]
+      - sense: blood sugar
+        cues: [sugar, glucose, insulin, diabetic, fingerstick, hypoglycemia]

@@ -1,0 +1,732 @@
+{
+  "config": "quickumls:jaccard:0.7:3:5:length:semtypes=default:trim=1:prefer=457758",
+  "gold_spans_total": 23131,
+  "macro": {
+    "measured_over": 22,
+    "set_f1": 0.6725,
+    "set_precision": 0.8016,
+    "set_recall": 0.4733,
+    "span_recall": 0.8433
+  },
+  "macro_union": {
+    "measured_over": 22,
+    "set_recall": 0.6631,
+    "span_recall": 0.8709
+  },
+  "method": "phenotype = seed SNOMED concept + isa descendants (SNOMEDCT_US, depth 6). Gold spans whose annotated concept falls in that closure are the phenotype's evidence. span_recall = we found the text; set_recall = we found it and assigned a concept inside the set.",
+  "notes": 68,
+  "phenotypes": [
+    {
+      "claimed": 178,
+      "claimed_correct": 135,
+      "concept_set_size": 361,
+      "gold_spans": 197,
+      "phenotype": "hypertension",
+      "set_f1": 0.7867,
+      "set_found": 161,
+      "set_precision": 0.7584,
+      "set_recall": 0.8173,
+      "span_found": 196,
+      "span_recall": 0.9949
+    },
+    {
+      "claimed": 134,
+      "claimed_correct": 127,
+      "concept_set_size": 175,
+      "gold_spans": 210,
+      "phenotype": "chest_pain",
+      "set_f1": 0.7454,
+      "set_found": 129,
+      "set_precision": 0.9478,
+      "set_recall": 0.6143,
+      "span_found": 187,
+      "span_recall": 0.8905
+    },
+    {
+      "claimed": 194,
+      "claimed_correct": 140,
+      "concept_set_size": 142,
+      "gold_spans": 187,
+      "phenotype": "dyspnea",
+      "set_f1": 0.8067,
+      "set_found": 171,
+      "set_precision": 0.7216,
+      "set_recall": 0.9144,
+      "span_found": 184,
+      "span_recall": 0.984
+    },
+    {
+      "claimed": 114,
+      "claimed_correct": 106,
+      "concept_set_size": 246,
+      "gold_spans": 137,
+      "phenotype": "fever",
+      "set_f1": 0.8446,
+      "set_found": 106,
+      "set_precision": 0.9298,
+      "set_recall": 0.7737,
+      "span_found": 134,
+      "span_recall": 0.9781
+    },
+    {
+      "claimed": 56,
+      "claimed_correct": 47,
+      "concept_set_size": 382,
+      "gold_spans": 121,
+      "phenotype": "diabetes_mellitus",
+      "set_f1": 0.5387,
+      "set_found": 48,
+      "set_precision": 0.8393,
+      "set_recall": 0.3967,
+      "span_found": 83,
+      "span_recall": 0.686
+    },
+    {
+      "claimed": 40,
+      "claimed_correct": 40,
+      "concept_set_size": 129,
+      "gold_spans": 45,
+      "phenotype": "chronic_kidney_disease",
+      "set_f1": 0.9412,
+      "set_found": 40,
+      "set_precision": 1.0,
+      "set_recall": 0.8889,
+      "span_found": 45,
+      "span_recall": 1.0
+    },
+    {
+      "claimed": 24,
+      "claimed_correct": 22,
+      "concept_set_size": 161,
+      "gold_spans": 49,
+      "phenotype": "heart_failure",
+      "set_f1": 0.6027,
+      "set_found": 22,
+      "set_precision": 0.9167,
+      "set_recall": 0.449,
+      "span_found": 42,
+      "span_recall": 0.8571
+    },
+    {
+      "claimed": 39,
+      "claimed_correct": 37,
+      "concept_set_size": 23,
+      "gold_spans": 52,
+      "phenotype": "atrial_fibrillation",
+      "set_f1": 0.8256,
+      "set_found": 38,
+      "set_precision": 0.9487,
+      "set_recall": 0.7308,
+      "span_found": 47,
+      "span_recall": 0.9038
+    },
+    {
+      "claimed": 16,
+      "claimed_correct": 3,
+      "concept_set_size": 221,
+      "gold_spans": 27,
+      "phenotype": "depression",
+      "set_f1": 0.1395,
+      "set_found": 3,
+      "set_precision": 0.1875,
+      "set_recall": 0.1111,
+      "span_found": 27,
+      "span_recall": 1.0
+    },
+    {
+      "claimed": 18,
+      "claimed_correct": 12,
+      "concept_set_size": 41,
+      "gold_spans": 54,
+      "phenotype": "type_2_diabetes",
+      "set_f1": 0.3333,
+      "set_found": 12,
+      "set_precision": 0.6667,
+      "set_recall": 0.2222,
+      "span_found": 42,
+      "span_recall": 0.7778
+    },
+    {
+      "claimed": 8,
+      "claimed_correct": 5,
+      "concept_set_size": 36,
+      "gold_spans": 8,
+      "phenotype": "type_1_diabetes",
+      "set_f1": 0.625,
+      "set_found": 5,
+      "set_precision": 0.625,
+      "set_recall": 0.625,
+      "span_found": 5,
+      "span_recall": 0.625
+    },
+    {
+      "claimed": 14,
+      "claimed_correct": 13,
+      "concept_set_size": 280,
+      "gold_spans": 15,
+      "phenotype": "dementia",
+      "set_f1": 0.8966,
+      "set_found": 13,
+      "set_precision": 0.9286,
+      "set_recall": 0.8667,
+      "span_found": 15,
+      "span_recall": 1.0
+    },
+    {
+      "claimed": 0,
+      "claimed_correct": 0,
+      "concept_set_size": 8,
+      "gold_spans": 7,
+      "phenotype": "hfpef",
+      "set_f1": null,
+      "set_found": 0,
+      "set_precision": null,
+      "set_recall": 0.0,
+      "span_found": 5,
+      "span_recall": 0.7143
+    },
+    {
+      "claimed": 0,
+      "claimed_correct": 0,
+      "concept_set_size": 8,
+      "gold_spans": 4,
+      "phenotype": "hfref",
+      "set_f1": null,
+      "set_found": 0,
+      "set_precision": null,
+      "set_recall": 0.0,
+      "span_found": 0,
+      "span_recall": 0.0
+    },
+    {
+      "claimed": 27,
+      "claimed_correct": 25,
+      "concept_set_size": 1080,
+      "gold_spans": 54,
+      "phenotype": "metastatic_cancer",
+      "set_f1": 0.6173,
+      "set_found": 25,
+      "set_precision": 0.9259,
+      "set_recall": 0.463,
+      "span_found": 53,
+      "span_recall": 0.9815
+    },
+    {
+      "claimed": 0,
+      "claimed_correct": 0,
+      "concept_set_size": 257,
+      "gold_spans": 2,
+      "phenotype": "rheumatoid_arthritis",
+      "set_f1": null,
+      "set_found": 0,
+      "set_precision": null,
+      "set_recall": 0.0,
+      "span_found": 1,
+      "span_recall": 0.5
+    },
+    {
+      "claimed": 0,
+      "claimed_correct": 0,
+      "concept_set_size": 38,
+      "gold_spans": 1,
+      "phenotype": "systemic_lupus_erythematosus",
+      "set_f1": null,
+      "set_found": 0,
+      "set_precision": null,
+      "set_recall": 0.0,
+      "span_found": 1,
+      "span_recall": 1.0
+    },
+    {
+      "claimed": 12,
+      "claimed_correct": 11,
+      "concept_set_size": 47,
+      "gold_spans": 22,
+      "phenotype": "alcohol_use_disorder",
+      "set_f1": 0.6471,
+      "set_found": 11,
+      "set_precision": 0.9167,
+      "set_recall": 0.5,
+      "span_found": 22,
+      "span_recall": 1.0
+    },
+    {
+      "claimed": 25,
+      "claimed_correct": 19,
+      "concept_set_size": 99,
+      "gold_spans": 19,
+      "phenotype": "obesity",
+      "set_f1": 0.8636,
+      "set_found": 19,
+      "set_precision": 0.76,
+      "set_recall": 1.0,
+      "span_found": 19,
+      "span_recall": 1.0
+    },
+    {
+      "claimed": 23,
+      "claimed_correct": 18,
+      "concept_set_size": 241,
+      "gold_spans": 28,
+      "phenotype": "deep_vein_thrombosis",
+      "set_f1": 0.7269,
+      "set_found": 19,
+      "set_precision": 0.7826,
+      "set_recall": 0.6786,
+      "span_found": 28,
+      "span_recall": 1.0
+    },
+    {
+      "claimed": 22,
+      "claimed_correct": 17,
+      "concept_set_size": 30,
+      "gold_spans": 50,
+      "phenotype": "pulmonary_embolism",
+      "set_f1": 0.4912,
+      "set_found": 18,
+      "set_precision": 0.7727,
+      "set_recall": 0.36,
+      "span_found": 33,
+      "span_recall": 0.66
+    },
+    {
+      "claimed": 0,
+      "claimed_correct": 0,
+      "concept_set_size": 10,
+      "gold_spans": 1,
+      "phenotype": "clostridioides_difficile",
+      "set_f1": null,
+      "set_found": 0,
+      "set_precision": null,
+      "set_recall": 0.0,
+      "span_found": 1,
+      "span_recall": 1.0
+    }
+  ],
+  "phenotypes_union": [
+    {
+      "claimed": 983,
+      "claimed_correct": 137,
+      "concept_set_size": 3167,
+      "gold_spans": 619,
+      "phenotype": "hypertension",
+      "set_f1": null,
+      "set_found": 489,
+      "set_precision": null,
+      "set_recall": 0.79,
+      "span_found": 587,
+      "span_recall": 0.9483
+    },
+    {
+      "claimed": 1067,
+      "claimed_correct": 138,
+      "concept_set_size": 1187,
+      "gold_spans": 1046,
+      "phenotype": "chest_pain",
+      "set_f1": null,
+      "set_found": 761,
+      "set_precision": null,
+      "set_recall": 0.7275,
+      "span_found": 930,
+      "span_recall": 0.8891
+    },
+    {
+      "claimed": 767,
+      "claimed_correct": 140,
+      "concept_set_size": 778,
+      "gold_spans": 709,
+      "phenotype": "dyspnea",
+      "set_f1": null,
+      "set_found": 561,
+      "set_precision": null,
+      "set_recall": 0.7913,
+      "span_found": 666,
+      "span_recall": 0.9394
+    },
+    {
+      "claimed": 586,
+      "claimed_correct": 109,
+      "concept_set_size": 2712,
+      "gold_spans": 444,
+      "phenotype": "fever",
+      "set_f1": null,
+      "set_found": 297,
+      "set_precision": null,
+      "set_recall": 0.6689,
+      "span_found": 409,
+      "span_recall": 0.9212
+    },
+    {
+      "claimed": 359,
+      "claimed_correct": 49,
+      "concept_set_size": 1333,
+      "gold_spans": 230,
+      "phenotype": "diabetes_mellitus",
+      "set_f1": null,
+      "set_found": 115,
+      "set_precision": null,
+      "set_recall": 0.5,
+      "span_found": 187,
+      "span_recall": 0.813
+    },
+    {
+      "claimed": 602,
+      "claimed_correct": 41,
+      "concept_set_size": 1284,
+      "gold_spans": 594,
+      "phenotype": "chronic_kidney_disease",
+      "set_f1": null,
+      "set_found": 492,
+      "set_precision": null,
+      "set_recall": 0.8283,
+      "span_found": 576,
+      "span_recall": 0.9697
+    },
+    {
+      "claimed": 752,
+      "claimed_correct": 22,
+      "concept_set_size": 2217,
+      "gold_spans": 492,
+      "phenotype": "heart_failure",
+      "set_f1": null,
+      "set_found": 339,
+      "set_precision": null,
+      "set_recall": 0.689,
+      "span_found": 432,
+      "span_recall": 0.878
+    },
+    {
+      "claimed": 706,
+      "claimed_correct": 45,
+      "concept_set_size": 581,
+      "gold_spans": 593,
+      "phenotype": "atrial_fibrillation",
+      "set_f1": null,
+      "set_found": 467,
+      "set_precision": null,
+      "set_recall": 0.7875,
+      "span_found": 547,
+      "span_recall": 0.9224
+    },
+    {
+      "claimed": 255,
+      "claimed_correct": 24,
+      "concept_set_size": 1532,
+      "gold_spans": 137,
+      "phenotype": "depression",
+      "set_f1": null,
+      "set_found": 88,
+      "set_precision": null,
+      "set_recall": 0.6423,
+      "span_found": 111,
+      "span_recall": 0.8102
+    },
+    {
+      "claimed": 347,
+      "claimed_correct": 13,
+      "concept_set_size": 890,
+      "gold_spans": 224,
+      "phenotype": "type_2_diabetes",
+      "set_f1": null,
+      "set_found": 114,
+      "set_precision": null,
+      "set_recall": 0.5089,
+      "span_found": 183,
+      "span_recall": 0.817
+    },
+    {
+      "claimed": 570,
+      "claimed_correct": 5,
+      "concept_set_size": 415,
+      "gold_spans": 539,
+      "phenotype": "type_1_diabetes",
+      "set_f1": null,
+      "set_found": 361,
+      "set_precision": null,
+      "set_recall": 0.6698,
+      "span_found": 499,
+      "span_recall": 0.9258
+    },
+    {
+      "claimed": 77,
+      "claimed_correct": 13,
+      "concept_set_size": 684,
+      "gold_spans": 76,
+      "phenotype": "dementia",
+      "set_f1": null,
+      "set_found": 36,
+      "set_precision": null,
+      "set_recall": 0.4737,
+      "span_found": 59,
+      "span_recall": 0.7763
+    },
+    {
+      "claimed": 659,
+      "claimed_correct": 3,
+      "concept_set_size": 1176,
+      "gold_spans": 547,
+      "phenotype": "hfpef",
+      "set_f1": null,
+      "set_found": 393,
+      "set_precision": null,
+      "set_recall": 0.7185,
+      "span_found": 494,
+      "span_recall": 0.9031
+    },
+    {
+      "claimed": 689,
+      "claimed_correct": 0,
+      "concept_set_size": 1398,
+      "gold_spans": 412,
+      "phenotype": "hfref",
+      "set_f1": null,
+      "set_found": 310,
+      "set_precision": null,
+      "set_recall": 0.7524,
+      "span_found": 393,
+      "span_recall": 0.9539
+    },
+    {
+      "claimed": 386,
+      "claimed_correct": 26,
+      "concept_set_size": 2292,
+      "gold_spans": 312,
+      "phenotype": "metastatic_cancer",
+      "set_f1": null,
+      "set_found": 213,
+      "set_precision": null,
+      "set_recall": 0.6827,
+      "span_found": 284,
+      "span_recall": 0.9103
+    },
+    {
+      "claimed": 313,
+      "claimed_correct": 0,
+      "concept_set_size": 3044,
+      "gold_spans": 49,
+      "phenotype": "rheumatoid_arthritis",
+      "set_f1": null,
+      "set_found": 32,
+      "set_precision": null,
+      "set_recall": 0.6531,
+      "span_found": 40,
+      "span_recall": 0.8163
+    },
+    {
+      "claimed": 336,
+      "claimed_correct": 0,
+      "concept_set_size": 1023,
+      "gold_spans": 288,
+      "phenotype": "systemic_lupus_erythematosus",
+      "set_f1": null,
+      "set_found": 225,
+      "set_precision": null,
+      "set_recall": 0.7812,
+      "span_found": 283,
+      "span_recall": 0.9826
+    },
+    {
+      "claimed": 75,
+      "claimed_correct": 11,
+      "concept_set_size": 184,
+      "gold_spans": 75,
+      "phenotype": "alcohol_use_disorder",
+      "set_f1": null,
+      "set_found": 51,
+      "set_precision": null,
+      "set_recall": 0.68,
+      "span_found": 67,
+      "span_recall": 0.8933
+    },
+    {
+      "claimed": 146,
+      "claimed_correct": 19,
+      "concept_set_size": 860,
+      "gold_spans": 72,
+      "phenotype": "obesity",
+      "set_f1": null,
+      "set_found": 53,
+      "set_precision": null,
+      "set_recall": 0.7361,
+      "span_found": 69,
+      "span_recall": 0.9583
+    },
+    {
+      "claimed": 84,
+      "claimed_correct": 18,
+      "concept_set_size": 353,
+      "gold_spans": 187,
+      "phenotype": "deep_vein_thrombosis",
+      "set_f1": null,
+      "set_found": 62,
+      "set_precision": null,
+      "set_recall": 0.3316,
+      "span_found": 100,
+      "span_recall": 0.5348
+    },
+    {
+      "claimed": 770,
+      "claimed_correct": 18,
+      "concept_set_size": 518,
+      "gold_spans": 812,
+      "phenotype": "pulmonary_embolism",
+      "set_f1": null,
+      "set_found": 533,
+      "set_precision": null,
+      "set_recall": 0.6564,
+      "span_found": 651,
+      "span_recall": 0.8017
+    },
+    {
+      "claimed": 429,
+      "claimed_correct": 0,
+      "concept_set_size": 196,
+      "gold_spans": 656,
+      "phenotype": "clostridioides_difficile",
+      "set_f1": null,
+      "set_found": 340,
+      "set_precision": null,
+      "set_recall": 0.5183,
+      "span_found": 521,
+      "span_recall": 0.7942
+    }
+  ],
+  "question": "Do we find the evidence an expert annotated for a declared phenotype?",
+  "seeds": {
+    "alcohol_use_disorder": {
+      "codes": [
+        "15167005"
+      ],
+      "max_depth": 6
+    },
+    "atrial_fibrillation": {
+      "codes": [
+        "49436004"
+      ],
+      "max_depth": 6
+    },
+    "chest_pain": {
+      "codes": [
+        "29857009"
+      ],
+      "max_depth": 6
+    },
+    "chronic_kidney_disease": {
+      "codes": [
+        "709044004"
+      ],
+      "max_depth": 6
+    },
+    "clostridioides_difficile": {
+      "codes": [
+        "186431008"
+      ],
+      "max_depth": 6
+    },
+    "deep_vein_thrombosis": {
+      "codes": [
+        "128053003"
+      ],
+      "max_depth": 6
+    },
+    "dementia": {
+      "codes": [
+        "52448006"
+      ],
+      "max_depth": 6
+    },
+    "depression": {
+      "codes": [
+        "35489007"
+      ],
+      "max_depth": 6
+    },
+    "diabetes_mellitus": {
+      "codes": [
+        "73211009"
+      ],
+      "max_depth": 6
+    },
+    "dyspnea": {
+      "codes": [
+        "267036007"
+      ],
+      "max_depth": 6
+    },
+    "fever": {
+      "codes": [
+        "386661006"
+      ],
+      "max_depth": 6
+    },
+    "heart_failure": {
+      "codes": [
+        "84114007"
+      ],
+      "max_depth": 6
+    },
+    "hfpef": {
+      "codes": [
+        "446221000"
+      ],
+      "max_depth": 6
+    },
+    "hfref": {
+      "codes": [
+        "703272007"
+      ],
+      "max_depth": 6
+    },
+    "hypertension": {
+      "codes": [
+        "38341003"
+      ],
+      "max_depth": 6
+    },
+    "metastatic_cancer": {
+      "codes": [
+        "128462008"
+      ],
+      "max_depth": 6
+    },
+    "obesity": {
+      "codes": [
+        "414916001"
+      ],
+      "max_depth": 6
+    },
+    "pulmonary_embolism": {
+      "codes": [
+        "59282003"
+      ],
+      "max_depth": 1
+    },
+    "rheumatoid_arthritis": {
+      "codes": [
+        "69896004"
+      ],
+      "max_depth": 6
+    },
+    "systemic_lupus_erythematosus": {
+      "codes": [
+        "55464009"
+      ],
+      "max_depth": 6
+    },
+    "type_1_diabetes": {
+      "codes": [
+        "46635009"
+      ],
+      "max_depth": 6
+    },
+    "type_2_diabetes": {
+      "codes": [
+        "44054006"
+      ],
+      "max_depth": 6
+    }
+  },
+  "source": "phenotypes.yaml",
+  "two_sets": "`phenotypes` scores the DISORDER facet, which is what the shipped measured_set_recall describes. `phenotypes_union` scores what a pheno=X target actually selects \u2014 every facet unioned. Precision for the union keeps the same independent answer key (the SNOMED isa closure of the seed), so it is a strict LOWER bound: a medication concept cannot appear under a disease seed's closure, so union PRECISION is not measurable here and is reported null rather than as a near-zero that would read as imprecision. The disorder facet remains the specificity anchor.",
+  "why_two_recalls": "span_recall bounds what a corruption operator can reach; set_recall bounds whether phenotype_scope is correct. A mention missed under protect mode is never protected, and the run still reports evidence_touch=0 because measurement and protection read the same span set \u2014 set_recall is what makes that zero non-vacuous."
+}

@@ -1,0 +1,164 @@
+{
+  "arms": {
+    "lexicon_floor": {
+      "family": {
+        "f1": 0.3906,
+        "fn": 139,
+        "fp": 17,
+        "gold": 189,
+        "precision": 0.7463,
+        "predicted": 67,
+        "recall": 0.2646,
+        "tp": 50
+      },
+      "historical": {
+        "f1": 0.4026,
+        "fn": 663,
+        "fp": 79,
+        "gold": 913,
+        "precision": 0.7599,
+        "predicted": 329,
+        "recall": 0.2738,
+        "tp": 250
+      },
+      "negated": {
+        "f1": 0.6974,
+        "fn": 695,
+        "fp": 323,
+        "gold": 1868,
+        "precision": 0.7841,
+        "predicted": 1496,
+        "recall": 0.6279,
+        "tp": 1173
+      },
+      "uncertain": {
+        "f1": 0.3086,
+        "fn": 1002,
+        "fp": 24,
+        "gold": 1231,
+        "precision": 0.9051,
+        "predicted": 253,
+        "recall": 0.186,
+        "tp": 229
+      }
+    },
+    "medspacy_extended": {
+      "family": {
+        "f1": 0.8775,
+        "fn": 10,
+        "fp": 40,
+        "gold": 189,
+        "precision": 0.8174,
+        "predicted": 219,
+        "recall": 0.9471,
+        "tp": 179
+      },
+      "historical": {
+        "f1": 0.6975,
+        "fn": 204,
+        "fp": 411,
+        "gold": 913,
+        "precision": 0.633,
+        "predicted": 1120,
+        "recall": 0.7766,
+        "tp": 709
+      },
+      "negated": {
+        "f1": 0.7758,
+        "fn": 427,
+        "fp": 406,
+        "gold": 1868,
+        "precision": 0.7802,
+        "predicted": 1847,
+        "recall": 0.7714,
+        "tp": 1441
+      },
+      "uncertain": {
+        "f1": 0.7463,
+        "fn": 263,
+        "fp": 395,
+        "gold": 1231,
+        "precision": 0.7102,
+        "predicted": 1363,
+        "recall": 0.7864,
+        "tp": 968
+      }
+    },
+    "medspacy_stock": {
+      "family": {
+        "f1": 0.8775,
+        "fn": 10,
+        "fp": 40,
+        "gold": 189,
+        "precision": 0.8174,
+        "predicted": 219,
+        "recall": 0.9471,
+        "tp": 179
+      },
+      "historical": {
+        "f1": 0.4601,
+        "fn": 596,
+        "fp": 148,
+        "gold": 913,
+        "precision": 0.6817,
+        "predicted": 465,
+        "recall": 0.3472,
+        "tp": 317
+      },
+      "negated": {
+        "f1": 0.7129,
+        "fn": 623,
+        "fp": 380,
+        "gold": 1868,
+        "precision": 0.7662,
+        "predicted": 1625,
+        "recall": 0.6665,
+        "tp": 1245
+      },
+      "uncertain": {
+        "f1": 0.4622,
+        "fn": 846,
+        "fp": 50,
+        "gold": 1231,
+        "precision": 0.8851,
+        "predicted": 435,
+        "recall": 0.3128,
+        "tp": 385
+      }
+    },
+    "negspacy": {
+      "family": {
+        "not_applicable": "negation-only implementation"
+      },
+      "historical": {
+        "not_applicable": "negation-only implementation"
+      },
+      "negated": {
+        "f1": 0.735,
+        "fn": 714,
+        "fp": 118,
+        "gold": 1868,
+        "precision": 0.9072,
+        "predicted": 1272,
+        "recall": 0.6178,
+        "tp": 1154
+      },
+      "uncertain": {
+        "not_applicable": "negation-only implementation"
+      }
+    }
+  },
+  "gold_cues": {
+    "family": 450,
+    "historical": 1990,
+    "negated": 4204,
+    "uncertain": 1341
+  },
+  "how_to_read": "the lexicon floor is the number that matters most. It is every medspaCy literal matched as a bare substring, with no scope logic at all. Where stock ConText barely exceeds it, the engine is not the limiting factor and neither is the algorithm \u2014 the vocabulary is, and vocabulary is a different repair from scope. Where stock falls BELOW it, the engine's scope pruning is discarding true cues.",
+  "notes": 40,
+  "question": "How well is each implementation detecting assertion cues?",
+  "split": "held_out",
+  "split_note": "the cue vocabulary was mined on the development notes, so the medspacy_extended row is only an honest estimate on held_out.",
+  "unit": "cue occurrence, matched by character overlap plus dimension, greedy one-to-one",
+  "why": "span-level scores conflate finding a cue with scoping it. The MIMIC gold's shape \u2014 historical precision 0.846 against recall 0.111 \u2014 says the failure is detection, and this measures that directly."
+}
